@@ -1,7 +1,7 @@
 # Make sure this file is valid yaml, otherwise it will not be recognized by security audits
 
 # point_of_contact: the owner of this repository, can be a GitHub user or GitHub team. Do NOT use the '@' symbol
-point_of_contact: <user or github team>
+point_of_contact: "@snowflakedb/snowapi"
 
 # production: whether this repository meets the criteria for being "production", see
 # go/production-repository-criteria for criteria
@@ -34,5 +34,5 @@ code_owners_file_present: true
 jira_project_issue_type: Bug
 
 # jira_area: the Jira area that raised issues should use
-jira_area: Orphaned
+jira_area: "Snowpark: Application Development Ecosystem"
 
