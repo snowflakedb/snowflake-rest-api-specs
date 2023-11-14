@@ -1,0 +1,364 @@
+openapi: 3.0.0
+servers:
+  - description: Snowflake Services API
+    url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Services API
+  description: >-
+    The Snowflake Services API is a REST API that you can use to access, update, and perform certain actions on Services resource in a Snowflake database.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+
+  /api/v2/databases/{database}/schemas/{schema}/services:
+    get:
+      summary: List services
+      tags:
+        - service
+      description: Lists the services under the database and schema.
+      operationId: listServices
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/schema'
+        - $ref: 'common.yaml#/components/parameters/like'
+        - $ref: 'common.yaml#/components/parameters/startsWith'
+        - $ref: 'common.yaml#/components/parameters/showLimit'
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ServiceFull'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+    post:
+      summary: Create a service
+      tags:
+        - service
+      description: Create a service, with standard create modifiers 
+                   as query parameters. See the Service component definition 
+                   for what is required to be provided in the request body.
+      operationId: createService
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/schema'
+        - $ref: 'common.yaml#/components/parameters/createMode'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Service'
+      responses:
+        '200':
+          $ref: 'common.yaml#/components/responses/200SuccessResponse'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '409':
+          $ref: 'common.yaml#/components/responses/409Conflict'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+  /api/v2/databases/{database}/schemas/{schema}/services/{name}:
+    get:
+      summary: Fetch a service.
+      tags:
+        - service
+      description: Fetch a Service using the SHOW command output. 
+      operationId: fetchService
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/schema'
+        - $ref: 'common.yaml#/components/parameters/name'
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/ServiceFull'
+                  - $ref: '#/components/schemas/ServiceWithSpec'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+    delete:
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/schema'
+        - $ref: 'common.yaml#/components/parameters/name'
+        - $ref: 'common.yaml#/components/parameters/ifExists'
+      summary: Delete a service
+      tags:
+        - service
+      description: Delete a service with the given name. If ifExists is used, the operation will
+                   succeed even if the object does not exist. Otherwise, there will be a failure
+                   if the drop is unsuccessful.
+      operationId: deleteService
+      responses:
+        '200':
+          $ref: 'common.yaml#/components/responses/200SuccessResponse'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+  /api/v2/databases/{database}/schemas/{schema}/services/{name}/logs:
+    get:
+      summary: Fetch the logs for a given service.
+      tags:
+        - service
+      description: Fetch the logs for a service. 
+      operationId: fetchServiceLogs
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/schema'
+        - $ref: 'common.yaml#/components/parameters/name'
+        - in: query
+          name: instance_id
+          schema:
+            type: integer
+        - in: query 
+          name: container_name
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: string
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+  /api/v2/databases/{database}/schemas/{schema}/services/{name}/status:
+    get:
+      summary: Fetch the status for a given service.
+      tags:
+        - service
+      description: Fetch the status for a service. 
+      operationId: fetchServiceStatus
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/schema'
+        - $ref: 'common.yaml#/components/parameters/name'
+        - in: query
+          name: timeout
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: string
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+  /api/v2/databases/{database}/schemas/{schema}/services/{name}:resume:
+    post:
+      summary: Resume a service
+      tags:
+        - service
+      description: Resume a service.
+      operationId: resumeService
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/schema'
+        - $ref: 'common.yaml#/components/parameters/name'
+      responses:
+        '200':
+          $ref: 'common.yaml#/components/responses/200SuccessResponse'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+
+  /api/v2/databases/{database}/schemas/{schema}/services/{name}:suspend:
+    post:
+      summary: Suspend a service
+      tags:
+        - service
+      description: Suspend a service.
+      operationId: suspendService
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/schema'
+        - $ref: 'common.yaml#/components/parameters/name'
+      responses:
+        '200':
+          $ref: 'common.yaml#/components/responses/200SuccessResponse'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+components:
+  schemas:
+    Service:
+      type: object
+      properties:
+        name:
+          $ref: './common.yaml#/components/schemas/Identifier'
+        compute_pool:
+          type: string
+        min_instances:
+          type: integer
+        max_instances:
+          type: integer
+        database_name:
+          $ref: './common.yaml#/components/schemas/Identifier'
+          readOnly: true
+        schema_name:
+          $ref: './common.yaml#/components/schemas/Identifier'
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+        dns_name:
+          type: string
+          readOnly: true
+        public_endpoints:
+          type: string
+          readOnly: true
+      required:
+        - name
+        - compute_pool
+        - min_instances
+        - max_instances
+
+    ServiceWithSpec:
+      allOf:
+        - $ref: '#/components/schemas/Service'
+        - type: object
+          properties:
+            spec:
+              type: string
+              readOnly: true
+    
+    ServiceFull:
+      allOf:
+        - $ref: '#/components/schemas/Service'
+        - type: object
+          properties:
+            class_database:
+              type: string
+              readOnly: true
+            class_schema:
+              type: string
+              readOnly: true
+            class_name:
+              type: string
+              readOnly: true
+            class_version:
+              type: string
+              readOnly: true
+
+tags:
+  - name: service
