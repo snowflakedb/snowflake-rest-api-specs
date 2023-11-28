@@ -1,0 +1,195 @@
+openapi: 3.0.0
+servers:
+  - description: Snowflake Image Repositories API
+    url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Image Repositories API
+  description: >-
+    The Snowflake Image Repositories API is a REST API that you can use to access, update, and perform certain actions on Image Repository resources in Snowflake.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/databases/{database}/schemas/{schema}/image-repositories:
+    get:
+      summary: List image repositories
+      tags:
+        - image-repository
+      description: Lists the image repositories under the database and schema.
+      operationId: listImageRepositories
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/schema'
+        - $ref: 'common.yaml#/components/parameters/like'
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ImageRepository'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '409':
+          $ref: 'common.yaml#/components/responses/409Conflict'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+    post:
+      summary: Create an image repository
+      tags:
+        - image-repository
+      description: Create an image repository, with standard create modifiers
+        as query parameters. See the ImageRepository component definition
+        for what is required to be provided in the request body.
+      operationId: createImageRepository
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/schema'
+        - $ref: 'common.yaml#/components/parameters/createMode'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ImageRepository'
+      responses:
+        '200':
+          $ref: 'common.yaml#/components/responses/200SuccessResponse'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '409':
+          $ref: 'common.yaml#/components/responses/409Conflict'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+  /api/v2/databases/{database}/schemas/{schema}/image-repositories/{name}:
+    get:
+      summary: Fetch an image repository.
+      tags:
+        - image-repository
+      description: Fetch an image repository using the SHOW command output.
+      operationId: fetchImageRepository
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/schema'
+        - $ref: 'common.yaml#/components/parameters/name'
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImageRepository'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+    delete:
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/schema'
+        - $ref: 'common.yaml#/components/parameters/name'
+        - $ref: 'common.yaml#/components/parameters/ifExists'
+      summary: Delete an image repository
+      tags:
+        - image-repository
+      description: Delete an image repository with the given name. If ifExists is used, the operation will
+        succeed even if the object does not exist. Otherwise, there will be a failure
+        if the drop is unsuccessful.
+      operationId: deleteImageRepository
+      responses:
+        '200':
+          $ref: 'common.yaml#/components/responses/200SuccessResponse'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+components:
+  schemas:
+    ImageRepository:
+      type: object
+      properties:
+        name:
+          $ref: './common.yaml#/components/schemas/Identifier'
+        database_name:
+          $ref: './common.yaml#/components/schemas/Identifier'
+          readOnly: true
+        schema_name:
+          $ref: './common.yaml#/components/schemas/Identifier'
+          readOnly: true
+        created_on:
+          type: string
+          format: date-time
+          readOnly: true
+        repository_url:
+          type: string
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+        owner_role_type:
+          type: string
+          readOnly: true
+      example:
+        name: image_repository_name
+        database_name: test_db
+        schema_name: test_schema
+        created_on: "YYYY-MM-DDTHH:MI:SS.FF6"
+        repository_url: https://www.snowflake.com
+        owner: IMAGE_ADMIN
+        owner_role_type: ADMIN
+      required:
+        - name
+tags:
+  - name: image-repository

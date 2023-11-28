@@ -1,5 +1,6 @@
 # Created by https://www.gitignore.io/api/c,c++,node,java,python,intellij,netbeans
 # Edit at https://www.gitignore.io/?templates=c,c++,node,java,python,intellij,netbeans
+.DS_Store
 
 ### C ###
 # Prerequisites
