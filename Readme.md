@@ -1,3 +1,3 @@
-## Snowflake Rest Api Specs
+## Snowflake REST API Specs
 
-This repository is the source for REST API specifications for Snowflake.
+This repository contains the OpenAPI specifications for Snowflake REST API.
