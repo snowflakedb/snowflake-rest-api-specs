@@ -521,14 +521,23 @@ components:
         warehouse:
           $ref: './common.yaml#/components/schemas/Identifier'
         schedule:
+          type: object
           oneOf:
-            - $ref: '#/components/schemas/MinutesSchedule'
-            - $ref: '#/components/schemas/CronSchedule'
-          discriminator:
-            propertyName: schedule_type
-            mapping:
-              CRON_TYPE: '#/components/schemas/CronSchedule'
-              MINUTES_TYPE: '#/components/schemas/MinutesSchedule'
+            - type: object
+              properties:
+                minutes:
+                  type: integer
+              required:
+                - minutes
+            - type: object
+              properties:
+                cron_expr:
+                  type: string
+                timezone:
+                  type: string
+              required:
+                - cron_expr
+                - timezone
         comment:
           type: string
         config:
@@ -612,28 +621,6 @@ components:
       required:
         - name
         - definition
-    CronSchedule:
-      type: object
-      properties:
-        cron_expr:
-          type: string
-        timezone:
-          type: string
-      example:
-        cron_expr: "* * * * ? *"
-        timezone: america/los_angeles
-      required:
-        - cron_expr
-        - timezone
-    MinutesSchedule:
-      type: object
-      properties:
-        minutes:
-          type: integer
-      example:
-        minutes: 10
-      required:
-        - minutes
 externalDocs:
   description: Streams and Tasks Reference
   url: https://docs.snowflake.com/en/sql-reference/commands-stream

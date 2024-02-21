@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.snowflake.snowapi</groupId>
+    <artifactId>rest-api-specs</artifactId>
+    <version>1.0.3</version>
+    <name>Snow Api open api specs</name>
+    <description>Repo to store api specs for snowflake resources.</description>
+
+    <url>https://github.com/snowflakedb/snowflake-rest-api-specs</url>
+    <scm>
+        <connection>scm:git:ssh://git@github.com:snowflakedb/snowflake-rest-api-specs.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:snowflakedb/snowflake-rest-api-specs.git</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/snowflakedb/snowflake-rest-api-specs</url>
+    </scm>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/SnowAPI/resources</directory>
+            </resource>
+        </resources>
+        <!-- disable default maven deploy plugin since we are using gpg:sign-and-deploy-file -->
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <configuration>
+                        <skip>true</skip>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-remote-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>bundle</goal>
+                        </goals>
+                        <configuration>
+                            <includes>
+                                <include>**/*.yaml</include>
+                            </includes>
+                            <resourcesDirectory>${project.basedir}/SnowAPI/resources</resourcesDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>release-deploy</id>
+            <activation>
+                <property>
+                    <name>release-deploy</name>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>sign-and-deploy-file</goal>
+                                </goals>
+                                <phase>deploy</phase>
+                                <configuration>
+                                    <file>target/${project.artifactId}-${project.version}.jar</file>
+                                    <repositoryId>release</repositoryId>
+                                    <url>https://nexus.int.snowflakecomputing.com/repository/Releases/</url>
+                                    <keyname>${env.GPG_KEY_ID}</keyname>
+                                    <passphrase>${env.GPG_KEY_PASSPHRASE}</passphrase>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>${project.artifactId}</artifactId>
+                                    <version>${project.version}</version>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
