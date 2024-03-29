@@ -1,0 +1,329 @@
+components:
+  schemas:
+    description: If the identifier contains spaces or special characters, the entire string must be enclosed in double quotes. Identifiers enclosed in double quotes are also case-sensitive.
+    Identifier:
+      type: string
+      description: "A Snowflake object identifier."
+      pattern: '^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$'
+     
+    ErrorResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: "Error message returned by server"
+        error_code:
+          type: string
+          description: "Error code"
+        request_id:
+          type: string
+          description: "Unique request id"
+      example:
+        message: "Compilation error!"
+        error_code: "390189"
+        request_id: "01afef9d-0607-0550-0001-dd270c3902d7"
+    SuccessResponse:
+      type: object
+      description: "Schema for all the success response returned by server"
+      properties:
+        status:
+          type: string
+          description: "Message returned by server"
+      example:
+        status: "Request successfully completed"
+    PointOfTime:
+      type: object
+      description: A point of time.
+      required:
+        - point_of_time_type
+      properties:
+        point_of_time_type:
+          description: Type of the point of time, can be `timestamp`, `offset`, or `statement`
+          type: string
+        reference:
+          type: string
+          description: The relation to the point of time.
+            At the time of writing `at` and `before` are supported.
+      discriminator:
+        propertyName: point_of_time_type
+        mapping:
+          timestamp: PointOfTimeTimestamp
+          offset: PointOfTimeOffset
+          statement: PointOfTimeStatement
+    PointOfTimeTimestamp:
+      description: A point of time that is identified by a timestamp.
+      allOf:
+        - $ref: '#/components/schemas/PointOfTime'
+      properties:
+        timestamp:
+          type: string
+          description: Timestamp of the point of time.
+    PointOfTimeOffset:
+      description: A point of time that is identified by an offset in reference to right now.
+      allOf:
+        - $ref: '#/components/schemas/PointOfTime'
+      properties:
+        offset:
+          type: string
+          description: Offset of the point of time.
+    PointOfTimeStatement:
+      description: A point of time that is identified by when a statement was executed.
+      allOf:
+        - $ref: '#/components/schemas/PointOfTime'
+      properties:
+        statement:
+          type: string
+          description: Statement of the point of time.
+  parameters:
+    database:
+      name: database
+      description: String that specifies the identifier (i.e. name) for the database which the resource belongs to.
+      required: true
+      in: 'path'
+      schema:
+        example: TEST_DB
+        $ref: './common.yaml#/components/schemas/Identifier'
+    schema:
+      name: schema
+      description: String that specifies the identifier (i.e. name) for the schema which the resource belongs to.
+      required: true
+      in: 'path'
+      schema:
+        example: TEST_SCHEMA
+        $ref: './common.yaml#/components/schemas/Identifier'
+    name:
+      name: name
+      description: String that specifies the identifier (i.e. name) for the resource.
+      required: true
+      in: 'path'
+      schema:
+        example: TEST_NAME
+        $ref: './common.yaml#/components/schemas/Identifier'
+    createMode:
+      name: 'createMode'
+      description: A query parameter allowing support for different modes of resource creation.
+      in: 'query'
+      schema:
+        type: string
+        enum: [errorIfExists, orReplace, ifNotExists]
+        example: errorIfExists
+        default: errorIfExists
+    ifExists:
+      name: 'ifExists'
+      description: A query parameter determining if the endpoint will not throw an error if the resource does not exist.
+      in: 'query'
+      schema:
+        type: boolean
+        example: false
+        default: false
+    like:
+      name: 'like'
+      description: A query parameter that filters the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters
+      in: 'query'
+      schema:
+        type: string
+        example: "test_%"
+    startsWith:
+      name: 'startsWith'
+      description: A query parameter that filters the command output based on the string of characters that appear at the beginning of the object name. Uses case-sensitive pattern matching.
+      in: 'query'
+      schema:
+        type: string
+        example: "test"
+    rootOnly:
+      name: 'rootOnly'
+      description: A query parameter that filters the command output to return only root resources (resources with no predecessors).
+      in: 'query'
+      schema:
+        type: boolean
+        example: false
+        default: false
+    showLimit:
+      name: 'showLimit'
+      description: A query parameter that limits the maximum number of rows returned by a command.
+      in: 'query'
+      schema:
+        type: integer
+        example: 10
+    fromName:
+      name: 'fromName'
+      description: A query parameter enables fetching rows only following the first row whose object name matches the specified string. Case-sensitive and does not have to be the full name.
+      in: 'query'
+      schema:
+        type: string
+        example: "from_test"
+    copyGrants:
+      name: copyGrants
+      description: A query parameter enabled copy grants during the creation of the object.
+      in: 'query'
+      schema:
+        type: boolean
+        example: false
+        default: false
+    sessionId:
+      name: 'sessionId'
+      description: A unique ID for the current session.
+      required: true
+      in: path
+      schema:
+        type: integer
+        format: uuid
+        example: 524514326772799
+    content-type:
+      name: 'Content-Type'
+      description: The type of content for the resource. Currently supports application/json.
+      in: header
+      schema:
+        type: string
+        enum: ['application/json']
+    accept:
+      name: 'Accept'
+      description: The acceptance type for the resource. Currently supports application/json.
+      in: header
+      schema:
+        type: string
+        enum: ['application/json']
+    x-snowflake-authorization-token-type:
+      name: 'X-Snowflake-Authorization-Token-Type'
+      description: The type for the Snowflake authorization token. Currently supports keypair-jwt tokens.
+      in: header
+      schema:
+        type: string
+        enum: ['KEYPAIR_JWT']
+    x-sfc-session:
+      name: 'X-Sfc-Session'
+      description: The token for the current Snowflake session.
+      in: header
+      required: false
+      schema:
+        type: string
+        description: Snowflake Session Token
+        example: "ver:3-hint:1000-ABCD="
+  securitySchemes:
+    keyPair:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Set X-Snowflake-Authorization-Token-Type to KEYPAIR_JWT if the token is a key pair authn JWT.
+    ExternalOAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Configure External Oauth with Snowflake (refer to docs). Set X-Snowflake-Authorization-Token-Type to OAUTH and set the Token to auth token received from the external Auth server.
+    snowflakeOAuth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: /oauth/authorize
+          scopes: {}
+  responses:
+    '200SuccessResponse':
+      description: Successful
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SuccessResponse'
+
+    '201SuccessCreatedResponse':
+      description: Successfully create new resource on server.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SuccessResponse'
+
+    '202SuccessAcceptedResponse':
+      description: Successfully accept the request, but it is not completed yet.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SuccessResponse'
+
+    '400BadRequest':
+      description: >-
+        Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the request body for retry.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    '401Unauthorized':
+      description: >-
+        Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a new access token for retry.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    '403Forbidden':
+      description: >-
+        Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    '404NotFound':
+      description: >-
+        Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    '405MethodNotAllowed':
+      description: >-
+        Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    '409Conflict':
+      description: >-
+        Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the options orReplace/ifNotExists.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    '410Gone':
+      description: >-
+        Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    '415UnsupportedMediaType':
+      description: >-
+        The request header Content-Type includes an unsupported media type. The API supports application/json only. If none specified, the request payload is taken as JSON, but if any other media type is specified, this error is returned.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    '429LimitExceeded':
+      description: >-
+        Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    '500InternalServerError':
+      description: >-
+        Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    '503ServiceUnavailable':
+      description: >-
+        Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    '504GatewayTimeout':
+      description: >-
+        Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+
+  security:
+    - keyPair: []
+    - ExternalOAuth: []
+    - snowflakeOAuth: []

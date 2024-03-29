@@ -1,0 +1,185 @@
+openapi: 3.0.0
+servers:
+  - url: https://org-account.snowflakecomputing.com
+    description: Snowflake Session API
+info:
+  title: Snowflake Session API
+  version: 0.0.1
+  description: >-
+    The Snowflake Session API is a REST API that you can use to manage Snowflake sessions and session tokens.
+  contact:
+    name: Snowflake, Inc.
+    url: https://www.snowflake.com
+    email: support@snowflake.com
+security:
+  - NONE: []
+  - bearerAuth: []
+paths:
+  /api/v2/sessions:
+    post:
+      summary: Create a session
+      tags:
+        - session
+      description: Create a session, with keys pairs or Oath authentication methods.
+      operationId: createSession
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/content-type'
+        - $ref: 'common.yaml#/components/parameters/accept'
+        - $ref: 'common.yaml#/components/parameters/x-snowflake-authorization-token-type'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateSessionRequest'
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateSessionResponse' 
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '409':
+          $ref: 'common.yaml#/components/responses/409Conflict'
+        '429':
+          $ref: 'common.yaml#/components/responses/429LimitExceeded'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+  /api/v2/sessions/{sessionId}:
+    delete:
+      summary: Close a session
+      tags:
+        - session
+      description: Close the current session
+      operationId: deleteSession
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/sessionId'
+        - $ref: 'common.yaml#/components/parameters/content-type'
+      responses:
+        '200':
+          $ref: 'common.yaml#/components/responses/200SuccessResponse'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '429':
+          $ref: 'common.yaml#/components/responses/429LimitExceeded'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+
+  /api/v2/sessions/{sessionId}:refresh-token:
+    post:
+      summary: Request new session tokens
+      tags:
+        - session
+      description: Request new session tokens by providing the master token.
+      operationId: requestSessionToken
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/sessionId'
+        - $ref: 'common.yaml#/components/parameters/content-type'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenRequest'
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateSessionResponse' 
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '409':
+          $ref: 'common.yaml#/components/responses/409Conflict'
+        '429':
+          $ref: 'common.yaml#/components/responses/429LimitExceeded'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      $ref: 'common.yaml#/components/securitySchemes/keyPair'
+  schemas:
+    CreateSessionResponse:
+      type: object
+      description: Schema for all the error responses returned by server when creating a session.
+      properties:
+        token:
+          type: string
+          readOnly: true
+          description: Token for creating a session
+        validityInSeconds:
+          type: integer
+          readOnly: true
+          description: The length of time for which the current session token is valid in seconds.
+        masterToken:
+          type: string
+          description: A master token for an always-valid session.
+          readOnly: true
+        masterValidityInSeconds:
+          type: integer
+          description: The length of time for which the master session token is valid in seconds.
+          readOnly: true
+        sessionId:
+          type: integer
+          description: A unique ID for the current session.
+          readOnly: true
+    CreateSessionRequest:
+      type: object
+      description: A request to create a session.
+      properties:
+        roleName:
+          type: string
+          description: The role to be used for the session.
+    TokenRequest:
+      type: object
+      description: A request to create a session token.
+      properties:
+        sessionToken:
+          type: string
+          description: A session token.
+
+tags:
+  - name: session
