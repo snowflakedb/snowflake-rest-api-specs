@@ -1,0 +1,337 @@
+openapi: 3.0.0
+servers:
+  - description: Snowflake Schema API
+    url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Schema API
+  description: >-
+    The Snowflake Schema API is a REST API that you can use to access, update, and perform certain actions on Schema resource in Snowflake.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  # TODO: add rename, swap with
+  /api/v2/databases/{database}/schemas:
+    get:
+      summary: List schemas
+      tags:
+        - schema
+      description: Lists the accessible schemas.
+      operationId: listSchemas
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/like'
+        - $ref: 'common.yaml#/components/parameters/startsWith'
+        - $ref: 'common.yaml#/components/parameters/showLimit'
+        - $ref: 'common.yaml#/components/parameters/fromName'
+        - name: 'history'
+          in: 'query'
+          description: Includes dropped schemas that have not yet been purged.
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Schema'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+    post:
+      summary: Create a schema
+      tags:
+        - schema
+      description: Create a schema, with modifiers as query parameters.
+        See the schema definition for what is required to
+        be provided in the request body. (Cloning not currently supported)
+      operationId: createSchema
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/createMode'
+        - name: kind
+          in: query
+          description: Type of schema. At the time of writing this transient and permanent (represented by the empty string) are supported.
+          schema:
+            type: string
+            default: ''
+        - name: with_managed_access
+          in: query
+          description: Specifies a managed schema. Managed access schemas centralize privilege management with the schema owner.
+          schema:
+            type: boolean
+            default: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Schema'
+      responses:
+        '200':
+          $ref: 'common.yaml#/components/responses/200SuccessResponse'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '409':
+          $ref: 'common.yaml#/components/responses/409Conflict'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout' 
+  /api/v2/databases/{database}/schemas/{name}/clone:
+    post:
+      summary: Clone a schema
+      tags:
+        - schema
+      description: Clone an existing schema, with modifiers as query parameters.
+        See the schema definition for what is required to
+        be provided in the request body. (Cloning not currently supported)
+      operationId: cloneSchema
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/name'
+        - $ref: 'common.yaml#/components/parameters/createMode'
+        - name: kind
+          in: query
+          description: Type of schema. At the time of writing this transient and permanent (represented by the empty string) are supported.
+          schema:
+            type: string
+            default: ''
+        - name: with_managed_access
+          in: query
+          description: Specifies a managed schema. Managed access schemas centralize privilege management with the schema owner.
+          schema:
+            type: boolean
+            default: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SchemaClone'
+              
+      responses:
+        '200':
+          $ref: 'common.yaml#/components/responses/200SuccessResponse'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '409':
+          $ref: 'common.yaml#/components/responses/409Conflict'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout' 
+  /api/v2/databases/{database}/schemas/{name}:
+    get:
+      tags:
+        - schema
+      description: Fetch a schema.
+      operationId: fetchSchema
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/name'
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Schema'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+    delete:
+      summary: Delete a schema.
+      tags:
+        - schema
+      description: Delete a schema with the given name. If ifExists is used, the operation will
+                   succeed even if the object does not exist. Otherwise, there will be a failure
+                   if the drop is unsuccessful.
+      operationId: deleteSchema
+      parameters:
+        - $ref: 'common.yaml#/components/parameters/database'
+        - $ref: 'common.yaml#/components/parameters/name'
+        - $ref: 'common.yaml#/components/parameters/ifExists'
+        - name: restrict
+          in: query
+          description: Specifies whether the schema should not be droppped if there are existing foreign key references.
+            Returns a warning instead.
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          $ref: 'common.yaml#/components/responses/200SuccessResponse'
+        '400':
+          $ref: 'common.yaml#/components/responses/400BadRequest'
+        '401':
+          $ref: 'common.yaml#/components/responses/401Unauthorized'
+        '403':
+          $ref: 'common.yaml#/components/responses/403Forbidden'
+        '404':
+          $ref: 'common.yaml#/components/responses/404NotFound'
+        '405':
+          $ref: 'common.yaml#/components/responses/405MethodNotAllowed'
+        '500':
+          $ref: 'common.yaml#/components/responses/500InternalServerError'
+        '503':
+          $ref: 'common.yaml#/components/responses/503ServiceUnavailable'
+        '504':
+          $ref: 'common.yaml#/components/responses/504GatewayTimeout'
+components:
+  schemas:
+    Schema:
+      type: object
+      description: A Snowflake schema
+      properties:
+        # from show command
+        created_on:
+          type: string
+          format: date-time
+          readOnly: true
+          description: Schema creation date and time
+        name:
+          $ref: './common.yaml#/components/schemas/Identifier'
+          description: Name of the schema
+        is_default:
+          type: boolean
+          readOnly: true
+          description: Default schema for a user
+        is_current:
+          type: boolean
+          readOnly: true
+          description: Current schema for the session
+        database_name:
+          type: string
+          readOnly: true
+          description: Database that the schema belongs to
+        owner:
+          type: string
+          readOnly: true
+          description: Name of the role that owns the schema
+        comment:
+          type: string
+          description: Specifies a comment for the schema
+        options:
+          type: string
+          readOnly: true
+        retention_time:
+          type: integer
+          readOnly: true
+          description: Number of days that historical data is retained for Time Travel.
+        dropped_on:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
+          description: Schema dropped date and time
+        owner_role_type:
+          type: string
+          readOnly: true
+          description: The type of role that owns the object
+        budget:
+          type: string
+          readOnly: true
+          description: >-
+            A budget defines a monthly spending limit on the compute costs 
+            for a Snowflake account or a custom group of Snowflake objects.
+        # from parameters
+        data_retention_time_in_days:  # technically also available from show command
+          type: integer
+          description: Specifies the number of days for which Time Travel actions (CLONE and UNDROP) can be performed on the schema, 
+            as well as specifying the default Time Travel retention time for all tables created in the schema
+        default_ddl_collation:
+          type: string
+          description: Specifies a default collation specification for all tables added to the schema. 
+            The default can be overridden at the individual table level
+        log_level:
+          type: string
+          description: Specifies the severity level of messages that should be ingested
+            and made available in the active event table.
+            At the time of writing the supported values are TRACE, DEBUG, INFO, WARN,
+            ERROR, FATAL and OFF.
+        pipe_execution_paused:
+          type: boolean
+          description: Pipe execution status
+        max_data_extension_time_in_days:
+          type: integer
+          description: Object parameter that specifies the maximum number of days for which Snowflake can extend 
+            the data retention period for tables in the schema to prevent streams on the tables from becoming stale
+        suspend_task_after_num_failures:
+          type: integer
+          description: Specifies the number of consecutive failed task runs after which the current task is suspended automatically.
+        trace_level:
+          type: string
+          description: Controls how trace events are ingested into the event table.
+            At the time of writing the supported values are ALWAYS, ON_EVENT and OFF.
+        user_task_managed_initial_warehouse_size:
+          type: string
+          description: Specifies the size of the compute resources to provision for the first run of the task, 
+            before a task history is available for Snowflake to determine an ideal size.
+        user_task_timeout_ms:
+          type: integer
+          description: Specifies the time limit on a single run of the task before it times out in milliseconds
+      required:
+        - name
+    SchemaClone:
+      type: object
+      description: Clone schema
+      allOf:
+          - $ref: '#/components/schemas/Schema'
+      properties:
+        point_of_time:
+          $ref: 'common.yaml#/components/schemas/PointOfTime'
+tags:
+  - name: schema
