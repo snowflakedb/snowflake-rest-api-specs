@@ -1,0 +1,2440 @@
+{
+	"info": {
+		"_postman_id": "5d3493db-15b9-4693-aa80-5deaae573cb9",
+		"name": "Snowflake Image Repository API",
+		"description": "The Snowflake Image Repository API is a REST API that you can use to access, update, and perform certain actions on Image Repository resource in Snowflake.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28868798",
+		"_collection_link": "https://snowflake.postman.co/workspace/PrPr-Fast-Follow-up~221950c9-2cfb-4efc-9682-eac740a73ea5/collection/28868798-5d3493db-15b9-4693-aa80-5deaae573cb9?action=share&source=collection_link&creator=28868798"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v2",
+					"item": [
+						{
+							"name": "databases",
+							"item": [
+								{
+									"name": "{database}",
+									"item": [
+										{
+											"name": "schemas",
+											"item": [
+												{
+													"name": "{schema}",
+													"item": [
+														{
+															"name": "image-repositories",
+															"item": [
+																{
+																	"name": "{name}",
+																	"item": [
+																		{
+																			"name": "Fetch an image repository.",
+																			"request": {
+																				"method": "GET",
+																				"header": [
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories",
+																						":name"
+																					],
+																					"variable": [
+																						{
+																							"key": "database",
+																							"value": "\"){k\"\"\"\"\"\"\"",
+																							"description": "(Required) "
+																						},
+																						{
+																							"key": "schema",
+																							"value": "\"){k\"\"\"\"\"\"\"",
+																							"description": "(Required) "
+																						},
+																						{
+																							"key": "name",
+																							"value": "\"){k\"\"\"\"\"\"\"",
+																							"description": "(Required) "
+																						}
+																					]
+																				},
+																				"description": "Fetch an image repository using the SHOW command output."
+																			},
+																			"response": [
+																				{
+																					"name": "successful",
+																					"originalRequest": {
+																						"method": "GET",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "OK",
+																					"code": 200,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+																					"originalRequest": {
+																						"method": "GET",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Bad Request",
+																					"code": 400,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+																					"originalRequest": {
+																						"method": "GET",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Unauthorized",
+																					"code": 401,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+																					"originalRequest": {
+																						"method": "GET",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Forbidden",
+																					"code": 403,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+																					"originalRequest": {
+																						"method": "GET",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Not Found",
+																					"code": 404,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+																					"originalRequest": {
+																						"method": "GET",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Method Not Allowed",
+																					"code": 405,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+																					"originalRequest": {
+																						"method": "GET",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Internal Server Error",
+																					"code": 500,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+																					"originalRequest": {
+																						"method": "GET",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Service Unavailable",
+																					"code": 503,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+																					"originalRequest": {
+																						"method": "GET",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Gateway Timeout",
+																					"code": 504,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				}
+																			]
+																		},
+																		{
+																			"name": "Delete an image repository",
+																			"request": {
+																				"method": "DELETE",
+																				"header": [
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name?ifExists=false",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories",
+																						":name"
+																					],
+																					"query": [
+																						{
+																							"key": "ifExists",
+																							"value": "false"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database",
+																							"value": "\"){k\"\"\"\"\"\"\"",
+																							"description": "(Required) "
+																						},
+																						{
+																							"key": "schema",
+																							"value": "\"){k\"\"\"\"\"\"\"",
+																							"description": "(Required) "
+																						},
+																						{
+																							"key": "name",
+																							"value": "\"){k\"\"\"\"\"\"\"",
+																							"description": "(Required) "
+																						}
+																					]
+																				},
+																				"description": "Delete an image repository with the given name. If ifExists is used, the operation will succeed even if the object does not exist. Otherwise, there will be a failure if the drop is unsuccessful."
+																			},
+																			"response": [
+																				{
+																					"name": "Successful",
+																					"originalRequest": {
+																						"method": "DELETE",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name?ifExists=false",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"query": [
+																								{
+																									"key": "ifExists",
+																									"value": "false"
+																								}
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "OK",
+																					"code": 200,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"status\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+																					"originalRequest": {
+																						"method": "DELETE",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name?ifExists=false",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"query": [
+																								{
+																									"key": "ifExists",
+																									"value": "false"
+																								}
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Bad Request",
+																					"code": 400,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+																					"originalRequest": {
+																						"method": "DELETE",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name?ifExists=false",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"query": [
+																								{
+																									"key": "ifExists",
+																									"value": "false"
+																								}
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Unauthorized",
+																					"code": 401,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+																					"originalRequest": {
+																						"method": "DELETE",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name?ifExists=false",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"query": [
+																								{
+																									"key": "ifExists",
+																									"value": "false"
+																								}
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Forbidden",
+																					"code": 403,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+																					"originalRequest": {
+																						"method": "DELETE",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name?ifExists=false",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"query": [
+																								{
+																									"key": "ifExists",
+																									"value": "false"
+																								}
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Not Found",
+																					"code": 404,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+																					"originalRequest": {
+																						"method": "DELETE",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name?ifExists=false",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"query": [
+																								{
+																									"key": "ifExists",
+																									"value": "false"
+																								}
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Method Not Allowed",
+																					"code": 405,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+																					"originalRequest": {
+																						"method": "DELETE",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name?ifExists=false",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"query": [
+																								{
+																									"key": "ifExists",
+																									"value": "false"
+																								}
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Internal Server Error",
+																					"code": 500,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+																					"originalRequest": {
+																						"method": "DELETE",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name?ifExists=false",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"query": [
+																								{
+																									"key": "ifExists",
+																									"value": "false"
+																								}
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Service Unavailable",
+																					"code": 503,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				},
+																				{
+																					"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+																					"originalRequest": {
+																						"method": "DELETE",
+																						"header": [
+																							{
+																								"key": "Accept",
+																								"value": "application/json"
+																							}
+																						],
+																						"url": {
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories/:name?ifExists=false",
+																							"host": [
+																								"{{baseUrl}}"
+																							],
+																							"path": [
+																								"api",
+																								"v2",
+																								"databases",
+																								":database",
+																								"schemas",
+																								":schema",
+																								"image-repositories",
+																								":name"
+																							],
+																							"query": [
+																								{
+																									"key": "ifExists",
+																									"value": "false"
+																								}
+																							],
+																							"variable": [
+																								{
+																									"key": "database"
+																								},
+																								{
+																									"key": "schema"
+																								},
+																								{
+																									"key": "name"
+																								}
+																							]
+																						}
+																					},
+																					"status": "Gateway Timeout",
+																					"code": 504,
+																					"_postman_previewlanguage": "json",
+																					"header": [
+																						{
+																							"key": "Content-Type",
+																							"value": "application/json"
+																						}
+																					],
+																					"cookie": [],
+																					"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	"name": "List image repositories",
+																	"request": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"databases",
+																				":database",
+																				"schemas",
+																				":schema",
+																				"image-repositories"
+																			],
+																			"query": [
+																				{
+																					"key": "like",
+																					"value": "<string>",
+																					"disabled": true
+																				}
+																			],
+																			"variable": [
+																				{
+																					"key": "database",
+																					"value": "REST_DB",
+																					"description": "(Required) "
+																				},
+																				{
+																					"key": "schema",
+																					"value": "test_schema",
+																					"description": "(Required) "
+																				}
+																			]
+																		},
+																		"description": "Lists the image repositories under the database and schema."
+																	},
+																	"response": [
+																		{
+																			"name": "successful",
+																			"originalRequest": {
+																				"method": "GET",
+																				"header": [
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?like=<string>",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "like",
+																							"value": "<string>"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "OK",
+																			"code": 200,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "[\n  {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"l\\\"\",\n    \"database_name\": \"kYC9Mf2$p\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"980\\\"\",\n    \"created_on\": \"<dateTime>\",\n    \"repository_url\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\"\n  },\n  {\n    \"name\": \"rTdekk\",\n    \"database_name\": \"lB\",\n    \"schema_name\": \"AS2WrFwA\",\n    \"created_on\": \"<dateTime>\",\n    \"repository_url\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\"\n  }\n]"
+																		},
+																		{
+																			"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+																			"originalRequest": {
+																				"method": "GET",
+																				"header": [
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?like=<string>",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "like",
+																							"value": "<string>"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Bad Request",
+																			"code": 400,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+																			"originalRequest": {
+																				"method": "GET",
+																				"header": [
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?like=<string>",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "like",
+																							"value": "<string>"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Unauthorized",
+																			"code": 401,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+																			"originalRequest": {
+																				"method": "GET",
+																				"header": [
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?like=<string>",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "like",
+																							"value": "<string>"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Forbidden",
+																			"code": 403,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+																			"originalRequest": {
+																				"method": "GET",
+																				"header": [
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?like=<string>",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "like",
+																							"value": "<string>"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Not Found",
+																			"code": 404,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+																			"originalRequest": {
+																				"method": "GET",
+																				"header": [
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?like=<string>",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "like",
+																							"value": "<string>"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Method Not Allowed",
+																			"code": 405,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
+																			"originalRequest": {
+																				"method": "GET",
+																				"header": [
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?like=<string>",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "like",
+																							"value": "<string>"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Conflict",
+																			"code": 409,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+																			"originalRequest": {
+																				"method": "GET",
+																				"header": [
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?like=<string>",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "like",
+																							"value": "<string>"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Internal Server Error",
+																			"code": 500,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+																			"originalRequest": {
+																				"method": "GET",
+																				"header": [
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?like=<string>",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "like",
+																							"value": "<string>"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Service Unavailable",
+																			"code": 503,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+																			"originalRequest": {
+																				"method": "GET",
+																				"header": [
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?like=<string>",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "like",
+																							"value": "<string>"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Gateway Timeout",
+																			"code": 504,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		}
+																	]
+																},
+																{
+																	"name": "Create an image repository",
+																	"request": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"name\": \"imageRepoName\"\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?createMode=orReplace",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v2",
+																				"databases",
+																				":database",
+																				"schemas",
+																				":schema",
+																				"image-repositories"
+																			],
+																			"query": [
+																				{
+																					"key": "createMode",
+																					"value": "orReplace"
+																				}
+																			],
+																			"variable": [
+																				{
+																					"key": "database",
+																					"value": "REST_DB",
+																					"description": "(Required) "
+																				},
+																				{
+																					"key": "schema",
+																					"value": "TEST_SCHEMA",
+																					"description": "(Required) "
+																				}
+																			]
+																		},
+																		"description": "Create an image repository, with standard create modifiers as query parameters. See the ImageRepository component definition for what is required to be provided in the request body."
+																	},
+																	"response": [
+																		{
+																			"name": "Successful",
+																			"originalRequest": {
+																				"method": "POST",
+																				"header": [
+																					{
+																						"key": "Content-Type",
+																						"value": "application/json"
+																					},
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"body": {
+																					"mode": "raw",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"options": {
+																						"raw": {
+																							"headerFamily": "json",
+																							"language": "json"
+																						}
+																					}
+																				},
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?createMode=errorIfExists",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "createMode",
+																							"value": "errorIfExists"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "OK",
+																			"code": 200,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"status\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+																			"originalRequest": {
+																				"method": "POST",
+																				"header": [
+																					{
+																						"key": "Content-Type",
+																						"value": "application/json"
+																					},
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"body": {
+																					"mode": "raw",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"options": {
+																						"raw": {
+																							"headerFamily": "json",
+																							"language": "json"
+																						}
+																					}
+																				},
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?createMode=errorIfExists",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "createMode",
+																							"value": "errorIfExists"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Bad Request",
+																			"code": 400,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+																			"originalRequest": {
+																				"method": "POST",
+																				"header": [
+																					{
+																						"key": "Content-Type",
+																						"value": "application/json"
+																					},
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"body": {
+																					"mode": "raw",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"options": {
+																						"raw": {
+																							"headerFamily": "json",
+																							"language": "json"
+																						}
+																					}
+																				},
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?createMode=errorIfExists",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "createMode",
+																							"value": "errorIfExists"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Unauthorized",
+																			"code": 401,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+																			"originalRequest": {
+																				"method": "POST",
+																				"header": [
+																					{
+																						"key": "Content-Type",
+																						"value": "application/json"
+																					},
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"body": {
+																					"mode": "raw",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"options": {
+																						"raw": {
+																							"headerFamily": "json",
+																							"language": "json"
+																						}
+																					}
+																				},
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?createMode=errorIfExists",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "createMode",
+																							"value": "errorIfExists"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Forbidden",
+																			"code": 403,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+																			"originalRequest": {
+																				"method": "POST",
+																				"header": [
+																					{
+																						"key": "Content-Type",
+																						"value": "application/json"
+																					},
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"body": {
+																					"mode": "raw",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"options": {
+																						"raw": {
+																							"headerFamily": "json",
+																							"language": "json"
+																						}
+																					}
+																				},
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?createMode=errorIfExists",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "createMode",
+																							"value": "errorIfExists"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Not Found",
+																			"code": 404,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+																			"originalRequest": {
+																				"method": "POST",
+																				"header": [
+																					{
+																						"key": "Content-Type",
+																						"value": "application/json"
+																					},
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"body": {
+																					"mode": "raw",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"options": {
+																						"raw": {
+																							"headerFamily": "json",
+																							"language": "json"
+																						}
+																					}
+																				},
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?createMode=errorIfExists",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "createMode",
+																							"value": "errorIfExists"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Method Not Allowed",
+																			"code": 405,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
+																			"originalRequest": {
+																				"method": "POST",
+																				"header": [
+																					{
+																						"key": "Content-Type",
+																						"value": "application/json"
+																					},
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"body": {
+																					"mode": "raw",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"options": {
+																						"raw": {
+																							"headerFamily": "json",
+																							"language": "json"
+																						}
+																					}
+																				},
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?createMode=errorIfExists",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "createMode",
+																							"value": "errorIfExists"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Conflict",
+																			"code": 409,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+																			"originalRequest": {
+																				"method": "POST",
+																				"header": [
+																					{
+																						"key": "Content-Type",
+																						"value": "application/json"
+																					},
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"body": {
+																					"mode": "raw",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"options": {
+																						"raw": {
+																							"headerFamily": "json",
+																							"language": "json"
+																						}
+																					}
+																				},
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?createMode=errorIfExists",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "createMode",
+																							"value": "errorIfExists"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Internal Server Error",
+																			"code": 500,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+																			"originalRequest": {
+																				"method": "POST",
+																				"header": [
+																					{
+																						"key": "Content-Type",
+																						"value": "application/json"
+																					},
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"body": {
+																					"mode": "raw",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"options": {
+																						"raw": {
+																							"headerFamily": "json",
+																							"language": "json"
+																						}
+																					}
+																				},
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?createMode=errorIfExists",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "createMode",
+																							"value": "errorIfExists"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Service Unavailable",
+																			"code": 503,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		},
+																		{
+																			"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+																			"originalRequest": {
+																				"method": "POST",
+																				"header": [
+																					{
+																						"key": "Content-Type",
+																						"value": "application/json"
+																					},
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"body": {
+																					"mode": "raw",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"options": {
+																						"raw": {
+																							"headerFamily": "json",
+																							"language": "json"
+																						}
+																					}
+																				},
+																				"url": {
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?createMode=errorIfExists",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"api",
+																						"v2",
+																						"databases",
+																						":database",
+																						"schemas",
+																						":schema",
+																						"image-repositories"
+																					],
+																					"query": [
+																						{
+																							"key": "createMode",
+																							"value": "errorIfExists"
+																						}
+																					],
+																					"variable": [
+																						{
+																							"key": "database"
+																						},
+																						{
+																							"key": "schema"
+																						}
+																					]
+																				}
+																			},
+																			"status": "Gateway Timeout",
+																			"code": 504,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "Snowflake Token=\"{{sessionToken}}\"",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://org-account.snowflakecomputing.com"
+		}
+	]
+}
