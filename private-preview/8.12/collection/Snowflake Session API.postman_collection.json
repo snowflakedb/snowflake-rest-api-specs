@@ -1,11 +1,11 @@
 {
 	"info": {
-		"_postman_id": "5b5d94f2-fcac-4032-a88c-16783d9fd9a3",
-		"name": "Snowflake Sessions API",
-		"description": "The Snowflake Sessions API is a REST API that you can use to manage Snowflake sessions and session tokens.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
+		"_postman_id": "12160131-018d-4ff5-8c7d-c6f3262ddb58",
+		"name": "Snowflake Session API",
+		"description": "The Snowflake Session API is a REST API that you can use to manage Snowflake sessions and session tokens.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28868798",
-		"_collection_link": "https://snowflake.postman.co/workspace/SnowApi-Demo~576e3337-09c5-4d42-a068-1fb91ebec0b9/collection/28868798-5b5d94f2-fcac-4032-a88c-16783d9fd9a3?action=share&source=collection_link&creator=28868798"
+		"_collection_link": "https://snowflake.postman.co/workspace/PrPr-Fast-Follow-up~221950c9-2cfb-4efc-9682-eac740a73ea5/collection/28868798-12160131-018d-4ff5-8c7d-c6f3262ddb58?action=share&source=collection_link&creator=28868798"
 	},
 	"item": [
 		{
@@ -22,37 +22,7 @@
 									"item": [
 										{
 											"name": "Close a session",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"exec": [
-															"",
-															"pm.environment.set(\"sessionToken\", \"\");",
-															"pm.environment.set(\"masterToken\", \"\")",
-															"pm.environment.set(\"sessionId\", \"\")",
-															""
-														],
-														"type": "text/javascript"
-													}
-												}
-											],
 											"request": {
-												"auth": {
-													"type": "apikey",
-													"apikey": [
-														{
-															"key": "value",
-															"value": "Snowflake Token=\"{{sessionToken}}\"",
-															"type": "string"
-														},
-														{
-															"key": "key",
-															"value": "Authorization",
-															"type": "string"
-														}
-													]
-												},
 												"method": "DELETE",
 												"header": [
 													{
@@ -74,7 +44,7 @@
 													"variable": [
 														{
 															"key": "sessionId",
-															"value": "{{sessionId}}",
+															"value": "<integer>",
 															"description": "(Required) "
 														}
 													]
@@ -87,10 +57,6 @@
 													"originalRequest": {
 														"method": "DELETE",
 														"header": [
-															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
 															{
 																"key": "Accept",
 																"value": "application/json"
@@ -137,10 +103,6 @@
 														"method": "DELETE",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Accept",
 																"value": "application/json"
 															},
@@ -185,10 +147,6 @@
 													"originalRequest": {
 														"method": "DELETE",
 														"header": [
-															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
 															{
 																"key": "Accept",
 																"value": "application/json"
@@ -235,10 +193,6 @@
 														"method": "DELETE",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Accept",
 																"value": "application/json"
 															},
@@ -283,10 +237,6 @@
 													"originalRequest": {
 														"method": "DELETE",
 														"header": [
-															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
 															{
 																"key": "Accept",
 																"value": "application/json"
@@ -333,10 +283,6 @@
 														"method": "DELETE",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Accept",
 																"value": "application/json"
 															},
@@ -381,10 +327,6 @@
 													"originalRequest": {
 														"method": "DELETE",
 														"header": [
-															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
 															{
 																"key": "Accept",
 																"value": "application/json"
@@ -431,10 +373,6 @@
 														"method": "DELETE",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Accept",
 																"value": "application/json"
 															},
@@ -480,10 +418,6 @@
 														"method": "DELETE",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Accept",
 																"value": "application/json"
 															},
@@ -528,10 +462,6 @@
 													"originalRequest": {
 														"method": "DELETE",
 														"header": [
-															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
 															{
 																"key": "Accept",
 																"value": "application/json"
@@ -581,38 +511,7 @@
 									"item": [
 										{
 											"name": "Request new session tokens",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"exec": [
-															"",
-															"var jsonData = pm.response.json();",
-															"pm.environment.set(\"sessionToken\", jsonData[\"token\"]);",
-															"pm.environment.set(\"masterToken\", jsonData[\"masterToken\"])",
-															"pm.environment.set(\"sessionId\", jsonData[\"sessionId\"])",
-															""
-														],
-														"type": "text/javascript"
-													}
-												}
-											],
 											"request": {
-												"auth": {
-													"type": "apikey",
-													"apikey": [
-														{
-															"key": "value",
-															"value": "Snowflake Token=\"{{masterToken}}\"",
-															"type": "string"
-														},
-														{
-															"key": "key",
-															"value": "Authorization",
-															"type": "string"
-														}
-													]
-												},
 												"method": "POST",
 												"header": [
 													{
@@ -626,7 +525,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"sessionToken\": \"{{sessionToken}}\"\n}",
+													"raw": "{\n  \"sessionToken\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -655,10 +554,6 @@
 														"method": "POST",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Content-Type",
 																"value": "application/json"
 															},
@@ -674,7 +569,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"masterToken\": \"<string>\"\n}",
+															"raw": "{\n  \"sessionToken\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -713,10 +608,6 @@
 														"method": "POST",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Content-Type",
 																"value": "application/json"
 															},
@@ -732,7 +623,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"masterToken\": \"<string>\"\n}",
+															"raw": "{\n  \"sessionToken\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -771,10 +662,6 @@
 														"method": "POST",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Content-Type",
 																"value": "application/json"
 															},
@@ -790,7 +677,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"masterToken\": \"<string>\"\n}",
+															"raw": "{\n  \"sessionToken\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -829,10 +716,6 @@
 														"method": "POST",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Content-Type",
 																"value": "application/json"
 															},
@@ -848,7 +731,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"masterToken\": \"<string>\"\n}",
+															"raw": "{\n  \"sessionToken\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -887,10 +770,6 @@
 														"method": "POST",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Content-Type",
 																"value": "application/json"
 															},
@@ -906,7 +785,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"masterToken\": \"<string>\"\n}",
+															"raw": "{\n  \"sessionToken\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -945,10 +824,6 @@
 														"method": "POST",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Content-Type",
 																"value": "application/json"
 															},
@@ -964,7 +839,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"masterToken\": \"<string>\"\n}",
+															"raw": "{\n  \"sessionToken\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1003,10 +878,6 @@
 														"method": "POST",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Content-Type",
 																"value": "application/json"
 															},
@@ -1022,7 +893,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"masterToken\": \"<string>\"\n}",
+															"raw": "{\n  \"sessionToken\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1061,10 +932,6 @@
 														"method": "POST",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Content-Type",
 																"value": "application/json"
 															},
@@ -1080,7 +947,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"masterToken\": \"<string>\"\n}",
+															"raw": "{\n  \"sessionToken\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1119,10 +986,6 @@
 														"method": "POST",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Content-Type",
 																"value": "application/json"
 															},
@@ -1138,7 +1001,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"masterToken\": \"<string>\"\n}",
+															"raw": "{\n  \"sessionToken\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1177,10 +1040,6 @@
 														"method": "POST",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Content-Type",
 																"value": "application/json"
 															},
@@ -1196,7 +1055,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"masterToken\": \"<string>\"\n}",
+															"raw": "{\n  \"sessionToken\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1235,10 +1094,6 @@
 														"method": "POST",
 														"header": [
 															{
-																"key": "X-Sfc-Session",
-																"value": "<string>"
-															},
-															{
 																"key": "Content-Type",
 																"value": "application/json"
 															},
@@ -1254,7 +1109,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"masterToken\": \"<string>\"\n}",
+															"raw": "{\n  \"sessionToken\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1295,24 +1150,13 @@
 									"name": "Create a session",
 									"event": [
 										{
-											"listen": "prerequest",
-											"script": {
-												"exec": [
-													""
-												],
-												"type": "text/javascript"
-											}
-										},
-										{
 											"listen": "test",
 											"script": {
 												"exec": [
-													"",
 													"var jsonData = pm.response.json();",
 													"pm.environment.set(\"sessionToken\", jsonData[\"token\"]);",
 													"pm.environment.set(\"masterToken\", jsonData[\"masterToken\"])",
-													"pm.environment.set(\"sessionId\", jsonData[\"sessionId\"])",
-													""
+													"pm.environment.set(\"sessionId\", jsonData[\"sessionId\"])"
 												],
 												"type": "text/javascript"
 											}
@@ -1346,7 +1190,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"roleName\": \"sysadmin\"\n}",
+											"raw": "{\n  \n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",

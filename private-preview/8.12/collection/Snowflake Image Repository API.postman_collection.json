@@ -1,11 +1,11 @@
 {
 	"info": {
-		"_postman_id": "8fc545f0-179f-47d8-b439-2bc97d3f9ede",
-		"name": "Snowflake Image Repositories API",
-		"description": "The Snowflake Image Repositories API is a REST API that you can use to access, update, and perform certain actions on Image Repository resources in Snowflake.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
+		"_postman_id": "5d3493db-15b9-4693-aa80-5deaae573cb9",
+		"name": "Snowflake Image Repository API",
+		"description": "The Snowflake Image Repository API is a REST API that you can use to access, update, and perform certain actions on Image Repository resource in Snowflake.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28868798",
-		"_collection_link": "https://snowflake.postman.co/workspace/SnowApi-Demo~576e3337-09c5-4d42-a068-1fb91ebec0b9/collection/28868798-8fc545f0-179f-47d8-b439-2bc97d3f9ede?action=share&source=collection_link&creator=28868798"
+		"_collection_link": "https://snowflake.postman.co/workspace/PrPr-Fast-Follow-up~221950c9-2cfb-4efc-9682-eac740a73ea5/collection/28868798-5d3493db-15b9-4693-aa80-5deaae573cb9?action=share&source=collection_link&creator=28868798"
 	},
 	"item": [
 		{
@@ -35,26 +35,6 @@
 																		{
 																			"name": "Fetch an image repository.",
 																			"request": {
-																				"auth": {
-																					"type": "apikey",
-																					"apikey": [
-																						{
-																							"key": "value",
-																							"value": "Snowflake Token=\"{{sessionToken}}\"",
-																							"type": "string"
-																						},
-																						{
-																							"key": "in",
-																							"value": "header",
-																							"type": "string"
-																						},
-																						{
-																							"key": "key",
-																							"value": "Authorization",
-																							"type": "string"
-																						}
-																					]
-																				},
 																				"method": "GET",
 																				"header": [
 																					{
@@ -80,17 +60,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "{{database}}",
+																							"value": "\"){k\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						},
 																						{
 																							"key": "schema",
-																							"value": "{{schema}}",
+																							"value": "\"){k\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						},
 																						{
 																							"key": "name",
-																							"value": "{{image_repository_name}}",
+																							"value": "\"){k\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						}
 																					]
@@ -146,7 +126,7 @@
 																						}
 																					],
 																					"cookie": [],
-																					"body": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"w~\\\"\\\"z\\\"\\\"\\\"\",\n  \"database_name\": \"J\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}"
+																					"body": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}"
 																				},
 																				{
 																					"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -553,26 +533,6 @@
 																		{
 																			"name": "Delete an image repository",
 																			"request": {
-																				"auth": {
-																					"type": "apikey",
-																					"apikey": [
-																						{
-																							"key": "value",
-																							"value": "Snowflake Token=\"{{sessionToken}}\"",
-																							"type": "string"
-																						},
-																						{
-																							"key": "in",
-																							"value": "header",
-																							"type": "string"
-																						},
-																						{
-																							"key": "key",
-																							"value": "Authorization",
-																							"type": "string"
-																						}
-																					]
-																				},
 																				"method": "DELETE",
 																				"header": [
 																					{
@@ -604,17 +564,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "{{database}}",
+																							"value": "\"){k\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						},
 																						{
 																							"key": "schema",
-																							"value": "{{schema}}",
+																							"value": "\"){k\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						},
 																						{
 																							"key": "name",
-																							"value": "{{image_repository_name}}",
+																							"value": "\"){k\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						}
 																					]
@@ -1133,26 +1093,6 @@
 																{
 																	"name": "List image repositories",
 																	"request": {
-																		"auth": {
-																			"type": "apikey",
-																			"apikey": [
-																				{
-																					"key": "value",
-																					"value": "Snowflake Token=\"{{sessionToken}}\"",
-																					"type": "string"
-																				},
-																				{
-																					"key": "in",
-																					"value": "header",
-																					"type": "string"
-																				},
-																				{
-																					"key": "key",
-																					"value": "Authorization",
-																					"type": "string"
-																				}
-																			]
-																		},
 																		"method": "GET",
 																		"header": [
 																			{
@@ -1161,7 +1101,7 @@
 																			}
 																		],
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories?like=%imageRepositoryName%",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/image-repositories",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -1177,18 +1117,19 @@
 																			"query": [
 																				{
 																					"key": "like",
-																					"value": "%imageRepositoryName%"
+																					"value": "<string>",
+																					"disabled": true
 																				}
 																			],
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "{{database}}",
+																					"value": "REST_DB",
 																					"description": "(Required) "
 																				},
 																				{
 																					"key": "schema",
-																					"value": "{{schema}}",
+																					"value": "test_schema",
 																					"description": "(Required) "
 																				}
 																			]
@@ -1246,7 +1187,7 @@
 																				}
 																			],
 																			"cookie": [],
-																			"body": "[\n  {\n    \"name\": \"_QI7\",\n    \"database_name\": \"\\\",\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"YB\\\"\\\"\\\"\\\"\\\"\",\n    \"created_on\": \"<dateTime>\",\n    \"repository_url\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\"\n  },\n  {\n    \"name\": \"NxVOOv\",\n    \"database_name\": \"\\\"n\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"Q\\\"\\\"r\\\"\",\n    \"schema_name\": \"VoNKPUq\",\n    \"created_on\": \"<dateTime>\",\n    \"repository_url\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\"\n  }\n]"
+																			"body": "[\n  {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"l\\\"\",\n    \"database_name\": \"kYC9Mf2$p\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"980\\\"\",\n    \"created_on\": \"<dateTime>\",\n    \"repository_url\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\"\n  },\n  {\n    \"name\": \"rTdekk\",\n    \"database_name\": \"lB\",\n    \"schema_name\": \"AS2WrFwA\",\n    \"created_on\": \"<dateTime>\",\n    \"repository_url\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\"\n  }\n]"
 																		},
 																		{
 																			"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -1721,26 +1662,6 @@
 																{
 																	"name": "Create an image repository",
 																	"request": {
-																		"auth": {
-																			"type": "apikey",
-																			"apikey": [
-																				{
-																					"key": "value",
-																					"value": "Snowflake Token=\"{{sessionToken}}\"",
-																					"type": "string"
-																				},
-																				{
-																					"key": "in",
-																					"value": "header",
-																					"type": "string"
-																				},
-																				{
-																					"key": "key",
-																					"value": "Authorization",
-																					"type": "string"
-																				}
-																			]
-																		},
 																		"method": "POST",
 																		"header": [
 																			{
@@ -1754,7 +1675,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"{{image_repository_name}}\"\n}",
+																			"raw": "{\n  \"name\": \"imageRepoName\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -1785,12 +1706,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "{{database}}",
+																					"value": "REST_DB",
 																					"description": "(Required) "
 																				},
 																				{
 																					"key": "schema",
-																					"value": "{{schema}}",
+																					"value": "TEST_SCHEMA",
 																					"description": "(Required) "
 																				}
 																			]
@@ -1814,7 +1735,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"w~\\\"\\\"z\\\"\\\"\\\"\",\n  \"database_name\": \"J\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1880,7 +1801,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"w~\\\"\\\"z\\\"\\\"\\\"\",\n  \"database_name\": \"J\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1946,7 +1867,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"w~\\\"\\\"z\\\"\\\"\\\"\",\n  \"database_name\": \"J\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2012,7 +1933,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"w~\\\"\\\"z\\\"\\\"\\\"\",\n  \"database_name\": \"J\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2078,7 +1999,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"w~\\\"\\\"z\\\"\\\"\\\"\",\n  \"database_name\": \"J\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2144,7 +2065,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"w~\\\"\\\"z\\\"\\\"\\\"\",\n  \"database_name\": \"J\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2210,7 +2131,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"w~\\\"\\\"z\\\"\\\"\\\"\",\n  \"database_name\": \"J\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2276,7 +2197,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"w~\\\"\\\"z\\\"\\\"\\\"\",\n  \"database_name\": \"J\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2342,7 +2263,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"w~\\\"\\\"z\\\"\\\"\\\"\",\n  \"database_name\": \"J\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2408,7 +2329,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"w~\\\"\\\"z\\\"\\\"\\\"\",\n  \"database_name\": \"J\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"F\\\"\\\"y'\\\"\",\n  \"database_name\": \"\\\"\\\"\\\"U\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\",\n  \"schema_name\": \"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2473,6 +2394,41 @@
 					]
 				}
 			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "Snowflake Token=\"{{sessionToken}}\"",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"variable": [

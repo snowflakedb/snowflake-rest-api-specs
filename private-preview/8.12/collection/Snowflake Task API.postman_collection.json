@@ -1,11 +1,11 @@
 {
 	"info": {
-		"_postman_id": "1af61c08-a610-4705-b19c-4760742b5dca",
-		"name": "Snowflake Tasks API",
-		"description": "The Snowflake Tasks API is a REST API that you can use to access, update, and perform certain actions on Task resources in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
+		"_postman_id": "a115ddfd-7c28-48ba-8ff2-3e9e29474a41",
+		"name": "Snowflake Task API",
+		"description": "The Snowflake Task API is a REST API that you can use to access, update, and perform certain actions on task resources in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28868798",
-		"_collection_link": "https://snowflake.postman.co/workspace/SnowApi-Demo~576e3337-09c5-4d42-a068-1fb91ebec0b9/collection/28868798-1af61c08-a610-4705-b19c-4760742b5dca?action=share&source=collection_link&creator=28868798"
+		"_collection_link": "https://snowflake.postman.co/workspace/PrPr-Fast-Follow-up~221950c9-2cfb-4efc-9682-eac740a73ea5/collection/28868798-a115ddfd-7c28-48ba-8ff2-3e9e29474a41?action=share&source=collection_link&creator=28868798"
 	},
 	"item": [
 		{
@@ -38,26 +38,6 @@
 																				{
 																					"name": "Fetch the dependent tasks of a task",
 																					"request": {
-																						"auth": {
-																							"type": "apikey",
-																							"apikey": [
-																								{
-																									"key": "value",
-																									"value": "Snowflake Token=\"{{sessionToken}}\"",
-																									"type": "string"
-																								},
-																								{
-																									"key": "in",
-																									"value": "header",
-																									"type": "string"
-																								},
-																								{
-																									"key": "key",
-																									"value": "Authorization",
-																									"type": "string"
-																								}
-																							]
-																						},
 																						"method": "GET",
 																						"header": [
 																							{
@@ -84,17 +64,17 @@
 																							"variable": [
 																								{
 																									"key": "database",
-																									"value": "{{database}}",
+																									"value": "\"\"\"\"\"\"\"\"\"\"",
 																									"description": "(Required) "
 																								},
 																								{
 																									"key": "schema",
-																									"value": "{{schema}}",
+																									"value": "\"\"\"\"\"\"\"\"\"\"",
 																									"description": "(Required) "
 																								},
 																								{
 																									"key": "name",
-																									"value": "{{task_name}}",
+																									"value": "\"\"\"\"\"\"\"\"\"\"",
 																									"description": "(Required) "
 																								}
 																							]
@@ -151,7 +131,7 @@
 																								}
 																							],
 																							"cookie": [],
-																							"body": "[\n  {\n    \"name\": \"Pw$SP9KZSr\",\n    \"definition\": \"<string>\",\n    \"warehouse\": \"WBzQP_2\",\n    \"schedule\": {\n      \"minutes\": \"<integer>\"\n    },\n    \"comment\": \"<string>\",\n    \"config\": {\n      \"Ut_293\": -93287673.26920931,\n      \"cupidatatf0d\": \"qui fugiat in \",\n      \"quis1\": \"aliqua enim eiusmod consequat cupidatat\",\n      \"Ut_0\": \"incididunt ullamco dolore in commodo\"\n    },\n    \"predecessors\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"user_task_managed_initial_warehouse_size\": \"<string>\",\n    \"user_task_timeout_ms\": \"<integer>\",\n    \"suspend_task_after_num_failures\": \"<integer>\",\n    \"condition\": \"<string>\",\n    \"allow_overlapping_execution\": \"<boolean>\",\n    \"error_integration\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"id\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\",\n    \"state\": \"started\",\n    \"last_committed_on\": \"<dateTime>\",\n    \"last_suspended_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\"\n  },\n  {\n    \"name\": \"gTq9T\",\n    \"definition\": \"<string>\",\n    \"warehouse\": \"\\\"\\\"\\\":((\\\"\\\"4\\\"\",\n    \"schedule\": {\n      \"minutes\": \"<integer>\"\n    },\n    \"comment\": \"<string>\",\n    \"config\": {\n      \"culpa182\": -36841827.82457221,\n      \"consectetur_f2\": \"Ut anim\",\n      \"officia_aa\": -66193433.51332709\n    },\n    \"predecessors\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"user_task_managed_initial_warehouse_size\": \"<string>\",\n    \"user_task_timeout_ms\": \"<integer>\",\n    \"suspend_task_after_num_failures\": \"<integer>\",\n    \"condition\": \"<string>\",\n    \"allow_overlapping_execution\": \"<boolean>\",\n    \"error_integration\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"id\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\",\n    \"state\": \"suspended\",\n    \"last_committed_on\": \"<dateTime>\",\n    \"last_suspended_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\"\n  }\n]"
+																							"body": "[\n  {\n    \"name\": \"fWu4\",\n    \"definition\": \"<string>\",\n    \"warehouse\": \"dV\",\n    \"schedule\": {\n      \"schedule_type\": \"<string>\"\n    },\n    \"comment\": \"<string>\",\n    \"config\": {\n      \"nostrud_8\": false,\n      \"aliquip__d\": false\n    },\n    \"session_parameters\": {\n      \"nostrud3f8\": 22755800.201501667\n    },\n    \"predecessors\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"user_task_managed_initial_warehouse_size\": \"<string>\",\n    \"user_task_timeout_ms\": \"<integer>\",\n    \"suspend_task_after_num_failures\": \"<integer>\",\n    \"condition\": \"<string>\",\n    \"allow_overlapping_execution\": \"<boolean>\",\n    \"error_integration\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"id\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\",\n    \"state\": \"suspended\",\n    \"last_committed_on\": \"<dateTime>\",\n    \"last_suspended_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\"\n  },\n  {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\".\\\"\\\"U\\\"\\\":\\\"\",\n    \"definition\": \"<string>\",\n    \"warehouse\": \"o3szi7wpOd\",\n    \"schedule\": {\n      \"schedule_type\": \"<string>\"\n    },\n    \"comment\": \"<string>\",\n    \"config\": {\n      \"in_6\": \"est consequat aliqua\",\n      \"exa\": 17448603\n    },\n    \"session_parameters\": {\n      \"occaecat_5\": \"Excepteur n\",\n      \"nulla_bd\": 92080234.07344571\n    },\n    \"predecessors\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"user_task_managed_initial_warehouse_size\": \"<string>\",\n    \"user_task_timeout_ms\": \"<integer>\",\n    \"suspend_task_after_num_failures\": \"<integer>\",\n    \"condition\": \"<string>\",\n    \"allow_overlapping_execution\": \"<boolean>\",\n    \"error_integration\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"id\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\",\n    \"state\": \"started\",\n    \"last_committed_on\": \"<dateTime>\",\n    \"last_suspended_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\"\n  }\n]"
 																						},
 																						{
 																							"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -622,26 +602,6 @@
 																				{
 																					"name": "Get the graph runs that are executing or scheduled for the task for the next 8 days.",
 																					"request": {
-																						"auth": {
-																							"type": "apikey",
-																							"apikey": [
-																								{
-																									"key": "value",
-																									"value": "Snowflake Token=\"{{sessionToken}}\"",
-																									"type": "string"
-																								},
-																								{
-																									"key": "in",
-																									"value": "header",
-																									"type": "string"
-																								},
-																								{
-																									"key": "key",
-																									"value": "Authorization",
-																									"type": "string"
-																								}
-																							]
-																						},
 																						"method": "GET",
 																						"header": [
 																							{
@@ -674,17 +634,17 @@
 																							"variable": [
 																								{
 																									"key": "database",
-																									"value": "{{database}}",
+																									"value": "\"\"\"\"\"\"\"\"\"\"",
 																									"description": "(Required) "
 																								},
 																								{
 																									"key": "schema",
-																									"value": "{{schema}}",
+																									"value": "\"\"\"\"\"\"\"\"\"\"",
 																									"description": "(Required) "
 																								},
 																								{
 																									"key": "name",
-																									"value": "{{task_name}}",
+																									"value": "\"\"\"\"\"\"\"\"\"\"",
 																									"description": "(Required) "
 																								}
 																							]
@@ -747,7 +707,7 @@
 																								}
 																							],
 																							"cookie": [],
-																							"body": "[\n  {\n    \"root_task_name\": \"<string>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"state\": \"EXECUTING\",\n    \"scheduled_time\": \"<dateTime>\",\n    \"next_scheduled_time\": \"<dateTime>\",\n    \"root_task_id\": \"<string>\",\n    \"graph_version\": \"<integer>\",\n    \"run_id\": \"<integer>\",\n    \"first_error_task_name\": \"<string>\",\n    \"first_error_code\": \"<integer>\",\n    \"first_error_message\": \"<string>\",\n    \"query_start_time\": \"<dateTime>\",\n    \"completed_time\": \"<dateTime>\"\n  },\n  {\n    \"root_task_name\": \"<string>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"state\": \"EXECUTING\",\n    \"scheduled_time\": \"<dateTime>\",\n    \"next_scheduled_time\": \"<dateTime>\",\n    \"root_task_id\": \"<string>\",\n    \"graph_version\": \"<integer>\",\n    \"run_id\": \"<integer>\",\n    \"first_error_task_name\": \"<string>\",\n    \"first_error_code\": \"<integer>\",\n    \"first_error_message\": \"<string>\",\n    \"query_start_time\": \"<dateTime>\",\n    \"completed_time\": \"<dateTime>\"\n  }\n]"
+																							"body": "[\n  {\n    \"root_task_name\": \"<string>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"state\": \"FAILED\",\n    \"scheduled_time\": \"<dateTime>\",\n    \"next_scheduled_time\": \"<dateTime>\",\n    \"root_task_id\": \"<string>\",\n    \"graph_version\": \"<integer>\",\n    \"run_id\": \"<integer>\",\n    \"first_error_task_name\": \"<string>\",\n    \"first_error_code\": \"<integer>\",\n    \"first_error_message\": \"<string>\",\n    \"query_start_time\": \"<dateTime>\",\n    \"completed_time\": \"<dateTime>\"\n  },\n  {\n    \"root_task_name\": \"<string>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"state\": \"CANCELLED\",\n    \"scheduled_time\": \"<dateTime>\",\n    \"next_scheduled_time\": \"<dateTime>\",\n    \"root_task_id\": \"<string>\",\n    \"graph_version\": \"<integer>\",\n    \"run_id\": \"<integer>\",\n    \"first_error_task_name\": \"<string>\",\n    \"first_error_code\": \"<integer>\",\n    \"first_error_message\": \"<string>\",\n    \"query_start_time\": \"<dateTime>\",\n    \"completed_time\": \"<dateTime>\"\n  }\n]"
 																						},
 																						{
 																							"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -1272,26 +1232,6 @@
 																				{
 																					"name": "Get the graph runs that are completed for the task.",
 																					"request": {
-																						"auth": {
-																							"type": "apikey",
-																							"apikey": [
-																								{
-																									"key": "value",
-																									"value": "Snowflake Token=\"{{sessionToken}}\"",
-																									"type": "string"
-																								},
-																								{
-																									"key": "in",
-																									"value": "header",
-																									"type": "string"
-																								},
-																								{
-																									"key": "key",
-																									"value": "Authorization",
-																									"type": "string"
-																								}
-																							]
-																						},
 																						"method": "GET",
 																						"header": [
 																							{
@@ -1300,7 +1240,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tasks/:name/complete_graphs?resultLimit=1000&errorOnly=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tasks/:name/complete_graphs?resultLimit=<integer>&errorOnly=<boolean>",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -1318,29 +1258,29 @@
 																							"query": [
 																								{
 																									"key": "resultLimit",
-																									"value": "1000",
+																									"value": "<integer>",
 																									"description": "Number of results to return, at most. Default is 1000, valid range is 1 to 10000."
 																								},
 																								{
 																									"key": "errorOnly",
-																									"value": "false",
+																									"value": "<boolean>",
 																									"description": "Whether to only return results for tasks runs that have failed. Default is false."
 																								}
 																							],
 																							"variable": [
 																								{
 																									"key": "database",
-																									"value": "{{database}}",
+																									"value": "\"\"\"\"\"\"\"\"\"\"",
 																									"description": "(Required) "
 																								},
 																								{
 																									"key": "schema",
-																									"value": "{{schema}}",
+																									"value": "\"\"\"\"\"\"\"\"\"\"",
 																									"description": "(Required) "
 																								},
 																								{
 																									"key": "name",
-																									"value": "{{task_name}}",
+																									"value": "\"\"\"\"\"\"\"\"\"\"",
 																									"description": "(Required) "
 																								}
 																							]
@@ -1409,7 +1349,7 @@
 																								}
 																							],
 																							"cookie": [],
-																							"body": "[\n  {\n    \"root_task_name\": \"<string>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"state\": \"EXECUTING\",\n    \"scheduled_time\": \"<dateTime>\",\n    \"next_scheduled_time\": \"<dateTime>\",\n    \"root_task_id\": \"<string>\",\n    \"graph_version\": \"<integer>\",\n    \"run_id\": \"<integer>\",\n    \"first_error_task_name\": \"<string>\",\n    \"first_error_code\": \"<integer>\",\n    \"first_error_message\": \"<string>\",\n    \"query_start_time\": \"<dateTime>\",\n    \"completed_time\": \"<dateTime>\"\n  },\n  {\n    \"root_task_name\": \"<string>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"state\": \"EXECUTING\",\n    \"scheduled_time\": \"<dateTime>\",\n    \"next_scheduled_time\": \"<dateTime>\",\n    \"root_task_id\": \"<string>\",\n    \"graph_version\": \"<integer>\",\n    \"run_id\": \"<integer>\",\n    \"first_error_task_name\": \"<string>\",\n    \"first_error_code\": \"<integer>\",\n    \"first_error_message\": \"<string>\",\n    \"query_start_time\": \"<dateTime>\",\n    \"completed_time\": \"<dateTime>\"\n  }\n]"
+																							"body": "[\n  {\n    \"root_task_name\": \"<string>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"state\": \"FAILED\",\n    \"scheduled_time\": \"<dateTime>\",\n    \"next_scheduled_time\": \"<dateTime>\",\n    \"root_task_id\": \"<string>\",\n    \"graph_version\": \"<integer>\",\n    \"run_id\": \"<integer>\",\n    \"first_error_task_name\": \"<string>\",\n    \"first_error_code\": \"<integer>\",\n    \"first_error_message\": \"<string>\",\n    \"query_start_time\": \"<dateTime>\",\n    \"completed_time\": \"<dateTime>\"\n  },\n  {\n    \"root_task_name\": \"<string>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"state\": \"CANCELLED\",\n    \"scheduled_time\": \"<dateTime>\",\n    \"next_scheduled_time\": \"<dateTime>\",\n    \"root_task_id\": \"<string>\",\n    \"graph_version\": \"<integer>\",\n    \"run_id\": \"<integer>\",\n    \"first_error_task_name\": \"<string>\",\n    \"first_error_code\": \"<integer>\",\n    \"first_error_message\": \"<string>\",\n    \"query_start_time\": \"<dateTime>\",\n    \"completed_time\": \"<dateTime>\"\n  }\n]"
 																						},
 																						{
 																							"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -1985,26 +1925,6 @@
 																		{
 																			"name": "Fetch a task",
 																			"request": {
-																				"auth": {
-																					"type": "apikey",
-																					"apikey": [
-																						{
-																							"key": "value",
-																							"value": "Snowflake Token=\"{{sessionToken}}\"",
-																							"type": "string"
-																						},
-																						{
-																							"key": "in",
-																							"value": "header",
-																							"type": "string"
-																						},
-																						{
-																							"key": "key",
-																							"value": "Authorization",
-																							"type": "string"
-																						}
-																					]
-																				},
 																				"method": "GET",
 																				"header": [
 																					{
@@ -2030,17 +1950,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "{{database}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						},
 																						{
 																							"key": "schema",
-																							"value": "{{schema}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						},
 																						{
 																							"key": "name",
-																							"value": "{{task_name}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						}
 																					]
@@ -2096,7 +2016,7 @@
 																						}
 																					],
 																					"cookie": [],
-																					"body": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}"
+																					"body": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}"
 																				},
 																				{
 																					"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -2553,26 +2473,6 @@
 																		{
 																			"name": "Create a (or alter an existing) task",
 																			"request": {
-																				"auth": {
-																					"type": "apikey",
-																					"apikey": [
-																						{
-																							"key": "value",
-																							"value": "Snowflake Token=\"{{sessionToken}}\"",
-																							"type": "string"
-																						},
-																						{
-																							"key": "in",
-																							"value": "header",
-																							"type": "string"
-																						},
-																						{
-																							"key": "key",
-																							"value": "Authorization",
-																							"type": "string"
-																						}
-																					]
-																				},
 																				"method": "PUT",
 																				"header": [
 																					{
@@ -2586,7 +2486,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"{{task_name}}\",\n  \"warehouse\": \"{{warehouse}}\",\n  \"definition\": \"select 1\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2595,7 +2495,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tasks/:name?createMode=orReplace",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tasks/:name",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -2609,26 +2509,20 @@
 																						"tasks",
 																						":name"
 																					],
-																					"query": [
-																						{
-																							"key": "createMode",
-																							"value": "orReplace"
-																						}
-																					],
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "{{database}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						},
 																						{
 																							"key": "schema",
-																							"value": "{{schema}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						},
 																						{
 																							"key": "name",
-																							"value": "{{task_name}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						}
 																					]
@@ -2652,7 +2546,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2716,7 +2610,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2780,7 +2674,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2844,7 +2738,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2908,7 +2802,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2972,7 +2866,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -3036,7 +2930,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -3100,7 +2994,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -3164,7 +3058,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -3228,7 +3122,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -3281,26 +3175,6 @@
 																		{
 																			"name": "Delete a task",
 																			"request": {
-																				"auth": {
-																					"type": "apikey",
-																					"apikey": [
-																						{
-																							"key": "value",
-																							"value": "Snowflake Token=\"{{sessionToken}}\"",
-																							"type": "string"
-																						},
-																						{
-																							"key": "in",
-																							"value": "header",
-																							"type": "string"
-																						},
-																						{
-																							"key": "key",
-																							"value": "Authorization",
-																							"type": "string"
-																						}
-																					]
-																				},
 																				"method": "DELETE",
 																				"header": [
 																					{
@@ -3309,7 +3183,7 @@
 																					}
 																				],
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tasks/:name?ifExists=true",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tasks/:name?ifExists=false",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -3326,23 +3200,23 @@
 																					"query": [
 																						{
 																							"key": "ifExists",
-																							"value": "true"
+																							"value": "false"
 																						}
 																					],
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "{{database}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						},
 																						{
 																							"key": "schema",
-																							"value": "{{schema}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						},
 																						{
 																							"key": "name",
-																							"value": "{{task_name}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						}
 																					]
@@ -3920,26 +3794,6 @@
 																		{
 																			"name": "Execute a task object.",
 																			"request": {
-																				"auth": {
-																					"type": "apikey",
-																					"apikey": [
-																						{
-																							"key": "value",
-																							"value": "Snowflake Token=\"{{sessionToken}}\"",
-																							"type": "string"
-																						},
-																						{
-																							"key": "in",
-																							"value": "header",
-																							"type": "string"
-																						},
-																						{
-																							"key": "key",
-																							"value": "Authorization",
-																							"type": "string"
-																						}
-																					]
-																				},
 																				"method": "POST",
 																				"header": [
 																					{
@@ -3972,12 +3826,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "{{database}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						},
 																						{
 																							"key": "schema",
-																							"value": "{{schema}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						}
 																					]
@@ -4535,26 +4389,6 @@
 																		{
 																			"name": "Resume a suspended task.",
 																			"request": {
-																				"auth": {
-																					"type": "apikey",
-																					"apikey": [
-																						{
-																							"key": "value",
-																							"value": "Snowflake Token=\"{{sessionToken}}\"",
-																							"type": "string"
-																						},
-																						{
-																							"key": "in",
-																							"value": "header",
-																							"type": "string"
-																						},
-																						{
-																							"key": "key",
-																							"value": "Authorization",
-																							"type": "string"
-																						}
-																					]
-																				},
 																				"method": "POST",
 																				"header": [
 																					{
@@ -4580,12 +4414,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "{{database}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						},
 																						{
 																							"key": "schema",
-																							"value": "{{schema}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						}
 																					]
@@ -5073,26 +4907,6 @@
 																		{
 																			"name": "Suspends a running task.",
 																			"request": {
-																				"auth": {
-																					"type": "apikey",
-																					"apikey": [
-																						{
-																							"key": "value",
-																							"value": "Snowflake Token=\"{{sessionToken}}\"",
-																							"type": "string"
-																						},
-																						{
-																							"key": "in",
-																							"value": "header",
-																							"type": "string"
-																						},
-																						{
-																							"key": "key",
-																							"value": "Authorization",
-																							"type": "string"
-																						}
-																					]
-																				},
 																				"method": "POST",
 																				"header": [
 																					{
@@ -5118,12 +4932,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "{{database}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						},
 																						{
 																							"key": "schema",
-																							"value": "{{schema}}",
+																							"value": "\"\"\"\"\"\"\"\"\"\"",
 																							"description": "(Required) "
 																						}
 																					]
@@ -5608,26 +5422,6 @@
 																{
 																	"name": "List tasks",
 																	"request": {
-																		"auth": {
-																			"type": "apikey",
-																			"apikey": [
-																				{
-																					"key": "value",
-																					"value": "Snowflake Token=\"{{sessionToken}}\"",
-																					"type": "string"
-																				},
-																				{
-																					"key": "in",
-																					"value": "header",
-																					"type": "string"
-																				},
-																				{
-																					"key": "key",
-																					"value": "Authorization",
-																					"type": "string"
-																				}
-																			]
-																		},
 																		"method": "GET",
 																		"header": [
 																			{
@@ -5636,7 +5430,7 @@
 																			}
 																		],
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tasks",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tasks?rootOnly=false&like=<string>&startsWith=<string>&showLimit=<integer>",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -5652,34 +5446,30 @@
 																			"query": [
 																				{
 																					"key": "rootOnly",
-																					"value": "false",
-																					"disabled": true
+																					"value": "false"
 																				},
 																				{
 																					"key": "like",
-																					"value": "%taskName%",
-																					"disabled": true
+																					"value": "<string>"
 																				},
 																				{
 																					"key": "startsWith",
-																					"value": "task%",
-																					"disabled": true
+																					"value": "<string>"
 																				},
 																				{
 																					"key": "showLimit",
-																					"value": "10",
-																					"disabled": true
+																					"value": "<integer>"
 																				}
 																			],
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "{{database}}",
+																					"value": "\"\"\"\"\"\"\"\"\"\"",
 																					"description": "(Required) "
 																				},
 																				{
 																					"key": "schema",
-																					"value": "{{schema}}",
+																					"value": "\"\"\"\"\"\"\"\"\"\"",
 																					"description": "(Required) "
 																				}
 																			]
@@ -5749,7 +5539,7 @@
 																				}
 																			],
 																			"cookie": [],
-																			"body": "[\n  {\n    \"name\": \"Pw$SP9KZSr\",\n    \"definition\": \"<string>\",\n    \"warehouse\": \"WBzQP_2\",\n    \"schedule\": {\n      \"minutes\": \"<integer>\"\n    },\n    \"comment\": \"<string>\",\n    \"config\": {\n      \"Ut_293\": -93287673.26920931,\n      \"cupidatatf0d\": \"qui fugiat in \",\n      \"quis1\": \"aliqua enim eiusmod consequat cupidatat\",\n      \"Ut_0\": \"incididunt ullamco dolore in commodo\"\n    },\n    \"predecessors\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"user_task_managed_initial_warehouse_size\": \"<string>\",\n    \"user_task_timeout_ms\": \"<integer>\",\n    \"suspend_task_after_num_failures\": \"<integer>\",\n    \"condition\": \"<string>\",\n    \"allow_overlapping_execution\": \"<boolean>\",\n    \"error_integration\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"id\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\",\n    \"state\": \"started\",\n    \"last_committed_on\": \"<dateTime>\",\n    \"last_suspended_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\"\n  },\n  {\n    \"name\": \"gTq9T\",\n    \"definition\": \"<string>\",\n    \"warehouse\": \"\\\"\\\"\\\":((\\\"\\\"4\\\"\",\n    \"schedule\": {\n      \"minutes\": \"<integer>\"\n    },\n    \"comment\": \"<string>\",\n    \"config\": {\n      \"culpa182\": -36841827.82457221,\n      \"consectetur_f2\": \"Ut anim\",\n      \"officia_aa\": -66193433.51332709\n    },\n    \"predecessors\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"user_task_managed_initial_warehouse_size\": \"<string>\",\n    \"user_task_timeout_ms\": \"<integer>\",\n    \"suspend_task_after_num_failures\": \"<integer>\",\n    \"condition\": \"<string>\",\n    \"allow_overlapping_execution\": \"<boolean>\",\n    \"error_integration\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"id\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\",\n    \"state\": \"suspended\",\n    \"last_committed_on\": \"<dateTime>\",\n    \"last_suspended_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\"\n  }\n]"
+																			"body": "[\n  {\n    \"name\": \"fWu4\",\n    \"definition\": \"<string>\",\n    \"warehouse\": \"dV\",\n    \"schedule\": {\n      \"schedule_type\": \"<string>\"\n    },\n    \"comment\": \"<string>\",\n    \"config\": {\n      \"nostrud_8\": false,\n      \"aliquip__d\": false\n    },\n    \"session_parameters\": {\n      \"nostrud3f8\": 22755800.201501667\n    },\n    \"predecessors\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"user_task_managed_initial_warehouse_size\": \"<string>\",\n    \"user_task_timeout_ms\": \"<integer>\",\n    \"suspend_task_after_num_failures\": \"<integer>\",\n    \"condition\": \"<string>\",\n    \"allow_overlapping_execution\": \"<boolean>\",\n    \"error_integration\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"id\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\",\n    \"state\": \"suspended\",\n    \"last_committed_on\": \"<dateTime>\",\n    \"last_suspended_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\"\n  },\n  {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\".\\\"\\\"U\\\"\\\":\\\"\",\n    \"definition\": \"<string>\",\n    \"warehouse\": \"o3szi7wpOd\",\n    \"schedule\": {\n      \"schedule_type\": \"<string>\"\n    },\n    \"comment\": \"<string>\",\n    \"config\": {\n      \"in_6\": \"est consequat aliqua\",\n      \"exa\": 17448603\n    },\n    \"session_parameters\": {\n      \"occaecat_5\": \"Excepteur n\",\n      \"nulla_bd\": 92080234.07344571\n    },\n    \"predecessors\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"user_task_managed_initial_warehouse_size\": \"<string>\",\n    \"user_task_timeout_ms\": \"<integer>\",\n    \"suspend_task_after_num_failures\": \"<integer>\",\n    \"condition\": \"<string>\",\n    \"allow_overlapping_execution\": \"<boolean>\",\n    \"error_integration\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"id\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\",\n    \"state\": \"started\",\n    \"last_committed_on\": \"<dateTime>\",\n    \"last_suspended_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\"\n  }\n]"
 																		},
 																		{
 																			"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -6396,26 +6186,6 @@
 																{
 																	"name": "Create a task",
 																	"request": {
-																		"auth": {
-																			"type": "apikey",
-																			"apikey": [
-																				{
-																					"key": "value",
-																					"value": "Snowflake Token=\"{{sessionToken}}\"",
-																					"type": "string"
-																				},
-																				{
-																					"key": "in",
-																					"value": "header",
-																					"type": "string"
-																				},
-																				{
-																					"key": "key",
-																					"value": "Authorization",
-																					"type": "string"
-																				}
-																			]
-																		},
 																		"method": "POST",
 																		"header": [
 																			{
@@ -6429,7 +6199,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"{{task_name}}\",\n  \"definition\": \"select 1\",\n  \"warehouse\": \"{{warehouse}}\",\n  \"predecessors\": [\n    \"task1\",\n    \"task2\",\n    \"task3\"\n  ],\n  \"user_task_timeout_ms\": 10,\n  \"condition\": \"SYSTEM$GET_PREDECESSOR_RETURN_VALUE('test_task') != 'VALIDATION'\",\n  \"allow_overlapping_execution\": false,\n  \"database_name\": \"{{database}}\",\n  \"schema_name\": \"{{schema}}\"\n}",
+																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -6438,7 +6208,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tasks?createMode=orReplace",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tasks?createMode=errorIfExists",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -6454,18 +6224,18 @@
 																			"query": [
 																				{
 																					"key": "createMode",
-																					"value": "orReplace"
+																					"value": "errorIfExists"
 																				}
 																			],
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "{{database}}",
+																					"value": "\"\"\"\"\"\"\"\"\"\"",
 																					"description": "(Required) "
 																				},
 																				{
 																					"key": "schema",
-																					"value": "{{schema}}",
+																					"value": "\"\"\"\"\"\"\"\"\"\"",
 																					"description": "(Required) "
 																				}
 																			]
@@ -6489,7 +6259,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6555,7 +6325,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6621,7 +6391,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6687,7 +6457,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6753,7 +6523,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6819,7 +6589,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6885,7 +6655,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6951,7 +6721,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -7017,7 +6787,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -7083,7 +6853,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -7149,7 +6919,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"mga_vVk\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"sYG7\",\n  \"schedule\": {\n    \"minutes\": \"<integer>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"dolor_\": \"eiusmod dolor consequat sed\"\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"zaX3\\\"\\\"D\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"definition\": \"<string>\",\n  \"warehouse\": \"\\\"\\\"\\\"\\\"\\\"go\\\"\\\"\\\"\\\"\\\"\\\"Ane\\\"\",\n  \"schedule\": {\n    \"schedule_type\": \"<string>\"\n  },\n  \"comment\": \"<string>\",\n  \"config\": {\n    \"eiusmod_6ae\": -31230176.483643398,\n    \"tempor__f\": \"exercitation cupidatat laborum eiusmod\"\n  },\n  \"session_parameters\": {\n    \"magna_4\": -95061975,\n    \"nulla_5\": -54116813.73612733,\n    \"deserunt711\": true\n  },\n  \"predecessors\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"user_task_managed_initial_warehouse_size\": \"<string>\",\n  \"user_task_timeout_ms\": \"<integer>\",\n  \"suspend_task_after_num_failures\": \"<integer>\",\n  \"condition\": \"<string>\",\n  \"allow_overlapping_execution\": \"<boolean>\",\n  \"error_integration\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"state\": \"suspended\",\n  \"last_committed_on\": \"<dateTime>\",\n  \"last_suspended_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -7216,6 +6986,41 @@
 			]
 		}
 	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "Snowflake Token=\"{{sessionToken}}\"",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
 			"key": "baseUrl",
@@ -7223,15 +7028,15 @@
 		},
 		{
 			"key": "name",
-			"value": "c"
+			"value": "\"\"\"\"\"\"\"\"\"\""
 		},
 		{
 			"key": "name",
-			"value": "c"
+			"value": "\"\"\"\"\"\"\"\"\"\""
 		},
 		{
 			"key": "name",
-			"value": "c"
+			"value": "\"\"\"\"\"\"\"\"\"\""
 		}
 	]
 }

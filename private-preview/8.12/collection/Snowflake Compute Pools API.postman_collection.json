@@ -1,11 +1,11 @@
 {
 	"info": {
-		"_postman_id": "991bc617-04b4-4650-9bed-01b35e8b33ff",
+		"_postman_id": "a1c47394-218c-43e0-9cba-5f2c7dd46ba1",
 		"name": "Snowflake Compute Pools API",
 		"description": "The Snowflake Compute Pools API is a REST API that you can use to access, update, and perform certain actions on Compute Pool resources.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28868798",
-		"_collection_link": "https://snowflake.postman.co/workspace/SnowApi-Demo~576e3337-09c5-4d42-a068-1fb91ebec0b9/collection/28868798-991bc617-04b4-4650-9bed-01b35e8b33ff?action=share&source=collection_link&creator=28868798"
+		"_collection_link": "https://snowflake.postman.co/workspace/PrPr-Fast-Follow-up~221950c9-2cfb-4efc-9682-eac740a73ea5/collection/28868798-a1c47394-218c-43e0-9cba-5f2c7dd46ba1?action=share&source=collection_link&creator=28868798"
 	},
 	"item": [
 		{
@@ -23,26 +23,6 @@
 										{
 											"name": "Fetch a compute pool.",
 											"request": {
-												"auth": {
-													"type": "apikey",
-													"apikey": [
-														{
-															"key": "value",
-															"value": "Snowflake Token=\"{{sessionToken}}\"",
-															"type": "string"
-														},
-														{
-															"key": "in",
-															"value": "header",
-															"type": "string"
-														},
-														{
-															"key": "key",
-															"value": "Authorization",
-															"type": "string"
-														}
-													]
-												},
 												"method": "GET",
 												"header": [
 													{
@@ -64,7 +44,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "{{compute_pool_name}}",
+															"value": "KsnbGQ",
 															"description": "(Required) "
 														}
 													]
@@ -110,7 +90,7 @@
 														}
 													],
 													"cookie": [],
-													"body": "{\n  \"name\": \"CZ82wIQJ\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"warehouse\": \"hYkM0DuY\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"SUSPENDED\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}"
+													"body": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}"
 												},
 												{
 													"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -435,28 +415,542 @@
 											]
 										},
 										{
-											"name": "Delete a compute pool",
+											"name": "Create a (or alter an existing) compute pool.",
 											"request": {
-												"auth": {
-													"type": "apikey",
-													"apikey": [
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools",
+														":name"
+													],
+													"variable": [
 														{
-															"key": "value",
-															"value": "Snowflake Token=\"{{sessionToken}}\"",
-															"type": "string"
-														},
-														{
-															"key": "in",
-															"value": "header",
-															"type": "string"
-														},
-														{
-															"key": "key",
-															"value": "Authorization",
-															"type": "string"
+															"key": "name",
+															"value": "KsnbGQ",
+															"description": "(Required) "
 														}
 													]
 												},
+												"description": "Create a (or alter an existing) compute pool. Even if the operation is just an alter, the full property set must be provided."
+											},
+											"response": [
+												{
+													"name": "Successful",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"status\": \"<string>\"\n}"
+												},
+												{
+													"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Method Not Allowed",
+													"code": 405,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Gateway Timeout",
+													"code": 504,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												}
+											]
+										},
+										{
+											"name": "Delete a compute pool",
+											"request": {
 												"method": "DELETE",
 												"header": [
 													{
@@ -484,7 +978,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "{{compute_pool_name}}",
+															"value": "KsnbGQ",
 															"description": "(Required) "
 														}
 													]
@@ -916,26 +1410,6 @@
 										{
 											"name": "Resume a compute pool",
 											"request": {
-												"auth": {
-													"type": "apikey",
-													"apikey": [
-														{
-															"key": "value",
-															"value": "Snowflake Token=\"{{sessionToken}}\"",
-															"type": "string"
-														},
-														{
-															"key": "in",
-															"value": "header",
-															"type": "string"
-														},
-														{
-															"key": "key",
-															"value": "Authorization",
-															"type": "string"
-														}
-													]
-												},
 												"method": "POST",
 												"header": [
 													{
@@ -1283,26 +1757,6 @@
 										{
 											"name": "Perform an action on a compute pool",
 											"request": {
-												"auth": {
-													"type": "apikey",
-													"apikey": [
-														{
-															"key": "value",
-															"value": "Snowflake Token=\"{{sessionToken}}\"",
-															"type": "string"
-														},
-														{
-															"key": "in",
-															"value": "header",
-															"type": "string"
-														},
-														{
-															"key": "key",
-															"value": "Authorization",
-															"type": "string"
-														}
-													]
-												},
 												"method": "POST",
 												"header": [
 													{
@@ -1650,26 +2104,6 @@
 										{
 											"name": "Stops all services on the compute pool.",
 											"request": {
-												"auth": {
-													"type": "apikey",
-													"apikey": [
-														{
-															"key": "value",
-															"value": "Snowflake Token=\"{{sessionToken}}\"",
-															"type": "string"
-														},
-														{
-															"key": "in",
-															"value": "header",
-															"type": "string"
-														},
-														{
-															"key": "key",
-															"value": "Authorization",
-															"type": "string"
-														}
-													]
-												},
 												"method": "POST",
 												"header": [
 													{
@@ -2014,26 +2448,6 @@
 								{
 									"name": "List compute pools",
 									"request": {
-										"auth": {
-											"type": "apikey",
-											"apikey": [
-												{
-													"key": "value",
-													"value": "Snowflake Token=\"{{sessionToken}}\"",
-													"type": "string"
-												},
-												{
-													"key": "in",
-													"value": "header",
-													"type": "string"
-												},
-												{
-													"key": "key",
-													"value": "Authorization",
-													"type": "string"
-												}
-											]
-										},
 										"method": "GET",
 										"header": [
 											{
@@ -2042,7 +2456,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/v2/compute-pools?like=%computePoolName%&startsWith=compute%&showLimit=10",
+											"raw": "{{baseUrl}}/api/v2/compute-pools",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -2054,15 +2468,18 @@
 											"query": [
 												{
 													"key": "like",
-													"value": "%computePoolName%"
+													"value": "<string>",
+													"disabled": true
 												},
 												{
 													"key": "startsWith",
-													"value": "compute%"
+													"value": "<string>",
+													"disabled": true
 												},
 												{
 													"key": "showLimit",
-													"value": "10"
+													"value": "<integer>",
+													"disabled": true
 												}
 											]
 										},
@@ -2115,7 +2532,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "[\n  {\n    \"name\": \"_dBj\",\n    \"instance_family\": \"<string>\",\n    \"min_nodes\": \"<integer>\",\n    \"max_nodes\": \"<integer>\",\n    \"warehouse\": \"jprqFqc\",\n    \"auto_resume\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"state\": \"RESIZING\",\n    \"num_services\": \"<integer>\",\n    \"auto_suspend_secs\": \"<long>\",\n    \"active_nodes\": \"<integer>\",\n    \"idle_nodes\": \"<integer>\",\n    \"created_on\": \"<dateTime>\",\n    \"resumed_on\": \"<dateTime>\",\n    \"updated_on\": \"<dateTime>\",\n    \"owner\": \"<string>\"\n  },\n  {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"instance_family\": \"<string>\",\n    \"min_nodes\": \"<integer>\",\n    \"max_nodes\": \"<integer>\",\n    \"warehouse\": \"\\\",\\\"\\\"\\\"\\\"#\\\"\\\"\\\"\\\"\\\"\\\"F\\\"\",\n    \"auto_resume\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"state\": \"RESIZING\",\n    \"num_services\": \"<integer>\",\n    \"auto_suspend_secs\": \"<long>\",\n    \"active_nodes\": \"<integer>\",\n    \"idle_nodes\": \"<integer>\",\n    \"created_on\": \"<dateTime>\",\n    \"resumed_on\": \"<dateTime>\",\n    \"updated_on\": \"<dateTime>\",\n    \"owner\": \"<string>\"\n  }\n]"
+											"body": "[\n  {\n    \"name\": \"\\\"8\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"instance_family\": \"<string>\",\n    \"min_nodes\": \"<integer>\",\n    \"max_nodes\": \"<integer>\",\n    \"auto_resume\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"state\": \"RESIZING\",\n    \"num_services\": \"<integer>\",\n    \"auto_suspend_secs\": \"<long>\",\n    \"active_nodes\": \"<integer>\",\n    \"idle_nodes\": \"<integer>\",\n    \"created_on\": \"<dateTime>\",\n    \"resumed_on\": \"<dateTime>\",\n    \"updated_on\": \"<dateTime>\",\n    \"owner\": \"<string>\"\n  },\n  {\n    \"name\": \"qh_LP\",\n    \"instance_family\": \"<string>\",\n    \"min_nodes\": \"<integer>\",\n    \"max_nodes\": \"<integer>\",\n    \"auto_resume\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"state\": \"ACTIVE\",\n    \"num_services\": \"<integer>\",\n    \"auto_suspend_secs\": \"<long>\",\n    \"active_nodes\": \"<integer>\",\n    \"idle_nodes\": \"<integer>\",\n    \"created_on\": \"<dateTime>\",\n    \"resumed_on\": \"<dateTime>\",\n    \"updated_on\": \"<dateTime>\",\n    \"owner\": \"<string>\"\n  }\n]"
 										},
 										{
 											"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -2506,26 +2923,6 @@
 								{
 									"name": "Create a compute pool",
 									"request": {
-										"auth": {
-											"type": "apikey",
-											"apikey": [
-												{
-													"key": "value",
-													"value": "Snowflake Token=\"{{sessionToken}}\"",
-													"type": "string"
-												},
-												{
-													"key": "in",
-													"value": "header",
-													"type": "string"
-												},
-												{
-													"key": "key",
-													"value": "Authorization",
-													"type": "string"
-												}
-											]
-										},
 										"method": "POST",
 										"header": [
 											{
@@ -2539,7 +2936,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"{{compute_pool_name}}\",\n  \"instance_family\": \"family\",\n  \"min_nodes\": 3,\n  \"max_nodes\": 10,\n  \"auto_resume\": true,\n  \"auto_suspend_secs\": 10\n}",
+											"raw": "{\n  \"name\": \"compute_pool_name\",\n  \"instance_family\": \"CPU_X64_XS\",\n  \"min_nodes\": 1,\n  \"max_nodes\": 1,\n  \"auto_resume\": true,\n  \"comment\": \"<string>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -2548,7 +2945,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=ifNotExists",
+											"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -2560,7 +2957,13 @@
 											"query": [
 												{
 													"key": "createMode",
-													"value": "ifNotExists"
+													"value": "errorIfExists"
+												},
+												{
+													"key": "initiallySuspended",
+													"value": "<boolean>",
+													"description": "Specifies whether the compute pool is created initially in the suspended state.",
+													"disabled": true
 												}
 											]
 										},
@@ -2583,7 +2986,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"CZ82wIQJ\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"warehouse\": \"hYkM0DuY\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"SUSPENDED\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2592,7 +2995,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists",
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
 													"host": [
 														"{{baseUrl}}"
 													],
@@ -2605,6 +3008,11 @@
 														{
 															"key": "createMode",
 															"value": "errorIfExists"
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
 														}
 													]
 												}
@@ -2637,7 +3045,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"CZ82wIQJ\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"warehouse\": \"hYkM0DuY\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"SUSPENDED\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2646,7 +3054,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists",
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
 													"host": [
 														"{{baseUrl}}"
 													],
@@ -2659,6 +3067,11 @@
 														{
 															"key": "createMode",
 															"value": "errorIfExists"
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
 														}
 													]
 												}
@@ -2691,7 +3104,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"CZ82wIQJ\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"warehouse\": \"hYkM0DuY\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"SUSPENDED\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2700,7 +3113,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists",
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
 													"host": [
 														"{{baseUrl}}"
 													],
@@ -2713,6 +3126,11 @@
 														{
 															"key": "createMode",
 															"value": "errorIfExists"
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
 														}
 													]
 												}
@@ -2745,7 +3163,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"CZ82wIQJ\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"warehouse\": \"hYkM0DuY\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"SUSPENDED\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2754,7 +3172,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists",
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
 													"host": [
 														"{{baseUrl}}"
 													],
@@ -2767,6 +3185,11 @@
 														{
 															"key": "createMode",
 															"value": "errorIfExists"
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
 														}
 													]
 												}
@@ -2799,7 +3222,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"CZ82wIQJ\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"warehouse\": \"hYkM0DuY\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"SUSPENDED\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2808,7 +3231,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists",
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
 													"host": [
 														"{{baseUrl}}"
 													],
@@ -2821,6 +3244,11 @@
 														{
 															"key": "createMode",
 															"value": "errorIfExists"
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
 														}
 													]
 												}
@@ -2853,7 +3281,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"CZ82wIQJ\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"warehouse\": \"hYkM0DuY\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"SUSPENDED\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2862,7 +3290,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists",
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
 													"host": [
 														"{{baseUrl}}"
 													],
@@ -2875,6 +3303,11 @@
 														{
 															"key": "createMode",
 															"value": "errorIfExists"
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
 														}
 													]
 												}
@@ -2907,7 +3340,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"CZ82wIQJ\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"warehouse\": \"hYkM0DuY\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"SUSPENDED\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2916,7 +3349,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists",
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
 													"host": [
 														"{{baseUrl}}"
 													],
@@ -2929,6 +3362,11 @@
 														{
 															"key": "createMode",
 															"value": "errorIfExists"
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
 														}
 													]
 												}
@@ -2961,7 +3399,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"CZ82wIQJ\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"warehouse\": \"hYkM0DuY\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"SUSPENDED\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2970,7 +3408,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists",
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
 													"host": [
 														"{{baseUrl}}"
 													],
@@ -2983,6 +3421,11 @@
 														{
 															"key": "createMode",
 															"value": "errorIfExists"
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
 														}
 													]
 												}
@@ -3015,7 +3458,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"CZ82wIQJ\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"warehouse\": \"hYkM0DuY\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"SUSPENDED\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3024,7 +3467,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists",
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
 													"host": [
 														"{{baseUrl}}"
 													],
@@ -3037,6 +3480,11 @@
 														{
 															"key": "createMode",
 															"value": "errorIfExists"
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
 														}
 													]
 												}
@@ -3069,7 +3517,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"CZ82wIQJ\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"warehouse\": \"hYkM0DuY\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"SUSPENDED\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"}\\\"\\\"Z\\\"\\\"\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"RESIZING\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3078,7 +3526,7 @@
 													}
 												},
 												"url": {
-													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists",
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
 													"host": [
 														"{{baseUrl}}"
 													],
@@ -3091,6 +3539,11 @@
 														{
 															"key": "createMode",
 															"value": "errorIfExists"
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
 														}
 													]
 												}
@@ -3116,6 +3569,41 @@
 			]
 		}
 	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "Snowflake Token=\"{{sessionToken}}\"",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
 			"key": "baseUrl",
@@ -3123,15 +3611,15 @@
 		},
 		{
 			"key": "name",
-			"value": "gVWQ"
+			"value": "KsnbGQ"
 		},
 		{
 			"key": "name",
-			"value": "gVWQ"
+			"value": "KsnbGQ"
 		},
 		{
 			"key": "name",
-			"value": "gVWQ"
+			"value": "KsnbGQ"
 		}
 	]
 }
