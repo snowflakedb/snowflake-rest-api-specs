@@ -49,7 +49,7 @@
 													"bearer": [
 														{
 															"key": "token",
-															"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJMTE1QRlMuQURNSU4uU0hBMjU2OmNSeE5VOXdBcjdWUEErYW9HelliRlVWVjlrb1c1a1dTKzZKcWVaKzl5Vzg9Iiwic3ViIjoiTExNUEZTLkFETUlOIiwiaWF0IjoxNzIyMDIxMTIwLCJleHAiOjE3MjIxMDc1MjB9.P9OKR4QsuIcdVfDUk1ftTCglB9x_Iy50oGjn8k2uEhGTJPmXb19fDRySlSXrFwOFMZfBtQIMZu-exzu3RD34IFt2FtmuttwhHo7riLnAOstfzt-yAvrKBDPW9aQHNYCidw1F-OJidbCMfoI2srGWezxpMpDQsJiamQJCbq3k9CtF_geQfwqGezwGIitVP9nQUCSAKgS-XGyfyDAJUJIuhOReJHNyiVMvAQ2ga2tNpr23nyixKQ0OelLkkmVqQviYfDEEcypWHGSKkCbHOShc52yxdgoan7tT4XNdAVqighrxwOwnzf41q6xizf4tRC1o14HO3Zny3iGdU49LK2dtOw",
+															"value": "{{bearerToken}}",
 															"type": "string"
 														}
 													]
@@ -178,50 +178,6 @@
 															"value": "deny"
 														},
 														{
-															"key": "X-Snowflake-Cluster",
-															"value": "8847705_463461"
-														},
-														{
-															"key": "X-Snowflake-Connection-Id",
-															"value": "12981156"
-														},
-														{
-															"key": "X-Snowflake-Connection-Request",
-															"value": "12"
-														},
-														{
-															"key": "X-Snowflake-Deployment",
-															"value": "awsuswest2preprod8"
-														},
-														{
-															"key": "X-Snowflake-Nginx",
-															"value": "10.239.227.144"
-														},
-														{
-															"key": "X-Snowflake-Nginx-Version",
-															"value": "1.19.5"
-														},
-														{
-															"key": "X-Snowflake-Redirect-Counter",
-															"value": "0"
-														},
-														{
-															"key": "X-Snowflake-Request-Time",
-															"value": "0.203"
-														},
-														{
-															"key": "X-Snowflake-Status",
-															"value": "200"
-														},
-														{
-															"key": "X-Snowflake-Topology",
-															"value": "1722960101076"
-														},
-														{
-															"key": "X-Snowflake-Upstream",
-															"value": "10.239.18.135:8443"
-														},
-														{
 															"key": "X-XSS-Protection",
 															"value": "1; mode=block"
 														},
@@ -318,50 +274,6 @@
 														{
 															"key": "X-Frame-Options",
 															"value": "deny"
-														},
-														{
-															"key": "X-Snowflake-Cluster",
-															"value": "8847705_463461"
-														},
-														{
-															"key": "X-Snowflake-Connection-Id",
-															"value": "12981156"
-														},
-														{
-															"key": "X-Snowflake-Connection-Request",
-															"value": "12"
-														},
-														{
-															"key": "X-Snowflake-Deployment",
-															"value": "awsuswest2preprod8"
-														},
-														{
-															"key": "X-Snowflake-Nginx",
-															"value": "10.239.227.144"
-														},
-														{
-															"key": "X-Snowflake-Nginx-Version",
-															"value": "1.19.5"
-														},
-														{
-															"key": "X-Snowflake-Redirect-Counter",
-															"value": "0"
-														},
-														{
-															"key": "X-Snowflake-Request-Time",
-															"value": "0.203"
-														},
-														{
-															"key": "X-Snowflake-Status",
-															"value": "200"
-														},
-														{
-															"key": "X-Snowflake-Topology",
-															"value": "1722960101076"
-														},
-														{
-															"key": "X-Snowflake-Upstream",
-															"value": "10.239.18.135:8443"
 														},
 														{
 															"key": "X-XSS-Protection",
