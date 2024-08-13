@@ -1,0 +1,4906 @@
+{
+	"info": {
+		"_postman_id": "50e91b3b-1f21-4a92-afe6-0712bb930c0f",
+		"name": "Snowflake Compute Pools API",
+		"description": "The Snowflake Compute Pools API is a REST API that you can use to access, update, and perform common actions on Compute Pool resources.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28868798",
+		"_collection_link": "https://snowflake.postman.co/workspace/SnowApi-PuPr~785f3044-d2f3-4a33-8fea-8707898185ed/collection/28868798-50e91b3b-1f21-4a92-afe6-0712bb930c0f?action=share&source=collection_link&creator=28868798"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v2",
+					"item": [
+						{
+							"name": "compute-pools",
+							"item": [
+								{
+									"name": "{name}",
+									"item": [
+										{
+											"name": "Fetches a compute pool.",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools",
+														":name"
+													],
+													"variable": [
+														{
+															"key": "name",
+															"value": "jYW",
+															"description": "(Required) Identifier (i.e. name) for the resource."
+														}
+													]
+												},
+												"description": "Fetches a named compute pool. You can get the name of the compute pool from the `/api/v2/compute-pools` GET request."
+											},
+											"response": [
+												{
+													"name": "Successful request.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"name\": \"\\\"\\\"\\\"V\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"IDLE\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"target_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"status_message\": \"<string>\"\n}"
+												},
+												{
+													"name": "Successfully accepted the request, but it is not completed yet.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Accepted",
+													"code": 202,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Location",
+															"value": "<string>",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+												},
+												{
+													"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Method Not Allowed",
+													"code": 405,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Too Many Requests",
+													"code": 429,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Gateway Timeout",
+													"code": 504,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												}
+											]
+										},
+										{
+											"name": "Deletes a compute pool.",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools/:name?ifExists=false",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools",
+														":name"
+													],
+													"query": [
+														{
+															"key": "ifExists",
+															"value": "false",
+															"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+														}
+													],
+													"variable": [
+														{
+															"key": "name",
+															"value": "jYW",
+															"description": "(Required) Identifier (i.e. name) for the resource."
+														}
+													]
+												},
+												"description": "Deletes a compute pool with the given name. If you enable the `ifExists` parameter, the operation succeeds even if the object does not exist. Otherwise, a 404 failure is returned if the object does not exist."
+											},
+											"response": [
+												{
+													"name": "Successful request.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"status\": \"<string>\"\n}"
+												},
+												{
+													"name": "Successfully accepted the request, but it is not completed yet.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Accepted",
+													"code": 202,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Location",
+															"value": "<string>",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+												},
+												{
+													"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Method Not Allowed",
+													"code": 405,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Too Many Requests",
+													"code": 429,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Gateway Timeout",
+													"code": 504,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "{name}:resume",
+									"item": [
+										{
+											"name": "Resumes a suspended compute pool.",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:resume",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools",
+														"{{name}}:resume"
+													]
+												},
+												"description": "Resume a compute pool, if suspended. If the specified compute pool is already running, no action is taken."
+											},
+											"response": [
+												{
+													"name": "Successful request.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:resume",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:resume"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"status\": \"<string>\"\n}"
+												},
+												{
+													"name": "Successfully accepted the request, but it is not completed yet.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:resume",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:resume"
+															]
+														}
+													},
+													"status": "Accepted",
+													"code": 202,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Location",
+															"value": "<string>",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+												},
+												{
+													"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:resume",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:resume"
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:resume",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:resume"
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:resume",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:resume"
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:resume",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:resume"
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:resume",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:resume"
+															]
+														}
+													},
+													"status": "Method Not Allowed",
+													"code": 405,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:resume",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:resume"
+															]
+														}
+													},
+													"status": "Too Many Requests",
+													"code": 429,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:resume",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:resume"
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:resume",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:resume"
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:resume",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:resume"
+															]
+														}
+													},
+													"status": "Gateway Timeout",
+													"code": 504,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "{name}:suspend",
+									"item": [
+										{
+											"name": "Suspends an active compute pool.",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:suspend",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools",
+														"{{name}}:suspend"
+													]
+												},
+												"description": "Suspend a compute pool, if active. If the specified compute pool is already suspended, no action is taken."
+											},
+											"response": [
+												{
+													"name": "Successful request.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:suspend",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:suspend"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"status\": \"<string>\"\n}"
+												},
+												{
+													"name": "Successfully accepted the request, but it is not completed yet.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:suspend",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:suspend"
+															]
+														}
+													},
+													"status": "Accepted",
+													"code": 202,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Location",
+															"value": "<string>",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+												},
+												{
+													"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:suspend",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:suspend"
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:suspend",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:suspend"
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:suspend",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:suspend"
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:suspend",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:suspend"
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:suspend",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:suspend"
+															]
+														}
+													},
+													"status": "Method Not Allowed",
+													"code": 405,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:suspend",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:suspend"
+															]
+														}
+													},
+													"status": "Too Many Requests",
+													"code": 429,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:suspend",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:suspend"
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:suspend",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:suspend"
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:suspend",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:suspend"
+															]
+														}
+													},
+													"status": "Gateway Timeout",
+													"code": 504,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "{name}:stopallservices",
+									"item": [
+										{
+											"name": "Stops all services on the compute pool.",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stopallservices",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools",
+														"{{name}}:stopallservices"
+													]
+												},
+												"description": "Stops all services in the compute pool. Deprecated - use :stop-all-services instead."
+											},
+											"response": [
+												{
+													"name": "Successful request.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stopallservices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stopallservices"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"status\": \"<string>\"\n}"
+												},
+												{
+													"name": "Successfully accepted the request, but it is not completed yet.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stopallservices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stopallservices"
+															]
+														}
+													},
+													"status": "Accepted",
+													"code": 202,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Location",
+															"value": "<string>",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+												},
+												{
+													"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stopallservices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stopallservices"
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stopallservices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stopallservices"
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stopallservices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stopallservices"
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stopallservices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stopallservices"
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stopallservices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stopallservices"
+															]
+														}
+													},
+													"status": "Method Not Allowed",
+													"code": 405,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stopallservices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stopallservices"
+															]
+														}
+													},
+													"status": "Too Many Requests",
+													"code": 429,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stopallservices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stopallservices"
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stopallservices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stopallservices"
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stopallservices",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stopallservices"
+															]
+														}
+													},
+													"status": "Gateway Timeout",
+													"code": 504,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "{name}:stop-all-services",
+									"item": [
+										{
+											"name": "Stops all services on the compute pool.",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stop-all-services",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools",
+														"{{name}}:stop-all-services"
+													]
+												},
+												"description": "Stops all services in the compute pool."
+											},
+											"response": [
+												{
+													"name": "Successful request.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stop-all-services",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stop-all-services"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"status\": \"<string>\"\n}"
+												},
+												{
+													"name": "Successfully accepted the request, but it is not completed yet.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stop-all-services",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stop-all-services"
+															]
+														}
+													},
+													"status": "Accepted",
+													"code": 202,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Location",
+															"value": "<string>",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+												},
+												{
+													"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stop-all-services",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stop-all-services"
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stop-all-services",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stop-all-services"
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stop-all-services",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stop-all-services"
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stop-all-services",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stop-all-services"
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stop-all-services",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stop-all-services"
+															]
+														}
+													},
+													"status": "Method Not Allowed",
+													"code": 405,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stop-all-services",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stop-all-services"
+															]
+														}
+													},
+													"status": "Too Many Requests",
+													"code": 429,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stop-all-services",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stop-all-services"
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stop-all-services",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stop-all-services"
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/compute-pools/{{name}}:stop-all-services",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"compute-pools",
+																"{{name}}:stop-all-services"
+															]
+														}
+													},
+													"status": "Gateway Timeout",
+													"code": 504,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Lists compute pools.",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v2/compute-pools?like=<string>&startsWith=<string>&showLimit=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v2",
+												"compute-pools"
+											],
+											"query": [
+												{
+													"key": "like",
+													"value": "<string>",
+													"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+												},
+												{
+													"key": "startsWith",
+													"value": "<string>",
+													"description": "Query parameter to filter the command output based on the string of characters that appear at the beginning of the object name. Uses case-sensitive pattern matching."
+												},
+												{
+													"key": "showLimit",
+													"value": "<integer>",
+													"description": "Query parameter to limit the maximum number of rows returned by a command."
+												}
+											]
+										},
+										"description": "Lists the compute pools under the account."
+									},
+									"response": [
+										{
+											"name": "Successful request.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?like=<string>&startsWith=<string>&showLimit=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														},
+														{
+															"key": "startsWith",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output based on the string of characters that appear at the beginning of the object name. Uses case-sensitive pattern matching."
+														},
+														{
+															"key": "showLimit",
+															"value": "<integer>",
+															"description": "Query parameter to limit the maximum number of rows returned by a command."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"name\": \"CEJLO\",\n    \"instance_family\": \"<string>\",\n    \"min_nodes\": \"<integer>\",\n    \"max_nodes\": \"<integer>\",\n    \"auto_resume\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"state\": \"SUSPENDED\",\n    \"num_services\": \"<integer>\",\n    \"auto_suspend_secs\": \"<long>\",\n    \"active_nodes\": \"<integer>\",\n    \"idle_nodes\": \"<integer>\",\n    \"target_nodes\": \"<integer>\",\n    \"created_on\": \"<dateTime>\",\n    \"resumed_on\": \"<dateTime>\",\n    \"updated_on\": \"<dateTime>\",\n    \"owner\": \"<string>\",\n    \"error_code\": \"<string>\",\n    \"status_message\": \"<string>\"\n  },\n  {\n    \"name\": \"n1\",\n    \"instance_family\": \"<string>\",\n    \"min_nodes\": \"<integer>\",\n    \"max_nodes\": \"<integer>\",\n    \"auto_resume\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"state\": \"ACTIVE\",\n    \"num_services\": \"<integer>\",\n    \"auto_suspend_secs\": \"<long>\",\n    \"active_nodes\": \"<integer>\",\n    \"idle_nodes\": \"<integer>\",\n    \"target_nodes\": \"<integer>\",\n    \"created_on\": \"<dateTime>\",\n    \"resumed_on\": \"<dateTime>\",\n    \"updated_on\": \"<dateTime>\",\n    \"owner\": \"<string>\",\n    \"error_code\": \"<string>\",\n    \"status_message\": \"<string>\"\n  }\n]"
+										},
+										{
+											"name": "Successfully accepted the request, but it is not completed yet.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?like=<string>&startsWith=<string>&showLimit=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														},
+														{
+															"key": "startsWith",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output based on the string of characters that appear at the beginning of the object name. Uses case-sensitive pattern matching."
+														},
+														{
+															"key": "showLimit",
+															"value": "<integer>",
+															"description": "Query parameter to limit the maximum number of rows returned by a command."
+														}
+													]
+												}
+											},
+											"status": "Accepted",
+											"code": 202,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Location",
+													"value": "<string>",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+										},
+										{
+											"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?like=<string>&startsWith=<string>&showLimit=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														},
+														{
+															"key": "startsWith",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output based on the string of characters that appear at the beginning of the object name. Uses case-sensitive pattern matching."
+														},
+														{
+															"key": "showLimit",
+															"value": "<integer>",
+															"description": "Query parameter to limit the maximum number of rows returned by a command."
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?like=<string>&startsWith=<string>&showLimit=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														},
+														{
+															"key": "startsWith",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output based on the string of characters that appear at the beginning of the object name. Uses case-sensitive pattern matching."
+														},
+														{
+															"key": "showLimit",
+															"value": "<integer>",
+															"description": "Query parameter to limit the maximum number of rows returned by a command."
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?like=<string>&startsWith=<string>&showLimit=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														},
+														{
+															"key": "startsWith",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output based on the string of characters that appear at the beginning of the object name. Uses case-sensitive pattern matching."
+														},
+														{
+															"key": "showLimit",
+															"value": "<integer>",
+															"description": "Query parameter to limit the maximum number of rows returned by a command."
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?like=<string>&startsWith=<string>&showLimit=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														},
+														{
+															"key": "startsWith",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output based on the string of characters that appear at the beginning of the object name. Uses case-sensitive pattern matching."
+														},
+														{
+															"key": "showLimit",
+															"value": "<integer>",
+															"description": "Query parameter to limit the maximum number of rows returned by a command."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?like=<string>&startsWith=<string>&showLimit=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														},
+														{
+															"key": "startsWith",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output based on the string of characters that appear at the beginning of the object name. Uses case-sensitive pattern matching."
+														},
+														{
+															"key": "showLimit",
+															"value": "<integer>",
+															"description": "Query parameter to limit the maximum number of rows returned by a command."
+														}
+													]
+												}
+											},
+											"status": "Method Not Allowed",
+											"code": 405,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?like=<string>&startsWith=<string>&showLimit=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														},
+														{
+															"key": "startsWith",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output based on the string of characters that appear at the beginning of the object name. Uses case-sensitive pattern matching."
+														},
+														{
+															"key": "showLimit",
+															"value": "<integer>",
+															"description": "Query parameter to limit the maximum number of rows returned by a command."
+														}
+													]
+												}
+											},
+											"status": "Too Many Requests",
+											"code": 429,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?like=<string>&startsWith=<string>&showLimit=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														},
+														{
+															"key": "startsWith",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output based on the string of characters that appear at the beginning of the object name. Uses case-sensitive pattern matching."
+														},
+														{
+															"key": "showLimit",
+															"value": "<integer>",
+															"description": "Query parameter to limit the maximum number of rows returned by a command."
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?like=<string>&startsWith=<string>&showLimit=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														},
+														{
+															"key": "startsWith",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output based on the string of characters that appear at the beginning of the object name. Uses case-sensitive pattern matching."
+														},
+														{
+															"key": "showLimit",
+															"value": "<integer>",
+															"description": "Query parameter to limit the maximum number of rows returned by a command."
+														}
+													]
+												}
+											},
+											"status": "Service Unavailable",
+											"code": 503,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?like=<string>&startsWith=<string>&showLimit=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														},
+														{
+															"key": "startsWith",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output based on the string of characters that appear at the beginning of the object name. Uses case-sensitive pattern matching."
+														},
+														{
+															"key": "showLimit",
+															"value": "<integer>",
+															"description": "Query parameter to limit the maximum number of rows returned by a command."
+														}
+													]
+												}
+											},
+											"status": "Gateway Timeout",
+											"code": 504,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Creates a compute pool.",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"\\\"\\\"\\\"V\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"IDLE\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"target_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"status_message\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v2",
+												"compute-pools"
+											],
+											"query": [
+												{
+													"key": "createMode",
+													"value": "errorIfExists",
+													"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+												},
+												{
+													"key": "initiallySuspended",
+													"value": "<boolean>",
+													"description": "Specifies whether the compute pool is created initially in the suspended state."
+												}
+											]
+										},
+										"description": "Creates a compute pool, with standard create modifiers as query parameters. See the Compute Pool component definition for what is required to be provided in the request body."
+									},
+									"response": [
+										{
+											"name": "Successful request.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"V\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"IDLE\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"target_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"status_message\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<string>\"\n}"
+										},
+										{
+											"name": "Successfully accepted the request, but it is not completed yet.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"V\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"IDLE\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"target_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"status_message\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
+														}
+													]
+												}
+											},
+											"status": "Accepted",
+											"code": 202,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Location",
+													"value": "<string>",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+										},
+										{
+											"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"V\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"IDLE\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"target_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"status_message\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"V\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"IDLE\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"target_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"status_message\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"V\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"IDLE\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"target_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"status_message\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"V\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"IDLE\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"target_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"status_message\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"V\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"IDLE\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"target_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"status_message\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
+														}
+													]
+												}
+											},
+											"status": "Method Not Allowed",
+											"code": 405,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"V\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"IDLE\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"target_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"status_message\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
+														}
+													]
+												}
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"V\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"IDLE\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"target_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"status_message\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
+														}
+													]
+												}
+											},
+											"status": "Too Many Requests",
+											"code": 429,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"V\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"IDLE\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"target_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"status_message\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"V\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"IDLE\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"target_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"status_message\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
+														}
+													]
+												}
+											},
+											"status": "Service Unavailable",
+											"code": 503,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"V\\\"\",\n  \"instance_family\": \"<string>\",\n  \"min_nodes\": \"<integer>\",\n  \"max_nodes\": \"<integer>\",\n  \"auto_resume\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"state\": \"IDLE\",\n  \"num_services\": \"<integer>\",\n  \"auto_suspend_secs\": \"<long>\",\n  \"active_nodes\": \"<integer>\",\n  \"idle_nodes\": \"<integer>\",\n  \"target_nodes\": \"<integer>\",\n  \"created_on\": \"<dateTime>\",\n  \"resumed_on\": \"<dateTime>\",\n  \"updated_on\": \"<dateTime>\",\n  \"owner\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"status_message\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/compute-pools?createMode=errorIfExists&initiallySuspended=<boolean>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"compute-pools"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														},
+														{
+															"key": "initiallySuspended",
+															"value": "<boolean>",
+															"description": "Specifies whether the compute pool is created initially in the suspended state."
+														}
+													]
+												}
+											},
+											"status": "Gateway Timeout",
+											"code": 504,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://org-account.snowflakecomputing.com"
+		},
+		{
+			"key": "name",
+			"value": "jYW"
+		},
+		{
+			"key": "name",
+			"value": "jYW"
+		},
+		{
+			"key": "name",
+			"value": "jYW"
+		},
+		{
+			"key": "name",
+			"value": "jYW"
+		}
+	]
+}
