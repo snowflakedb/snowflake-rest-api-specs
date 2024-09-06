@@ -1,0 +1,214 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake REST Server
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Role API
+  description: The Snowflake Role API is a REST API that you can use to access, update,
+    and perform certain action on Roles in a Snowflake database.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/roles:
+    post:
+      summary: Create a role
+      tags:
+      - role
+      description: Create a role according to the parameters given
+      operationId: createRole
+      parameters:
+      - $ref: common.yaml#/components/parameters/createMode
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Role'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    get:
+      summary: List roles available to account
+      tags:
+      - role
+      description: Lists the roles available to the user's account
+      operationId: listRoles
+      parameters:
+      - $ref: common.yaml#/components/parameters/like
+      - $ref: common.yaml#/components/parameters/startsWith
+      - $ref: common.yaml#/components/parameters/showLimit
+      - $ref: common.yaml#/components/parameters/fromName
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Role'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/roles/{name}:
+    delete:
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      summary: Delete a role
+      tags:
+      - role
+      description: Delete a role with the given name.
+      operationId: deleteRole
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  schemas:
+    Role:
+      description: Properties of role.
+      type: object
+      required:
+      - name
+      properties:
+        name:
+          type: string
+          description: Role name
+          example: accountadmin
+        comment:
+          type: string
+          description: Comment about the role.
+          example: Account administrator can manage all aspects of the account.
+        created_on:
+          type: string
+          readOnly: true
+          description: Timestamp for the creation of this role.
+          format: date-time
+        is_default:
+          type: boolean
+          description: "Specifies whether the role being fetched is the user\u2019\
+            s default role."
+          readOnly: true
+        is_current:
+          type: boolean
+          description: "Specifies whether the role being fetched is the user\u2019\
+            s current role."
+          readOnly: true
+        is_inherited:
+          type: boolean
+          description: Specifies whether the role used to run the command inherits
+            the specified role.
+          readOnly: true
+        assigned_to_users:
+          type: integer
+          readOnly: true
+          description: The number of users to whom this role has been assigned.
+          format: int64
+        granted_to_roles:
+          type: integer
+          readOnly: true
+          description: The number of roles to which this role has been granted.
+          format: int64
+        granted_roles:
+          type: integer
+          readOnly: true
+          description: The number of roles that have been granted to this role.
+          format: int64
+        owner:
+          type: string
+          description: Specifies the role that owns this role.
+          readOnly: true
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []
