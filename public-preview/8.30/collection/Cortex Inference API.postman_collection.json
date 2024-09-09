@@ -1,0 +1,584 @@
+{
+	"info": {
+		"_postman_id": "8c7639b8-0913-41ab-8291-5c350558eac3",
+		"name": "Cortex Inference API",
+		"description": "OpenAPI 3.0 specification for the Cortex REST API\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28868798",
+		"_collection_link": "https://snowflake.postman.co/workspace/SnowApi-PuPr~785f3044-d2f3-4a33-8fea-8707898185ed/collection/28868798-8c7639b8-0913-41ab-8291-5c350558eac3?action=share&source=collection_link&creator=28868798"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v2",
+					"item": [
+						{
+							"name": "cortex",
+							"item": [
+								{
+									"name": "inference:complete",
+									"item": [
+										{
+											"name": "Perform LLM text completion inference.",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"model\": \"<string>\",\n  \"messages\": [\n    {\n      \"content\": \"<string>\"\n    }\n  ],\n  \"stream\": false,\n  \"temperature\": 0,\n  \"top_p\": 1,\n  \"max_tokens\": 4096\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/cortex/inference:complete",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"cortex",
+														"inference:complete"
+													]
+												},
+												"description": "Perform LLM text completion inference, similar to snowflake.cortex.Complete."
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"model\": \"<string>\",\n  \"messages\": [\n    {\n      \"content\": \"<string>\"\n    }\n  ],\n  \"stream\": false,\n  \"temperature\": 0,\n  \"top_p\": 1,\n  \"max_tokens\": 4096\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/cortex/inference:complete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"cortex",
+																"inference:complete"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"choices\": [\n    {\n      \"message\": {\n        \"content\": \"<string>\"\n      }\n    },\n    {\n      \"message\": {\n        \"content\": \"<string>\"\n      }\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": \"<integer>\",\n    \"completion_tokens\": \"<integer>\",\n    \"total_tokens\": \"<integer>\"\n  }\n}"
+												},
+												{
+													"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"model\": \"<string>\",\n  \"messages\": [\n    {\n      \"content\": \"<string>\"\n    }\n  ],\n  \"stream\": false,\n  \"temperature\": 0,\n  \"top_p\": 1,\n  \"max_tokens\": 4096\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/cortex/inference:complete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"cortex",
+																"inference:complete"
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "<uuid>",
+															"description": {
+																"content": "Unique ID of the API request.",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"model\": \"<string>\",\n  \"messages\": [\n    {\n      \"content\": \"<string>\"\n    }\n  ],\n  \"stream\": false,\n  \"temperature\": 0,\n  \"top_p\": 1,\n  \"max_tokens\": 4096\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/cortex/inference:complete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"cortex",
+																"inference:complete"
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "<uuid>",
+															"description": {
+																"content": "Unique ID of the API request.",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"model\": \"<string>\",\n  \"messages\": [\n    {\n      \"content\": \"<string>\"\n    }\n  ],\n  \"stream\": false,\n  \"temperature\": 0,\n  \"top_p\": 1,\n  \"max_tokens\": 4096\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/cortex/inference:complete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"cortex",
+																"inference:complete"
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "<uuid>",
+															"description": {
+																"content": "Unique ID of the API request.",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"model\": \"<string>\",\n  \"messages\": [\n    {\n      \"content\": \"<string>\"\n    }\n  ],\n  \"stream\": false,\n  \"temperature\": 0,\n  \"top_p\": 1,\n  \"max_tokens\": 4096\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/cortex/inference:complete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"cortex",
+																"inference:complete"
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "<uuid>",
+															"description": {
+																"content": "Unique ID of the API request.",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"model\": \"<string>\",\n  \"messages\": [\n    {\n      \"content\": \"<string>\"\n    }\n  ],\n  \"stream\": false,\n  \"temperature\": 0,\n  \"top_p\": 1,\n  \"max_tokens\": 4096\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/cortex/inference:complete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"cortex",
+																"inference:complete"
+															]
+														}
+													},
+													"status": "Method Not Allowed",
+													"code": 405,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "<uuid>",
+															"description": {
+																"content": "Unique ID of the API request.",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"model\": \"<string>\",\n  \"messages\": [\n    {\n      \"content\": \"<string>\"\n    }\n  ],\n  \"stream\": false,\n  \"temperature\": 0,\n  \"top_p\": 1,\n  \"max_tokens\": 4096\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/cortex/inference:complete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"cortex",
+																"inference:complete"
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "<uuid>",
+															"description": {
+																"content": "Unique ID of the API request.",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"model\": \"<string>\",\n  \"messages\": [\n    {\n      \"content\": \"<string>\"\n    }\n  ],\n  \"stream\": false,\n  \"temperature\": 0,\n  \"top_p\": 1,\n  \"max_tokens\": 4096\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/cortex/inference:complete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"cortex",
+																"inference:complete"
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "<uuid>",
+															"description": {
+																"content": "Unique ID of the API request.",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"model\": \"<string>\",\n  \"messages\": [\n    {\n      \"content\": \"<string>\"\n    }\n  ],\n  \"stream\": false,\n  \"temperature\": 0,\n  \"top_p\": 1,\n  \"max_tokens\": 4096\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/cortex/inference:complete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"cortex",
+																"inference:complete"
+															]
+														}
+													},
+													"status": "Gateway Timeout",
+													"code": 504,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "<uuid>",
+															"description": {
+																"content": "Unique ID of the API request.",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
