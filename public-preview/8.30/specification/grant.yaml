@@ -1,0 +1,481 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake REST Server
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Grant API
+  description: The Snowflake Grant API is a REST API that you can use to show or manage
+    privileges that have been provided to users and roles in a Snowflake database.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/grants/{granteeType}/{granteeName}/{securableType}/{securableName}/privileges:
+    post:
+      summary: Grant the specified privilege(s) on the named securable to the named
+        grantee.
+      description: Endpoint to indicate that the privileges listed in the request
+        body should be granted.
+      operationId: grantPrivilege
+      tags:
+      - grant
+      parameters:
+      - $ref: '#/components/parameters/granteeType'
+      - $ref: '#/components/parameters/granteeName'
+      - $ref: '#/components/parameters/securableType'
+      - $ref: '#/components/parameters/securableName'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Grant'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/grants/{granteeType}/{granteeName}/{bulkGrantType}/{securableTypePlural}/{scopeType}/{scopeName}/privileges:
+    post:
+      summary: Grant the specified privilege(s) on all/future (as specified by bulkGrantType)
+        securables of this type in a given scope to the named grantee.
+      description: Endpoint to indicate that the privileges listed in the request
+        body should be granted to all securables of this type in the given scope.
+      operationId: grantGroupPrivilege
+      tags:
+      - grant
+      parameters:
+      - $ref: '#/components/parameters/granteeType'
+      - $ref: '#/components/parameters/granteeName'
+      - $ref: '#/components/parameters/bulkGrantType'
+      - $ref: '#/components/parameters/securableTypePlural'
+      - $ref: '#/components/parameters/scopeType'
+      - $ref: '#/components/parameters/scopeName'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Grant'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/grants/{granteeType}/{granteeName}/{securableType}/{securableName}/privileges/{privilege}:
+    delete:
+      summary: Revoke the specified privilege on the named securable from the named
+        grantee.
+      description: Endpoint to indicate that the privilege listed in the path should
+        be revoked.
+      operationId: revokePrivilege
+      tags:
+      - grant
+      parameters:
+      - $ref: '#/components/parameters/granteeType'
+      - $ref: '#/components/parameters/granteeName'
+      - $ref: '#/components/parameters/securableType'
+      - $ref: '#/components/parameters/securableName'
+      - $ref: '#/components/parameters/privilege'
+      - $ref: '#/components/parameters/deleteMode'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/grants/{granteeType}/{granteeName}/{securableType}/{securableName}/privileges/{privilege}/grant-option:
+    delete:
+      summary: Revoke the grant option for the specified privilege on the named securable
+        from the named grantee.
+      description: Endpoint to indicate that the grant option for the privilege listed
+        in the path should be revoked.
+      operationId: revokePrivilegeGrantOption
+      tags:
+      - grant
+      parameters:
+      - $ref: '#/components/parameters/granteeType'
+      - $ref: '#/components/parameters/granteeName'
+      - $ref: '#/components/parameters/securableType'
+      - $ref: '#/components/parameters/securableName'
+      - $ref: '#/components/parameters/privilege'
+      - $ref: '#/components/parameters/deleteMode'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  ? /api/v2/grants/{granteeType}/{granteeName}/{bulkGrantType}/{securableTypePlural}/{scopeType}/{scopeName}/privileges/{privilege}
+  : delete:
+      summary: Revoke the specified privilege on the specified all/future securable
+        in the given scope from the named grantee.
+      description: Endpoint to indicate that the privilege listed on the group securable
+        in the given scope should be revoked.
+      operationId: revokeGroupPrivilege
+      tags:
+      - grant
+      parameters:
+      - $ref: '#/components/parameters/granteeType'
+      - $ref: '#/components/parameters/granteeName'
+      - $ref: '#/components/parameters/bulkGrantType'
+      - $ref: '#/components/parameters/securableTypePlural'
+      - $ref: '#/components/parameters/scopeType'
+      - $ref: '#/components/parameters/scopeName'
+      - $ref: '#/components/parameters/privilege'
+      - $ref: '#/components/parameters/deleteMode'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  ? /api/v2/grants/{granteeType}/{granteeName}/{bulkGrantType}/{securableTypePlural}/{scopeType}/{scopeName}/privileges/{privilege}/grant-option
+  : delete:
+      summary: Revoke the grant option for the specified privilege on the specified
+        all/future securable in the given scope from the named grantee.
+      description: Endpoint to indicate that the grant option for the privilege listed
+        on the group securable in the given scope should be revoked.
+      operationId: revokeGroupPrivilegeGrantOption
+      tags:
+      - grant
+      parameters:
+      - $ref: '#/components/parameters/granteeType'
+      - $ref: '#/components/parameters/granteeName'
+      - $ref: '#/components/parameters/bulkGrantType'
+      - $ref: '#/components/parameters/securableTypePlural'
+      - $ref: '#/components/parameters/scopeType'
+      - $ref: '#/components/parameters/scopeName'
+      - $ref: '#/components/parameters/privilege'
+      - $ref: '#/components/parameters/deleteMode'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/grants/{granteeType}/{granteeName}:
+    get:
+      summary: List of privileges associated with this grantee type and name
+      description: List the roles and privileges granted to the specified grantee
+        using the output of SHOW GRANTS TO
+      operationId: listGrantsTo
+      tags:
+      - grant
+      parameters:
+      - $ref: '#/components/parameters/granteeType'
+      - $ref: '#/components/parameters/granteeName'
+      - $ref: common.yaml#/components/parameters/showLimit
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Grant'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  parameters:
+    granteeType:
+      name: granteeType
+      description: String that specifies the type of resource that is the privilege
+        grantee.
+      required: true
+      in: path
+      schema:
+        example: role
+        type: string
+        enum:
+        - user
+        - role
+        - application-role
+        - database-role
+        - share
+    granteeName:
+      name: granteeName
+      description: String that specifies the name of the privilege grantee.
+      required: true
+      in: path
+      schema:
+        example: SYSADMIN
+        type: string
+    securableType:
+      name: securableType
+      description: String that specifies the type of resource that is being secured
+        by a privilege.
+      required: true
+      in: path
+      schema:
+        example: DATABASE
+        type: string
+    securableName:
+      name: securableName
+      description: String that specifies the name of resource that is being secured
+        by a privilege.
+      required: true
+      in: path
+      schema:
+        example: MY_DB
+        type: string
+    bulkGrantType:
+      name: bulkGrantType
+      description: String that species whether this group privilege should be on ALL
+        or FUTURE resources of the specified plural type
+      required: true
+      in: path
+      schema:
+        example: all
+        type: string
+        enum:
+        - all
+        - future
+    securableTypePlural:
+      name: securableTypePlural
+      description: String that specifies the plural of the type of resource that is
+        being secured by an ALL/FUTURE privilege. Must be either "schemas" or any
+        plural object type that can nest under a schema such as "tables"
+      required: true
+      in: path
+      schema:
+        example: tables
+        type: string
+    scopeType:
+      name: scopeType
+      description: String that specifies the type of resource that is the scope of
+        an ALL/FUTURE privilege. Can only be DATABASE or SCHEMA
+      required: true
+      in: path
+      schema:
+        example: schema
+        type: string
+        enum:
+        - database
+        - schema
+    scopeName:
+      name: scopeName
+      description: String that specifies the name of resource that is the scope of
+        an ALL/FUTURE privilege
+      required: true
+      in: path
+      schema:
+        example: MY_DB.MY_SC
+        type: string
+    privilege:
+      name: privilege
+      description: String that specifies a privilege to be revoked
+      required: true
+      in: path
+      schema:
+        example: SELECT
+        type: string
+    deleteMode:
+      name: deleteMode
+      description: If "cascade", recursively revoke the grant from sub-grantees to
+        which this privilege was re-granted. Acceptable values are "restrict" or "cascade".
+      required: false
+      in: query
+      schema:
+        type: string
+        example: restrict
+  schemas:
+    Grant:
+      description: Properties of a grant that can be granted to a role or user.
+      type: object
+      properties:
+        privileges:
+          type: array
+          description: Privilege type
+          items:
+            type: string
+          example:
+          - CREATE DATABASE
+          - EXECUTE TASK
+        grant_option:
+          type: boolean
+          description: Can grantee pass this privilege down?
+        created_on:
+          type: string
+          format: date-time
+        grantee_type:
+          type: string
+          description: Entity type being granted to
+          example: ROLE
+        grantee_name:
+          type: string
+          description: Specific name of object being granted to
+          example: ACCOUNTADMIN
+        securable_type:
+          type: string
+          description: Type of object granted on
+          example: ACCOUNT
+        securable_name:
+          type: string
+          description: Name of specific object granted on (not name of privilege!)
+        granted_by_role_type:
+          type: string
+          description: Type of role that granted this privilege to this grantee
+          example: ROLE
+        granted_by_name:
+          type: string
+          description: The role that granted this privilege to this grantee
+          example: SUBADMIN
+tags:
+- name: grant
