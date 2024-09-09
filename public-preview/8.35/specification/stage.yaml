@@ -1,0 +1,526 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake Stage API
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Stage API
+  description: The Snowflake Stage API is a REST API that you can use to access, update,
+    and perform certain actions on stage resources in a Snowflake database.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/databases/{database}/schemas/{schema}/stages:
+    get:
+      summary: List stages
+      tags:
+      - stage
+      description: Lists stages under the database and schema, with show options as
+        query parameters.
+      operationId: listStages
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/like
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Stage'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    post:
+      summary: Create a stage
+      tags:
+      - stage
+      description: Create a stage, with standard create modifiers as query parameters.
+        See the Stage component definition for what is required to be provided in
+        the request body.
+      operationId: createStage
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/createMode
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Stage'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/stages/{name}:
+    get:
+      summary: Fetch a stage
+      tags:
+      - stage
+      description: Fetch a stage using the describe command output.
+      operationId: fetchStage
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Stage'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    delete:
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      summary: Delete a stage
+      tags:
+      - stage
+      description: Delete a stage with the stage name. If ifExists is used, the operation
+        will succeed even if the object does not exist. Otherwise, there will be a
+        failure if the drop is unsuccessful.
+      operationId: deleteStage
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/stages/{name}/files:
+    get:
+      summary: List files in the stage.
+      tags:
+      - stage
+      description: List files in the stage -- this is equivalent to LIST @stage.
+      operationId: listFiles
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/pattern
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StageFile'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/stages/{name}/files/{filePath}:presigned-url:
+    post:
+      summary: Generate a presigned url and optionally encryption materials.
+      tags:
+      - stage
+      description: Generate a presigned url and optionally encryption materials for
+        uploading and downloading files.
+      operationId: getPresignedUrl
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - name: filePath
+        description: The full stage path of the file.
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PresignedUrlRequest'
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FileTransferMaterial'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  schemas:
+    PresignedUrlRequest:
+      type: object
+      description: Request object to get presigned url of a file
+      properties:
+        mode:
+          type: string
+          description: Indicates whether the presigned url is used for file uploading
+            or downloading. Can be `upload` or `download`. Default to `download`.
+          enum:
+          - upload
+          - download
+          default: download
+        expiration_time:
+          description: Expiration time of the generated presigned url in seconds.
+          type: integer
+    FileTransferMaterial:
+      type: object
+      description: Materials for uploading and downloading stage files
+      properties:
+        presigned_url:
+          type: string
+          description: Presigned url for file transfer.
+        query_stage_master_key:
+          type: string
+          description: Query stage master key for client side file encryption. NULL
+            if the stage does not use client encryption.
+        query_id:
+          type: string
+          description: Query id for client side file encryption. NULL if the stage
+            does not use client encryption or the presigned_url is used for downloading.
+        smk_id:
+          type: integer
+          format: int64
+          description: SMK id for client side file encryption. NULL if the stage does
+            not use client encryption or the presigned_url is used for downloading.
+    StageFile:
+      type: object
+      description: A file on a snowflake stage.
+      properties:
+        name:
+          type: string
+          description: Name of the file.
+        size:
+          type: string
+          description: Size of the file.
+          readOnly: true
+        md5:
+          type: string
+          description: md5 hash of the file.
+          readOnly: true
+        last_modified:
+          type: string
+          description: Date and time when the file was last modified.
+          readOnly: true
+    Stage:
+      type: object
+      description: A Snowflake stage.
+      properties:
+        name:
+          $ref: ./common.yaml#/components/schemas/Identifier
+          description: String that specifies the identifier (i.e. name) for the stage.
+        kind:
+          type: string
+          enum:
+          - PERMANENT
+          - TEMPORARY
+          default: PERMANENT
+          description: Specifies whether the stage is permanent or temporary.
+        url:
+          type: string
+          description: URL for the external stage; blank for an internal stage.
+        endpoint:
+          type: string
+          description: The S3-compatible API endpoint associated with the stage; always
+            NULL for stages that are not S3-compatible.
+        storage_integration:
+          $ref: ./common.yaml#/components/schemas/Identifier
+          description: Storage integration associated with the stage; always NULL
+            for an internal stage.
+        comment:
+          type: string
+          description: Specifies a comment for the stage.
+        credentials:
+          $ref: '#/components/schemas/Credentials'
+          writeOnly: true
+          description: Credentials of the stage.
+        encryption:
+          type: object
+          description: Encryption parameters of the stage.
+          writeOnly: true
+          properties:
+            type:
+              type: string
+              enum:
+              - SNOWFLAKE_FULL
+              - SNOWFLAKE_SSE
+              - AWS_CSE
+              - AWS_SSE_S3
+              - AWS_SSE_KMS
+              - GCS_SSE_KMS
+              - AZURE_CSE
+              - NONE
+              description: Specifies the encryption type used.
+            master_key:
+              type: string
+              format: password
+              description: Specifies the client-side master key used to encrypt the
+                files in the bucket. The master key must be a 128-bit or 256-bit key
+                in Base64-encoded form.
+            kms_key_id:
+              type: string
+              description: Optionally specifies the ID for the KMS-managed key used
+                to encrypt files unloaded into the bucket.
+        directory_table:
+          type: object
+          description: Directory table parameters of the stage.
+          properties:
+            enable:
+              type: boolean
+              default: false
+              description: Specifies whether to add a directory table to the stage.
+                When the value is TRUE, a directory table is created with the stage.
+            refresh_on_create:
+              type: boolean
+              default: true
+              writeOnly: true
+              description: Specifies whether to automatically refresh the directory
+                table metadata once, immediately after the stage is created.
+            auto_refresh:
+              type: boolean
+              default: false
+              writeOnly: true
+              description: Specifies whether Snowflake should enable triggering automatic
+                refreshes of the directory table metadata when new or updated data
+                files are available in the named external stage specified in the URL
+                value.
+            notification_integration:
+              type: string
+              writeOnly: true
+              description: Specifies the name of the notification integration used
+                to automatically refresh the directory table metadata.
+        created_on:
+          type: string
+          description: Date and time when the stage was created.
+          format: date-time
+          readOnly: true
+        has_credentials:
+          type: boolean
+          description: Indicates that the external stage has access credentials; always
+            false for an internal stage.
+          readOnly: true
+        has_encryption_key:
+          type: boolean
+          description: Indicates that the external stage contains encrypted files;
+            always false for an internal stage.
+          readOnly: true
+        owner:
+          type: string
+          description: Role that owns the stage.
+          readOnly: true
+        owner_role_type:
+          type: string
+          description: The type of role that owns the object, either ROLE or DATABASE_ROLE.
+            If a Snowflake Native App owns the object, the value is APPLICATION. Snowflake
+            returns NULL if you delete the object because a deleted object does not
+            have an owner role.
+          readOnly: true
+        region:
+          type: string
+          description: Region where the stage is located.
+          readOnly: true
+        cloud:
+          type: string
+          description: Cloud provider; always NULL for an internal stage.
+          readOnly: true
+      example:
+        name: stage_name
+      required:
+      - name
+    Credentials:
+      type: object
+      description: Specifies the credentials of the stage.
+      properties:
+        credential_type:
+          description: Type of the credential, can be either AWS or AZURE.
+          type: string
+      discriminator:
+        propertyName: credential_type
+        mapping:
+          AWS: AwsCredentials
+          AZURE: AzureCredentials
+    AwsCredentials:
+      description: Specifies the AWS credentials of the stage.
+      allOf:
+      - $ref: '#/components/schemas/Credentials'
+      properties:
+        aws_key_id:
+          type: string
+          format: password
+          description: Scoped credentials generated by AWS Security Token Service
+            (STS).
+        aws_secret_key:
+          type: string
+          format: password
+          description: Scoped credentials generated by AWS Security Token Service
+            (STS).
+        aws_token:
+          type: string
+          format: password
+          description: Scoped credentials generated by AWS Security Token Service
+            (STS).
+        aws_role:
+          type: string
+          description: Omit the security credentials and access keys and, instead,
+            identify the role using AWS_ROLE and specify the AWS role ARN (Amazon
+            Resource Name).
+    AzureCredentials:
+      description: Specifies the Azure credentials of the stage.
+      allOf:
+      - $ref: '#/components/schemas/Credentials'
+      properties:
+        azure_sas_token:
+          type: string
+          format: password
+          description: Specifies the SAS (shared access signature) token for connecting
+            to Azure.
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []

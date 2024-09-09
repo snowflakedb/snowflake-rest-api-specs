@@ -1,0 +1,834 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake Database API
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Database API
+  description: The Snowflake Database API is a REST API that you can use to access,
+    update, and perform certain actions on Database resource in Snowflake.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/databases:
+    get:
+      summary: Lists databases.
+      tags:
+      - database
+      description: Lists the accessible databases.
+      operationId: listDatabases
+      parameters:
+      - $ref: common.yaml#/components/parameters/like
+      - $ref: common.yaml#/components/parameters/startsWith
+      - $ref: common.yaml#/components/parameters/showLimit
+      - $ref: common.yaml#/components/parameters/fromName
+      - name: history
+        in: query
+        description: Optionally includes dropped databases that have not yet been
+          purged.
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Successful request.
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Database'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    post:
+      summary: Creates a database.
+      tags:
+      - database
+      description: Creates a database, with modifiers as query parameters. You must
+        provide the full database definition when creating a database.
+      operationId: createDatabase
+      parameters:
+      - $ref: common.yaml#/components/parameters/createMode
+      - name: kind
+        in: query
+        description: Type of database to create. Currently, Snowflake supports only
+          `transient` and `permanent` (also represented by the empty string).
+        schema:
+          type: string
+        deprecated: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Database'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases:from-share:
+    post:
+      summary: Creates a database from a share.
+      tags:
+      - database
+      description: Creates a database from a given share.
+      operationId: createDatabaseFromShare
+      parameters:
+      - $ref: common.yaml#/components/parameters/createMode
+      - name: share
+        in: query
+        description: ID of the share from which to create the database, in the form
+          "<provider_account>.<share_name>".
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DatabaseFromShare'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{name}:from_share:
+    post:
+      summary: Creates a database from a share.
+      tags:
+      - database
+      description: Creates a database from a given share.
+      operationId: createDatabaseFromShareDeprecated
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/createMode
+      - name: share
+        in: query
+        description: ID of the share from which to create the database, in the form
+          "<provider_account>.<share_name>".
+        schema:
+          type: string
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+      deprecated: true
+  /api/v2/databases/{name}:clone:
+    post:
+      summary: Clones a database.
+      tags:
+      - database
+      description: Clones an existing database, with modifiers as query parameters.
+        You must provide the full database definition when cloning an existing database.
+      operationId: cloneDatabase
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/createMode
+      - name: kind
+        in: query
+        description: Type of database to create. Currently, Snowflake supports only
+          `transient` and `permanent` (also represented by the empty string).
+        schema:
+          type: string
+        deprecated: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DatabaseClone'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{name}:
+    get:
+      tags:
+      - database
+      description: Fetches a database.
+      operationId: fetchDatabase
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Database'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    put:
+      summary: Creates a new, or alters an existing, database.
+      tags:
+      - database
+      description: Creates a new, or alters an existing, database. You must provide
+        the full database definition even when altering an existing database.
+      operationId: createOrAlterDatabase
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Database'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    delete:
+      summary: Deletes a database.
+      tags:
+      - database
+      description: Deletes the specified database. If you enable the `ifExists` parameter,
+        the operation succeeds even if the database does not exist. Otherwise, a 404
+        failure is returned if the database does not exist. if the drop is unsuccessful.
+      operationId: deleteDatabase
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      - name: restrict
+        in: query
+        description: 'Whether to drop the database if foreign keys exist that reference
+          any tables in the database.
+
+          - `true`: Return a warning about existing foreign key references and don''t
+          drop the database.
+
+          - `false`: Drop the database and all objects in the database, including
+          tables with primary or unique keys that are referenced by foreign keys in
+          other tables.'
+        schema:
+          type: boolean
+          default: false
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{name}/replication:enable:
+    post:
+      summary: Enables database replication.
+      tags:
+      - database
+      description: Promotes a local database to serve as a primary database for replication.
+        A primary database can be replicated in one or more accounts, allowing users
+        in those accounts to query objects in each secondary (i.e. replica) database.
+      operationId: enableDatabaseReplication
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      - name: ignore_edition_check
+        in: query
+        description: 'Whether to allow replicating data to accounts on lower editions.
+          Default: `true`.
+
+          For more information, see the <a href=https://docs.snowflake.com/en/sql-reference/sql/alter-database>
+          ALTER DATABASE</a> reference.'
+        schema:
+          type: boolean
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountIdentifiers'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{name}/replication:disable:
+    post:
+      summary: Disables database replication.
+      tags:
+      - database
+      description: Disables replication for this primary database, meaning no replica
+        of this database (i.e. secondary database) in another account can be refreshed.
+        Any secondary databases remain linked to the primary database, but requests
+        to refresh a secondary database are denied.
+      operationId: disableDatabaseReplication
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountIdentifiers'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{name}/replication:refresh:
+    post:
+      summary: Refreshes database replications.
+      tags:
+      - database
+      description: 'Refreshes a secondary database from a snapshot of its primary
+        database. A snapshot includes changes to the objects and data.
+
+        If you call this endpoint while another refresh for the same replica database
+        is running, it fails and returns an error. Snowflake ensures only one refresh
+        is executed at any given time.'
+      operationId: refreshDatabaseReplication
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{name}/failover:enable:
+    post:
+      summary: Enables database failover.
+      tags:
+      - database
+      description: Specifies a comma-separated list of accounts in your organization
+        where a replica of this primary database can be promoted to serve as the primary
+        database.
+      operationId: enableDatabaseFailover
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountIdentifiers'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{name}/failover:disable:
+    post:
+      summary: Disables database failover.
+      tags:
+      - database
+      description: Disables failover for this primary database, meaning no replica
+        of this database (i.e. secondary database) can be promoted to serve as the
+        primary database.
+      operationId: disableDatabaseFailover
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountIdentifiers'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{name}/failover:primary:
+    post:
+      summary: Sets a primary database.
+      tags:
+      - database
+      description: Promotes the specified secondary (replica) database to serve as
+        the primary database. When promoted, the database becomes writeable. At the
+        same time, the previous primary database becomes a read-only secondary database.
+      operationId: primaryDatabaseFailover
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  schemas:
+    AccountIdentifiers:
+      type: object
+      description: Array of unique account identifiers.
+      properties:
+        accounts:
+          type: array
+          items:
+            type: string
+            minLength: 1
+      example:
+        accounts:
+        - accountName1
+        - accountName2
+      required:
+      - accounts
+    Database:
+      type: object
+      description: Snowflake database object.
+      properties:
+        created_on:
+          type: string
+          format: date-time
+          readOnly: true
+          description: Date and time the database was created.
+        name:
+          $ref: ./common.yaml#/components/schemas/Identifier
+          description: Name of the database.
+        kind:
+          type: string
+          enum:
+          - PERMANENT
+          - TRANSIENT
+          default: PERMANENT
+          description: Database type, permanent (default) or transient.
+        is_default:
+          type: boolean
+          readOnly: true
+          description: Whether the database is the default database for a user.
+        is_current:
+          type: boolean
+          readOnly: true
+          description: Current database for the session.
+        origin:
+          type: string
+          readOnly: true
+        owner:
+          type: string
+          readOnly: true
+          description: Name of the role that owns the database.
+        comment:
+          type: string
+          description: Optional comment in which to store information related to the
+            database.
+        options:
+          type: string
+          readOnly: true
+        retention_time:
+          type: integer
+          readOnly: true
+          description: Number of days that historical data is retained for Time Travel.
+        dropped_on:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
+          description: Date and time the database was dropped.
+        budget:
+          type: string
+          readOnly: true
+          description: Budget that defines a monthly spending limit on the compute
+            costs for a Snowflake account or a custom group of Snowflake objects.
+        owner_role_type:
+          type: string
+          readOnly: true
+          description: Type of role that owns the object, either ROLE or DATABASE_ROLE
+        data_retention_time_in_days:
+          type: integer
+          description: Specifies the number of days for which Time Travel actions
+            (CLONE and UNDROP) can be performed on the database, as well as specifying
+            the default Time Travel retention time for all schemas created in the
+            database.
+        default_ddl_collation:
+          type: string
+          description: Default collation specification for all schemas and tables
+            added to the database. You an override the default at the schema and individual
+            table levels.
+        log_level:
+          type: string
+          description: Severity level of messages that should be ingested and made
+            available in the active event table. Currently, Snowflake supports only
+            `TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, `FATAL` and `OFF`.
+        max_data_extension_time_in_days:
+          type: integer
+          description: Maximum number of days for which Snowflake can extend the data
+            retention period for tables in the database to prevent streams on the
+            tables from becoming stale.
+        suspend_task_after_num_failures:
+          type: integer
+          description: Maximum number of consecutive failed task runs before the current
+            task is suspended automatically.
+        trace_level:
+          type: string
+          description: How trace events are ingested into the event table. Currently,
+            Snowflake supports only `ALWAYS`, `ON_EVENT`, and `OFF`.
+        user_task_managed_initial_warehouse_size:
+          type: string
+          description: Size of the compute resources to provision for the first run
+            of the task, before a task history is available for Snowflake to determine
+            an ideal size.
+        user_task_timeout_ms:
+          type: integer
+          description: Time limit, in milliseconds, for a single run of the task before
+            it times out.
+      required:
+      - name
+    DatabaseClone:
+      type: object
+      description: Clone database.
+      allOf:
+      - $ref: '#/components/schemas/Database'
+      properties:
+        point_of_time:
+          $ref: common.yaml#/components/schemas/PointOfTime
+    DatabaseFromShare:
+      type: object
+      description: Database from share.
+      properties:
+        name:
+          $ref: ./common.yaml#/components/schemas/Identifier
+          description: Name of the database.
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []
