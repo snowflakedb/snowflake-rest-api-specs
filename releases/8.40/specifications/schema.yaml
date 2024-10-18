@@ -1,0 +1,513 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake Schema API
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Schema API
+  description: The Snowflake Schema API is a REST API that you can use to access,
+    update, and perform certain actions on a Snowflake schema.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/databases/{database}/schemas:
+    get:
+      summary: Lists schemas.
+      tags:
+      - schema
+      description: Lists the accessible schemas.
+      operationId: listSchemas
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/like
+      - $ref: common.yaml#/components/parameters/startsWith
+      - $ref: common.yaml#/components/parameters/showLimit
+      - $ref: common.yaml#/components/parameters/fromName
+      - name: history
+        in: query
+        description: 'Whether to include dropped schemas that have not yet been purged.
+          Default: `false`.'
+        schema:
+          type: boolean
+          default: false
+      responses:
+        '200':
+          description: Successful request.
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Schema'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    post:
+      summary: Creates a schema.
+      tags:
+      - schema
+      description: Creates a schema, with modifiers as query parameters. You must
+        provide the full schema definition when creating a schema.
+      operationId: createSchema
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/createMode
+      - name: kind
+        in: query
+        description: Type of schema to create. Currently, Snowflake supports only
+          `transient` and `permanent` (also represented by the empty string).
+        schema:
+          type: string
+          default: ''
+        deprecated: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Schema'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{name}:clone:
+    post:
+      summary: Clones a schema.
+      tags:
+      - schema
+      description: Clones an existing schema, with modifiers as query parameters.
+        You must provide the full schema definition when cloning an existing schema.
+      operationId: cloneSchema
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/createMode
+      - name: kind
+        in: query
+        description: Type of schema to clone. Currently, Snowflake supports only `transient`
+          and `permanent` (also represented by the empty string).
+        schema:
+          type: string
+          default: ''
+        deprecated: true
+      - name: targetDatabase
+        in: query
+        description: Database of the newly created schema. Defaults to the source
+          schema's database.
+        schema:
+          $ref: ./common.yaml#/components/schemas/Identifier
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SchemaClone'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{name}:undrop:
+    post:
+      summary: Undrop a schema.
+      tags:
+      - schema
+      description: Undrops schema.
+      operationId: undropSchema
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{name}:
+    get:
+      tags:
+      - schema
+      description: Fetches a schema.
+      operationId: fetchSchema
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Schema'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    put:
+      summary: Creates a new, or alters an existing, schema.
+      tags:
+      - schema
+      description: Creates a new, or alters an existing, schema. You must provide
+        the full schema definition even when altering an existing schema.
+      operationId: createOrAlterSchema
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/name
+      - name: kind
+        in: query
+        description: Type of schema to create. Currently, Snowflake supports only
+          `transient` and `permanent` (also represented by the empty string).
+        schema:
+          type: string
+          default: ''
+        deprecated: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Schema'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    delete:
+      summary: Deletes a schema.
+      tags:
+      - schema
+      description: Deletes the specified schema. If you enable the `ifExists` parameter,
+        the operation succeeds even if the schema does not exist. Otherwise, a 404
+        failure is returned if the schema does not exist. if the drop is unsuccessful.
+      operationId: deleteSchema
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      - name: restrict
+        in: query
+        description: 'Whether to drop the schema if foreign keys exist that reference
+          any tables in the schema.
+
+          - `true`: Return a warning about existing foreign key references and don''t
+          drop the schema.
+
+          - `false`: Drop the schema and all objects in the database, including tables
+          with primary or unique keys that are referenced by foreign keys in other
+          tables.
+
+          Default: `false`.'
+        schema:
+          type: boolean
+          default: false
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  schemas:
+    Schema:
+      type: object
+      description: Snowflake schema definition.
+      properties:
+        created_on:
+          type: string
+          format: date-time
+          readOnly: true
+          description: Date and time the schema was created.
+        name:
+          $ref: ./common.yaml#/components/schemas/Identifier
+          description: Name of the schema.
+        kind:
+          type: string
+          enum:
+          - PERMANENT
+          - TRANSIENT
+          default: PERMANENT
+          description: Schema type, permanent (default) or transient.
+        is_default:
+          type: boolean
+          readOnly: true
+          description: Default schema for a user.
+        is_current:
+          type: boolean
+          readOnly: true
+          description: Current schema for the session.
+        database_name:
+          type: string
+          readOnly: true
+          description: Database that the schema belongs to
+        owner:
+          type: string
+          readOnly: true
+          description: Name of the role that owns the schema.
+        comment:
+          type: string
+          description: Optional comment in which to store information related to the
+            schema.
+        options:
+          type: string
+          readOnly: true
+        managed_access:
+          type: boolean
+          default: false
+          description: Whether this schema is a managed access schema that centralizes
+            privilege management with the schema owner.
+        retention_time:
+          type: integer
+          readOnly: true
+          description: Number of days that historical data is retained for Time Travel.
+        dropped_on:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
+          description: Date and time the schema was dropped.
+        owner_role_type:
+          type: string
+          readOnly: true
+          description: Type of role that owns the object, either `ROLE` or `DATABASE_ROLE`.
+        budget:
+          type: string
+          readOnly: true
+          description: Budget that defines a monthly spending limit on the compute
+            costs  for a Snowflake account or a custom group of Snowflake objects.
+        data_retention_time_in_days:
+          type: integer
+          description: Number of days for which Time Travel actions (CLONE and UNDROP)
+            can be performed on the schema, as well as specifying the default Time
+            Travel retention time for all tables created in the schema
+        default_ddl_collation:
+          type: string
+          description: Specifies a default collation specification for all tables
+            added to the schema. You an override the default at the schema and individual
+            table levels.
+        log_level:
+          type: string
+          description: Severity level of messages that should be ingested and made
+            available in the active event table. Currently, Snowflake supports only
+            `TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, `FATAL` and `OFF`.
+        pipe_execution_paused:
+          type: boolean
+          description: Whether pipe execution is paused.
+        max_data_extension_time_in_days:
+          type: integer
+          description: Maximum number of days for which Snowflake can extend the data
+            retention period for tables in the schema to prevent streams on the tables
+            from becoming stale.
+        suspend_task_after_num_failures:
+          type: integer
+          description: Specifies the number of consecutive failed task runs after
+            which the current task is suspended automatically.
+        trace_level:
+          type: string
+          description: How trace events are ingested into the event table. Currently,
+            Snowflake supports only `ALWAYS`, `ON_EVENT`, and `OFF`.
+        user_task_managed_initial_warehouse_size:
+          type: string
+          description: Size of the compute resources to provision for the first run
+            of the task, before a task history is available for Snowflake to determine
+            an ideal size.
+        user_task_timeout_ms:
+          type: integer
+          description: Time limit, in milliseconds, for a single run of the task before
+            it times out.
+      required:
+      - name
+    SchemaClone:
+      type: object
+      description: Schema clone definition.
+      allOf:
+      - $ref: '#/components/schemas/Schema'
+      properties:
+        point_of_time:
+          $ref: common.yaml#/components/schemas/PointOfTime
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []

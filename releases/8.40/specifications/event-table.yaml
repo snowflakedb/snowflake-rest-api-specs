@@ -1,0 +1,385 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake REST Server
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Event Table API
+  description: The Snowflake Event Table API is a REST API that you can use to access,
+    update, and perform certain actions on Event Table resource in a Snowflake database.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/databases/{database}/schemas/{schema}/event-tables:
+    get:
+      summary: List event tables
+      tags:
+      - event-table
+      description: List event tables
+      operationId: listEventTables
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/like
+      - $ref: common.yaml#/components/parameters/startsWith
+      - $ref: common.yaml#/components/parameters/showLimit
+      - $ref: common.yaml#/components/parameters/fromName
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EventTable'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    post:
+      summary: Create an event table
+      tags:
+      - event-table
+      description: Create an event table
+      operationId: createEventTable
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/createMode
+      - $ref: common.yaml#/components/parameters/copyGrants
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EventTable'
+  /api/v2/databases/{database}/schemas/{schema}/event-tables/{name}:
+    get:
+      summary: Fetch an event table
+      tags:
+      - event-table
+      description: Fetch an event table
+      operationId: fetchEventTable
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventTable'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    delete:
+      summary: Delete an event table
+      tags:
+      - event-table
+      description: Delete an event table
+      operationId: deleteEventTable
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/event-tables/{name}:rename:
+    post:
+      summary: Rename the event table
+      tags:
+      - event-table
+      description: Rename the event table
+      operationId: renameEventTable
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      - name: targetName
+        description: Specify the name of the target resource to be renamed to.
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  schemas:
+    EventTable:
+      type: object
+      description: A Snowflake event table
+      properties:
+        name:
+          type: string
+          description: Name of the event table
+        cluster_by:
+          type: array
+          items:
+            type: string
+          description: Cluster key column(s) or expression
+        data_retention_time_in_days:
+          type: integer
+          description: number of days to retain the old version of deleted/updated
+            data
+        max_data_extension_time_in_days:
+          type: integer
+          description: Maximum number of days to extend data retention beyond the
+            retention period to prevent a stream becoming stale.
+        change_tracking:
+          type: boolean
+          description: True if change tracking is enabled, allowing streams and CHANGES
+            to be used on the entity.
+        default_ddl_collation:
+          type: string
+          description: Collation that is used for all the new columns created by the
+            DDL statements (if not specified)
+        comment:
+          type: string
+          description: user comment associated to an object in the dictionary
+        created_on:
+          type: string
+          format: date-time
+          readOnly: true
+          description: Date and time when the event table was created.
+        database_name:
+          type: string
+          readOnly: true
+          description: Database in which the event table is stored
+        schema_name:
+          type: string
+          readOnly: true
+          description: Schema in which the event table is stored
+        owner:
+          type: string
+          readOnly: true
+          description: Role that owns the event table
+        owner_role_type:
+          type: string
+          readOnly: true
+          description: The type of role that owns the event table
+        rows:
+          type: integer
+          format: int64
+          readOnly: true
+          description: Number of rows in the table.
+        bytes:
+          type: integer
+          format: int64
+          readOnly: true
+          description: Number of bytes that will be scanned if the entire table is
+            scanned in a query.Note that this number may be different than the number
+            of actual physical bytes stored on-disk for the table
+        automatic_clustering:
+          type: boolean
+          readOnly: true
+          description: If Automatic Clustering is enabled for your account, specifies
+            whether it is explicitly enabled or disabled for the table.
+        search_optimization:
+          type: boolean
+          readOnly: true
+          description: If ON, the table has the search optimization service enabled
+        search_optimization_progress:
+          type: integer
+          format: int64
+          readOnly: true
+          description: Percentage of the table that has been optimized for search
+        search_optimization_bytes:
+          type: integer
+          format: int64
+          readOnly: true
+          description: Number of additional bytes of storage that the search optimization
+            service consumes for this table
+        columns:
+          type: array
+          items:
+            $ref: '#/components/schemas/EventTableColumn'
+          readOnly: true
+      required:
+      - name
+    EventTableColumn:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Column name
+        datatype:
+          type: string
+          description: The data type for the column
+        nullable:
+          type: boolean
+          description: Specifies that the column does allow NULL values or not
+        default:
+          type: string
+          description: Specifies whether a default value is automatically inserted
+            in the column if a value is not explicitly specified via an INSERT or
+            CREATE TABLE AS SELECT statement
+        primary_key:
+          type: boolean
+          description: A primary key is the column or columns that contain values
+            that uniquely identify each row in a table
+        unique_key:
+          type: boolean
+          description: Unique keys are columns in a table that uniquely identify items
+            in the rows. This sounds a lot like a primary key, but the main difference
+            is that unique keys can have NULL values.
+        check:
+          type: string
+          description: ''
+        expression:
+          type: string
+          description: ''
+        comment:
+          type: string
+          description: Specifies a comment for the column
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []

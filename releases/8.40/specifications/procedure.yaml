@@ -1,0 +1,815 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake REST Server
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Procedure API
+  description: The Snowflake Procedure API is a REST API that you can use to access,
+    update, and perform certain actions on Procedure resource in a Snowflake database.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/databases/{database}/schemas/{schema}/procedures:
+    get:
+      summary: List procedures
+      tags:
+      - procedure
+      description: List procedures
+      operationId: listProcedures
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/like
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Procedure'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    post:
+      summary: Create a procedure
+      tags:
+      - procedure
+      description: Create a procedure
+      operationId: createProcedure
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/createMode
+      - $ref: common.yaml#/components/parameters/copyGrants
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Procedure'
+  /api/v2/databases/{database}/schemas/{schema}/procedures/{nameWithArgs}:
+    get:
+      summary: Fetch a procedure
+      tags:
+      - procedure
+      description: Fetch a procedure
+      operationId: fetchProcedure
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/nameWithArgs
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Procedure'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    delete:
+      summary: Delete a procedure
+      tags:
+      - procedure
+      description: Delete a procedure
+      operationId: deleteProcedure
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/nameWithArgs
+      - $ref: common.yaml#/components/parameters/ifExists
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/procedures/{nameWithArgs}:call:
+    post:
+      summary: Call a procedure
+      tags:
+      - procedure
+      description: Call a procedure
+      operationId: callProcedure
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/nameWithArgs
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CallArgumentList'
+components:
+  schemas:
+    Procedure:
+      type: object
+      description: A Snowflake procedure
+      properties:
+        name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Name of the procedure
+        execute_as:
+          type: string
+          enum:
+          - CALLER
+          - OWNER
+          description: What permissions should the procedure execution be called with
+        is_secure:
+          type: boolean
+          description: Specifies whether the function/procedure is secure or not
+        arguments:
+          type: array
+          items:
+            $ref: '#/components/schemas/Argument'
+          description: List of arguments for the function/procedure
+        return_type:
+          $ref: '#/components/schemas/ReturnType'
+          description: Return type of the function/procedure. Should be a SQL data
+            type or a table
+        language_config:
+          $ref: '#/components/schemas/FunctionLanguage'
+          description: Language that the function/procedure is written in
+        comment:
+          type: string
+          description: Specifies a comment for the function/procedure
+        body:
+          type: string
+          description: Function/procedure definition
+        created_on:
+          type: string
+          format: date-time
+          readOnly: true
+          description: The date and time when the function/procedure was created
+        schema_name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: The name of the schema in which the function/procedure exists.
+        database_name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: The name of the database in which the function/procedure exists.
+        min_num_arguments:
+          type: integer
+          readOnly: true
+          description: The minimum number of arguments
+        max_num_arguments:
+          type: integer
+          readOnly: true
+          description: The maximum number of arguments
+        owner:
+          type: string
+          readOnly: true
+          description: Role that owns the function/procedure
+        owner_role_type:
+          type: string
+          readOnly: true
+          description: The type of role that owns the function/procedure
+        is_builtin:
+          type: boolean
+          readOnly: true
+          description: If the function/procedure is built-in or not (user-defined)
+      required:
+      - name
+      - arguments
+      - return_type
+      - language_config
+      - body
+    Argument:
+      type: object
+      properties:
+        name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Argument name
+        datatype:
+          type: string
+          enum:
+          - ARRAY
+          - BIGINT
+          - BINARY
+          - BOOLEAN
+          - BYTEINT
+          - CHAR
+          - CHARACTER
+          - DATE
+          - DATETIME
+          - DECIMAL
+          - DOUBLE
+          - DOUBLE PRECISION
+          - FLOAT
+          - FLOAT4
+          - FLOAT8
+          - GEOGRAPHY
+          - GEOMETRY
+          - INT
+          - INTEGER
+          - NUMBER
+          - NUMERIC
+          - OBJECT
+          - REAL
+          - STRING
+          - SMALLINT
+          - TEXT
+          - TIME
+          - TIMESTAMP_LTZ
+          - TIMESTAMP_NTZ
+          - TIMESTAMP_TZ
+          - TINYINT
+          - VARBINARY
+          - VARCHAR
+          - VARIANT
+          - VECTOR
+          x-enum-varnames:
+          - ARRAY
+          - BIGINT
+          - BINARY
+          - BOOLEAN
+          - BYTEINT
+          - CHAR
+          - CHARACTER
+          - DATE
+          - DATETIME
+          - DECIMAL
+          - DOUBLE
+          - DOUBLE_PRECISION
+          - FLOAT
+          - FLOAT4
+          - FLOAT8
+          - GEOGRAPHY
+          - GEOMETRY
+          - INT
+          - INTEGER
+          - NUMBER
+          - NUMERIC
+          - OBJECT
+          - REAL
+          - STRING
+          - SMALLINT
+          - TEXT
+          - TIME
+          - TIMESTAMP_LTZ
+          - TIMESTAMP_NTZ
+          - TIMESTAMP_TZ
+          - TINYINT
+          - VARBINARY
+          - VARCHAR
+          - VARIANT
+          - VECTOR
+          description: Argument data type
+        default_value:
+          type: string
+          description: Default value of the argument
+      required:
+      - name
+      - datatype
+    ReturnType:
+      type: object
+      properties:
+        type:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Type of the return, can be either DATATYPE or TABLE
+      required:
+      - type
+      discriminator:
+        propertyName: type
+        mapping:
+          DATATYPE: ReturnDataType
+          TABLE: ReturnTable
+    ReturnDataType:
+      allOf:
+      - $ref: '#/components/schemas/ReturnType'
+      properties:
+        datatype:
+          type: string
+          enum:
+          - ARRAY
+          - BIGINT
+          - BINARY
+          - BOOLEAN
+          - BYTEINT
+          - CHAR
+          - CHARACTER
+          - DATE
+          - DATETIME
+          - DECIMAL
+          - DOUBLE
+          - DOUBLE PRECISION
+          - FLOAT
+          - FLOAT4
+          - FLOAT8
+          - GEOGRAPHY
+          - GEOMETRY
+          - INT
+          - INTEGER
+          - NUMBER
+          - NUMERIC
+          - OBJECT
+          - REAL
+          - STRING
+          - SMALLINT
+          - TEXT
+          - TIME
+          - TIMESTAMP_LTZ
+          - TIMESTAMP_NTZ
+          - TIMESTAMP_TZ
+          - TINYINT
+          - VARBINARY
+          - VARCHAR
+          - VARIANT
+          - VECTOR
+          x-enum-varnames:
+          - ARRAY
+          - BIGINT
+          - BINARY
+          - BOOLEAN
+          - BYTEINT
+          - CHAR
+          - CHARACTER
+          - DATE
+          - DATETIME
+          - DECIMAL
+          - DOUBLE
+          - DOUBLE_PRECISION
+          - FLOAT
+          - FLOAT4
+          - FLOAT8
+          - GEOGRAPHY
+          - GEOMETRY
+          - INT
+          - INTEGER
+          - NUMBER
+          - NUMERIC
+          - OBJECT
+          - REAL
+          - STRING
+          - SMALLINT
+          - TEXT
+          - TIME
+          - TIMESTAMP_LTZ
+          - TIMESTAMP_NTZ
+          - TIMESTAMP_TZ
+          - TINYINT
+          - VARBINARY
+          - VARCHAR
+          - VARIANT
+          - VECTOR
+          description: Return data type
+        nullable:
+          type: boolean
+          description: Argument null return acceptance criteria
+      required:
+      - datatype
+    ReturnTable:
+      allOf:
+      - $ref: '#/components/schemas/ReturnType'
+      properties:
+        column_list:
+          type: array
+          items:
+            $ref: '#/components/schemas/ColumnType'
+          description: List of table columns to return
+    ColumnType:
+      type: object
+      properties:
+        name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Argument name
+        datatype:
+          type: string
+          enum:
+          - ARRAY
+          - BIGINT
+          - BINARY
+          - BOOLEAN
+          - BYTEINT
+          - CHAR
+          - CHARACTER
+          - DATE
+          - DATETIME
+          - DECIMAL
+          - DOUBLE
+          - DOUBLE PRECISION
+          - FLOAT
+          - FLOAT4
+          - FLOAT8
+          - GEOGRAPHY
+          - GEOMETRY
+          - INT
+          - INTEGER
+          - NUMBER
+          - NUMERIC
+          - OBJECT
+          - REAL
+          - STRING
+          - SMALLINT
+          - TEXT
+          - TIME
+          - TIMESTAMP_LTZ
+          - TIMESTAMP_NTZ
+          - TIMESTAMP_TZ
+          - TINYINT
+          - VARBINARY
+          - VARCHAR
+          - VARIANT
+          - VECTOR
+          x-enum-varnames:
+          - ARRAY
+          - BIGINT
+          - BINARY
+          - BOOLEAN
+          - BYTEINT
+          - CHAR
+          - CHARACTER
+          - DATE
+          - DATETIME
+          - DECIMAL
+          - DOUBLE
+          - DOUBLE_PRECISION
+          - FLOAT
+          - FLOAT4
+          - FLOAT8
+          - GEOGRAPHY
+          - GEOMETRY
+          - INT
+          - INTEGER
+          - NUMBER
+          - NUMERIC
+          - OBJECT
+          - REAL
+          - STRING
+          - SMALLINT
+          - TEXT
+          - TIME
+          - TIMESTAMP_LTZ
+          - TIMESTAMP_NTZ
+          - TIMESTAMP_TZ
+          - TINYINT
+          - VARBINARY
+          - VARCHAR
+          - VARIANT
+          - VECTOR
+          description: Argument data type
+      required:
+      - name
+      - datatype
+    FunctionLanguage:
+      type: object
+      properties:
+        language:
+          type: string
+          description: 'Language that the function/procedure is written in. Possible
+            values include: JAVA, JAVASCRIPT, PYTHON, SCALA, SQL'
+        called_on_null_input:
+          type: boolean
+          description: Decide if the function/procedure can receive null input
+      required:
+      - language
+      discriminator:
+        propertyName: language
+        mapping:
+          JAVA: JavaFunction
+          PYTHON: PythonFunction
+          SCALA: ScalaFunction
+          JAVASCRIPT: JavaScriptFunction
+          SQL: SQLFunction
+    BaseLanguage:
+      allOf:
+      - $ref: '#/components/schemas/FunctionLanguage'
+      properties:
+        runtime_version:
+          type: string
+          description: Runtime version of the function's/procedure's specified language
+        packages:
+          type: array
+          items:
+            type: string
+          description: Packages to include with the function/procedure
+        imports:
+          type: array
+          items:
+            type: string
+          description: List of imports
+        handler:
+          type: string
+          description: Fully qualified method name including the package and the class
+      required:
+      - runtime_version
+      - packages
+      - handler
+    JavaFunction:
+      allOf:
+      - $ref: '#/components/schemas/BaseLanguage'
+      properties:
+        external_access_integrations:
+          type: array
+          items:
+            type: string
+          description: List of external access integrations attached to this function/procedure
+        secrets:
+          type: object
+          additionalProperties:
+            type: string
+          description: Secrets to be used with this function/procedure for external
+            access
+        target_path:
+          type: string
+          description: Specifies where Snowflake should write the compiled code for
+            inline procedures
+    PythonFunction:
+      allOf:
+      - $ref: '#/components/schemas/BaseLanguage'
+      properties:
+        external_access_integrations:
+          type: array
+          items:
+            type: string
+          description: List of external access integrations attached to this function/procedure
+        secrets:
+          type: object
+          additionalProperties:
+            type: string
+          description: Secrets to be used with this function/procedure for external
+            access
+    ScalaFunction:
+      allOf:
+      - $ref: '#/components/schemas/BaseLanguage'
+      properties:
+        target_path:
+          type: string
+          description: Specifies where Snowflake should write the compiled code for
+            inline function/procedures
+    JavaScriptFunction:
+      allOf:
+      - $ref: '#/components/schemas/FunctionLanguage'
+    SQLFunction:
+      allOf:
+      - $ref: '#/components/schemas/FunctionLanguage'
+    CallArgumentList:
+      type: object
+      properties:
+        call_arguments:
+          type: array
+          items:
+            $ref: '#/components/schemas/CallArgument'
+          description: Call Argument list
+      required:
+      - call_arguments
+    CallArgument:
+      type: object
+      properties:
+        name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Name of the call argument
+        datatype:
+          type: string
+          enum:
+          - ARRAY
+          - BIGINT
+          - BINARY
+          - BOOLEAN
+          - BYTEINT
+          - CHAR
+          - CHARACTER
+          - DATE
+          - DATETIME
+          - DECIMAL
+          - DOUBLE
+          - DOUBLE PRECISION
+          - FLOAT
+          - FLOAT4
+          - FLOAT8
+          - GEOGRAPHY
+          - GEOMETRY
+          - INT
+          - INTEGER
+          - NUMBER
+          - NUMERIC
+          - OBJECT
+          - REAL
+          - STRING
+          - SMALLINT
+          - TEXT
+          - TIME
+          - TIMESTAMP_LTZ
+          - TIMESTAMP_NTZ
+          - TIMESTAMP_TZ
+          - TINYINT
+          - VARBINARY
+          - VARCHAR
+          - VARIANT
+          - VECTOR
+          x-enum-varnames:
+          - ARRAY
+          - BIGINT
+          - BINARY
+          - BOOLEAN
+          - BYTEINT
+          - CHAR
+          - CHARACTER
+          - DATE
+          - DATETIME
+          - DECIMAL
+          - DOUBLE
+          - DOUBLE_PRECISION
+          - FLOAT
+          - FLOAT4
+          - FLOAT8
+          - GEOGRAPHY
+          - GEOMETRY
+          - INT
+          - INTEGER
+          - NUMBER
+          - NUMERIC
+          - OBJECT
+          - REAL
+          - STRING
+          - SMALLINT
+          - TEXT
+          - TIME
+          - TIMESTAMP_LTZ
+          - TIMESTAMP_NTZ
+          - TIMESTAMP_TZ
+          - TINYINT
+          - VARBINARY
+          - VARCHAR
+          - VARIANT
+          - VECTOR
+          description: Call argument data type
+        value:
+          description: Value of the call argument
+      required:
+      - name
+      - datatype
+      - value
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []
