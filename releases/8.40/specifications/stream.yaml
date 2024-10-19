@@ -1,0 +1,495 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake REST Server
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Stream API
+  description: The Snowflake Stream API is a REST API that you can use to access,
+    update, and perform certain actions on Stream resource in a Snowflake database.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/databases/{database}/schemas/{schema}/streams:
+    get:
+      summary: List streams
+      tags:
+      - stream
+      description: List streams
+      operationId: listStreams
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/like
+      - $ref: common.yaml#/components/parameters/startsWith
+      - $ref: common.yaml#/components/parameters/showLimit
+      - $ref: common.yaml#/components/parameters/fromName
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Stream'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    post:
+      summary: Create a stream
+      tags:
+      - stream
+      description: Create a stream
+      operationId: createStream
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/createMode
+      - $ref: common.yaml#/components/parameters/copyGrants
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Stream'
+  /api/v2/databases/{database}/schemas/{schema}/streams/{name}:
+    get:
+      summary: Fetch a stream
+      tags:
+      - stream
+      description: Fetch a stream
+      operationId: fetchStream
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Stream'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    delete:
+      summary: Delete a stream
+      tags:
+      - stream
+      description: Delete a stream
+      operationId: deleteStream
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/streams/{name}:clone:
+    post:
+      summary: Clone a stream
+      tags:
+      - stream
+      description: Clone a stream
+      operationId: cloneStream
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/createMode
+      - name: targetDatabase
+        description: Database of the target resource. Defaults to the source's database
+        in: query
+        required: true
+        schema:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+      - name: targetSchema
+        description: Schema of the target resource. Defaults to the source's schema
+        in: query
+        required: true
+        schema:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+      - $ref: common.yaml#/components/parameters/copyGrants
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StreamClone'
+components:
+  schemas:
+    Stream:
+      type: object
+      description: A Snowflake stream
+      properties:
+        created_on:
+          type: string
+          format: date-time
+          readOnly: true
+          description: Date and time when the stream was created.
+        name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Name of the stream
+        stream_source:
+          $ref: '#/components/schemas/StreamSource'
+          description: Source for the stream
+        comment:
+          type: string
+          description: user comment associated to an object in the dictionary
+        database_name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: Database in which the stream is stored
+        schema_name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: Schema in which the stream is stored
+        owner:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: Role that owns the stream
+        table_name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: Table name whose changes are tracked by the stream
+        stale:
+          type: boolean
+          readOnly: true
+          description: Specifies whether the stream is stale or not
+        mode:
+          type: string
+          readOnly: true
+          description: 'Mode of the stream. Possible values include: APPEND_ONLY,
+            INSERT_ONLY. For streams on tables, the column displays DEFAULT.'
+        stale_after:
+          type: string
+          format: date-time
+          readOnly: true
+          description: 'Timestamp when the stream became stale or may become stale
+            if not consumed. '
+        invalid_reason:
+          type: string
+          readOnly: true
+          description: Reason why the stream cannot be queried successfully. This
+            column supports future functionality. Currently, the only value returned
+            is N/A.
+        owner_role_type:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: The type of role that owns the stream
+        type:
+          type: string
+          readOnly: true
+          description: Type of the stream; currently DELTA only.
+      required:
+      - name
+      - stream_source
+    StreamSource:
+      type: object
+      properties:
+        src_type:
+          type: string
+          description: 'Type of the source. Possible values include: stream, table,
+            view'
+        name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Name of the source whose changes are tracked by the stream
+        database_name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Database name to which stream source type belongs. If not provided,
+            database  name provided in the path param will be used.
+        schema_name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Schema name to which stream source type belongs. If not provided,
+            schema name provided in the path param will be used.
+      required:
+      - src_type
+      - name
+      discriminator:
+        propertyName: src_type
+        mapping:
+          table: StreamSourceTable
+          external_table: StreamSourceExternalTable
+          view: StreamSourceView
+          stage: StreamSourceStage
+    StreamSourceTable:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/StreamSource'
+      properties:
+        append_only:
+          type: boolean
+          description: Whether this stream is an append only stream or not
+        show_initial_rows:
+          type: boolean
+          description: Whether this stream show initial rows on first consumption
+        point_of_time:
+          $ref: '#/components/schemas/PointOfTime'
+          description: Point of time for the stream
+    PointOfTime:
+      type: object
+      properties:
+        point_of_time_type:
+          type: string
+          description: 'Type of the point of time. Possible values include: timestamp,
+            offset, statement'
+        reference:
+          type: string
+          enum:
+          - at
+          - before
+          x-enum-varnames:
+          - AT
+          - BEFORE
+          description: Relation to the point of time.  Currently, the API supports
+            `at` and `before`
+      required:
+      - point_of_time_type
+      - reference
+      discriminator:
+        propertyName: point_of_time_type
+        mapping:
+          timestamp: PointOfTimeTimestamp
+          offset: PointOfTimeOffset
+          statement: PointOfTimeStatement
+          stream: PointOfTimeStream
+    PointOfTimeTimestamp:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/PointOfTime'
+      properties:
+        timestamp:
+          type: string
+          description: Timestamp of the point of time.
+      required:
+      - timestamp
+    PointOfTimeOffset:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/PointOfTime'
+      properties:
+        offset:
+          type: string
+          description: Point of time identified by an offset in reference to the current
+            time, such as `10 min`.
+      required:
+      - offset
+    PointOfTimeStatement:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/PointOfTime'
+      properties:
+        statement:
+          type: string
+          description: Statement of the point of time.
+      required:
+      - statement
+    PointOfTimeStream:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/PointOfTime'
+      properties:
+        stream:
+          type: string
+          description: 'Creates the new stream at the same offset as the specified
+            stream. '
+    StreamSourceExternalTable:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/StreamSource'
+      properties:
+        insert_only:
+          type: boolean
+          description: Whether this stream is an insert only stream or not
+        point_of_time:
+          $ref: '#/components/schemas/PointOfTime'
+          description: Point of time for the stream
+    StreamSourceView:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/StreamSource'
+      properties:
+        append_only:
+          type: boolean
+          description: Whether this stream is an append only stream or not
+        show_initial_rows:
+          type: boolean
+          description: Whether this stream show initial rows on first consumption
+        point_of_time:
+          $ref: '#/components/schemas/PointOfTime'
+          description: Point of time for the stream
+        base_tables:
+          type: array
+          items:
+            type: string
+            pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: List of base tables for the stream
+    StreamSourceStage:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/StreamSource'
+    StreamClone:
+      type: object
+      properties:
+        name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Name of the stream
+        comment:
+          type: string
+          description: user comment associated to an object in the dictionary
+      required:
+      - name
