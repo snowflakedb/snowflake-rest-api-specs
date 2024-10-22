@@ -1,0 +1,423 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake Account API
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Account API
+  description: The Snowflake Account API is a REST API that you can use to access,
+    update, and perform certain actions on Account resource in Snowflake.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/accounts:
+    get:
+      summary: Lists accounts.
+      tags:
+      - account
+      description: Lists the accessible accounts.
+      operationId: listAccounts
+      parameters:
+      - $ref: common.yaml#/components/parameters/like
+      - $ref: common.yaml#/components/parameters/showLimit
+      - name: history
+        in: query
+        description: Optionally includes dropped accounts that have not yet been purged.
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Successful request.
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Account'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    post:
+      summary: Creates a account.
+      tags:
+      - account
+      description: Creates a account. You must provide the full account definition
+        when creating a account.
+      operationId: createAccount
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Account'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/accounts/{name}:
+    delete:
+      summary: Deletes a account.
+      tags:
+      - account
+      description: Deletes the specified account. If you enable the `ifExists` parameter,
+        the operation succeeds even if the account does not exist. Otherwise, a 404
+        failure is returned if the account does not exist. if the drop is unsuccessful.
+      operationId: deleteAccount
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      - name: gracePeriodInDays
+        in: query
+        description: "Specifies the number of days during which the account can be\
+          \ restored (\u201Cundropped\u201D). The minimum is 3 days and the maximum\
+          \ is 90 days."
+        schema:
+          type: integer
+        required: true
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/accounts/{name}:undrop:
+    post:
+      summary: Restore a account.
+      tags:
+      - account
+      description: Restores a dropped account that has not yet been permanently deleted
+        (a dropped account that is within its grace period).
+      operationId: UndropAccount
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  schemas:
+    Account:
+      type: object
+      description: Snowflake account object.
+      properties:
+        organization_name:
+          type: string
+          readOnly: true
+          description: Name of the organization.
+        name:
+          $ref: ./common.yaml#/components/schemas/Identifier
+          description: User-defined name that identifies an account within the organization.
+        region_group:
+          type: string
+          description: Region group where the account is located. Note - This column
+            is only displayed for organizations that span multiple region groups.
+        region:
+          type: string
+          description: Snowflake Region where the account is located. A Snowflake
+            Region is a distinct location within a cloud platform region that is isolated
+            from other Snowflake Regions. A Snowflake Region can be either multi-tenant
+            or single-tenant (for a Virtual Private Snowflake account).
+        edition:
+          type: string
+          description: Snowflake Edition of the account.
+          enum:
+          - STANDARD
+          - ENTERPRISE
+          - BUSINESS_CRITICAL
+        created_on:
+          type: string
+          format: date-time
+          readOnly: true
+          description: Date and time the account was created.
+        account_url:
+          type: string
+          readOnly: true
+          description: Preferred Snowflake account URL that includes the values of
+            organization_name and account_name.
+        account_locator:
+          type: string
+          readOnly: true
+          description: System-assigned identifier of the acccount.
+        account_locator_url:
+          type: string
+          readOnly: true
+          description: Legacy Snowflake account URL syntax that includes the region_name
+            and account_locator.
+        managed_accounts:
+          type: integer
+          readOnly: true
+          format: int64
+          description: Indicates how many managed accounts have been created by the
+            account.
+        consumption_billing_entity_name:
+          type: string
+          readOnly: true
+          description: Name of the consumption billing entity.
+        marketplace_consumer_billing_entity_name:
+          type: string
+          readOnly: true
+          description: Name of the marketplace consumer billing entity.
+        marketplace_provider_billing_entity_name:
+          type: string
+          readOnly: true
+          description: Name of the marketplace provider billing entity.
+        old_account_url:
+          type: string
+          readOnly: true
+          description: If the original account URL was saved when the account was
+            renamed, provides the original URL. If the original account URL was dropped,
+            the value is NULL even if the account was renamed
+        comment:
+          type: string
+          description: Optional comment in which to store information related to the
+            account.
+        is_org_admin:
+          type: boolean
+          readOnly: true
+          description: Indicates whether the ORGADMIN role is enabled in an account.
+            If TRUE, the role is enabled.
+        retention_time:
+          type: integer
+          readOnly: true
+          description: Number of days that historical data is retained for Time Travel.
+        dropped_on:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
+          description: Date and time the account was dropped.
+        scheduled_deletion_time:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
+          description: Date and time when the account is scheduled to be permanently
+            deleted. Accounts are deleted within one hour after the scheduled time.
+        restored_on:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
+          description: Date and time when the account was last restored.
+        account_old_url_saved_on:
+          type: string
+          format: date-time
+          readOnly: true
+          description: If the original account URL was saved when the account was
+            renamed, provides the date and time when the original account URL was
+            saved.
+        account_old_url_last_used:
+          type: string
+          format: date-time
+          readOnly: true
+          description: If the original account URL was saved when the account was
+            renamed, indicates the last time the account was accessed using the original
+            URL.
+        organization_old_url:
+          type: string
+          readOnly: true
+          description: "If the account\u2019s organization was changed in a way that\
+            \ created a new account URL and the original account URL was saved, provides\
+            \ the original account URL. If the original account URL was dropped, the\
+            \ value is NULL even if the organization changed."
+        organization_old_url_saved_on:
+          type: string
+          readOnly: true
+          format: date-time
+          description: "If the account\u2019s organization was changed in a way that\
+            \ created a new account URL and the original account URL was saved, provides\
+            \ the date and time when the original account URL was saved."
+        organization_old_url_last_used:
+          type: string
+          readOnly: true
+          format: date-time
+          description: "If the account\u2019s organization was changed in a way that\
+            \ created a new account URL and the original account URL was saved, indicates\
+            \ the last time the account was accessed using the original account URL."
+        organization_URL_expiration_on:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
+          description: "If the account\u2019s organization was changed in a way that\
+            \ created a new account URL and the original account URL was saved, provides\
+            \ the date and time when the original account URL will be dropped. Dropped\
+            \ URLs cannot be used to access the account."
+        moved_on:
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
+          description: Date and time when the account was moved to a different organization.
+        is_events_account:
+          type: boolean
+          readOnly: true
+          description: Indicates whether an account is an events account. For more
+            information, see Set up logging and event sharing for an application.
+        moved_to_organization:
+          type: string
+          readOnly: true
+          description: If the account was moved to a different organization, provides
+            the name of that organization.
+        admin_name:
+          type: string
+          description: Name of the account administrator.
+          writeOnly: true
+          nullable: true
+        admin_password:
+          type: string
+          description: Password for the account administrator.
+          writeOnly: true
+          format: password
+        admin_rsa_public_key:
+          type: string
+          description: RSA public key for the account administrator.
+          writeOnly: true
+          format: password
+        admin_user_type:
+          type: string
+          description: User type of the account administrator.
+          writeOnly: true
+        first_name:
+          type: string
+          description: First name of the account administrator.
+          writeOnly: true
+        last_name:
+          type: string
+          description: Last name of the account administrator.
+          writeOnly: true
+        email:
+          type: string
+          description: Email address of the account administrator.
+          writeOnly: true
+          nullable: true
+        must_change_password:
+          type: boolean
+          description: Indicates whether the account administrator must change the
+            password at the next login.
+          default: false
+          writeOnly: true
+        polaris:
+          type: boolean
+          description: Indicates whether the account is a Polaris account.
+          default: false
+          writeOnly: true
+      required:
+      - name
+      - admin_name
+      - email
+      - edition
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []
+tags:
+- name: account
