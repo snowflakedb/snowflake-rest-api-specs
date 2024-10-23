@@ -1,2 +1,3 @@
-GA Release version is 8.40
+GA release version is 8.40
+
 
