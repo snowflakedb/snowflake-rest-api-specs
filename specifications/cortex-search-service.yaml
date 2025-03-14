@@ -1,0 +1,634 @@
+openapi: 3.0.1
+info:
+  title: Cortex Search REST API
+  description: OpenAPI 3.0 specification for the Cortex Search REST API
+  version: 0.1.0
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/databases/{database}/schemas/{schema}/cortex-search-services:
+    get:
+      operationId: listCortexSearchServices
+      summary: List cortex search services
+      description: Lists the cortex search services under the database and schema.
+      tags:
+      - cortex-search-service
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/like
+      - $ref: common.yaml#/components/parameters/fromName
+      - $ref: common.yaml#/components/parameters/showLimit
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CortexSearchService'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    post:
+      operationId: createCortexSearchService
+      summary: Create a cortex search service
+      description: Create a cortex search service, with standard create modifiers
+        as query parameters. See the Cortex Search Service component definition for
+        what is required to be provided in the request body.
+      tags:
+      - cortex-search-service
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/createMode
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              allOf:
+              - $ref: '#/components/schemas/CortexSearchService'
+              - type: object
+              - required:
+                - name
+                - search_column
+                - target_lag
+                - warehouse
+                - definition
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/cortex-search-services/{name}:
+    get:
+      operationId: fetchCortexSearchService
+      summary: Fetch a cortex search service.
+      description: Fetch a Cortex Search Service.
+      tags:
+      - cortex-search-service
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CortexSearchService'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    delete:
+      operationId: deleteCortexSearchService
+      summary: Delete a cortex search service
+      description: Delete a cortex search service with the given name. If ifExists
+        is used, the operation will succeed even if the object does not exist. Otherwise,
+        there will be a failure if the drop is unsuccessful.
+      tags:
+      - cortex search service
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/cortex-search-services/{service_name}:query:
+    post:
+      operationId: queryCortexSearchService
+      summary: Query a Cortex Search Service.
+      description: Query a Cortex Search Service to get search results.
+      tags:
+      - cortex-search-service
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - in: path
+        name: service_name
+        required: true
+        schema:
+          type: string
+        description: The name of the Cortex Search Service.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QueryRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryResponse'
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/cortex-search-services/{name}:suspend:
+    post:
+      operationId: suspendCortexSearchService
+      summary: Suspend a cortex search service.
+      description: Suspends one or both of the indexing or serving targets of a cortex
+        search service.
+      tags:
+      - cortex-search-service
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      - $ref: '#/components/parameters/suspendResumeTarget'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/cortex-search-services/{name}:resume:
+    post:
+      operationId: resumeCortexSearchService
+      description: Resume the cortex search service
+      summary: Resume the cortex search service
+      tags:
+      - cortex-search-service
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      - $ref: '#/components/parameters/suspendResumeTarget'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  parameters:
+    suspendResumeTarget:
+      name: target
+      description: Query parameter that identifies the target to which suspension
+        or resumption of the cortex search service should be applied.
+      in: query
+      schema:
+        type: string
+        enum:
+        - indexing
+        - INDEXING
+        - serving
+        - SERVING
+        example: indexing
+  schemas:
+    QueryRequest:
+      type: object
+      description: A search query and additional parameters for search.
+      properties:
+        query:
+          description: Unstructured text query.  Exactly one of 'query' or 'queries'
+            must be specified.
+          type: string
+        queries:
+          description: A search query expressed as a collection of multiple column-level
+            queries.  Exactly one of 'query' or 'queries' must be specified.
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/ColumnQuery'
+        columns:
+          description: List of columns to return.
+          type: array
+          items:
+            type: string
+        filter:
+          description: Filter query.
+          type: object
+        limit:
+          description: Max number of results to return.
+          type: integer
+          default: 10
+        scoring_config:
+          $ref: '#/components/schemas/ScoringConfig'
+        experimental:
+          description: reserved
+          type: object
+          additionalProperties: true
+      required:
+      - columns
+    ScoringConfig:
+      type: object
+      description: reserved
+      properties:
+        functions:
+          $ref: '#/components/schemas/Functions'
+        reranker:
+          $ref: '#/components/schemas/Reranker'
+        weights:
+          $ref: '#/components/schemas/Weights'
+    Weights:
+      type: object
+      description: Weights to apply to each scoring component.
+      properties:
+        texts:
+          description: Weight to apply to all text-specific columns.
+          type: number
+          example: 0.5
+        vectors:
+          description: Weight to apply to all vector-specific columns.
+          type: number
+          example: 0.5
+        reranker:
+          description: Weight to apply to reranker-specific scoring component.
+          type: number
+          example: 0.5
+    Functions:
+      type: object
+      description: Functions to apply for scoring this request.
+      properties:
+        numeric_boosts:
+          type: array
+          items:
+            $ref: '#/components/schemas/NumericBoost'
+        time_decays:
+          type: array
+          items:
+            $ref: '#/components/schemas/TimeDecay'
+        text_boosts:
+          type: array
+          items:
+            $ref: '#/components/schemas/TextBoost'
+        vector_boosts:
+          type: array
+          items:
+            $ref: '#/components/schemas/VectorBoost'
+    Column:
+      type: string
+      description: Column to apply this function to.
+    NumericBoost:
+      type: object
+      properties:
+        column:
+          $ref: '#/components/schemas/Column'
+        weight:
+          type: number
+          description: Weight to apply for boosting this numerical column. It will
+            be normalized across all scored columns specified in the scoring config
+            so that all weights sum to 1. If a weight is not provided, the weight
+            defaults to 1 pre-normalization.
+          example: 0.5
+      required:
+      - column
+    TimeDecay:
+      type: object
+      properties:
+        column:
+          $ref: '#/components/schemas/Column'
+        weight:
+          type: number
+          description: Weight to apply for decaying this timestamp column. Normalized
+            across all scored columns in the scoring config so that all weights sum
+            to 1. If a weight is not provided, the weight defaults to 1 pre-normalization.
+          example: 0.5
+        limit_hours:
+          type: number
+          description: Optional limit in hours after which the decay does not apply.
+          example: 24
+        now:
+          type: string
+          format: date-time
+          description: Optional reference timestamp to calculate decay from.
+          example: '2022-01-01T00:00:00Z'
+      required:
+      - column
+    TextBoost:
+      type: object
+      properties:
+        column:
+          $ref: '#/components/schemas/Column'
+        weight:
+          description: Weight to apply for boosting this text column.
+          type: number
+          example: 0.5
+    VectorBoost:
+      type: object
+      properties:
+        column:
+          $ref: '#/components/schemas/Column'
+        weight:
+          description: Weight to apply for boosting this vector column.
+          type: number
+          example: 0.5
+    Reranker:
+      type: string
+      description: Model to use for the reranker, or "none" if the reranker should
+        be turned off. If excluded or null, the default reranker is used.
+      example: none
+    ColumnQuery:
+      description: Query specification of a given column. Exactly one of 'text' or
+        'vector' must be specified.
+      type: object
+      properties:
+        text:
+          description: Unstructured text query for querying a text index.
+          type: string
+        vector:
+          description: Query embedding vector. Must be computed using the same model
+            as used for embedding the column being queried.
+          type: array
+          items:
+            type: number
+            format: float
+    QueryResponse:
+      type: object
+      description: Search results.
+      properties:
+        results:
+          type: array
+          description: List of result rows.
+          items:
+            type: object
+            additionalProperties: true
+            description: Map of column names to bytes.
+        request_id:
+          type: string
+          description: ID of the request.
+      required:
+      - results
+      - request_id
+    CortexSearchService:
+      type: object
+      description: A Snowflake cortex search service object.
+      properties:
+        name:
+          type: string
+          description: Specifies the name for the cortex search service, must be unique
+            for the schema in which the cortex search service is created
+        search_column:
+          type: string
+          description: Specifies the name of the search column for the cortex search
+            service.
+        columns:
+          type: array
+          items:
+            type: string
+          description: Specifies all columns included in the cortex search service
+            and that can be returned in search queries.
+        attribute_columns:
+          type: array
+          items:
+            type: string
+          description: Specifies the attribute columns, which can be referenced in
+            filters in search queries to the cortex search service.
+        target_lag:
+          $ref: common.yaml#/components/schemas/TargetLag
+          description: Specifies the schedule for periodically refreshing the cortex
+            search service.
+        warehouse:
+          type: string
+          description: Specifies the name of the warehouse that provides the compute
+            resources for refreshing the cortex search service
+          example: test_wh
+        definition:
+          type: string
+          description: Specifies the definition (source query) used to create the
+            cortex search service
+          example: SELECT col1, col2 FROM foo
+        comment:
+          type: string
+          description: Specifies a comment for the cortex search service
+        created_on:
+          type: string
+          format: date-time
+          readOnly: true
+          description: Date and time when the cortex search service was created.
+        database_name:
+          type: string
+          readOnly: true
+          description: Database in which the cortex search service is stored
+        schema_name:
+          type: string
+          readOnly: true
+          description: Schema in which the cortex search service is stored
+        source_data_num_rows:
+          type: integer
+          format: int64
+          readOnly: true
+          description: Number of rows in the materialized source data feeding into
+            the cortex search service.
+        data_timestamp:
+          type: string
+          format: date-time
+          readOnly: true
+          description: Date and time as of which data existent in base tables is now
+            serving.
+        indexing_state:
+          $ref: '#/components/schemas/SchedulingState'
+          description: Current state of the indexing pipeline for the cortex search
+            service; one of 'SUSPENDED' or 'ACTIVE'.
+        serving_state:
+          $ref: '#/components/schemas/SchedulingState'
+          description: Whether the cortex search service is currently actively serving;
+            one of 'SUSPENDED' or 'ACTIVE'.
+        indexing_error:
+          type: string
+          readOnly: true
+          description: Error encountered during the latest indexing pipeline of the
+            cortex search service, if any.
+        serving_data_bytes:
+          type: integer
+          format: int64
+          readOnly: true
+          description: Size of the serving index, in bytes.
+    SchedulingState:
+      type: string
+      enum:
+      - ACTIVE
+      - SUSPENDED
+      - INITIALIZING
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []

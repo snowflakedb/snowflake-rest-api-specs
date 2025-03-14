@@ -1,0 +1,3234 @@
+{
+	"info": {
+		"_postman_id": "ea4982f0-2429-49ec-ae42-77230590c208",
+		"name": "Snowflake Catalog Integration API",
+		"description": "The Snowflake Catalog Integration API is a REST API that you can use to access, update, and perform certain actions on Catalog Integration resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43111250"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v2",
+					"item": [
+						{
+							"name": "catalog-integrations",
+							"item": [
+								{
+									"name": "{name}",
+									"item": [
+										{
+											"name": "Fetch a catalog integration.",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations",
+														":name"
+													],
+													"variable": [
+														{
+															"key": "name",
+															"value": "ql38vH",
+															"description": "(Required) Identifier (i.e. name) for the resource."
+														}
+													]
+												},
+												"description": "Fetch a catalog integration."
+											},
+											"response": [
+												{
+													"name": "successful",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"name\": \"\\\"\\\"\\\"t\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"type\": \"<string>\",\n  \"category\": \"<string>\",\n  \"created_on\": \"<dateTime>\"\n}"
+												},
+												{
+													"name": "Successfully accepted the request, but it is not completed yet.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Accepted",
+													"code": 202,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Location",
+															"value": "<string>",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+												},
+												{
+													"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Method Not Allowed",
+													"code": 405,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Request Timeout",
+													"code": 408,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Conflict",
+													"code": 409,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Gone",
+													"code": 410,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Too Many Requests",
+													"code": 429,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Gateway Timeout",
+													"code": 504,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												}
+											]
+										},
+										{
+											"name": "Delete a catalog integration.",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations",
+														":name"
+													],
+													"query": [
+														{
+															"key": "ifExists",
+															"value": "false",
+															"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+														}
+													],
+													"variable": [
+														{
+															"key": "name",
+															"value": "ql38vH",
+															"description": "(Required) Identifier (i.e. name) for the resource."
+														}
+													]
+												},
+												"description": "Delete a catalog integration."
+											},
+											"response": [
+												{
+													"name": "Successful request.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"status\": \"<string>\"\n}"
+												},
+												{
+													"name": "Successfully accepted the request, but it is not completed yet.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Accepted",
+													"code": 202,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Location",
+															"value": "<string>",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+												},
+												{
+													"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Method Not Allowed",
+													"code": 405,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Request Timeout",
+													"code": 408,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Conflict",
+													"code": 409,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Gone",
+													"code": 410,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Too Many Requests",
+													"code": 429,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/catalog-integrations/:name?ifExists=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"catalog-integrations",
+																":name"
+															],
+															"query": [
+																{
+																	"key": "ifExists",
+																	"value": "false",
+																	"description": "Query parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist."
+																}
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Gateway Timeout",
+													"code": 504,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "List catalog integrations.",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v2",
+												"catalog-integrations"
+											],
+											"query": [
+												{
+													"key": "like",
+													"value": "<string>",
+													"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+												}
+											]
+										},
+										"description": "List catalog integrations."
+									},
+									"response": [
+										{
+											"name": "successful",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"name\": \"fg0BB8_$M\",\n    \"catalog\": {\n      \"catalog_source\": \"POLARIS\"\n    },\n    \"table_format\": \"ICEBERG\",\n    \"enabled\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"type\": \"<string>\",\n    \"category\": \"<string>\",\n    \"created_on\": \"<dateTime>\"\n  },\n  {\n    \"name\": \"S\",\n    \"catalog\": {\n      \"catalog_source\": \"OBJECT_STORE\"\n    },\n    \"table_format\": \"ICEBERG\",\n    \"enabled\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"type\": \"<string>\",\n    \"category\": \"<string>\",\n    \"created_on\": \"<dateTime>\"\n  }\n]"
+										},
+										{
+											"name": "Successfully accepted the request, but it is not completed yet.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Accepted",
+											"code": 202,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Location",
+													"value": "<string>",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+										},
+										{
+											"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Method Not Allowed",
+											"code": 405,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Request Timeout",
+											"code": 408,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Gone",
+											"code": 410,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Too Many Requests",
+											"code": 429,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Service Unavailable",
+											"code": 503,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Gateway Timeout",
+											"code": 504,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Create a catalog integration.",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v2",
+												"catalog-integrations"
+											],
+											"query": [
+												{
+													"key": "createMode",
+													"value": "errorIfExists",
+													"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+												}
+											]
+										},
+										"description": "Create a catalog integration."
+									},
+									"response": [
+										{
+											"name": "Successful request.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<string>\"\n}"
+										},
+										{
+											"name": "Successfully accepted the request, but it is not completed yet.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														}
+													]
+												}
+											},
+											"status": "Accepted",
+											"code": 202,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Location",
+													"value": "<string>",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+										},
+										{
+											"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														}
+													]
+												}
+											},
+											"status": "Method Not Allowed",
+											"code": 405,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														}
+													]
+												}
+											},
+											"status": "Request Timeout",
+											"code": 408,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														}
+													]
+												}
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														}
+													]
+												}
+											},
+											"status": "Gone",
+											"code": 410,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														}
+													]
+												}
+											},
+											"status": "Too Many Requests",
+											"code": 429,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														}
+													]
+												}
+											},
+											"status": "Service Unavailable",
+											"code": 503,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/catalog-integrations?createMode=errorIfExists",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"catalog-integrations"
+													],
+													"query": [
+														{
+															"key": "createMode",
+															"value": "errorIfExists",
+															"description": "Query parameter allowing support for different modes of resource creation. Possible values include:\n- `errorIfExists`: Throws an error if you try to create a resource that already exists.\n- `orReplace`: Automatically replaces the existing resource with the current one.\n- `ifNotExists`: Creates a new resource when an alter is requested for a non-existent resource."
+														}
+													]
+												}
+											},
+											"status": "Gateway Timeout",
+											"code": 504,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://org-account.snowflakecomputing.com"
+		}
+	]
+}

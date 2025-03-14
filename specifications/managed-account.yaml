@@ -1,0 +1,222 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake Managed Account API
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Managed Account API
+  description: The Snowflake Managed Account API is a REST API that you can use to
+    access, update, and perform certain actions on Managed Account resource in Snowflake.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/managed-accounts:
+    get:
+      summary: List managed accounts.
+      tags:
+      - managed-account
+      description: Lists the accessible managed accounts.
+      operationId: listManagedAccounts
+      parameters:
+      - $ref: common.yaml#/components/parameters/like
+      responses:
+        '200':
+          description: Successful request.
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ManagedAccount'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    post:
+      summary: Create a managed accounts.
+      tags:
+      - managed-account
+      description: Creates a managed account. You must provide the full managed account
+        definition when creating a managed account.
+      operationId: createManagedAccount
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ManagedAccount'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/managed-accounts/{name}:
+    delete:
+      summary: Delete a managed account.
+      tags:
+      - managed-account
+      description: Removes a managed account, including all objects created in the
+        account, and immediately restricts access to the account. Currently used by
+        data providers to create reader accounts for their consumers. For more details,
+        see Manage reader accounts.
+      operationId: deleteManagedAccount
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  schemas:
+    ManagedAccount:
+      type: object
+      description: Snowflake account object.
+      properties:
+        name:
+          $ref: ./common.yaml#/components/schemas/Identifier
+          description: Name of the account.
+        cloud:
+          type: string
+          readOnly: true
+          description: Cloud in which the managed account is located. For reader accounts,
+            this is always the same as the cloud for the provider account.
+        region:
+          type: string
+          readOnly: true
+          description: Region in which the managed account is located. For reader
+            accounts, this is always the same as the region for the provider account.
+        locator:
+          type: string
+          readOnly: true
+          description: Legacy identifier for the account.
+        created_on:
+          type: string
+          format: date-time
+          readOnly: true
+          description: Date and time the account was created.
+        url:
+          type: string
+          readOnly: true
+          description: Account URL that is used to connect to the account, in the
+            account name format. The account identifier in this format follows the
+            pattern <orgname>-<account_name>.
+        account_locator_url:
+          type: string
+          readOnly: true
+          description: Account URL that is used to connect to the account, in the
+            legacy account locator format.
+        comment:
+          type: string
+          description: Optional comment in which to store information related to the
+            account.
+        admin_name:
+          type: string
+          description: Name of the account administrator.
+          writeOnly: true
+          nullable: true
+        admin_password:
+          type: string
+          description: Password for the account administrator.
+          writeOnly: true
+          nullable: true
+          format: password
+        account_type:
+          type: string
+          description: Type of the account.
+          enum:
+          - READER
+          default: READER
+      required:
+      - name
+      - admin_name
+      - admin_password
+      - account_type
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []
+tags:
+- name: managed-account

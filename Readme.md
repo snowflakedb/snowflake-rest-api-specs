@@ -12,4 +12,4 @@ More details at https://docs.snowflake.com/en/developer-guide/snowflake-rest-api
 
 1. Clone this repository
 2. In Postman client, click *Import*, then choose import folder
-3. Select `releases/8.40/collection` as the import folder
+3. Select `collections` as the import folder

@@ -1,0 +1,451 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake API
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Cortex Analyst API
+  description: The Snowflake Cortex Analyst API is a REST API that allows end user
+    to chat with their data leveraging semantic models to generate SQL queries.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/cortex/analyst/feedback:
+    post:
+      operationId: sendFeedback
+      tags:
+      - cortex-analyst
+      description: Send a user feedback of Cortex Analyst response
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SendFeedbackRequest'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/cortex/analyst/message:
+    post:
+      operationId: sendMessage
+      tags:
+      - cortex-analyst
+      summary: Send a data question to the Cortex Analyst
+      description: Send a data question to the Cortex Analyst
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SendMessageRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendMessageResponse'
+            text/event-stream:
+              schema:
+                type: string
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  schemas:
+    StatusUpdate:
+      type: object
+      properties:
+        status:
+          description: The latest status for processing the request
+          type: string
+        status_message:
+          description: A human readable description on the current request processing
+            status
+          type: string
+        request_id:
+          type: string
+          description: Unique request ID.
+      required:
+      - status
+    SemanticModelSelection:
+      type: object
+      properties:
+        index:
+          description: The index of the selected semantic model
+          type: integer
+          format: int32
+        identifier:
+          $ref: '#/components/schemas/SemanticModelObject'
+    MessageContentDelta:
+      type: object
+      properties:
+        type:
+          type: string
+        index:
+          type: integer
+          description: The index of the content array this delta object represents
+      discriminator:
+        propertyName: type
+        mapping:
+          text: '#/components/schemas/MessageContentDeltaTextObject'
+          sql: '#/components/schemas/MessageContentDeltaSqlObject'
+          suggestions: '#/components/schemas/MessageContentDeltaSuggestionsObject'
+          chart: '#/components/schemas/MessageContentChartObject'
+    MessageContentDeltaTextObject:
+      allOf:
+      - $ref: '#/components/schemas/MessageContentDelta'
+      - title: Text
+        type: object
+        description: The text content that is part of a message.
+        properties:
+          text_delta:
+            type: string
+            description: The delta of the text content, clients should concatenate
+              all deltas for the same index
+            example: To answer the question "What is the profit per store?" we must
+              aggregate sales at the store level
+        required:
+        - text_delta
+    MessageContentDeltaSqlObject:
+      allOf:
+      - $ref: '#/components/schemas/MessageContentDelta'
+      - title: SQL
+        type: object
+        description: The SQL content that is part of a message.
+        properties:
+          statement_delta:
+            type: string
+            description: The delta of the sql statement, clients should concatenate
+              all deltas for the same index
+            example: SELECT store, SUM(profit) FROM sales GROUP BY store
+          confidence:
+            $ref: '#/components/schemas/Confidence'
+        required:
+        - statement_delta
+    MessageContentDeltaSuggestionsObject:
+      allOf:
+      - $ref: '#/components/schemas/MessageContentDelta'
+      - title: Suggested Questions
+        type: object
+        description: If SQL cannot be generated, a list of questions the semantic
+          model can generate SQL for.
+        properties:
+          suggestions_delta:
+            $ref: '#/components/schemas/SuggestionDelta'
+        required:
+        - suggestions_delta
+    SuggestionDelta:
+      type: object
+      properties:
+        index:
+          type: integer
+          description: The index of the suggestions array this delta object represents
+        suggestion_delta:
+          type: string
+          description: The delta of a suggestion text, clients should concatenate
+            all deltas for the same index
+    StreamingError:
+      type: object
+      properties:
+        message:
+          type: string
+          description: A description of the error
+        code:
+          type: string
+          description: The Snowflake error code categorizing the error
+        request_id:
+          type: string
+          description: Unique request ID
+    SendMessageResponse:
+      type: object
+      description: The non-streaming response object for the sendMessage
+      properties:
+        message:
+          $ref: '#/components/schemas/MessageObject'
+        request_id:
+          type: string
+          description: Unique request ID
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Warning'
+        semantic_model_selection:
+          $ref: '#/components/schemas/SemanticModelSelection'
+      required:
+      - message
+    Warning:
+      type: object
+      title: The warning object
+      description: Represents a warning within a chat.
+      properties:
+        message:
+          type: string
+          description: A human-readable message describing the warning
+    Warnings:
+      type: object
+      description: Represents a wrapper schema around Warning for streaming case
+      properties:
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Warning'
+    SemanticModelObject:
+      type: object
+      title: the semantic model object
+      description: Represents a semantic model object
+      properties:
+        semantic_model_file:
+          description: The path to a file stored in a Snowflake Stage holding the
+            semantic model yaml. Must be a fully qualified stage url
+          type: string
+          example: '@db.schema.stage/path/to/file.yaml'
+        semantic_view:
+          description: The name of the Snowflake native semantic model object
+          type: string
+          example: db.schema.semantic_view
+    MessageObject:
+      type: object
+      title: The message object
+      description: Represents a message within a chat.
+      properties:
+        role:
+          description: The entity that produced the message. One of `user` or `analyst`.
+          type: string
+          enum:
+          - user
+          - analyst
+        content:
+          description: The content of the message in array of text or SQL.
+          type: array
+          items:
+            $ref: '#/components/schemas/MessageContent'
+      required:
+      - content
+    MessageContent:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+          - text
+          - sql
+          - suggestions
+          - results
+          - chart
+      discriminator:
+        propertyName: type
+        mapping:
+          text: '#/components/schemas/MessageContentTextObject'
+          sql: '#/components/schemas/MessageContentSqlObject'
+          suggestions: '#/components/schemas/MessageContentSuggestionsObject'
+          results: '#/components/schemas/MessageContentResultsObject'
+          chart: '#/components/schemas/MessageContentChartObject'
+    MessageContentTextObject:
+      allOf:
+      - $ref: '#/components/schemas/MessageContent'
+      - title: Text
+        type: object
+        description: The text content that is part of a message.
+        properties:
+          text:
+            type: string
+            example: To answer the question "What is the profit per store?" we must
+              aggregate sales at the store level
+        required:
+        - text
+    MessageContentSqlObject:
+      allOf:
+      - $ref: '#/components/schemas/MessageContent'
+      - title: SQL
+        type: object
+        description: The SQL content that is part of a message.
+        properties:
+          statement:
+            type: string
+            description: The executable SQL statement
+            example: SELECT store, SUM(profit) FROM sales GROUP BY store
+          confidence:
+            $ref: '#/components/schemas/Confidence'
+        required:
+        - statement
+    MessageContentSuggestionsObject:
+      allOf:
+      - $ref: '#/components/schemas/MessageContent'
+      - title: Suggested Questions
+        type: object
+        description: If SQL cannot be generated, a list of questions the semantic
+          model can generate SQL for.
+        properties:
+          suggestions:
+            type: array
+            items:
+              type: string
+              example: What is the lifetime revenue for the top 5 clients?
+        required:
+        - suggestions
+    MessageContentResultsObject:
+      allOf:
+      - $ref: '#/components/schemas/MessageContent'
+      - title: Results
+        type: object
+        description: Query ID of the executed query
+        properties:
+          query_id:
+            type: string
+        required:
+        - query_id
+    MessageContentChartObject:
+      allOf:
+      - $ref: '#/components/schemas/MessageContent'
+      - title: Chart
+        type: object
+        description: The chart specification that is part of a message.
+        properties:
+          chart_spec:
+            type: string
+        required:
+        - chart_spec
+    SendMessageRequest:
+      type: object
+      description: The request object for sendMessage requests
+      properties:
+        semantic_model_file:
+          type: string
+          description: The path to a file stored in a Snowflake Stage holding the
+            semantic model yaml. Must be a fully qualified stage url
+          example: '@db.schema.stage/path/to/file.yaml'
+        semantic_model:
+          type: string
+          description: A string containing the entire semantic model yaml
+          example: 'name: my_semantic_model\ntables:\n  - name: orders\n...'
+        semantic_view:
+          type: string
+          description: The name of the Snowflake native semantic model object
+          example: db.schema.semantic_view
+        semantic_models:
+          type: array
+          description: A list of semantic model objects. If set, other semantic model
+            properties are ignored
+          items:
+            $ref: '#/components/schemas/SemanticModelObject'
+        stream:
+          type: boolean
+          description: Whether to stream the response or not
+          default: false
+        operation:
+          type: string
+          enum:
+          - sql_generation
+          - answer_generation
+          description: Whether to response with SQL or natural language. One of 'sql_generation'
+            or 'answer_generation'
+          default: sql_generation
+        warehouse:
+          type: string
+          description: Warehouse name to use for result set handling. Only used when
+            'operation' is 'answer_generation'
+        messages:
+          type: array
+          items:
+            $ref: '#/components/schemas/MessageObject'
+        source:
+          type: string
+          description: an optional field to specify the source of the request. e.g
+            "eval", "prod"
+        experimental:
+          type: string
+          description: JSON serialized string of experimental API fields (undocumented).
+      required:
+      - messages
+    Confidence:
+      type: object
+      description: The verified query the response is based on
+      properties:
+        verified_query_used:
+          $ref: '#/components/schemas/VerifiedQuery'
+    VerifiedQuery:
+      type: object
+      description: VerifiedQuery represents a (question, sql) pair that has been manually
+        verified (e.g. by an analyst) to be correct.
+      properties:
+        name:
+          type: string
+          description: A name for this verified query. Mainly used for display purposes.
+        question:
+          type: string
+          description: The question being answered.
+        sql:
+          type: string
+          description: The correct SQL query for answering the question.
+        verified_at:
+          type: integer
+          format: int64
+          description: Timestamp at which the query was last verified - measures in
+            seconds since epoch, in UTC.
+        verified_by:
+          type: string
+          description: Name of the person who verified this query.
+    SendFeedbackRequest:
+      type: object
+      description: The request object for sending user feedback on Cortex Analyst
+        responses
+      properties:
+        request_id:
+          type: string
+          description: Request id associated with the feedback
+        positive:
+          type: boolean
+          description: Whether the response was good (true) or bad (false)
+        feedback_message:
+          type: string
+          description: The text for the detailed feedback message
+      required:
+      - request_id
+      - positive
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []
