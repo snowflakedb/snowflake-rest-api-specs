@@ -1,0 +1,395 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake REST Server
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake API Integration API
+  description: The Snowflake API Integration API is a REST API that you can use to
+    access, update, and perform certain actions on API Integration resource in a Snowflake
+    database.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/api-integrations:
+    get:
+      summary: List API integrations
+      tags:
+      - api-integration
+      description: List API integrations
+      operationId: listAPIIntegrations
+      parameters:
+      - $ref: common.yaml#/components/parameters/like
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ApiIntegration'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    post:
+      summary: Create an API integration
+      tags:
+      - api-integration
+      description: Create an API integration
+      operationId: createAPIIntegration
+      parameters:
+      - $ref: common.yaml#/components/parameters/createMode
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ApiIntegration'
+  /api/v2/api-integrations/{name}:
+    get:
+      summary: Fetch an API integration
+      tags:
+      - api-integration
+      description: Fetch an API integration
+      operationId: fetchAPIIntegration
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiIntegration'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    put:
+      summary: Create an (or alter an existing) API integration
+      tags:
+      - api-integration
+      description: Create an (or alter an existing) API integration. Note that API_KEY
+        is not currently altered by this operation and is supported for a newly-created
+        object only. Unsetting API_BLOCKED_PREFIXES is also unsupported.
+      operationId: createOrAlterAPIIntegration
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ApiIntegration'
+    delete:
+      summary: Delete an API integration
+      tags:
+      - api-integration
+      description: Delete an API integration
+      operationId: deleteAPIIntegration
+      parameters:
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  schemas:
+    ApiIntegration:
+      type: object
+      description: A Snowflake API integration object.
+      properties:
+        name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Name of the API integration.
+        api_hook:
+          $ref: '#/components/schemas/ApiHook'
+        api_allowed_prefixes:
+          type: array
+          items:
+            type: string
+          description: A comma-separated list of endpoints and resources that Snowflake
+            can access.
+        api_blocked_prefixes:
+          type: array
+          items:
+            type: string
+          description: A comma-separated list of endpoints and resources that are
+            not allowed to be called from Snowflake.
+          nullable: true
+        enabled:
+          type: boolean
+          description: Whether the API integration is enabled.
+        comment:
+          type: string
+          description: Comment for the API integration.
+          nullable: true
+        created_on:
+          type: string
+          format: date-time
+          readOnly: true
+          description: Date and time when the API integration was created.
+      required:
+      - name
+      - api_hook
+      - api_allowed_prefixes
+      - enabled
+    ApiHook:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+          - AWS
+          - AZURE
+          - GC
+          - GIT
+          description: Type of ApiHook, can be AWS, AZURE, GC or GIT.
+      required:
+      - type
+      discriminator:
+        propertyName: type
+        mapping:
+          AWS: AwsHook
+          AZURE: AzureHook
+          GC: GoogleCloudHook
+          GIT: GitHook
+    AwsHook:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/ApiHook'
+      properties:
+        api_provider:
+          type: string
+          enum:
+          - AWS_API_GATEWAY
+          - AWS_PRIVATE_API_GATEWAY
+          - AWS_GOV_API_GATEWAY
+          - AWS_GOV_PRIVATE_API_GATEWAY
+        api_aws_role_arn:
+          type: string
+          description: The ARN (Amazon resource name) of the IAM role.
+        api_key:
+          $ref: '#/components/schemas/ApiKey'
+      required:
+      - api_provider
+      - api_aws_role_arn
+    AzureHook:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/ApiHook'
+      properties:
+        api_provider:
+          type: string
+          enum:
+          - AZURE_API_MANAGEMENT
+          - AZURE_PRIVATE_API_MANAGEMENT
+        azure_tenant_id:
+          type: string
+          description: The ID of the Office 365 tenant that all Azure API Management
+            instances belong to.
+        azure_ad_application_id:
+          type: string
+          description: The application ID of the Azure Active Directory application.
+        api_key:
+          $ref: '#/components/schemas/ApiKey'
+      required:
+      - api_provider
+      - azure_tenant_id
+      - azure_ad_application_id
+    GoogleCloudHook:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/ApiHook'
+      properties:
+        api_provider:
+          type: string
+          enum:
+          - GOOGLE_API_GATEWAY
+        google_audience:
+          type: string
+          description: Used as an audience claim when generating the JTW (JSON Web
+            Token) to authenticate to the Google API Gateway.
+        api_key:
+          $ref: '#/components/schemas/ApiKey'
+      required:
+      - api_provider
+      - google_audience
+    GitHook:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/ApiHook'
+      properties:
+        allow_any_secret:
+          type: boolean
+          default: false
+          description: Whether to allow any Snowflake secret when accessing the Git
+            repository. This setting is ignored if allowed_authentication_secrets
+            is present.
+        allowed_authentication_secrets:
+          type: array
+          items:
+            type: string
+          description: A comma-separated list of fully-qualified Snowflake secret
+            names that UDF or procedure handler code can use when accessing the Git
+            repository.
+          nullable: true
+        allowed_api_authentication_integrations:
+          type: array
+          items:
+            type: string
+          description: A comma-separated list of Snowflake security integration names
+            that UDF or procedure handler code can use when accessing the Git repository.
+            If empty, allow no integrations.
+          nullable: true
+    ApiKey:
+      type: string
+      description: An alphanumeric string that is used to identify API clients and
+        control access to the API, also called a subscription key.
+      nullable: true
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []

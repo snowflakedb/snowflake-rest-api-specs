@@ -1,0 +1,252 @@
+openapi: 3.0.2
+info:
+  title: Cortex Inference API
+  description: OpenAPI 3.0 specification for the Cortex REST API
+  version: 0.1.0
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/cortex/inference:complete:
+    post:
+      summary: Perform LLM text completion inference.
+      tags:
+      - cortex-inference
+      description: Perform LLM text completion inference, similar to snowflake.cortex.Complete.
+      operationId: cortexLLMInferenceComplete
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CompleteRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            text/event-stream:
+              schema:
+                $ref: '#/components/schemas/StreamingCompleteResponse'
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  schemas:
+    CompleteRequest:
+      type: object
+      description: LLM text completion request.
+      properties:
+        model:
+          description: The model name. See documentation for possible values.
+          type: string
+        messages:
+          type: array
+          items:
+            type: object
+            properties:
+              role:
+                type: string
+                description: "Indicates the role of the message, one of 'system',\
+                  \ 'user' or 'assistant'.\n\nRules:\n- A 'user' message must be the\
+                  \ last message in the list.\n- If a 'system' message is specified,\
+                  \ it must be the first message.\n- If a 'assistant' message is specified,\
+                  \ it must be immediately before a 'user' message in the list.\n\
+                  \  Multiple 'assistant' and 'user' messages can be specified, but\
+                  \ they must alternate in sequence.\n"
+                default: user
+              content:
+                type: string
+                description: The text completion prompt, e.g. 'What is a Large Language
+                  Model?'.
+              content_list:
+                type: array
+                description: Contents of toolUse and toolResults
+                items:
+                  discriminator:
+                    propertyName: type
+                    mapping:
+                      text: common-cortex-tool.yaml#/components/schemas/TextContent
+                      tool_result: common-cortex-tool.yaml#/components/schemas/ToolResults
+                      tool_use: common-cortex-tool.yaml#/components/schemas/ToolUse
+            required:
+            - content
+          minItems: 1
+        temperature:
+          description: Temperature controls the amount of randomness used in response
+            generation. A higher temperature corresponds to more randomness.
+          type: number
+          nullable: true
+          minimum: 0.0
+        top_p:
+          description: Threshold probability for nucleus sampling. A higher top-p
+            value increases the diversity of tokens that the model considers, while
+            a lower value results in more predictable output.
+          type: number
+          default: 1.0
+          minimum: 0.0
+          maximum: 1.0
+        max_tokens:
+          description: The maximum number of output tokens to produce. The default
+            value is model-dependent.
+          type: integer
+          default: 4096
+          minimum: 0
+        max_output_tokens:
+          deprecated: true
+          description: Deprecated in favor of "max_tokens", which has identical behavior.
+          type: integer
+          nullable: true
+        response_format:
+          type: object
+          nullable: true
+          description: An object describing response format config for structured-output
+            mode.
+          properties:
+            type:
+              type: string
+              enum:
+              - json
+              description: The response format type (e.g., "json").
+            schema:
+              type: object
+              description: The schema defining the structure of the response. If the
+                `type` is "json", the `schema` field should contain a valid JSON schema.
+        guardrails:
+          $ref: '#/components/schemas/GuardrailsConfig'
+        tools:
+          description: List of tools to be used during tool calling
+          type: array
+          items:
+            $ref: common-cortex-tool.yaml#/components/schemas/Tool
+        tool_choice:
+          $ref: common-cortex-tool.yaml#/components/schemas/ToolChoice
+        provisioned_throughput_id:
+          type: string
+          description: The provisioned throughput ID to be used with the request.
+          nullable: true
+        sf-ml-xp-inflight-prompt-action:
+          type: string
+          description: Reserved
+        sf-ml-xp-inflight-prompt-client-id:
+          type: string
+          description: Reserved
+        sf-ml-xp-inflight-prompt-public-key:
+          type: string
+          description: Reserved
+        stream:
+          type: boolean
+          default: true
+          nullable: true
+          description: Reserved
+      required:
+      - model
+      - messages
+    GuardrailsConfig:
+      type: object
+      title: GuardrailsConfig
+      description: Guardrails configuration
+      nullable: true
+      properties:
+        enabled:
+          type: boolean
+          description: Controls whether guardrails are enabled
+        response_when_unsafe:
+          type: string
+          description: The response when the guardrails model marks the completion
+            as unsafe
+          example: Response filtered by Cortex Guard
+    NonStreamingCompleteResponse:
+      type: object
+      description: Text-completion response for non-streaming request.
+      properties:
+        choices:
+          type: array
+          items:
+            type: object
+            properties:
+              message:
+                type: object
+                properties:
+                  content:
+                    type: string
+                    description: The text completion response.
+                  content_list:
+                    type: array
+                    description: Contents of text and toolUse response.
+                    items:
+                      discriminator:
+                        propertyName: type
+                        mapping:
+                          text: common-cortex-tool.yaml#/components/schemas/TextContent
+                          tool_use: common-cortex-tool.yaml#/components/schemas/ToolUse
+        usage:
+          type: object
+          title: Usage
+          properties:
+            prompt_tokens:
+              type: integer
+              description: Input token count.
+            completion_tokens:
+              type: integer
+              description: Output token count.
+            guard_tokens:
+              type: integer
+              description: Tokens used by cortex guard.
+            total_tokens:
+              type: integer
+              description: Sum of all tokens.
+    StreamingCompleteResponse:
+      type: object
+      description: Server-sent events for streaming text-completion updates.
+      x-events:
+        data:
+          $ref: '#/components/schemas/StreamingCompleteResponseDataEvent'
+    StreamingCompleteResponseDataEvent:
+      type: object
+      description: Streaming text-completion response event.
+      properties:
+        choices:
+          type: array
+          items:
+            type: object
+            properties:
+              delta:
+                type: object
+                properties:
+                  content:
+                    type: string
+                    description: Change in text-completion response content since
+                      previous event.
+                  content_list:
+                    type: array
+                    description: Contents of text and toolUse response.
+                    items:
+                      discriminator:
+                        propertyName: type
+                        mapping:
+                          text: common-cortex-tool.yaml#/components/schemas/TextContent
+                          tool_use: common-cortex-tool.yaml#/components/schemas/StreamingToolUse
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []

@@ -1,0 +1,2530 @@
+{
+	"info": {
+		"_postman_id": "9894f9ba-cd05-4a22-b3f7-5a388af52681",
+		"name": "Snowflake Managed Account API",
+		"description": "The Snowflake Managed Account API is a REST API that you can use to access, update, and perform certain actions on Managed Account resource in Snowflake.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43111250"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v2",
+					"item": [
+						{
+							"name": "managed-accounts",
+							"item": [
+								{
+									"name": "{name}",
+									"item": [
+										{
+											"name": "Delete a managed account.",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts",
+														":name"
+													],
+													"variable": [
+														{
+															"key": "name",
+															"value": "\"\"\"\"",
+															"description": "(Required) Identifier (i.e. name) for the resource."
+														}
+													]
+												},
+												"description": "Removes a managed account, including all objects created in the account, and immediately restricts access to the account. Currently used by data providers to create reader accounts for their consumers. For more details, see Manage reader accounts."
+											},
+											"response": [
+												{
+													"name": "Successful request.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"managed-accounts",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"status\": \"<string>\"\n}"
+												},
+												{
+													"name": "Successfully accepted the request, but it is not completed yet.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"managed-accounts",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Accepted",
+													"code": 202,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Location",
+															"value": "<string>",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+												},
+												{
+													"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"managed-accounts",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"managed-accounts",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"managed-accounts",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"managed-accounts",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"managed-accounts",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Method Not Allowed",
+													"code": 405,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"managed-accounts",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Request Timeout",
+													"code": 408,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"managed-accounts",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Conflict",
+													"code": 409,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"managed-accounts",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Gone",
+													"code": 410,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"managed-accounts",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Too Many Requests",
+													"code": 429,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"managed-accounts",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"managed-accounts",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												},
+												{
+													"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v2/managed-accounts/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v2",
+																"managed-accounts",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "Gateway Timeout",
+													"code": 504,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-Snowflake-Request-ID",
+															"value": "",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "List managed accounts.",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v2",
+												"managed-accounts"
+											],
+											"query": [
+												{
+													"key": "like",
+													"value": "<string>",
+													"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+												}
+											]
+										},
+										"description": "Lists the accessible managed accounts."
+									},
+									"response": [
+										{
+											"name": "Successful request.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"name\": \"VxfSV\",\n    \"account_type\": \"READER\",\n    \"cloud\": \"<string>\",\n    \"region\": \"<string>\",\n    \"locator\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"url\": \"<string>\",\n    \"account_locator_url\": \"<string>\",\n    \"comment\": \"<string>\"\n  },\n  {\n    \"name\": \"\\\"\\\"\\\"kIe\\\"\",\n    \"account_type\": \"READER\",\n    \"cloud\": \"<string>\",\n    \"region\": \"<string>\",\n    \"locator\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"url\": \"<string>\",\n    \"account_locator_url\": \"<string>\",\n    \"comment\": \"<string>\"\n  }\n]"
+										},
+										{
+											"name": "Successfully accepted the request, but it is not completed yet.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Accepted",
+											"code": 202,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Location",
+													"value": "<string>",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+										},
+										{
+											"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Method Not Allowed",
+											"code": 405,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Request Timeout",
+											"code": 408,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Gone",
+											"code": 410,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Too Many Requests",
+											"code": 429,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Service Unavailable",
+											"code": 503,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts?like=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													],
+													"query": [
+														{
+															"key": "like",
+															"value": "<string>",
+															"description": "Query parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters."
+														}
+													]
+												}
+											},
+											"status": "Gateway Timeout",
+											"code": 504,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Create a managed accounts.",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v2/managed-accounts",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v2",
+												"managed-accounts"
+											]
+										},
+										"description": "Creates a managed account. You must provide the full managed account definition when creating a managed account."
+									},
+									"response": [
+										{
+											"name": "Successful request.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<string>\"\n}"
+										},
+										{
+											"name": "Successfully accepted the request, but it is not completed yet.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													]
+												}
+											},
+											"status": "Accepted",
+											"code": 202,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Location",
+													"value": "<string>",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": \"<string>\",\n  \"message\": \"<string>\",\n  \"resultHandler\": \"<string>\"\n}"
+										},
+										{
+											"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													]
+												}
+											},
+											"status": "Method Not Allowed",
+											"code": 405,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													]
+												}
+											},
+											"status": "Request Timeout",
+											"code": 408,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													]
+												}
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													]
+												}
+											},
+											"status": "Gone",
+											"code": 410,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													]
+												}
+											},
+											"status": "Too Many Requests",
+											"code": 429,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													]
+												}
+											},
+											"status": "Service Unavailable",
+											"code": 503,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										},
+										{
+											"name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v2/managed-accounts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v2",
+														"managed-accounts"
+													]
+												}
+											},
+											"status": "Gateway Timeout",
+											"code": 504,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-Snowflake-Request-ID",
+													"value": "",
+													"description": {
+														"content": "",
+														"type": "text/plain"
+													}
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"code\": \"<string>\",\n  \"error_code\": \"<string>\",\n  \"request_id\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{bearerToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://org-account.snowflakecomputing.com"
+		}
+	]
+}
