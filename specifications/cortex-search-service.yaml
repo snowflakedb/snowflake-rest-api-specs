@@ -362,15 +362,15 @@ components:
       description: A search query and additional parameters for search.
       properties:
         query:
-          description: Unstructured text query.  Exactly one of 'query' or 'queries'
+          description: Unstructured text query.  Exactly one of 'query' or 'multi_index_query'
             must be specified.
           type: string
-        queries:
+        multi_index_query:
           description: A search query expressed as a collection of multiple column-level
-            queries.  Exactly one of 'query' or 'queries' must be specified.
+            queries.  Exactly one of 'query' or 'multi_index_query' must be specified.
+            A column/index can be queried with multiple queries.
           type: object
-          additionalProperties:
-            $ref: '#/components/schemas/ColumnQuery'
+          additionalProperties: true
         columns:
           description: List of columns to return.
           type: array
@@ -437,6 +437,10 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/VectorBoost'
+        query_similarity_boosts:
+          type: array
+          items:
+            $ref: '#/components/schemas/QuerySimilarityBoost'
     Column:
       type: string
       description: Column to apply this function to.
@@ -494,6 +498,24 @@ components:
           description: Weight to apply for boosting this vector column.
           type: number
           example: 0.5
+    QuerySimilarityBoost:
+      type: object
+      properties:
+        cortex_search_service:
+          description: Fully-qualified name of a Cortex Search Service through which
+            to find similar previous queries.
+          type: string
+          example: MY_DB.MY_SCHEMA.MY_SEARCH_SERVICE
+        previous_query_column:
+          description: Name of a TEXT column indexed in the specified previous queries
+            search service that contains the previous query strings.
+          type: string
+        documents_column:
+          description: Name of an ARRAY column indexed in the specified previous queries
+            search service that contains a list of documents that matched the corresponding
+            previous query. Each document is represented as an OBJECT mapping all
+            primary key columns to their corresponding values.
+          type: string
     Reranker:
       type: string
       description: Model to use for the reranker, or "none" if the reranker should

@@ -8,6 +8,42 @@ info:
     url: https://snowflake.com
     email: support@snowflake.com
 paths:
+  /api/v2/cortex/models:
+    get:
+      summary: Returns the LLMs available for the current session
+      tags:
+      - cortex-inference
+      description: Returns the LLMs available for the current session
+      operationId: getModels
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetModelsRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetModelsResponse'
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
   /api/v2/cortex/inference:complete:
     post:
       summary: Perform LLM text completion inference.
@@ -45,6 +81,20 @@ paths:
           $ref: common.yaml#/components/responses/504GatewayTimeout
 components:
   schemas:
+    GetModelsRequest:
+      type: object
+      properties:
+        models:
+          type: array
+          items:
+            type: string
+    GetModelsResponse:
+      type: object
+      properties:
+        models:
+          type: array
+          items:
+            type: string
     CompleteRequest:
       type: object
       description: LLM text completion request.
@@ -60,12 +110,12 @@ components:
               role:
                 type: string
                 description: "Indicates the role of the message, one of 'system',\
-                  \ 'user' or 'assistant'.\n\nRules:\n- A 'user' message must be the\
-                  \ last message in the list.\n- If a 'system' message is specified,\
-                  \ it must be the first message.\n- If a 'assistant' message is specified,\
-                  \ it must be immediately before a 'user' message in the list.\n\
-                  \  Multiple 'assistant' and 'user' messages can be specified, but\
-                  \ they must alternate in sequence.\n"
+                  \ 'user' or 'assistant'.\n\nRules:\n  - A 'user' message must be\
+                  \ the last message in the list.\n  - If a 'system' message is specified,\
+                  \ it must be the first message.\n  - If a 'assistant' message is\
+                  \ specified, it must be immediately before a 'user' message in the\
+                  \ list.\n\nMultiple 'assistant' and 'user' messages can be specified,\
+                  \ but they must alternate in sequence.\n"
                 default: user
               content:
                 type: string
@@ -224,21 +274,16 @@ components:
             type: object
             properties:
               delta:
-                type: object
-                properties:
-                  content:
-                    type: string
-                    description: Change in text-completion response content since
-                      previous event.
-                  content_list:
-                    type: array
-                    description: Contents of text and toolUse response.
-                    items:
-                      discriminator:
-                        propertyName: type
-                        mapping:
-                          text: common-cortex-tool.yaml#/components/schemas/TextContent
-                          tool_use: common-cortex-tool.yaml#/components/schemas/StreamingToolUse
+                $ref: '#/components/schemas/StreamingCompleteResponseDelta'
+    StreamingCompleteResponseDelta:
+      type: object
+      required:
+      - type
+      discriminator:
+        propertyName: type
+        mapping:
+          text: common-cortex-tool.yaml#/components/schemas/StreamingTextContent
+          tool_use: common-cortex-tool.yaml#/components/schemas/StreamingToolUse
   securitySchemes:
     KeyPair:
       $ref: common.yaml#/components/securitySchemes/KeyPair
