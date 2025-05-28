@@ -5,7 +5,9 @@ components:
       are also case-sensitive.
     Identifier:
       type: string
-      description: A Snowflake object identifier.
+      description: A Snowflake object identifier. If the identifier contains spaces
+        or special characters, the entire string must be enclosed in double quotes.
+        Identifiers enclosed in double quotes are also case-sensitive.
       pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
       example: TEST_NAME
     ErrorResponse:
@@ -611,7 +613,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
-  security:
-  - KeyPair: []
-  - ExternalOAuth: []
-  - SnowflakeOAuth: []
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []
