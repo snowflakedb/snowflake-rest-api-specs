@@ -1,8 +1,5 @@
 components:
   schemas:
-    description: If the identifier contains spaces or special characters, the entire
-      string must be enclosed in double quotes. Identifiers enclosed in double quotes
-      are also case-sensitive.
     Identifier:
       type: string
       description: A Snowflake object identifier. If the identifier contains spaces
