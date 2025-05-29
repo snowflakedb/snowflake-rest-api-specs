@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "8c45022d-df47-4aa0-9ea3-a53e23ffc21e",
+		"_postman_id": "53b19a20-7f35-418d-a630-f205bc1abf0f",
 		"name": "Snowflake API Integration API",
 		"description": "The Snowflake API Integration API is a REST API that you can use to access, update, and perform certain actions on API Integration resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -43,7 +43,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "\"6%\"\",7 \"\"\"",
+															"value": "ITKM9$452",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -110,7 +110,7 @@
 														}
 													],
 													"cookie": [],
-													"body": "{\n  \"name\": \"jc8IGOMw\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"created_on\": \"<dateTime>\"\n}"
+													"body": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"F@|\\\"\\\"\\\"\\\"2\\\"\",\n  \"api_hook\": {\n    \"type\": \"AZURE\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"created_on\": \"<dateTime>\"\n}"
 												},
 												{
 													"name": "Successfully accepted the request, but it is not completed yet.",
@@ -827,7 +827,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -849,7 +849,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "\"6%\"\",7 \"\"\"",
+															"value": "ITKM9$452",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -878,7 +878,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+															"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -945,7 +945,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+															"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1020,7 +1020,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+															"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1087,7 +1087,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+															"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1154,7 +1154,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+															"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1221,7 +1221,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+															"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1288,7 +1288,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+															"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1355,7 +1355,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+															"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1422,7 +1422,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+															"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1489,7 +1489,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+															"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1568,7 +1568,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "\"6%\"\",7 \"\"\"",
+															"value": "ITKM9$452",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -2519,7 +2519,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "[\n  {\n    \"name\": \"\\\"Mrl\\\"\",\n    \"api_hook\": {\n      \"type\": \"AZURE\"\n    },\n    \"api_allowed_prefixes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"enabled\": \"<boolean>\",\n    \"api_blocked_prefixes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\"\n  },\n  {\n    \"name\": \"\\\"<\\\"\\\"u8\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"0\\\"\\\"\\\"\",\n    \"api_hook\": {\n      \"type\": \"GC\"\n    },\n    \"api_allowed_prefixes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"enabled\": \"<boolean>\",\n    \"api_blocked_prefixes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\"\n  }\n]"
+											"body": "[\n  {\n    \"name\": \"Q7Bt9ebOmwI\",\n    \"api_hook\": {\n      \"type\": \"AWS\"\n    },\n    \"api_allowed_prefixes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"enabled\": \"<boolean>\",\n    \"api_blocked_prefixes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\"\n  },\n  {\n    \"name\": \"q\",\n    \"api_hook\": {\n      \"type\": \"GC\"\n    },\n    \"api_allowed_prefixes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"enabled\": \"<boolean>\",\n    \"api_blocked_prefixes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\"\n  }\n]"
 										},
 										{
 											"name": "Successfully accepted the request, but it is not completed yet.",
@@ -3249,7 +3249,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+											"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -3299,7 +3299,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3367,7 +3367,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3443,7 +3443,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3511,7 +3511,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3579,7 +3579,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3647,7 +3647,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3715,7 +3715,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3783,7 +3783,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3851,7 +3851,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3919,7 +3919,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3987,7 +3987,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -4055,7 +4055,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -4123,7 +4123,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -4191,7 +4191,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"p\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"AWS\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"N\\\\E\\\"\\\"\\\"\\\"\\\"\\\",\\\"\\\"\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enabled\": \"<boolean>\",\n  \"api_blocked_prefixes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",

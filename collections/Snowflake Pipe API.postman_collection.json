@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "6a46814a-0cbc-4efa-ab2e-0de3a22de68a",
+		"_postman_id": "f47359d0-26c6-4b39-be34-fb1f21182afd",
 		"name": "Snowflake Pipe API",
 		"description": "The Snowflake Pipe API is a REST API that you can use to access, update, and perform certain actions on Pipe resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -59,17 +59,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"X&j\"\"\"\"\"\"{E\"\"e\"",
+																							"value": "Ro",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"X&j\"\"\"\"\"\"{E\"\"e\"",
+																							"value": "Ro",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "\"X&j\"\"\"\"\"\"{E\"\"e\"",
+																							"value": "Ro",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -1004,17 +1004,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"X&j\"\"\"\"\"\"{E\"\"e\"",
+																							"value": "Ro",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"X&j\"\"\"\"\"\"{E\"\"e\"",
+																							"value": "Ro",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "\"X&j\"\"\"\"\"\"{E\"\"e\"",
+																							"value": "Ro",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -2062,12 +2062,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"X&j\"\"\"\"\"\"{E\"\"e\"",
+																							"value": "Ro",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"X&j\"\"\"\"\"\"{E\"\"e\"",
+																							"value": "Ro",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -3199,12 +3199,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"X&j\"\"\"\"\"\"{E\"\"e\"",
+																					"value": "Ro",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"X&j\"\"\"\"\"\"{E\"\"e\"",
+																					"value": "Ro",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -4194,12 +4194,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"X&j\"\"\"\"\"\"{E\"\"e\"",
+																					"value": "Ro",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"X&j\"\"\"\"\"\"{E\"\"e\"",
+																					"value": "Ro",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -5369,7 +5369,7 @@
 		},
 		{
 			"key": "name",
-			"value": "\"X&j\"\"\"\"\"\"{E\"\"e\""
+			"value": "Ro"
 		}
 	]
 }

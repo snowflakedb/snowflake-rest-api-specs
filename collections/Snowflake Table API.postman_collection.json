@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "133a78b2-baf4-456a-bf68-fb05af312901",
+		"_postman_id": "335088cd-1ad7-493b-8a70-c9fccf358293",
 		"name": "Snowflake Table API",
 		"description": "The Snowflake Table API is a REST API that you can use to access, update, and perform certain actions on Tables resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -90,12 +90,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -1437,12 +1437,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -2571,17 +2571,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -2658,7 +2658,7 @@
 																						}
 																					],
 																					"cookie": [],
-																					"body": "{\n  \"name\": \"<string>\",\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\",\n  \"rows\": \"<long>\",\n  \"bytes\": \"<long>\",\n  \"owner\": \"<string>\",\n  \"dropped_on\": \"<dateTime>\",\n  \"automatic_clustering\": \"<boolean>\",\n  \"search_optimization\": \"<boolean>\",\n  \"search_optimization_progress\": \"<long>\",\n  \"search_optimization_bytes\": \"<long>\",\n  \"owner_role_type\": \"<string>\",\n  \"budget\": \"<string>\",\n  \"table_type\": \"DYNAMIC\"\n}"
+																					"body": "{\n  \"name\": \"<string>\",\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\",\n  \"rows\": \"<long>\",\n  \"bytes\": \"<long>\",\n  \"owner\": \"<string>\",\n  \"dropped_on\": \"<dateTime>\",\n  \"automatic_clustering\": \"<boolean>\",\n  \"search_optimization\": \"<boolean>\",\n  \"search_optimization_progress\": \"<long>\",\n  \"search_optimization_bytes\": \"<long>\",\n  \"owner_role_type\": \"<string>\",\n  \"budget\": \"<string>\",\n  \"table_type\": \"NORMAL\"\n}"
 																				},
 																				{
 																					"name": "Successfully accepted the request, but it is not completed yet.",
@@ -3531,17 +3531,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -4672,17 +4672,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -5701,7 +5701,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5710,7 +5710,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -5737,24 +5737,24 @@
 																						},
 																						{
 																							"key": "targetDatabase",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "Database of the newly created table. Defaults to the source table's database."
 																						},
 																						{
 																							"key": "targetSchema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "Schema of the newly created table. Defaults to the source table's schema."
 																						}
 																					],
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -5783,7 +5783,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -5792,7 +5792,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -5819,12 +5819,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -5879,7 +5879,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -5888,7 +5888,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -5915,12 +5915,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -5983,7 +5983,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -5992,7 +5992,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -6019,12 +6019,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -6079,7 +6079,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6088,7 +6088,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -6115,12 +6115,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -6175,7 +6175,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6184,7 +6184,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -6211,12 +6211,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -6271,7 +6271,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6280,7 +6280,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -6307,12 +6307,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -6367,7 +6367,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6376,7 +6376,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -6403,12 +6403,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -6463,7 +6463,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6472,7 +6472,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -6499,12 +6499,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -6559,7 +6559,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6568,7 +6568,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -6595,12 +6595,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -6655,7 +6655,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6664,7 +6664,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -6691,12 +6691,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -6751,7 +6751,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6760,7 +6760,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -6787,12 +6787,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -6847,7 +6847,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6856,7 +6856,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -6883,12 +6883,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -6943,7 +6943,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6952,7 +6952,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -6979,12 +6979,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -7039,7 +7039,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"voluptate aute qui aliquip\",\n    \"reference\": \"in Lorem\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"commodo adipisicing\",\n    \"reference\": \"est Duis Excepteur\"\n  },\n  \"kind\": \"PERMANENT\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"enable_schema_evolution\": \"<boolean>\",\n  \"change_tracking\": \"<boolean>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"default_ddl_collation\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"datatype\": \"<string>\",\n      \"nullable\": true,\n      \"collate\": \"<string>\",\n      \"default\": \"<string>\",\n      \"autoincrement\": \"<boolean>\",\n      \"autoincrement_start\": \"<integer>\",\n      \"autoincrement_increment\": \"<integer>\",\n      \"constraints\": [\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"column_names\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"constraint_type\": \"<string>\"\n        }\n      ],\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ],\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -7048,7 +7048,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -7075,12 +7075,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -7166,12 +7166,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -8326,12 +8326,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -9586,12 +9586,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -10489,12 +10489,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -11490,12 +11490,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -12491,12 +12491,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -13492,12 +13492,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -14498,12 +14498,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -15545,7 +15545,7 @@
 																					}
 																				],
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -15567,29 +15567,29 @@
 																						},
 																						{
 																							"key": "targetName",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) The name of the target table to be swapped with."
 																						},
 																						{
 																							"key": "targetDatabase",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "Database of the target table. Defaults to the source table's database."
 																						},
 																						{
 																							"key": "targetSchema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "Schema of the target table. Defaults to the source table's schema."
 																						}
 																					],
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"I\"\"\"",
+																							"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -15613,7 +15613,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -15635,17 +15635,17 @@
 																								},
 																								{
 																									"key": "targetName",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "(Required) The name of the target table to be swapped with."
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the target table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the target table. Defaults to the source table's schema."
 																								}
 																							],
@@ -15695,7 +15695,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -15717,17 +15717,17 @@
 																								},
 																								{
 																									"key": "targetName",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "(Required) The name of the target table to be swapped with."
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the target table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the target table. Defaults to the source table's schema."
 																								}
 																							],
@@ -15785,7 +15785,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -15807,17 +15807,17 @@
 																								},
 																								{
 																									"key": "targetName",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "(Required) The name of the target table to be swapped with."
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the target table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the target table. Defaults to the source table's schema."
 																								}
 																							],
@@ -15867,7 +15867,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -15889,17 +15889,17 @@
 																								},
 																								{
 																									"key": "targetName",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "(Required) The name of the target table to be swapped with."
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the target table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the target table. Defaults to the source table's schema."
 																								}
 																							],
@@ -15949,7 +15949,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -15971,17 +15971,17 @@
 																								},
 																								{
 																									"key": "targetName",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "(Required) The name of the target table to be swapped with."
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the target table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the target table. Defaults to the source table's schema."
 																								}
 																							],
@@ -16031,7 +16031,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -16053,17 +16053,17 @@
 																								},
 																								{
 																									"key": "targetName",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "(Required) The name of the target table to be swapped with."
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the target table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the target table. Defaults to the source table's schema."
 																								}
 																							],
@@ -16113,7 +16113,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -16135,17 +16135,17 @@
 																								},
 																								{
 																									"key": "targetName",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "(Required) The name of the target table to be swapped with."
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the target table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the target table. Defaults to the source table's schema."
 																								}
 																							],
@@ -16195,7 +16195,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -16217,17 +16217,17 @@
 																								},
 																								{
 																									"key": "targetName",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "(Required) The name of the target table to be swapped with."
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the target table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the target table. Defaults to the source table's schema."
 																								}
 																							],
@@ -16277,7 +16277,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -16299,17 +16299,17 @@
 																								},
 																								{
 																									"key": "targetName",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "(Required) The name of the target table to be swapped with."
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the target table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the target table. Defaults to the source table's schema."
 																								}
 																							],
@@ -16359,7 +16359,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -16381,17 +16381,17 @@
 																								},
 																								{
 																									"key": "targetName",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "(Required) The name of the target table to be swapped with."
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the target table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the target table. Defaults to the source table's schema."
 																								}
 																							],
@@ -16441,7 +16441,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -16463,17 +16463,17 @@
 																								},
 																								{
 																									"key": "targetName",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "(Required) The name of the target table to be swapped with."
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the target table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the target table. Defaults to the source table's schema."
 																								}
 																							],
@@ -16523,7 +16523,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -16545,17 +16545,17 @@
 																								},
 																								{
 																									"key": "targetName",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "(Required) The name of the target table to be swapped with."
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the target table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the target table. Defaults to the source table's schema."
 																								}
 																							],
@@ -16605,7 +16605,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -16627,17 +16627,17 @@
 																								},
 																								{
 																									"key": "targetName",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "(Required) The name of the target table to be swapped with."
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the target table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the target table. Defaults to the source table's schema."
 																								}
 																							],
@@ -16687,7 +16687,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"I\"\"\"&targetDatabase=\"I\"\"\"&targetSchema=\"I\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/tables/{{name}}:swap-with?ifExists=false&targetName=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetDatabase=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"&targetSchema=\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -16709,17 +16709,17 @@
 																								},
 																								{
 																									"key": "targetName",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "(Required) The name of the target table to be swapped with."
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Database of the target table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"I\"\"\"",
+																									"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																									"description": "Schema of the target table. Defaults to the source table's schema."
 																								}
 																							],
@@ -16816,12 +16816,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"I\"\"\"",
+																					"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"I\"\"\"",
+																					"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -16926,7 +16926,7 @@
 																				}
 																			],
 																			"cookie": [],
-																			"body": "[\n  {\n    \"name\": \"<string>\",\n    \"kind\": \"PERMANENT\",\n    \"cluster_by\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"enable_schema_evolution\": \"<boolean>\",\n    \"change_tracking\": \"<boolean>\",\n    \"data_retention_time_in_days\": \"<integer>\",\n    \"max_data_extension_time_in_days\": \"<integer>\",\n    \"default_ddl_collation\": \"<string>\",\n    \"columns\": [\n      {\n        \"name\": \"<string>\",\n        \"datatype\": \"<string>\",\n        \"nullable\": true,\n        \"collate\": \"<string>\",\n        \"default\": \"<string>\",\n        \"autoincrement\": \"<boolean>\",\n        \"autoincrement_start\": \"<integer>\",\n        \"autoincrement_increment\": \"<integer>\",\n        \"constraints\": [\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          },\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          }\n        ],\n        \"comment\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"datatype\": \"<string>\",\n        \"nullable\": true,\n        \"collate\": \"<string>\",\n        \"default\": \"<string>\",\n        \"autoincrement\": \"<boolean>\",\n        \"autoincrement_start\": \"<integer>\",\n        \"autoincrement_increment\": \"<integer>\",\n        \"constraints\": [\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          },\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          }\n        ],\n        \"comment\": \"<string>\"\n      }\n    ],\n    \"constraints\": [\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      }\n    ],\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"rows\": \"<long>\",\n    \"bytes\": \"<long>\",\n    \"owner\": \"<string>\",\n    \"dropped_on\": \"<dateTime>\",\n    \"automatic_clustering\": \"<boolean>\",\n    \"search_optimization\": \"<boolean>\",\n    \"search_optimization_progress\": \"<long>\",\n    \"search_optimization_bytes\": \"<long>\",\n    \"owner_role_type\": \"<string>\",\n    \"budget\": \"<string>\",\n    \"table_type\": \"HYBRID\"\n  },\n  {\n    \"name\": \"<string>\",\n    \"kind\": \"PERMANENT\",\n    \"cluster_by\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"enable_schema_evolution\": \"<boolean>\",\n    \"change_tracking\": \"<boolean>\",\n    \"data_retention_time_in_days\": \"<integer>\",\n    \"max_data_extension_time_in_days\": \"<integer>\",\n    \"default_ddl_collation\": \"<string>\",\n    \"columns\": [\n      {\n        \"name\": \"<string>\",\n        \"datatype\": \"<string>\",\n        \"nullable\": true,\n        \"collate\": \"<string>\",\n        \"default\": \"<string>\",\n        \"autoincrement\": \"<boolean>\",\n        \"autoincrement_start\": \"<integer>\",\n        \"autoincrement_increment\": \"<integer>\",\n        \"constraints\": [\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          },\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          }\n        ],\n        \"comment\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"datatype\": \"<string>\",\n        \"nullable\": true,\n        \"collate\": \"<string>\",\n        \"default\": \"<string>\",\n        \"autoincrement\": \"<boolean>\",\n        \"autoincrement_start\": \"<integer>\",\n        \"autoincrement_increment\": \"<integer>\",\n        \"constraints\": [\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          },\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          }\n        ],\n        \"comment\": \"<string>\"\n      }\n    ],\n    \"constraints\": [\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      }\n    ],\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"rows\": \"<long>\",\n    \"bytes\": \"<long>\",\n    \"owner\": \"<string>\",\n    \"dropped_on\": \"<dateTime>\",\n    \"automatic_clustering\": \"<boolean>\",\n    \"search_optimization\": \"<boolean>\",\n    \"search_optimization_progress\": \"<long>\",\n    \"search_optimization_bytes\": \"<long>\",\n    \"owner_role_type\": \"<string>\",\n    \"budget\": \"<string>\",\n    \"table_type\": \"DYNAMIC\"\n  }\n]"
+																			"body": "[\n  {\n    \"name\": \"<string>\",\n    \"kind\": \"PERMANENT\",\n    \"cluster_by\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"enable_schema_evolution\": \"<boolean>\",\n    \"change_tracking\": \"<boolean>\",\n    \"data_retention_time_in_days\": \"<integer>\",\n    \"max_data_extension_time_in_days\": \"<integer>\",\n    \"default_ddl_collation\": \"<string>\",\n    \"columns\": [\n      {\n        \"name\": \"<string>\",\n        \"datatype\": \"<string>\",\n        \"nullable\": true,\n        \"collate\": \"<string>\",\n        \"default\": \"<string>\",\n        \"autoincrement\": \"<boolean>\",\n        \"autoincrement_start\": \"<integer>\",\n        \"autoincrement_increment\": \"<integer>\",\n        \"constraints\": [\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          },\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          }\n        ],\n        \"comment\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"datatype\": \"<string>\",\n        \"nullable\": true,\n        \"collate\": \"<string>\",\n        \"default\": \"<string>\",\n        \"autoincrement\": \"<boolean>\",\n        \"autoincrement_start\": \"<integer>\",\n        \"autoincrement_increment\": \"<integer>\",\n        \"constraints\": [\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          },\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          }\n        ],\n        \"comment\": \"<string>\"\n      }\n    ],\n    \"constraints\": [\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      }\n    ],\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"rows\": \"<long>\",\n    \"bytes\": \"<long>\",\n    \"owner\": \"<string>\",\n    \"dropped_on\": \"<dateTime>\",\n    \"automatic_clustering\": \"<boolean>\",\n    \"search_optimization\": \"<boolean>\",\n    \"search_optimization_progress\": \"<long>\",\n    \"search_optimization_bytes\": \"<long>\",\n    \"owner_role_type\": \"<string>\",\n    \"budget\": \"<string>\",\n    \"table_type\": \"ICEBERG\"\n  },\n  {\n    \"name\": \"<string>\",\n    \"kind\": \"PERMANENT\",\n    \"cluster_by\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"enable_schema_evolution\": \"<boolean>\",\n    \"change_tracking\": \"<boolean>\",\n    \"data_retention_time_in_days\": \"<integer>\",\n    \"max_data_extension_time_in_days\": \"<integer>\",\n    \"default_ddl_collation\": \"<string>\",\n    \"columns\": [\n      {\n        \"name\": \"<string>\",\n        \"datatype\": \"<string>\",\n        \"nullable\": true,\n        \"collate\": \"<string>\",\n        \"default\": \"<string>\",\n        \"autoincrement\": \"<boolean>\",\n        \"autoincrement_start\": \"<integer>\",\n        \"autoincrement_increment\": \"<integer>\",\n        \"constraints\": [\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          },\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          }\n        ],\n        \"comment\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"datatype\": \"<string>\",\n        \"nullable\": true,\n        \"collate\": \"<string>\",\n        \"default\": \"<string>\",\n        \"autoincrement\": \"<boolean>\",\n        \"autoincrement_start\": \"<integer>\",\n        \"autoincrement_increment\": \"<integer>\",\n        \"constraints\": [\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          },\n          {\n            \"name\": \"<string>\",\n            \"column_names\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"constraint_type\": \"<string>\"\n          }\n        ],\n        \"comment\": \"<string>\"\n      }\n    ],\n    \"constraints\": [\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      }\n    ],\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"rows\": \"<long>\",\n    \"bytes\": \"<long>\",\n    \"owner\": \"<string>\",\n    \"dropped_on\": \"<dateTime>\",\n    \"automatic_clustering\": \"<boolean>\",\n    \"search_optimization\": \"<boolean>\",\n    \"search_optimization_progress\": \"<long>\",\n    \"search_optimization_bytes\": \"<long>\",\n    \"owner_role_type\": \"<string>\",\n    \"budget\": \"<string>\",\n    \"table_type\": \"NORMAL\"\n  }\n]"
 																		},
 																		{
 																			"name": "Successfully accepted the request, but it is not completed yet.",
@@ -18174,12 +18174,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"I\"\"\"",
+																					"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"I\"\"\"",
+																					"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -19450,12 +19450,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"I\"\"\"",
+																					"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"I\"\"\"",
+																					"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -20796,12 +20796,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"I\"\"\"",
+																					"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"I\"\"\"",
+																					"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\"",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -22111,7 +22111,7 @@
 		},
 		{
 			"key": "name",
-			"value": "\"I\"\"\""
+			"value": "\"\"\"-RbH\"\"\"\"\"\"\"\"`\""
 		}
 	]
 }

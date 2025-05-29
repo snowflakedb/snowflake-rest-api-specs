@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "b1cd43c6-5289-48c9-a1f7-6d24e6512bfe",
+		"_postman_id": "6e7b5cf5-571c-4b2d-8b68-fbb5d77c208c",
 		"name": "Snowflake View API",
 		"description": "The Snowflake View API is a REST API that you can use to access, update, and perform certain actions on View resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -59,17 +59,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "PqTrQG",
+																							"value": "q",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "PqTrQG",
+																							"value": "q",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "PqTrQG",
+																							"value": "q",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -138,7 +138,7 @@
 																						}
 																					],
 																					"cookie": [],
-																					"body": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"datatype\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"datatype\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}"
+																					"body": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"datatype\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"datatype\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}"
 																				},
 																				{
 																					"name": "Successfully accepted the request, but it is not completed yet.",
@@ -1004,17 +1004,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "PqTrQG",
+																							"value": "q",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "PqTrQG",
+																							"value": "q",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "PqTrQG",
+																							"value": "q",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -2068,12 +2068,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "PqTrQG",
+																					"value": "q",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "PqTrQG",
+																					"value": "q",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -2165,7 +2165,7 @@
 																				}
 																			],
 																			"cookie": [],
-																			"body": "[\n  {\n    \"name\": \"<string>\",\n    \"columns\": [\n      {\n        \"name\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"datatype\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"datatype\": \"<string>\"\n      }\n    ],\n    \"query\": \"<string>\",\n    \"secure\": \"<boolean>\",\n    \"kind\": \"TEMPORARY\",\n    \"recursive\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\"\n  },\n  {\n    \"name\": \"<string>\",\n    \"columns\": [\n      {\n        \"name\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"datatype\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"datatype\": \"<string>\"\n      }\n    ],\n    \"query\": \"<string>\",\n    \"secure\": \"<boolean>\",\n    \"kind\": \"PERMANENT\",\n    \"recursive\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\"\n  }\n]"
+																			"body": "[\n  {\n    \"name\": \"<string>\",\n    \"columns\": [\n      {\n        \"name\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"datatype\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"datatype\": \"<string>\"\n      }\n    ],\n    \"query\": \"<string>\",\n    \"secure\": \"<boolean>\",\n    \"kind\": \"PERMANENT\",\n    \"recursive\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\"\n  },\n  {\n    \"name\": \"<string>\",\n    \"columns\": [\n      {\n        \"name\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"datatype\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"datatype\": \"<string>\"\n      }\n    ],\n    \"query\": \"<string>\",\n    \"secure\": \"<boolean>\",\n    \"kind\": \"PERMANENT\",\n    \"recursive\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\"\n  }\n]"
 																		},
 																		{
 																			"name": "Successfully accepted the request, but it is not completed yet.",
@@ -3311,7 +3311,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																			"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -3348,12 +3348,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "PqTrQG",
+																					"value": "q",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "PqTrQG",
+																					"value": "q",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -3382,7 +3382,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3467,7 +3467,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3560,7 +3560,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3645,7 +3645,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3730,7 +3730,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3815,7 +3815,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3900,7 +3900,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3985,7 +3985,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4070,7 +4070,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4155,7 +4155,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4240,7 +4240,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4325,7 +4325,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4410,7 +4410,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4495,7 +4495,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"TEMPORARY\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"query\": \"<string>\",\n  \"secure\": \"<boolean>\",\n  \"kind\": \"PERMANENT\",\n  \"recursive\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",

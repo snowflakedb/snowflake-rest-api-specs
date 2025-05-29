@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "9894f9ba-cd05-4a22-b3f7-5a388af52681",
+		"_postman_id": "df3aba91-a95d-4105-8a3a-7acd7308f80c",
 		"name": "Snowflake Managed Account API",
 		"description": "The Snowflake Managed Account API is a REST API that you can use to access, update, and perform certain actions on Managed Account resource in Snowflake.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -43,7 +43,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "\"\"\"\"",
+															"value": "\"\"\"\"\"F\"\"<y\"",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -888,7 +888,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "[\n  {\n    \"name\": \"VxfSV\",\n    \"account_type\": \"READER\",\n    \"cloud\": \"<string>\",\n    \"region\": \"<string>\",\n    \"locator\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"url\": \"<string>\",\n    \"account_locator_url\": \"<string>\",\n    \"comment\": \"<string>\"\n  },\n  {\n    \"name\": \"\\\"\\\"\\\"kIe\\\"\",\n    \"account_type\": \"READER\",\n    \"cloud\": \"<string>\",\n    \"region\": \"<string>\",\n    \"locator\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"url\": \"<string>\",\n    \"account_locator_url\": \"<string>\",\n    \"comment\": \"<string>\"\n  }\n]"
+											"body": "[\n  {\n    \"name\": \"SN\",\n    \"account_type\": \"READER\",\n    \"cloud\": \"<string>\",\n    \"region\": \"<string>\",\n    \"locator\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"url\": \"<string>\",\n    \"account_locator_url\": \"<string>\",\n    \"comment\": \"<string>\"\n  },\n  {\n    \"name\": \"Em$y8Zb\",\n    \"account_type\": \"READER\",\n    \"cloud\": \"<string>\",\n    \"region\": \"<string>\",\n    \"locator\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"url\": \"<string>\",\n    \"account_locator_url\": \"<string>\",\n    \"comment\": \"<string>\"\n  }\n]"
 										},
 										{
 											"name": "Successfully accepted the request, but it is not completed yet.",
@@ -1618,7 +1618,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+											"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1661,7 +1661,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -1722,7 +1722,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -1791,7 +1791,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -1852,7 +1852,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -1913,7 +1913,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -1974,7 +1974,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2035,7 +2035,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2096,7 +2096,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2157,7 +2157,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2218,7 +2218,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2279,7 +2279,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2340,7 +2340,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2401,7 +2401,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2462,7 +2462,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"%\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"<Ro2\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"admin_name\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"account_type\": \"READER\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",

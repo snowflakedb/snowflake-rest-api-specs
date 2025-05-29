@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "1d20b9de-190c-4f4c-a6d9-2be15d134b45",
+		"_postman_id": "2ef15730-d582-4091-a2fa-73362bcf3b51",
 		"name": "Snowflake Notification Integration API",
 		"description": "The Snowflake Notification Integration API is a REST API that you can use to access, update, and perform certain actions on Notification Integration resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -43,7 +43,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "\"U\"",
+															"value": "jQ",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -110,7 +110,7 @@
 														}
 													],
 													"cookie": [],
-													"body": "{\n  \"name\": \"\\\"\\\"\\\"%\\\"\\\"5\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"4i\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AZURE_EVENT_GRID_INBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"created_on\": \"<dateTime>\"\n}"
+													"body": "{\n  \"name\": \"O_rvDoK_\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"created_on\": \"<dateTime>\"\n}"
 												},
 												{
 													"name": "Successfully accepted the request, but it is not completed yet.",
@@ -842,7 +842,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "\"U\"",
+															"value": "jQ",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -1793,7 +1793,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "[\n  {\n    \"name\": \"vRd\",\n    \"notification_hook\": {\n      \"type\": \"QUEUE_AZURE_EVENT_GRID_INBOUND\"\n    },\n    \"enabled\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\"\n  },\n  {\n    \"name\": \"\\\"xg\\\"\\\"{\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"notification_hook\": {\n      \"type\": \"EMAIL\"\n    },\n    \"enabled\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\"\n  }\n]"
+											"body": "[\n  {\n    \"name\": \"\\\"\\\"\\\"2\\\"\\\"\\\"\",\n    \"notification_hook\": {\n      \"type\": \"QUEUE_GCP_PUBSUB_OUTBOUND\"\n    },\n    \"enabled\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\"\n  },\n  {\n    \"name\": \"\\\"\\\"\\\"R\\\"\\\"i8K\\\"\\\"C`\\\"\\\"\\\"\",\n    \"notification_hook\": {\n      \"type\": \"QUEUE_GCP_PUBSUB_INBOUND\"\n    },\n    \"enabled\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\"\n  }\n]"
 										},
 										{
 											"name": "Successfully accepted the request, but it is not completed yet.",
@@ -2523,7 +2523,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+											"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -2573,7 +2573,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2641,7 +2641,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2717,7 +2717,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2785,7 +2785,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2853,7 +2853,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2921,7 +2921,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2989,7 +2989,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3057,7 +3057,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3125,7 +3125,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3193,7 +3193,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3261,7 +3261,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3329,7 +3329,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3397,7 +3397,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3465,7 +3465,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"nH%\\\"\\\"P\\\"\\\"'\\\"\\\">\\\"\\\"\\\"\\\"\\\"\",\n  \"notification_hook\": {\n    \"type\": \"QUEUE_AWS_SNS_OUTBOUND\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"3\\\"\",\n  \"notification_hook\": {\n    \"type\": \"WEBHOOK\"\n  },\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",

@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "27fc72d3-961b-4781-905d-c5d81236975c",
+		"_postman_id": "3c598ed6-d350-4b5e-9132-cbac390516a3",
 		"name": "Snowflake Stream API",
 		"description": "The Snowflake Stream API is a REST API that you can use to access, update, and perform certain actions on Stream resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -59,17 +59,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"",
+																							"value": "\"\"\"K\"\"l\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"",
+																							"value": "\"\"\"K\"\"l\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "\"\"\"\"",
+																							"value": "\"\"\"K\"\"l\"",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -133,7 +133,7 @@
 																						}
 																					],
 																					"cookie": [],
-																					"body": "{\n  \"name\": \"\\\"S7\\\"\\\"\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"S_3sF4N\",\n    \"database_name\": \"\\\"Is_\\\"\",\n    \"schema_name\": \"\\\"}~\\\"\\\"\\\"\\\"=\\\"\\\"N'\\\"\\\"\\\"\"\n  },\n  \"created_on\": \"<dateTime>\",\n  \"comment\": \"<string>\",\n  \"database_name\": \"\\\".rM-\\\"\\\"4I\\\"\",\n  \"schema_name\": \"WUbuwTGJ\",\n  \"owner\": \"R7AM8muQo\",\n  \"table_name\": \"ictXQP8v\",\n  \"stale\": \"<boolean>\",\n  \"mode\": \"<string>\",\n  \"stale_after\": \"<dateTime>\",\n  \"invalid_reason\": \"<string>\",\n  \"owner_role_type\": \"\\\"Gm(\\\"\\\"(\\\"\\\"\\\"\\\"V\\\"\\\"\\\"\\\"\\\"\",\n  \"type\": \"<string>\"\n}"
+																					"body": "{\n  \"name\": \"\\\"m\\\"\\\"\\\"\\\"A)\\\"\\\"N\\\"\\\"\\\"\\\"OV\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"\\\"\\\"?\\\"\\\"\\\"\\\"d\\\"\\\"\\\"\\\"5\\\"\",\n    \"database_name\": \"\\\"y\\\"\\\"\\\\\\\"\\\"fJ\\\"\\\"B\\\"\\\"L\\\"\",\n    \"schema_name\": \"C84H\"\n  },\n  \"created_on\": \"<dateTime>\",\n  \"comment\": \"<string>\",\n  \"database_name\": \"KFBtnQha\",\n  \"schema_name\": \"\\\"}s\\\"\\\"\\\"\\\")/\\\"\\\"\\\"\\\"\\\"\",\n  \"owner\": \"U9MZ\",\n  \"table_name\": \"\\\"l3\\\"\\\"\\\"\\\"(_D>\\\"\\\"\\\"\\\"0\\\"\",\n  \"stale\": \"<boolean>\",\n  \"mode\": \"<string>\",\n  \"stale_after\": \"<dateTime>\",\n  \"invalid_reason\": \"<string>\",\n  \"owner_role_type\": \"xHNOBd2kUy\",\n  \"type\": \"<string>\"\n}"
 																				},
 																				{
 																					"name": "Successfully accepted the request, but it is not completed yet.",
@@ -934,17 +934,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"",
+																							"value": "\"\"\"K\"\"l\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"",
+																							"value": "\"\"\"K\"\"l\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "\"\"\"\"",
+																							"value": "\"\"\"K\"\"l\"",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -1893,7 +1893,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1902,7 +1902,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -1924,12 +1924,12 @@
 																						},
 																						{
 																							"key": "targetDatabase",
-																							"value": "\"\"\"<( X)7\"\"\"",
+																							"value": "T",
 																							"description": "(Required) Database of the target resource. Defaults to the source's database"
 																						},
 																						{
 																							"key": "targetSchema",
-																							"value": "\"\"\"<( X)7\"\"\"",
+																							"value": "T",
 																							"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																						},
 																						{
@@ -1941,12 +1941,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"",
+																							"value": "\"\"\"K\"\"l\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"",
+																							"value": "\"\"\"K\"\"l\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -1970,7 +1970,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -1979,7 +1979,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -2001,12 +2001,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Database of the target resource. Defaults to the source's database"
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																								},
 																								{
@@ -2061,7 +2061,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2070,7 +2070,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -2092,12 +2092,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Database of the target resource. Defaults to the source's database"
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																								},
 																								{
@@ -2160,7 +2160,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2169,7 +2169,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -2191,12 +2191,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Database of the target resource. Defaults to the source's database"
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																								},
 																								{
@@ -2251,7 +2251,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2260,7 +2260,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -2282,12 +2282,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Database of the target resource. Defaults to the source's database"
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																								},
 																								{
@@ -2342,7 +2342,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2351,7 +2351,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -2373,12 +2373,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Database of the target resource. Defaults to the source's database"
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																								},
 																								{
@@ -2433,7 +2433,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2442,7 +2442,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -2464,12 +2464,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Database of the target resource. Defaults to the source's database"
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																								},
 																								{
@@ -2524,7 +2524,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2533,7 +2533,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -2555,12 +2555,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Database of the target resource. Defaults to the source's database"
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																								},
 																								{
@@ -2615,7 +2615,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2624,7 +2624,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -2646,12 +2646,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Database of the target resource. Defaults to the source's database"
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																								},
 																								{
@@ -2706,7 +2706,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2715,7 +2715,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -2737,12 +2737,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Database of the target resource. Defaults to the source's database"
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																								},
 																								{
@@ -2797,7 +2797,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2806,7 +2806,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -2828,12 +2828,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Database of the target resource. Defaults to the source's database"
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																								},
 																								{
@@ -2888,7 +2888,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2897,7 +2897,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -2919,12 +2919,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Database of the target resource. Defaults to the source's database"
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																								},
 																								{
@@ -2979,7 +2979,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2988,7 +2988,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3010,12 +3010,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Database of the target resource. Defaults to the source's database"
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																								},
 																								{
@@ -3070,7 +3070,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -3079,7 +3079,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3101,12 +3101,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Database of the target resource. Defaults to the source's database"
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																								},
 																								{
@@ -3161,7 +3161,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"oYQ8z\",\n  \"comment\": \"<string>\"\n}",
+																							"raw": "{\n  \"name\": \"HP\",\n  \"comment\": \"<string>\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -3170,7 +3170,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=\"\"\"<( X)7\"\"\"&targetSchema=\"\"\"<( X)7\"\"\"&copyGrants=false",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/streams/{{name}}:clone?createMode=errorIfExists&targetDatabase=T&targetSchema=T&copyGrants=false",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3192,12 +3192,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Database of the target resource. Defaults to the source's database"
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"<( X)7\"\"\"",
+																									"value": "T",
 																									"description": "(Required) Schema of the target resource. Defaults to the source's schema"
 																								},
 																								{
@@ -3289,12 +3289,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"\"\"\"",
+																					"value": "\"\"\"K\"\"l\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"\"\"\"",
+																					"value": "\"\"\"K\"\"l\"",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -3376,7 +3376,7 @@
 																				}
 																			],
 																			"cookie": [],
-																			"body": "[\n  {\n    \"name\": \"zAr\",\n    \"stream_source\": {\n      \"src_type\": \"<string>\",\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"'=\\\"\\\"R\\\"\",\n      \"database_name\": \"Ngpbb_F3\",\n      \"schema_name\": \"\\\"\\\"\\\"Wq\\\"\"\n    },\n    \"created_on\": \"<dateTime>\",\n    \"comment\": \"<string>\",\n    \"database_name\": \"HhY7\",\n    \"schema_name\": \"\\\"U@h\\\"\\\"\\\"\\\"YY\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"owner\": \"iUog2k\",\n    \"table_name\": \"\\\"\\\"\\\"09\\\"\",\n    \"stale\": \"<boolean>\",\n    \"mode\": \"<string>\",\n    \"stale_after\": \"<dateTime>\",\n    \"invalid_reason\": \"<string>\",\n    \"owner_role_type\": \"\\\"\\\"\\\"}\\\"\\\"\\\"\\\" B:\\\"\\\"\\\"\\\"\\\"\\\"@\\\"\",\n    \"type\": \"<string>\"\n  },\n  {\n    \"name\": \"\\\"\\\"\\\"|\\\"\\\"M\\\"\\\"\\\"\",\n    \"stream_source\": {\n      \"src_type\": \"<string>\",\n      \"name\": \"Q7Q5_D\",\n      \"database_name\": \"\\\"O\\\"\\\"5M\\\"\\\"&\\\"\\\".)Y\\\"\",\n      \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n    },\n    \"created_on\": \"<dateTime>\",\n    \"comment\": \"<string>\",\n    \"database_name\": \"\\\"/\\\"\\\"\\\"\\\"j\\\"\\\"\\\"\",\n    \"schema_name\": \"NQQnB79\",\n    \"owner\": \"J9iva7tA\",\n    \"table_name\": \"Sf\",\n    \"stale\": \"<boolean>\",\n    \"mode\": \"<string>\",\n    \"stale_after\": \"<dateTime>\",\n    \"invalid_reason\": \"<string>\",\n    \"owner_role_type\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\";]\\\"\",\n    \"type\": \"<string>\"\n  }\n]"
+																			"body": "[\n  {\n    \"name\": \"wE\",\n    \"stream_source\": {\n      \"src_type\": \"<string>\",\n      \"name\": \"\\\" \\\"\\\"\\\"\\\"5\\\"\",\n      \"database_name\": \"m\",\n      \"schema_name\": \"\\\"Y\\\"\\\"\\\"\\\"\\\"\\\")\\\"\\\"\\\"\\\"\\\"\"\n    },\n    \"created_on\": \"<dateTime>\",\n    \"comment\": \"<string>\",\n    \"database_name\": \"\\\"\\\"\\\"LH\\\"\\\"\\\"\",\n    \"schema_name\": \"sIDT_p1LM\",\n    \"owner\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U\\\"\",\n    \"table_name\": \"xfHUV\",\n    \"stale\": \"<boolean>\",\n    \"mode\": \"<string>\",\n    \"stale_after\": \"<dateTime>\",\n    \"invalid_reason\": \"<string>\",\n    \"owner_role_type\": \"\\\"D\\\"\\\"\\\"\\\"&/\\\"\",\n    \"type\": \"<string>\"\n  },\n  {\n    \"name\": \"oyky\",\n    \"stream_source\": {\n      \"src_type\": \"<string>\",\n      \"name\": \"\\\"X\\\"\\\"i\\\"\",\n      \"database_name\": \"LRC2mDA$H49\",\n      \"schema_name\": \"\\\"B\\\"\"\n    },\n    \"created_on\": \"<dateTime>\",\n    \"comment\": \"<string>\",\n    \"database_name\": \"\\\"X0+\\\"\\\"\\\"\\\"z\\\"\\\"E'fe\\\"\",\n    \"schema_name\": \"emexkNKuLEz\",\n    \"owner\": \"JqnJrd\",\n    \"table_name\": \"\\\"j\\\"\\\"\\\"\\\"kH\\\"\",\n    \"stale\": \"<boolean>\",\n    \"mode\": \"<string>\",\n    \"stale_after\": \"<dateTime>\",\n    \"invalid_reason\": \"<string>\",\n    \"owner_role_type\": \"va5nNc4_\",\n    \"type\": \"<string>\"\n  }\n]"
 																		},
 																		{
 																			"name": "Successfully accepted the request, but it is not completed yet.",
@@ -4392,7 +4392,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																			"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -4429,12 +4429,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"\"\"\"",
+																					"value": "\"\"\"K\"\"l\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"\"\"\"",
+																					"value": "\"\"\"K\"\"l\"",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -4458,7 +4458,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4538,7 +4538,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4626,7 +4626,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4706,7 +4706,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4786,7 +4786,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4866,7 +4866,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4946,7 +4946,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5026,7 +5026,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5106,7 +5106,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5186,7 +5186,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5266,7 +5266,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5346,7 +5346,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5426,7 +5426,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5506,7 +5506,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"C\\\"\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"C56bWZg\",\n    \"database_name\": \"\\\"\\\"\\\"sw&\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"P{j5\\\"\"\n  },\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"h6QHA_lK0G\",\n  \"stream_source\": {\n    \"src_type\": \"<string>\",\n    \"name\": \"\\\"`JN_\\\"\",\n    \"database_name\": \"sWCcq\",\n    \"schema_name\": \"Q\"\n  },\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5594,7 +5594,7 @@
 		},
 		{
 			"key": "name",
-			"value": "\"\"\"\""
+			"value": "\"\"\"K\"\"l\""
 		}
 	]
 }

@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "1461a644-f500-4f4d-bef5-9f2e957cc8d5",
+		"_postman_id": "4e4916e4-dacf-4353-a6df-06695a14c60f",
 		"name": "Snowflake Alert API",
 		"description": "The Snowflake Alert API is a REST API that you can use to access, update, and perform certain actions on Alert resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -59,17 +59,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "lsZq",
+																							"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "lsZq",
+																							"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "lsZq",
+																							"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\"",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -1004,17 +1004,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "lsZq",
+																							"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "lsZq",
+																							"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "lsZq",
+																							"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\"",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -2033,7 +2033,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2076,12 +2076,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "lsZq",
+																							"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "lsZq",
+																							"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -2110,7 +2110,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2201,7 +2201,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2300,7 +2300,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2391,7 +2391,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2482,7 +2482,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2573,7 +2573,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2664,7 +2664,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2755,7 +2755,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2846,7 +2846,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2937,7 +2937,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -3028,7 +3028,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -3119,7 +3119,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -3210,7 +3210,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -3301,7 +3301,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"before\"\n  }\n}",
+																							"raw": "{\n  \"name\": \"<string>\",\n  \"point_of_time\": {\n    \"point_of_time_type\": \"<string>\",\n    \"reference\": \"at\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -3406,12 +3406,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "lsZq",
+																							"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "lsZq",
+																							"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -4320,12 +4320,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "lsZq",
+																					"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "lsZq",
+																					"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -5525,12 +5525,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "lsZq",
+																					"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "lsZq",
+																					"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -6700,7 +6700,7 @@
 		},
 		{
 			"key": "name",
-			"value": "lsZq"
+			"value": "\"@\"\"\"\"\"\"p\"\"|L\"\"P\"\"\""
 		}
 	]
 }

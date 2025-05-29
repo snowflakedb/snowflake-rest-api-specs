@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "b86bdb7f-0f59-47b1-be7b-16afcfea2962",
+		"_postman_id": "2a4375ce-21cb-4c56-860f-0e637866d2c0",
 		"name": "Snowflake Result API",
 		"description": "The Snowflake Result API is a REST API that you can use to check request status and fetch request response.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -58,74 +58,6 @@
 												"description": "Get result status or the result when it is ready."
 											},
 											"response": [
-												{
-													"name": "successful",
-													"originalRequest": {
-														"method": "GET",
-														"header": [
-															{
-																"key": "Accept",
-																"value": "application/json"
-															},
-															{
-																"key": "Authorization",
-																"value": "Bearer <token>",
-																"description": "Added as a part of security scheme: bearer"
-															}
-														],
-														"url": {
-															"raw": "{{baseUrl}}/api/v2/results/:result_handler?page=0",
-															"host": [
-																"{{baseUrl}}"
-															],
-															"path": [
-																"api",
-																"v2",
-																"results",
-																":result_handler"
-															],
-															"query": [
-																{
-																	"key": "page",
-																	"value": "0",
-																	"description": "Number of the page of results to return. The number can range from 0 to the total number of pages minus 1."
-																}
-															],
-															"variable": [
-																{
-																	"key": "result_handler"
-																}
-															]
-														}
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "X-Snowflake-Request-ID",
-															"value": "",
-															"description": {
-																"content": "",
-																"type": "text/plain"
-															}
-														},
-														{
-															"key": "Link",
-															"value": "",
-															"description": {
-																"content": "",
-																"type": "text/plain"
-															}
-														}
-													],
-													"cookie": [],
-													"body": ""
-												},
 												{
 													"name": "Successfully accepted the request, but it is not completed yet.",
 													"originalRequest": {

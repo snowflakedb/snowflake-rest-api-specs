@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "7f7dfba2-fe32-4f1e-8be8-9ce02826a4e2",
+		"_postman_id": "5c1108a9-06f8-406e-b643-a7628235dc21",
 		"name": "Snowflake Account API",
 		"description": "The Snowflake Account API is a REST API that you can use to access, update, and perform certain actions on Account resource in Snowflake.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -55,7 +55,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "\"\"\"\"\"_\"\"7q\"\"\"",
+															"value": "\"O63mC\"",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -1800,7 +1800,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "[\n  {\n    \"name\": \"LWY\",\n    \"edition\": \"STANDARD\",\n    \"organization_name\": \"<string>\",\n    \"region_group\": \"<string>\",\n    \"region\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"account_url\": \"<string>\",\n    \"account_locator\": \"<string>\",\n    \"account_locator_url\": \"<string>\",\n    \"managed_accounts\": \"<long>\",\n    \"consumption_billing_entity_name\": \"<string>\",\n    \"marketplace_consumer_billing_entity_name\": \"<string>\",\n    \"marketplace_provider_billing_entity_name\": \"<string>\",\n    \"old_account_url\": \"<string>\",\n    \"comment\": \"<string>\",\n    \"is_org_admin\": \"<boolean>\",\n    \"retention_time\": \"<integer>\",\n    \"dropped_on\": \"<dateTime>\",\n    \"scheduled_deletion_time\": \"<dateTime>\",\n    \"restored_on\": \"<dateTime>\",\n    \"account_old_url_saved_on\": \"<dateTime>\",\n    \"account_old_url_last_used\": \"<dateTime>\",\n    \"organization_old_url\": \"<string>\",\n    \"organization_old_url_saved_on\": \"<dateTime>\",\n    \"organization_old_url_last_used\": \"<dateTime>\",\n    \"organization_URL_expiration_on\": \"<dateTime>\",\n    \"moved_on\": \"<dateTime>\",\n    \"is_events_account\": \"<boolean>\",\n    \"moved_to_organization\": \"<string>\"\n  },\n  {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\";\\\"\",\n    \"edition\": \"STANDARD\",\n    \"organization_name\": \"<string>\",\n    \"region_group\": \"<string>\",\n    \"region\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"account_url\": \"<string>\",\n    \"account_locator\": \"<string>\",\n    \"account_locator_url\": \"<string>\",\n    \"managed_accounts\": \"<long>\",\n    \"consumption_billing_entity_name\": \"<string>\",\n    \"marketplace_consumer_billing_entity_name\": \"<string>\",\n    \"marketplace_provider_billing_entity_name\": \"<string>\",\n    \"old_account_url\": \"<string>\",\n    \"comment\": \"<string>\",\n    \"is_org_admin\": \"<boolean>\",\n    \"retention_time\": \"<integer>\",\n    \"dropped_on\": \"<dateTime>\",\n    \"scheduled_deletion_time\": \"<dateTime>\",\n    \"restored_on\": \"<dateTime>\",\n    \"account_old_url_saved_on\": \"<dateTime>\",\n    \"account_old_url_last_used\": \"<dateTime>\",\n    \"organization_old_url\": \"<string>\",\n    \"organization_old_url_saved_on\": \"<dateTime>\",\n    \"organization_old_url_last_used\": \"<dateTime>\",\n    \"organization_URL_expiration_on\": \"<dateTime>\",\n    \"moved_on\": \"<dateTime>\",\n    \"is_events_account\": \"<boolean>\",\n    \"moved_to_organization\": \"<string>\"\n  }\n]"
+											"body": "[\n  {\n    \"name\": \"D8za\",\n    \"edition\": \"ENTERPRISE\",\n    \"organization_name\": \"<string>\",\n    \"region_group\": \"<string>\",\n    \"region\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"account_url\": \"<string>\",\n    \"account_locator\": \"<string>\",\n    \"account_locator_url\": \"<string>\",\n    \"managed_accounts\": \"<long>\",\n    \"consumption_billing_entity_name\": \"<string>\",\n    \"marketplace_consumer_billing_entity_name\": \"<string>\",\n    \"marketplace_provider_billing_entity_name\": \"<string>\",\n    \"old_account_url\": \"<string>\",\n    \"comment\": \"<string>\",\n    \"is_org_admin\": \"<boolean>\",\n    \"retention_time\": \"<integer>\",\n    \"dropped_on\": \"<dateTime>\",\n    \"scheduled_deletion_time\": \"<dateTime>\",\n    \"restored_on\": \"<dateTime>\",\n    \"account_old_url_saved_on\": \"<dateTime>\",\n    \"account_old_url_last_used\": \"<dateTime>\",\n    \"organization_old_url\": \"<string>\",\n    \"organization_old_url_saved_on\": \"<dateTime>\",\n    \"organization_old_url_last_used\": \"<dateTime>\",\n    \"organization_URL_expiration_on\": \"<dateTime>\",\n    \"moved_on\": \"<dateTime>\",\n    \"is_events_account\": \"<boolean>\",\n    \"moved_to_organization\": \"<string>\"\n  },\n  {\n    \"name\": \"lL6gtpKui\",\n    \"edition\": \"BUSINESS_CRITICAL\",\n    \"organization_name\": \"<string>\",\n    \"region_group\": \"<string>\",\n    \"region\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"account_url\": \"<string>\",\n    \"account_locator\": \"<string>\",\n    \"account_locator_url\": \"<string>\",\n    \"managed_accounts\": \"<long>\",\n    \"consumption_billing_entity_name\": \"<string>\",\n    \"marketplace_consumer_billing_entity_name\": \"<string>\",\n    \"marketplace_provider_billing_entity_name\": \"<string>\",\n    \"old_account_url\": \"<string>\",\n    \"comment\": \"<string>\",\n    \"is_org_admin\": \"<boolean>\",\n    \"retention_time\": \"<integer>\",\n    \"dropped_on\": \"<dateTime>\",\n    \"scheduled_deletion_time\": \"<dateTime>\",\n    \"restored_on\": \"<dateTime>\",\n    \"account_old_url_saved_on\": \"<dateTime>\",\n    \"account_old_url_last_used\": \"<dateTime>\",\n    \"organization_old_url\": \"<string>\",\n    \"organization_old_url_saved_on\": \"<dateTime>\",\n    \"organization_old_url_last_used\": \"<dateTime>\",\n    \"organization_URL_expiration_on\": \"<dateTime>\",\n    \"moved_on\": \"<dateTime>\",\n    \"is_events_account\": \"<boolean>\",\n    \"moved_to_organization\": \"<string>\"\n  }\n]"
 										},
 										{
 											"name": "Successfully accepted the request, but it is not completed yet.",
@@ -2660,7 +2660,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+											"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -2703,7 +2703,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+													"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2764,7 +2764,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+													"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2833,7 +2833,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+													"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2894,7 +2894,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+													"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2955,7 +2955,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+													"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3016,7 +3016,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+													"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3077,7 +3077,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+													"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3138,7 +3138,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+													"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3199,7 +3199,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+													"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3260,7 +3260,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+													"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3321,7 +3321,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+													"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3382,7 +3382,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+													"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3443,7 +3443,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+													"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3504,7 +3504,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"Z6KoD\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"STANDARD\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+													"raw": "{\n  \"name\": \"\\\"}Z\\\"\",\n  \"admin_name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"edition\": \"BUSINESS_CRITICAL\",\n  \"region_group\": \"<string>\",\n  \"region\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"admin_password\": \"<string>\",\n  \"admin_rsa_public_key\": \"<string>\",\n  \"admin_user_type\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3570,7 +3570,7 @@
 		},
 		{
 			"key": "name",
-			"value": "\"\"\"\"\"_\"\"7q\"\"\""
+			"value": "\"O63mC\""
 		}
 	]
 }

@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "9160e2bb-15a6-4470-a2c6-0405f7067bd9",
+		"_postman_id": "ea742897-2377-4a3b-8595-5b2602039ab9",
 		"name": "Snowflake Stage API",
 		"description": "The Snowflake Stage API is a REST API that you can use to access, update, and perform certain actions on stage resources in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -81,17 +81,17 @@
 																									"variable": [
 																										{
 																											"key": "database",
-																											"value": "qGArcc",
+																											"value": "\"JxC2\"",
 																											"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																										},
 																										{
 																											"key": "schema",
-																											"value": "qGArcc",
+																											"value": "\"JxC2\"",
 																											"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																										},
 																										{
 																											"key": "name",
-																											"value": "qGArcc",
+																											"value": "\"JxC2\"",
 																											"description": "(Required) Identifier (i.e. name) for the resource."
 																										}
 																									]
@@ -1016,17 +1016,17 @@
 																							"variable": [
 																								{
 																									"key": "database",
-																									"value": "qGArcc",
+																									"value": "\"JxC2\"",
 																									"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																								},
 																								{
 																									"key": "schema",
-																									"value": "qGArcc",
+																									"value": "\"JxC2\"",
 																									"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																								},
 																								{
 																									"key": "name",
-																									"value": "qGArcc",
+																									"value": "\"JxC2\"",
 																									"description": "(Required) Identifier (i.e. name) for the resource."
 																								}
 																							]
@@ -1863,17 +1863,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "qGArcc",
+																							"value": "\"JxC2\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "qGArcc",
+																							"value": "\"JxC2\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "qGArcc",
+																							"value": "\"JxC2\"",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -1950,7 +1950,7 @@
 																						}
 																					],
 																					"cookie": [],
-																					"body": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\" \\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false\n  },\n  \"created_on\": \"<dateTime>\",\n  \"has_credentials\": \"<boolean>\",\n  \"has_encryption_key\": \"<boolean>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"region\": \"<string>\",\n  \"cloud\": \"<string>\"\n}"
+																					"body": "{\n  \"name\": \"t_GWVD6UvkE\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"BbW7QHetaEE\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false\n  },\n  \"created_on\": \"<dateTime>\",\n  \"has_credentials\": \"<boolean>\",\n  \"has_encryption_key\": \"<boolean>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\",\n  \"region\": \"<string>\",\n  \"cloud\": \"<string>\"\n}"
 																				},
 																				{
 																					"name": "Successfully accepted the request, but it is not completed yet.",
@@ -2627,17 +2627,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "qGArcc",
+																							"value": "\"JxC2\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "qGArcc",
+																							"value": "\"JxC2\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "qGArcc",
+																							"value": "\"JxC2\"",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -3461,12 +3461,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "qGArcc",
+																					"value": "\"JxC2\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "qGArcc",
+																					"value": "\"JxC2\"",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -3546,7 +3546,7 @@
 																				}
 																			],
 																			"cookie": [],
-																			"body": "[\n  {\n    \"name\": \"\\\"1f\\\"\\\"\\\"\\\"/\\\"\\\"\\\"\\\"\\\"\",\n    \"kind\": \"PERMANENT\",\n    \"url\": \"<string>\",\n    \"endpoint\": \"<string>\",\n    \"storage_integration\": \"\\\">\\\"\",\n    \"comment\": \"<string>\",\n    \"credentials\": {\n      \"credential_type\": \"<string>\"\n    },\n    \"directory_table\": {\n      \"enable\": false\n    },\n    \"created_on\": \"<dateTime>\",\n    \"has_credentials\": \"<boolean>\",\n    \"has_encryption_key\": \"<boolean>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\",\n    \"region\": \"<string>\",\n    \"cloud\": \"<string>\"\n  },\n  {\n    \"name\": \"\\\"\\\"\\\"^k&\\\"\\\"\\\"\",\n    \"kind\": \"PERMANENT\",\n    \"url\": \"<string>\",\n    \"endpoint\": \"<string>\",\n    \"storage_integration\": \"\\\"d\\\"\\\"zpYa\\\"\",\n    \"comment\": \"<string>\",\n    \"credentials\": {\n      \"credential_type\": \"<string>\"\n    },\n    \"directory_table\": {\n      \"enable\": false\n    },\n    \"created_on\": \"<dateTime>\",\n    \"has_credentials\": \"<boolean>\",\n    \"has_encryption_key\": \"<boolean>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\",\n    \"region\": \"<string>\",\n    \"cloud\": \"<string>\"\n  }\n]"
+																			"body": "[\n  {\n    \"name\": \"\\\"*\\\"\\\"\\\"\",\n    \"kind\": \"PERMANENT\",\n    \"url\": \"<string>\",\n    \"endpoint\": \"<string>\",\n    \"storage_integration\": \"NQ5UTA\",\n    \"comment\": \"<string>\",\n    \"credentials\": {\n      \"credential_type\": \"<string>\"\n    },\n    \"directory_table\": {\n      \"enable\": false\n    },\n    \"created_on\": \"<dateTime>\",\n    \"has_credentials\": \"<boolean>\",\n    \"has_encryption_key\": \"<boolean>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\",\n    \"region\": \"<string>\",\n    \"cloud\": \"<string>\"\n  },\n  {\n    \"name\": \"HbIAYfd\",\n    \"kind\": \"PERMANENT\",\n    \"url\": \"<string>\",\n    \"endpoint\": \"<string>\",\n    \"storage_integration\": \"\\\"H\\\"\",\n    \"comment\": \"<string>\",\n    \"credentials\": {\n      \"credential_type\": \"<string>\"\n    },\n    \"directory_table\": {\n      \"enable\": false\n    },\n    \"created_on\": \"<dateTime>\",\n    \"has_credentials\": \"<boolean>\",\n    \"has_encryption_key\": \"<boolean>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\",\n    \"region\": \"<string>\",\n    \"cloud\": \"<string>\"\n  }\n]"
 																		},
 																		{
 																			"name": "Successfully accepted the request, but it is not completed yet.",
@@ -4366,7 +4366,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\";!\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"0\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U)\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"NONE\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
+																			"raw": "{\n  \"name\": \"\\\"r<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"v<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"j\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"GCS_SSE_KMS\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -4398,12 +4398,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "qGArcc",
+																					"value": "\"JxC2\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "qGArcc",
+																					"value": "\"JxC2\"",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -4432,7 +4432,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\";!\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"0\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U)\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"NONE\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
+																					"raw": "{\n  \"name\": \"\\\"r<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"v<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"j\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"GCS_SSE_KMS\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4512,7 +4512,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\";!\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"0\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U)\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"NONE\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
+																					"raw": "{\n  \"name\": \"\\\"r<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"v<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"j\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"GCS_SSE_KMS\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4600,7 +4600,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\";!\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"0\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U)\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"NONE\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
+																					"raw": "{\n  \"name\": \"\\\"r<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"v<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"j\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"GCS_SSE_KMS\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4680,7 +4680,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\";!\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"0\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U)\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"NONE\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
+																					"raw": "{\n  \"name\": \"\\\"r<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"v<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"j\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"GCS_SSE_KMS\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4760,7 +4760,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\";!\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"0\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U)\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"NONE\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
+																					"raw": "{\n  \"name\": \"\\\"r<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"v<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"j\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"GCS_SSE_KMS\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4840,7 +4840,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\";!\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"0\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U)\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"NONE\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
+																					"raw": "{\n  \"name\": \"\\\"r<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"v<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"j\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"GCS_SSE_KMS\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4920,7 +4920,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\";!\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"0\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U)\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"NONE\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
+																					"raw": "{\n  \"name\": \"\\\"r<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"v<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"j\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"GCS_SSE_KMS\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5000,7 +5000,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\";!\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"0\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U)\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"NONE\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
+																					"raw": "{\n  \"name\": \"\\\"r<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"v<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"j\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"GCS_SSE_KMS\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5080,7 +5080,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\";!\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"0\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U)\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"NONE\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
+																					"raw": "{\n  \"name\": \"\\\"r<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"v<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"j\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"GCS_SSE_KMS\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5160,7 +5160,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\";!\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"0\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U)\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"NONE\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
+																					"raw": "{\n  \"name\": \"\\\"r<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"v<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"j\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"GCS_SSE_KMS\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5240,7 +5240,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\";!\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"0\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U)\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"NONE\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
+																					"raw": "{\n  \"name\": \"\\\"r<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"v<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"j\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"GCS_SSE_KMS\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5320,7 +5320,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\";!\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"0\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U)\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"NONE\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
+																					"raw": "{\n  \"name\": \"\\\"r<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"v<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"j\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"GCS_SSE_KMS\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5400,7 +5400,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\";!\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"0\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"U)\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"NONE\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
+																					"raw": "{\n  \"name\": \"\\\"r<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"kind\": \"PERMANENT\",\n  \"url\": \"<string>\",\n  \"endpoint\": \"<string>\",\n  \"storage_integration\": \"\\\"\\\"\\\"\\\"\\\"v<\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"j\\\"\",\n  \"comment\": \"<string>\",\n  \"credentials\": {\n    \"credential_type\": \"<string>\"\n  },\n  \"encryption\": {\n    \"type\": \"GCS_SSE_KMS\",\n    \"master_key\": \"<string>\",\n    \"kms_key_id\": \"<string>\"\n  },\n  \"directory_table\": {\n    \"enable\": false,\n    \"refresh_on_create\": true,\n    \"auto_refresh\": false,\n    \"notification_integration\": \"<string>\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
