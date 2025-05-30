@@ -486,6 +486,10 @@ components:
           description: Size of the compute resources to provision for the first run
             of the serverless task, before a task history is available for Snowflake
             to determine an ideal size.
+        user_task_timeout_ms:
+          type: integer
+          description: Time limit, in milliseconds, for a single run of the task before
+            it times out.
         serverless_task_min_statement_size:
           type: string
           description: Specifies the minimum allowed warehouse size for the serverless
@@ -494,10 +498,6 @@ components:
           type: string
           description: Specifies the maximum allowed warehouse size for the serverless
             task. Minimum XSMALL, Maximum XXLARGE.
-        user_task_timeout_ms:
-          type: integer
-          description: Time limit, in milliseconds, for a single run of the task before
-            it times out.
       required:
       - name
     SchemaClone:

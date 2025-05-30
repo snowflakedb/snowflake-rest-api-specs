@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "ea4982f0-2429-49ec-ae42-77230590c208",
+		"_postman_id": "e18d0990-483a-4d78-9a40-44ce3e0a1958",
 		"name": "Snowflake Catalog Integration API",
 		"description": "The Snowflake Catalog Integration API is a REST API that you can use to access, update, and perform certain actions on Catalog Integration resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -43,7 +43,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "ql38vH",
+															"value": "\"x\"\"\"\"r0\"\"}'b\"\"\"",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -97,7 +97,7 @@
 														}
 													],
 													"cookie": [],
-													"body": "{\n  \"name\": \"\\\"\\\"\\\"t\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"type\": \"<string>\",\n  \"category\": \"<string>\",\n  \"created_on\": \"<dateTime>\"\n}"
+													"body": "{\n  \"name\": \"\\\"z9\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"type\": \"<string>\",\n  \"category\": \"<string>\",\n  \"created_on\": \"<dateTime>\"\n}"
 												},
 												{
 													"name": "Successfully accepted the request, but it is not completed yet.",
@@ -764,7 +764,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "ql38vH",
+															"value": "\"x\"\"\"\"r0\"\"}'b\"\"\"",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -1632,7 +1632,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "[\n  {\n    \"name\": \"fg0BB8_$M\",\n    \"catalog\": {\n      \"catalog_source\": \"POLARIS\"\n    },\n    \"table_format\": \"ICEBERG\",\n    \"enabled\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"type\": \"<string>\",\n    \"category\": \"<string>\",\n    \"created_on\": \"<dateTime>\"\n  },\n  {\n    \"name\": \"S\",\n    \"catalog\": {\n      \"catalog_source\": \"OBJECT_STORE\"\n    },\n    \"table_format\": \"ICEBERG\",\n    \"enabled\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"type\": \"<string>\",\n    \"category\": \"<string>\",\n    \"created_on\": \"<dateTime>\"\n  }\n]"
+											"body": "[\n  {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"o+l\\\"\",\n    \"catalog\": {\n      \"catalog_source\": \"OBJECT_STORE\"\n    },\n    \"table_format\": \"ICEBERG\",\n    \"enabled\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"type\": \"<string>\",\n    \"category\": \"<string>\",\n    \"created_on\": \"<dateTime>\"\n  },\n  {\n    \"name\": \"bpghMXbQq\",\n    \"catalog\": {\n      \"catalog_source\": \"GLUE\"\n    },\n    \"table_format\": \"ICEBERG\",\n    \"enabled\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"type\": \"<string>\",\n    \"category\": \"<string>\",\n    \"created_on\": \"<dateTime>\"\n  }\n]"
 										},
 										{
 											"name": "Successfully accepted the request, but it is not completed yet.",
@@ -2297,7 +2297,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+											"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -2342,7 +2342,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2405,7 +2405,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2476,7 +2476,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2539,7 +2539,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2602,7 +2602,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2665,7 +2665,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2728,7 +2728,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2791,7 +2791,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2854,7 +2854,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2917,7 +2917,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2980,7 +2980,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3043,7 +3043,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3106,7 +3106,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3169,7 +3169,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"9\\\"\\\"\\\"\",\n  \"catalog\": {\n    \"catalog_source\": \"POLARIS\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"an\",\n  \"catalog\": {\n    \"catalog_source\": \"GLUE\"\n  },\n  \"table_format\": \"ICEBERG\",\n  \"enabled\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",

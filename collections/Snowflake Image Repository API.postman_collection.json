@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "888b7215-2b83-4fbe-bc62-0dd916795d2d",
+		"_postman_id": "7e1d6529-3bba-4551-802c-45cc0ea4dd10",
 		"name": "Snowflake Image Repository API",
 		"description": "The Snowflake Image Repository API is a REST API that you can use to access, update, and perform common actions on Image Repository resource in Snowflake.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -63,17 +63,17 @@
 																							"variable": [
 																								{
 																									"key": "database",
-																									"value": "Z_cQ",
+																									"value": "bFGu37j2jCd",
 																									"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																								},
 																								{
 																									"key": "schema",
-																									"value": "Z_cQ",
+																									"value": "bFGu37j2jCd",
 																									"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																								},
 																								{
 																									"key": "name",
-																									"value": "Z_cQ",
+																									"value": "bFGu37j2jCd",
 																									"description": "(Required) Identifier (i.e. name) for the resource."
 																								}
 																							]
@@ -833,17 +833,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "Z_cQ",
+																							"value": "bFGu37j2jCd",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "Z_cQ",
+																							"value": "bFGu37j2jCd",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "Z_cQ",
+																							"value": "bFGu37j2jCd",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -920,7 +920,7 @@
 																						}
 																					],
 																					"cookie": [],
-																					"body": "{\n  \"name\": \"mXaP\",\n  \"database_name\": \"B0V$X\",\n  \"schema_name\": \"Pu\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}"
+																					"body": "{\n  \"name\": \"tcD\",\n  \"database_name\": \"\\\"\\\"\\\"S\\\"\\\"\\\"\\\"'4\\\"\",\n  \"schema_name\": \"Xfd\",\n  \"created_on\": \"<dateTime>\",\n  \"repository_url\": \"<string>\",\n  \"owner\": \"<string>\",\n  \"owner_role_type\": \"<string>\"\n}"
 																				},
 																				{
 																					"name": "Successfully accepted the request, but it is not completed yet.",
@@ -1597,17 +1597,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "Z_cQ",
+																							"value": "bFGu37j2jCd",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "Z_cQ",
+																							"value": "bFGu37j2jCd",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "Z_cQ",
+																							"value": "bFGu37j2jCd",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -2431,12 +2431,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "Z_cQ",
+																					"value": "bFGu37j2jCd",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "Z_cQ",
+																					"value": "bFGu37j2jCd",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -2516,7 +2516,7 @@
 																				}
 																			],
 																			"cookie": [],
-																			"body": "[\n  {\n    \"name\": \"\\\"-\\\"\\\"=\\\"\\\"\\\"\\\"k\\\"\",\n    \"database_name\": \"lr9$ZtrGs\",\n    \"schema_name\": \"P3yfFwM3\",\n    \"created_on\": \"<dateTime>\",\n    \"repository_url\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\"\n  },\n  {\n    \"name\": \"\\\"9q\\\"\\\"z\\\"\",\n    \"database_name\": \"rU\",\n    \"schema_name\": \"LBuuHe\",\n    \"created_on\": \"<dateTime>\",\n    \"repository_url\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\"\n  }\n]"
+																			"body": "[\n  {\n    \"name\": \"\\\"\\\"\\\"\\\"\",\n    \"database_name\": \"\\\"\\\"\\\"b*\\\"\\\"MF\\\"\\\"T\\\"\",\n    \"schema_name\": \"\\\"\\\"\\\"J\\\"\\\"Vt#\\\"\\\"\\\"\",\n    \"created_on\": \"<dateTime>\",\n    \"repository_url\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\"\n  },\n  {\n    \"name\": \"\\\"%+\\\"\\\"\\\"\",\n    \"database_name\": \"SB2jTbB\",\n    \"schema_name\": \"\\\"e2\\\"\\\"\\\"\",\n    \"created_on\": \"<dateTime>\",\n    \"repository_url\": \"<string>\",\n    \"owner\": \"<string>\",\n    \"owner_role_type\": \"<string>\"\n  }\n]"
 																		},
 																		{
 																			"name": "Successfully accepted the request, but it is not completed yet.",
@@ -3336,7 +3336,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"qUeZ\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\\\"Q\\\"\\\"]\\\"\\\"mg\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"ewYSKH5F\"\n}",
+																			"raw": "{\n  \"name\": \"Zr3RRUpWTz\",\n  \"database_name\": \"\\\"fp5G\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"\\\"awM\\\"\\\"s\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -3368,12 +3368,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "Z_cQ",
+																					"value": "bFGu37j2jCd",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "Z_cQ",
+																					"value": "bFGu37j2jCd",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -3402,7 +3402,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"qUeZ\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\\\"Q\\\"\\\"]\\\"\\\"mg\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"ewYSKH5F\"\n}",
+																					"raw": "{\n  \"name\": \"Zr3RRUpWTz\",\n  \"database_name\": \"\\\"fp5G\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"\\\"awM\\\"\\\"s\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3482,7 +3482,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"qUeZ\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\\\"Q\\\"\\\"]\\\"\\\"mg\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"ewYSKH5F\"\n}",
+																					"raw": "{\n  \"name\": \"Zr3RRUpWTz\",\n  \"database_name\": \"\\\"fp5G\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"\\\"awM\\\"\\\"s\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3570,7 +3570,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"qUeZ\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\\\"Q\\\"\\\"]\\\"\\\"mg\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"ewYSKH5F\"\n}",
+																					"raw": "{\n  \"name\": \"Zr3RRUpWTz\",\n  \"database_name\": \"\\\"fp5G\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"\\\"awM\\\"\\\"s\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3650,7 +3650,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"qUeZ\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\\\"Q\\\"\\\"]\\\"\\\"mg\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"ewYSKH5F\"\n}",
+																					"raw": "{\n  \"name\": \"Zr3RRUpWTz\",\n  \"database_name\": \"\\\"fp5G\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"\\\"awM\\\"\\\"s\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3730,7 +3730,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"qUeZ\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\\\"Q\\\"\\\"]\\\"\\\"mg\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"ewYSKH5F\"\n}",
+																					"raw": "{\n  \"name\": \"Zr3RRUpWTz\",\n  \"database_name\": \"\\\"fp5G\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"\\\"awM\\\"\\\"s\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3810,7 +3810,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"qUeZ\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\\\"Q\\\"\\\"]\\\"\\\"mg\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"ewYSKH5F\"\n}",
+																					"raw": "{\n  \"name\": \"Zr3RRUpWTz\",\n  \"database_name\": \"\\\"fp5G\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"\\\"awM\\\"\\\"s\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3890,7 +3890,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"qUeZ\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\\\"Q\\\"\\\"]\\\"\\\"mg\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"ewYSKH5F\"\n}",
+																					"raw": "{\n  \"name\": \"Zr3RRUpWTz\",\n  \"database_name\": \"\\\"fp5G\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"\\\"awM\\\"\\\"s\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3970,7 +3970,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"qUeZ\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\\\"Q\\\"\\\"]\\\"\\\"mg\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"ewYSKH5F\"\n}",
+																					"raw": "{\n  \"name\": \"Zr3RRUpWTz\",\n  \"database_name\": \"\\\"fp5G\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"\\\"awM\\\"\\\"s\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4050,7 +4050,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"qUeZ\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\\\"Q\\\"\\\"]\\\"\\\"mg\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"ewYSKH5F\"\n}",
+																					"raw": "{\n  \"name\": \"Zr3RRUpWTz\",\n  \"database_name\": \"\\\"fp5G\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"\\\"awM\\\"\\\"s\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4130,7 +4130,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"qUeZ\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\\\"Q\\\"\\\"]\\\"\\\"mg\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"ewYSKH5F\"\n}",
+																					"raw": "{\n  \"name\": \"Zr3RRUpWTz\",\n  \"database_name\": \"\\\"fp5G\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"\\\"awM\\\"\\\"s\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4210,7 +4210,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"qUeZ\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\\\"Q\\\"\\\"]\\\"\\\"mg\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"ewYSKH5F\"\n}",
+																					"raw": "{\n  \"name\": \"Zr3RRUpWTz\",\n  \"database_name\": \"\\\"fp5G\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"\\\"awM\\\"\\\"s\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4290,7 +4290,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"qUeZ\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\\\"Q\\\"\\\"]\\\"\\\"mg\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"ewYSKH5F\"\n}",
+																					"raw": "{\n  \"name\": \"Zr3RRUpWTz\",\n  \"database_name\": \"\\\"fp5G\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"\\\"awM\\\"\\\"s\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4370,7 +4370,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"qUeZ\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\\\"Q\\\"\\\"]\\\"\\\"mg\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"ewYSKH5F\"\n}",
+																					"raw": "{\n  \"name\": \"Zr3RRUpWTz\",\n  \"database_name\": \"\\\"fp5G\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"\\\"awM\\\"\\\"s\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",

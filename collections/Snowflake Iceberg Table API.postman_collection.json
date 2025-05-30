@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "2f61ec50-3fe3-41ff-b771-faa49683f050",
+		"_postman_id": "8db88f75-d6ab-4a6f-8d77-f6ae60d87888",
 		"name": "Snowflake Iceberg Table API",
 		"description": "The Snowflake Iceberg Table API is a REST API that you can use to access, update, and perform certain actions on Iceberg Table resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -59,17 +59,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -146,7 +146,7 @@
 																						}
 																					],
 																					"cookie": [],
-																					"body": "{\n  \"name\": \"uxl5KC\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\",\n  \"created_on\": \"<dateTime>\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\",\n  \"schema_name\": \"zNY\",\n  \"owner\": \"E\",\n  \"owner_role_type\": \"\\\"\\\\\\\"\\\"=\\\"\\\"\\\"\\\"\\\"\",\n  \"iceberg_table_type\": \"<string>\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"can_write_metadata\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"X_zIDd0B_tP\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"~T\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"auto_refresh\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}"
+																					"body": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"&\\\"\\\"\\\"\\\"\\\"\\\"Xl\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"created_on\": \"<dateTime>\",\n  \"database_name\": \"Xj$\",\n  \"schema_name\": \"\\\"PYFh\\\"\\\"t\\\"\",\n  \"owner\": \"\\\"\\\\\\\"\\\"\\\"\\\"N\\\"\\\"(p7\\\"\",\n  \"owner_role_type\": \"vuZ7moLQ\",\n  \"iceberg_table_type\": \"<string>\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"can_write_metadata\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"SIfmDuNKApc\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"VBvHg\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"auto_refresh\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}"
 																				},
 																				{
 																					"name": "Successfully accepted the request, but it is not completed yet.",
@@ -988,7 +988,7 @@
 																					}
 																				],
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -1010,24 +1010,24 @@
 																						},
 																						{
 																							"key": "type",
-																							"value": "CASCADE",
+																							"value": "RESTRICT",
 																							"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																						}
 																					],
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -1051,7 +1051,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -1073,7 +1073,7 @@
 																								},
 																								{
 																									"key": "type",
-																									"value": "CASCADE",
+																									"value": "RESTRICT",
 																									"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																								}
 																							],
@@ -1126,7 +1126,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -1148,7 +1148,7 @@
 																								},
 																								{
 																									"key": "type",
-																									"value": "CASCADE",
+																									"value": "RESTRICT",
 																									"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																								}
 																							],
@@ -1209,7 +1209,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -1231,7 +1231,7 @@
 																								},
 																								{
 																									"key": "type",
-																									"value": "CASCADE",
+																									"value": "RESTRICT",
 																									"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																								}
 																							],
@@ -1284,7 +1284,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -1306,7 +1306,7 @@
 																								},
 																								{
 																									"key": "type",
-																									"value": "CASCADE",
+																									"value": "RESTRICT",
 																									"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																								}
 																							],
@@ -1359,7 +1359,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -1381,7 +1381,7 @@
 																								},
 																								{
 																									"key": "type",
-																									"value": "CASCADE",
+																									"value": "RESTRICT",
 																									"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																								}
 																							],
@@ -1434,7 +1434,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -1456,7 +1456,7 @@
 																								},
 																								{
 																									"key": "type",
-																									"value": "CASCADE",
+																									"value": "RESTRICT",
 																									"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																								}
 																							],
@@ -1509,7 +1509,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -1531,7 +1531,7 @@
 																								},
 																								{
 																									"key": "type",
-																									"value": "CASCADE",
+																									"value": "RESTRICT",
 																									"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																								}
 																							],
@@ -1584,7 +1584,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -1606,7 +1606,7 @@
 																								},
 																								{
 																									"key": "type",
-																									"value": "CASCADE",
+																									"value": "RESTRICT",
 																									"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																								}
 																							],
@@ -1659,7 +1659,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -1681,7 +1681,7 @@
 																								},
 																								{
 																									"key": "type",
-																									"value": "CASCADE",
+																									"value": "RESTRICT",
 																									"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																								}
 																							],
@@ -1734,7 +1734,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -1756,7 +1756,7 @@
 																								},
 																								{
 																									"key": "type",
-																									"value": "CASCADE",
+																									"value": "RESTRICT",
 																									"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																								}
 																							],
@@ -1809,7 +1809,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -1831,7 +1831,7 @@
 																								},
 																								{
 																									"key": "type",
-																									"value": "CASCADE",
+																									"value": "RESTRICT",
 																									"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																								}
 																							],
@@ -1884,7 +1884,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -1906,7 +1906,7 @@
 																								},
 																								{
 																									"key": "type",
-																									"value": "CASCADE",
+																									"value": "RESTRICT",
 																									"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																								}
 																							],
@@ -1959,7 +1959,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -1981,7 +1981,7 @@
 																								},
 																								{
 																									"key": "type",
-																									"value": "CASCADE",
+																									"value": "RESTRICT",
 																									"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																								}
 																							],
@@ -2034,7 +2034,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=CASCADE",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/:name?ifExists=false&type=RESTRICT",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -2056,7 +2056,7 @@
 																								},
 																								{
 																									"key": "type",
-																									"value": "CASCADE",
+																									"value": "RESTRICT",
 																									"description": "Specifies whether the table can be dropped if foreign keys exist that reference the table."
 																								}
 																							],
@@ -2135,12 +2135,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -3136,12 +3136,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -4151,12 +4151,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -5329,7 +5329,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																					"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5362,12 +5362,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -5396,7 +5396,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -5477,7 +5477,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -5566,7 +5566,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -5647,7 +5647,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -5728,7 +5728,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -5809,7 +5809,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -5890,7 +5890,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -5971,7 +5971,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6052,7 +6052,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6133,7 +6133,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6214,7 +6214,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6295,7 +6295,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6376,7 +6376,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6457,7 +6457,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\"\n}",
+																							"raw": "{\n  \"base_location\": \"<string>\",\n  \"storage_serialization_policy\": \"OPTIMIZED\"\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -6552,12 +6552,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -7445,7 +7445,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -7472,24 +7472,24 @@
 																						},
 																						{
 																							"key": "targetDatabase",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "Database of the newly created table. Defaults to the source table's database."
 																						},
 																						{
 																							"key": "targetSchema",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "Schema of the newly created table. Defaults to the source table's schema."
 																						}
 																					],
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -7527,7 +7527,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -7554,12 +7554,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -7623,7 +7623,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -7650,12 +7650,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -7727,7 +7727,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -7754,12 +7754,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -7823,7 +7823,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -7850,12 +7850,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -7919,7 +7919,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -7946,12 +7946,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -8015,7 +8015,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -8042,12 +8042,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -8111,7 +8111,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -8138,12 +8138,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -8207,7 +8207,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -8234,12 +8234,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -8303,7 +8303,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -8330,12 +8330,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -8399,7 +8399,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -8426,12 +8426,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -8495,7 +8495,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -8522,12 +8522,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -8591,7 +8591,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -8618,12 +8618,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -8687,7 +8687,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -8714,12 +8714,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -8783,7 +8783,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:clone?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -8810,12 +8810,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -8881,7 +8881,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -8908,24 +8908,24 @@
 																						},
 																						{
 																							"key": "targetDatabase",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "Database of the newly created table. Defaults to the source table's database."
 																						},
 																						{
 																							"key": "targetSchema",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "Schema of the newly created table. Defaults to the source table's schema."
 																						}
 																					],
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"value": "M",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -8963,7 +8963,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -8990,12 +8990,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -9059,7 +9059,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -9086,12 +9086,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -9163,7 +9163,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -9190,12 +9190,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -9259,7 +9259,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -9286,12 +9286,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -9355,7 +9355,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -9382,12 +9382,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -9451,7 +9451,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -9478,12 +9478,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -9547,7 +9547,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -9574,12 +9574,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -9643,7 +9643,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -9670,12 +9670,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -9739,7 +9739,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -9766,12 +9766,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -9835,7 +9835,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -9862,12 +9862,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -9931,7 +9931,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -9958,12 +9958,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -10027,7 +10027,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -10054,12 +10054,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -10123,7 +10123,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -10150,12 +10150,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -10219,7 +10219,7 @@
 																							}
 																						},
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"&targetSchema=\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/iceberg-tables/{{name}}:create-like?createMode=errorIfExists&copyGrants=false&targetDatabase=M&targetSchema=M",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -10246,12 +10246,12 @@
 																								},
 																								{
 																									"key": "targetDatabase",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Database of the newly created table. Defaults to the source table's database."
 																								},
 																								{
 																									"key": "targetSchema",
-																									"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																									"value": "M",
 																									"description": "Schema of the newly created table. Defaults to the source table's schema."
 																								}
 																							],
@@ -10343,12 +10343,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"value": "M",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"value": "M",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -10448,7 +10448,7 @@
 																				}
 																			],
 																			"cookie": [],
-																			"body": "[\n  {\n    \"name\": \"YF7R\",\n    \"comment\": \"<string>\",\n    \"change_tracking\": \"<boolean>\",\n    \"max_data_extension_time_in_days\": \"<integer>\",\n    \"external_volume\": \"<string>\",\n    \"data_retention_time_in_days\": \"<integer>\",\n    \"catalog_sync\": \"<string>\",\n    \"catalog\": \"<string>\",\n    \"storage_serialization_policy\": \"COMPATIBLE\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"mIOapLHh\",\n    \"schema_name\": \"SjEGv\",\n    \"owner\": \"\\\"\\\"\\\"\\\"\\\"N\\\"\",\n    \"owner_role_type\": \"\\\"Vz*:\\\"\\\"Q\\\"\\\"!\\\"\\\"\\\"\",\n    \"iceberg_table_type\": \"<string>\",\n    \"catalog_table_name\": \"<string>\",\n    \"catalog_namespace\": \"<string>\",\n    \"can_write_metadata\": \"<string>\",\n    \"cluster_by\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"columns\": [\n      {\n        \"name\": \"yaBB$p9l\",\n        \"datatype\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"nullable\": \"<boolean>\",\n        \"default_value\": \"<string>\"\n      },\n      {\n        \"name\": \"\\\"p|V\\\"\",\n        \"datatype\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"nullable\": \"<boolean>\",\n        \"default_value\": \"<string>\"\n      }\n    ],\n    \"base_location\": \"<string>\",\n    \"replace_invalid_characters\": \"<boolean>\",\n    \"auto_refresh\": \"<boolean>\",\n    \"metadata_file_path\": \"<string>\",\n    \"constraints\": [\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      }\n    ]\n  },\n  {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"c\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n    \"comment\": \"<string>\",\n    \"change_tracking\": \"<boolean>\",\n    \"max_data_extension_time_in_days\": \"<integer>\",\n    \"external_volume\": \"<string>\",\n    \"data_retention_time_in_days\": \"<integer>\",\n    \"catalog_sync\": \"<string>\",\n    \"catalog\": \"<string>\",\n    \"storage_serialization_policy\": \"OPTIMIZED\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"\\\"\\\"\\\"R\\\"\\\"R*\\\"\",\n    \"schema_name\": \"BJGYzqW\",\n    \"owner\": \"_\",\n    \"owner_role_type\": \"\\\"B\\\"\",\n    \"iceberg_table_type\": \"<string>\",\n    \"catalog_table_name\": \"<string>\",\n    \"catalog_namespace\": \"<string>\",\n    \"can_write_metadata\": \"<string>\",\n    \"cluster_by\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"columns\": [\n      {\n        \"name\": \"X3RnrOw49gt\",\n        \"datatype\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"nullable\": \"<boolean>\",\n        \"default_value\": \"<string>\"\n      },\n      {\n        \"name\": \"BjtJM99iAl5\",\n        \"datatype\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"nullable\": \"<boolean>\",\n        \"default_value\": \"<string>\"\n      }\n    ],\n    \"base_location\": \"<string>\",\n    \"replace_invalid_characters\": \"<boolean>\",\n    \"auto_refresh\": \"<boolean>\",\n    \"metadata_file_path\": \"<string>\",\n    \"constraints\": [\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      }\n    ]\n  }\n]"
+																			"body": "[\n  {\n    \"name\": \"\\\"v\\\"\\\"\\\"\",\n    \"comment\": \"<string>\",\n    \"change_tracking\": \"<boolean>\",\n    \"max_data_extension_time_in_days\": \"<integer>\",\n    \"external_volume\": \"<string>\",\n    \"data_retention_time_in_days\": \"<integer>\",\n    \"catalog_sync\": \"<string>\",\n    \"catalog\": \"<string>\",\n    \"storage_serialization_policy\": \"OPTIMIZED\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"Br\",\n    \"schema_name\": \"bJSQ1BcMR\",\n    \"owner\": \"g48PWd3VbC\",\n    \"owner_role_type\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"{\\\"\",\n    \"iceberg_table_type\": \"<string>\",\n    \"catalog_table_name\": \"<string>\",\n    \"catalog_namespace\": \"<string>\",\n    \"can_write_metadata\": \"<string>\",\n    \"cluster_by\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"columns\": [\n      {\n        \"name\": \"\\\"C\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n        \"datatype\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"nullable\": \"<boolean>\",\n        \"default_value\": \"<string>\"\n      },\n      {\n        \"name\": \"lxLdYbcb\",\n        \"datatype\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"nullable\": \"<boolean>\",\n        \"default_value\": \"<string>\"\n      }\n    ],\n    \"base_location\": \"<string>\",\n    \"replace_invalid_characters\": \"<boolean>\",\n    \"auto_refresh\": \"<boolean>\",\n    \"metadata_file_path\": \"<string>\",\n    \"constraints\": [\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      }\n    ]\n  },\n  {\n    \"name\": \"rncm_\",\n    \"comment\": \"<string>\",\n    \"change_tracking\": \"<boolean>\",\n    \"max_data_extension_time_in_days\": \"<integer>\",\n    \"external_volume\": \"<string>\",\n    \"data_retention_time_in_days\": \"<integer>\",\n    \"catalog_sync\": \"<string>\",\n    \"catalog\": \"<string>\",\n    \"storage_serialization_policy\": \"OPTIMIZED\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"\\\"\\\"\\\"i*\\\"\",\n    \"schema_name\": \"Rp$d\",\n    \"owner\": \"\\\"\\\"\\\"\\\"\",\n    \"owner_role_type\": \"e\",\n    \"iceberg_table_type\": \"<string>\",\n    \"catalog_table_name\": \"<string>\",\n    \"catalog_namespace\": \"<string>\",\n    \"can_write_metadata\": \"<string>\",\n    \"cluster_by\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"columns\": [\n      {\n        \"name\": \"rGHYg\",\n        \"datatype\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"nullable\": \"<boolean>\",\n        \"default_value\": \"<string>\"\n      },\n      {\n        \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"@N\\\"\",\n        \"datatype\": \"<string>\",\n        \"comment\": \"<string>\",\n        \"nullable\": \"<boolean>\",\n        \"default_value\": \"<string>\"\n      }\n    ],\n    \"base_location\": \"<string>\",\n    \"replace_invalid_characters\": \"<boolean>\",\n    \"auto_refresh\": \"<boolean>\",\n    \"metadata_file_path\": \"<string>\",\n    \"constraints\": [\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"column_names\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"constraint_type\": \"<string>\"\n      }\n    ]\n  }\n]"
 																		},
 																		{
 																			"name": "Successfully accepted the request, but it is not completed yet.",
@@ -11594,7 +11594,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -11631,12 +11631,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"value": "M",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"value": "M",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -11665,7 +11665,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -11750,7 +11750,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -11843,7 +11843,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -11928,7 +11928,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -12013,7 +12013,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -12098,7 +12098,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -12183,7 +12183,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -12268,7 +12268,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -12353,7 +12353,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -12438,7 +12438,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -12523,7 +12523,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -12608,7 +12608,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -12693,7 +12693,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -12778,7 +12778,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"n9dwqda\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"w\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"^\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
+																					"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\",\n  \"comment\": \"<string>\",\n  \"change_tracking\": \"<boolean>\",\n  \"max_data_extension_time_in_days\": \"<integer>\",\n  \"external_volume\": \"<string>\",\n  \"data_retention_time_in_days\": \"<integer>\",\n  \"catalog_sync\": \"<string>\",\n  \"catalog\": \"<string>\",\n  \"storage_serialization_policy\": \"COMPATIBLE\",\n  \"catalog_table_name\": \"<string>\",\n  \"catalog_namespace\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"columns\": [\n    {\n      \"name\": \"\\\"uCA\\\"\\\"N\\\"\\\"\\\"\\\"h\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"/\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"base_location\": \"<string>\",\n  \"replace_invalid_characters\": \"<boolean>\",\n  \"metadata_file_path\": \"<string>\",\n  \"constraints\": [\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"column_names\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"constraint_type\": \"<string>\"\n    }\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -12865,7 +12865,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																			"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -12907,12 +12907,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"value": "M",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"value": "M",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -12941,7 +12941,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -13031,7 +13031,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -13129,7 +13129,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -13219,7 +13219,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -13309,7 +13309,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -13399,7 +13399,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -13489,7 +13489,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -13579,7 +13579,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -13669,7 +13669,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -13759,7 +13759,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -13849,7 +13849,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -13939,7 +13939,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -14029,7 +14029,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -14119,7 +14119,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"\\\\\\\\\\\"\\\"3D\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"base_location\": \"<string>\",\n  \"columns\": [\n    {\n      \"name\": \"\\\"G\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    },\n    {\n      \"name\": \"\\\"%w\\\"\\\"?}\\\"\\\"~dk[u\\\"\",\n      \"datatype\": \"<string>\",\n      \"comment\": \"<string>\",\n      \"nullable\": \"<boolean>\",\n      \"default_value\": \"<string>\"\n    }\n  ],\n  \"external_volume\": \"<string>\",\n  \"cluster_by\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -14243,12 +14243,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"value": "M",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"value": "M",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -15439,12 +15439,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"value": "M",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"value": "M",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -16635,12 +16635,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"value": "M",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"value": "M",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -17831,12 +17831,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"value": "M",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\"",
+																					"value": "M",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -19006,7 +19006,7 @@
 		},
 		{
 			"key": "name",
-			"value": "\"\"\"\"\"\"\"\"\"\"\"\"\"JB\"\"\""
+			"value": "M"
 		}
 	]
 }

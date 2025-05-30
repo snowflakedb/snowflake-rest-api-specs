@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "52af44d9-8db1-4e9a-83fe-e894590d4b41",
+		"_postman_id": "79ae70f7-e38b-4a9b-80f6-3406dd2f32c2",
 		"name": "Snowflake Network Policy API",
 		"description": "The Snowflake Network Policy API is a REST API that you can use to access, update, and perform certain actions on Network Policy resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -43,7 +43,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "\"R<\"",
+															"value": "_e1vbhLF",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -97,7 +97,7 @@
 														}
 													],
 													"cookie": [],
-													"body": "{\n  \"name\": \"\\\"K\\\"\\\"W\\\"\\\"\\\"\\\"(\\\"\\\"\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"owner\": \"Uqc\",\n  \"owner_role_type\": \"\\\"po`\\\"\\\"'^\\\"\"\n}"
+													"body": "{\n  \"name\": \"\\\"\\\"\\\"q\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"owner\": \"\\\"Z\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"owner_role_type\": \"KY\"\n}"
 												},
 												{
 													"name": "Successfully accepted the request, but it is not completed yet.",
@@ -764,7 +764,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "\"R<\"",
+															"value": "_e1vbhLF",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -1618,7 +1618,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "[\n  {\n    \"name\": \"e9\",\n    \"allowed_network_rule_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"blocked_network_rule_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"allowed_ip_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"blocked_ip_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"owner\": \"\\\"nD\\\"\\\"0\\\"\\\"\\\"\\\"z\\\"\",\n    \"owner_role_type\": \"_o\"\n  },\n  {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"RW\\\"\\\"\\\"\",\n    \"allowed_network_rule_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"blocked_network_rule_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"allowed_ip_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"blocked_ip_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"owner\": \"rIzm\",\n    \"owner_role_type\": \"d\"\n  }\n]"
+											"body": "[\n  {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"X?\\\"\",\n    \"allowed_network_rule_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"blocked_network_rule_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"allowed_ip_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"blocked_ip_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"owner\": \"brLrn\",\n    \"owner_role_type\": \"LAHol6\"\n  },\n  {\n    \"name\": \"HPgW38vW\",\n    \"allowed_network_rule_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"blocked_network_rule_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"allowed_ip_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"blocked_ip_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"owner\": \"ZhZ_uIx0e5\",\n    \"owner_role_type\": \"\\\"\\\"\\\"\\\"\\\"-\\\"\"\n  }\n]"
 										},
 										{
 											"name": "Successfully accepted the request, but it is not completed yet.",
@@ -2192,7 +2192,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+											"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -2237,7 +2237,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2300,7 +2300,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2371,7 +2371,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2434,7 +2434,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2497,7 +2497,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2560,7 +2560,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2623,7 +2623,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2686,7 +2686,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2749,7 +2749,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2812,7 +2812,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2875,7 +2875,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -2938,7 +2938,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3001,7 +3001,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3064,7 +3064,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"L!rX\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"EC\\\"\\\"\\\"\\\"\\\"\\\"i\\\"\",\n  \"allowed_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_network_rule_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"allowed_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"blocked_ip_list\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",

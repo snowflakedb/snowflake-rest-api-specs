@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "d4682f05-b7be-4e3f-99b5-40b490044d25",
+		"_postman_id": "7e029df6-49d8-46db-b921-0b5b8e64e20c",
 		"name": "Snowflake Grant API",
 		"description": "The Snowflake Grant API is a REST API that you can use to show or manage privileges that have been provided to users and roles in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -74,7 +74,7 @@
 																									"variable": [
 																										{
 																											"key": "granteeType",
-																											"value": "share",
+																											"value": "role",
 																											"description": "(Required) String that specifies the type of resource that is the privilege grantee."
 																										},
 																										{
@@ -1242,7 +1242,7 @@
 																							"variable": [
 																								{
 																									"key": "granteeType",
-																									"value": "share",
+																									"value": "role",
 																									"description": "(Required) String that specifies the type of resource that is the privilege grantee."
 																								},
 																								{
@@ -2402,7 +2402,7 @@
 																					"variable": [
 																						{
 																							"key": "granteeType",
-																							"value": "share",
+																							"value": "role",
 																							"description": "(Required) String that specifies the type of resource that is the privilege grantee."
 																						},
 																						{
@@ -3621,7 +3621,7 @@
 																													"variable": [
 																														{
 																															"key": "granteeType",
-																															"value": "share",
+																															"value": "role",
 																															"description": "(Required) String that specifies the type of resource that is the privilege grantee."
 																														},
 																														{
@@ -3631,7 +3631,7 @@
 																														},
 																														{
 																															"key": "bulkGrantType",
-																															"value": "future",
+																															"value": "all",
 																															"description": "(Required) String that species whether this group privilege should be on ALL or FUTURE resources of the specified plural type"
 																														},
 																														{
@@ -3641,7 +3641,7 @@
 																														},
 																														{
 																															"key": "scopeType",
-																															"value": "database",
+																															"value": "schema",
 																															"description": "(Required) String that specifies the type of resource that is the scope of an ALL/FUTURE privilege. Can only be DATABASE or SCHEMA"
 																														},
 																														{
@@ -4913,7 +4913,7 @@
 																											"variable": [
 																												{
 																													"key": "granteeType",
-																													"value": "share",
+																													"value": "role",
 																													"description": "(Required) String that specifies the type of resource that is the privilege grantee."
 																												},
 																												{
@@ -4923,7 +4923,7 @@
 																												},
 																												{
 																													"key": "bulkGrantType",
-																													"value": "future",
+																													"value": "all",
 																													"description": "(Required) String that species whether this group privilege should be on ALL or FUTURE resources of the specified plural type"
 																												},
 																												{
@@ -4933,7 +4933,7 @@
 																												},
 																												{
 																													"key": "scopeType",
-																													"value": "database",
+																													"value": "schema",
 																													"description": "(Required) String that specifies the type of resource that is the scope of an ALL/FUTURE privilege. Can only be DATABASE or SCHEMA"
 																												},
 																												{
@@ -6197,7 +6197,7 @@
 																									"variable": [
 																										{
 																											"key": "granteeType",
-																											"value": "share",
+																											"value": "role",
 																											"description": "(Required) String that specifies the type of resource that is the privilege grantee."
 																										},
 																										{
@@ -6207,7 +6207,7 @@
 																										},
 																										{
 																											"key": "bulkGrantType",
-																											"value": "future",
+																											"value": "all",
 																											"description": "(Required) String that species whether this group privilege should be on ALL or FUTURE resources of the specified plural type"
 																										},
 																										{
@@ -6217,7 +6217,7 @@
 																										},
 																										{
 																											"key": "scopeType",
-																											"value": "database",
+																											"value": "schema",
 																											"description": "(Required) String that specifies the type of resource that is the scope of an ALL/FUTURE privilege. Can only be DATABASE or SCHEMA"
 																										},
 																										{
@@ -7514,7 +7514,7 @@
 															"variable": [
 																{
 																	"key": "granteeType",
-																	"value": "share",
+																	"value": "role",
 																	"description": "(Required) String that specifies the type of resource that is the privilege grantee."
 																},
 																{

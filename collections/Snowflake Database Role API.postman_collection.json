@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "86479ab3-6ec8-4a39-b8cb-84a89f499110",
+		"_postman_id": "4794d883-3d94-436a-b03d-fb5322ab8b73",
 		"name": "Snowflake Database Role API",
 		"description": "The Snowflake Database Role API is a REST API that you can use to access, update, and perform certain actions on Database Role resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -62,12 +62,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "rpzPsxEE",
+																					"value": "\"]=\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "name",
-																					"value": "rpzPsxEE",
+																					"value": "\"]=\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the resource."
 																				}
 																			]
@@ -147,7 +147,7 @@
 																				}
 																			],
 																			"cookie": [],
-																			"body": "[\n  {\n    \"securable_type\": \"<string>\",\n    \"securable\": {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"%\\\"\\\"M\\\"\\\"&\\\"\",\n      \"database\": \"zfFAj6EZSe\",\n      \"schema\": \"\\\"f\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"service\": \"\\\"V\\\"\\\"_b?\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n    },\n    \"containing_scope\": {\n      \"database\": \"\\\"\\\"\\\"A\\\"\\\"LJQT\\\"\",\n      \"schema\": \"QDsr\"\n    },\n    \"grant_option\": \"<boolean>\",\n    \"privileges\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"created_on\": \"<dateTime>\",\n    \"granted_by\": \"<string>\"\n  },\n  {\n    \"securable_type\": \"<string>\",\n    \"securable\": {\n      \"name\": \"D9m1B3y\",\n      \"database\": \"\\\"9\\\"\\\"\\\"\\\"5\\\"\",\n      \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"service\": \"\\\"\\\\\\\"\"\n    },\n    \"containing_scope\": {\n      \"database\": \"\\\"\\\"\\\"\\\"\",\n      \"schema\": \"\\\"\\\"\\\"vn\\\"\\\"\\\"\\\"\\\"\\\"5\\\"\\\"A\\\"\"\n    },\n    \"grant_option\": \"<boolean>\",\n    \"privileges\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"created_on\": \"<dateTime>\",\n    \"granted_by\": \"<string>\"\n  }\n]"
+																			"body": "[\n  {\n    \"securable_type\": \"<string>\",\n    \"securable\": {\n      \"name\": \"onY\",\n      \"database\": \"\\\"]\\\"\\\"}~R\\\"\\\"|\\\"\",\n      \"schema\": \"\\\"y\\\"\\\"R-\\\"\\\"\\\"\\\"'\\\"\\\"\\\"\\\"\\\"\",\n      \"service\": \"\\\"\\\"\\\"\\\"\\\"|&N\\\"\\\"#\\\"\\\"\\\"\\\"w\\\"\"\n    },\n    \"containing_scope\": {\n      \"database\": \"\\\"\\\"\\\"\\\"\\\"JG\\\"\\\"b5\\\"\",\n      \"schema\": \"KvztS\"\n    },\n    \"grant_option\": \"<boolean>\",\n    \"privileges\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"created_on\": \"<dateTime>\",\n    \"granted_by\": \"<string>\"\n  },\n  {\n    \"securable_type\": \"<string>\",\n    \"securable\": {\n      \"name\": \"\\\"\\\"\\\"^7\\\"\",\n      \"database\": \"\\\"F*.\\\"\\\"\\\"\\\"{\\\"\",\n      \"schema\": \"A\",\n      \"service\": \"\\\"\\\"\\\"tz-H\\\"\\\"[v\\\"\\\"\\\"\"\n    },\n    \"containing_scope\": {\n      \"database\": \"ALKRy\",\n      \"schema\": \"sau$rM5qXqH\"\n    },\n    \"grant_option\": \"<boolean>\",\n    \"privileges\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"created_on\": \"<dateTime>\",\n    \"granted_by\": \"<string>\"\n  }\n]"
 																		},
 																		{
 																			"name": "Successfully accepted the request, but it is not completed yet.",
@@ -1033,7 +1033,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																			"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -1058,12 +1058,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "rpzPsxEE",
+																					"value": "\"]=\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "name",
-																					"value": "rpzPsxEE",
+																					"value": "\"]=\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the resource."
 																				}
 																			]
@@ -1092,7 +1092,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1165,7 +1165,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1246,7 +1246,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1319,7 +1319,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1392,7 +1392,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1465,7 +1465,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1538,7 +1538,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1611,7 +1611,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1684,7 +1684,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1757,7 +1757,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1830,7 +1830,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1903,7 +1903,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -1976,7 +1976,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2049,7 +2049,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2124,7 +2124,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																			"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -2133,7 +2133,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -2149,19 +2149,19 @@
 																			"query": [
 																				{
 																					"key": "mode",
-																					"value": "cascade",
+																					"value": "restrict",
 																					"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																				}
 																			],
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "rpzPsxEE",
+																					"value": "\"]=\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "name",
-																					"value": "rpzPsxEE",
+																					"value": "\"]=\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the resource."
 																				}
 																			]
@@ -2190,7 +2190,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2199,7 +2199,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -2215,7 +2215,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -2270,7 +2270,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2279,7 +2279,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -2295,7 +2295,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -2358,7 +2358,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2367,7 +2367,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -2383,7 +2383,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -2438,7 +2438,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2447,7 +2447,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -2463,7 +2463,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -2518,7 +2518,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2527,7 +2527,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -2543,7 +2543,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -2598,7 +2598,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2607,7 +2607,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -2623,7 +2623,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -2678,7 +2678,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2687,7 +2687,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -2703,7 +2703,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -2758,7 +2758,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2767,7 +2767,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -2783,7 +2783,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -2838,7 +2838,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2847,7 +2847,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -2863,7 +2863,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -2918,7 +2918,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2927,7 +2927,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -2943,7 +2943,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -2998,7 +2998,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3007,7 +3007,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -3023,7 +3023,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -3078,7 +3078,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3087,7 +3087,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -3103,7 +3103,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -3158,7 +3158,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3167,7 +3167,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -3183,7 +3183,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -3238,7 +3238,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -3247,7 +3247,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -3263,7 +3263,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -3338,12 +3338,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "rpzPsxEE",
+																					"value": "\"]=\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "name",
-																					"value": "rpzPsxEE",
+																					"value": "\"]=\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the resource."
 																				}
 																			]
@@ -3423,7 +3423,7 @@
 																				}
 																			],
 																			"cookie": [],
-																			"body": "[\n  {\n    \"securable_type\": \"<string>\",\n    \"securable\": {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"%\\\"\\\"M\\\"\\\"&\\\"\",\n      \"database\": \"zfFAj6EZSe\",\n      \"schema\": \"\\\"f\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"service\": \"\\\"V\\\"\\\"_b?\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n    },\n    \"containing_scope\": {\n      \"database\": \"\\\"\\\"\\\"A\\\"\\\"LJQT\\\"\",\n      \"schema\": \"QDsr\"\n    },\n    \"grant_option\": \"<boolean>\",\n    \"privileges\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"created_on\": \"<dateTime>\",\n    \"granted_by\": \"<string>\"\n  },\n  {\n    \"securable_type\": \"<string>\",\n    \"securable\": {\n      \"name\": \"D9m1B3y\",\n      \"database\": \"\\\"9\\\"\\\"\\\"\\\"5\\\"\",\n      \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"service\": \"\\\"\\\\\\\"\"\n    },\n    \"containing_scope\": {\n      \"database\": \"\\\"\\\"\\\"\\\"\",\n      \"schema\": \"\\\"\\\"\\\"vn\\\"\\\"\\\"\\\"\\\"\\\"5\\\"\\\"A\\\"\"\n    },\n    \"grant_option\": \"<boolean>\",\n    \"privileges\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"created_on\": \"<dateTime>\",\n    \"granted_by\": \"<string>\"\n  }\n]"
+																			"body": "[\n  {\n    \"securable_type\": \"<string>\",\n    \"securable\": {\n      \"name\": \"onY\",\n      \"database\": \"\\\"]\\\"\\\"}~R\\\"\\\"|\\\"\",\n      \"schema\": \"\\\"y\\\"\\\"R-\\\"\\\"\\\"\\\"'\\\"\\\"\\\"\\\"\\\"\",\n      \"service\": \"\\\"\\\"\\\"\\\"\\\"|&N\\\"\\\"#\\\"\\\"\\\"\\\"w\\\"\"\n    },\n    \"containing_scope\": {\n      \"database\": \"\\\"\\\"\\\"\\\"\\\"JG\\\"\\\"b5\\\"\",\n      \"schema\": \"KvztS\"\n    },\n    \"grant_option\": \"<boolean>\",\n    \"privileges\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"created_on\": \"<dateTime>\",\n    \"granted_by\": \"<string>\"\n  },\n  {\n    \"securable_type\": \"<string>\",\n    \"securable\": {\n      \"name\": \"\\\"\\\"\\\"^7\\\"\",\n      \"database\": \"\\\"F*.\\\"\\\"\\\"\\\"{\\\"\",\n      \"schema\": \"A\",\n      \"service\": \"\\\"\\\"\\\"tz-H\\\"\\\"[v\\\"\\\"\\\"\"\n    },\n    \"containing_scope\": {\n      \"database\": \"ALKRy\",\n      \"schema\": \"sau$rM5qXqH\"\n    },\n    \"grant_option\": \"<boolean>\",\n    \"privileges\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"created_on\": \"<dateTime>\",\n    \"granted_by\": \"<string>\"\n  }\n]"
 																		},
 																		{
 																			"name": "Successfully accepted the request, but it is not completed yet.",
@@ -4309,7 +4309,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																			"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -4334,12 +4334,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "rpzPsxEE",
+																					"value": "\"]=\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "name",
-																					"value": "rpzPsxEE",
+																					"value": "\"]=\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the resource."
 																				}
 																			]
@@ -4368,7 +4368,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4441,7 +4441,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4522,7 +4522,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4595,7 +4595,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4668,7 +4668,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4741,7 +4741,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4814,7 +4814,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4887,7 +4887,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -4960,7 +4960,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5033,7 +5033,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5106,7 +5106,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5179,7 +5179,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5252,7 +5252,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5325,7 +5325,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5400,7 +5400,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																			"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -5409,7 +5409,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -5425,19 +5425,19 @@
 																			"query": [
 																				{
 																					"key": "mode",
-																					"value": "cascade",
+																					"value": "restrict",
 																					"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																				}
 																			],
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "rpzPsxEE",
+																					"value": "\"]=\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "name",
-																					"value": "rpzPsxEE",
+																					"value": "\"]=\"\"\"",
 																					"description": "(Required) Identifier (i.e. name) for the resource."
 																				}
 																			]
@@ -5466,7 +5466,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5475,7 +5475,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -5491,7 +5491,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -5546,7 +5546,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5555,7 +5555,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -5571,7 +5571,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -5634,7 +5634,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5643,7 +5643,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -5659,7 +5659,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -5714,7 +5714,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5723,7 +5723,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -5739,7 +5739,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -5794,7 +5794,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5803,7 +5803,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -5819,7 +5819,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -5874,7 +5874,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5883,7 +5883,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -5899,7 +5899,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -5954,7 +5954,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -5963,7 +5963,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -5979,7 +5979,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -6034,7 +6034,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6043,7 +6043,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -6059,7 +6059,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -6114,7 +6114,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6123,7 +6123,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -6139,7 +6139,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -6194,7 +6194,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6203,7 +6203,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -6219,7 +6219,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -6274,7 +6274,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6283,7 +6283,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -6299,7 +6299,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -6354,7 +6354,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6363,7 +6363,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -6379,7 +6379,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -6434,7 +6434,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6443,7 +6443,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -6459,7 +6459,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -6514,7 +6514,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"V.\\\"\\\"&\\\"\\\"E\\\"\\\"Ys\\\"\",\n    \"database\": \"\\\"\\\"\\\"_ \\\"\\\"\\\"\\\"\\\"\\\"aq\\\"\\\"F\\\"\\\"\\\"\",\n    \"schema\": \"\\\"-\\\"\\\"\\\"\\\"#FdP\\\"\",\n    \"service\": \"\\\"\\\"\\\":\\\"\\\"\\\"\\\"(\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"\\\"\\\"O\\\"\\\"\\\"\\\"`\\\"\\\"DI:^\\\"\\\"\\\"\",\n    \"schema\": \"Nii7GGK2V\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																					"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"=s\\\"\\\"\\\"\\\"WH\\\"\\\"\\\"\\\"\\\"\",\n    \"database\": \"DVkUDDaiQu\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"service\": \"\\\"\\\"\\\"Z\\\\\\\"\\\"\\\"\\\"],\\\"\\\";\\\"\"\n  },\n  \"containing_scope\": {\n    \"database\": \"\\\"b\\\"\\\"n\\\"\\\"\\\"\\\"\\\"\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"q\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n  },\n  \"grant_option\": \"<boolean>\",\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6523,7 +6523,7 @@
 																					}
 																				},
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=cascade",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/:name/future-grants:revoke?mode=restrict",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -6539,7 +6539,7 @@
 																					"query": [
 																						{
 																							"key": "mode",
-																							"value": "cascade",
+																							"value": "restrict",
 																							"description": "Query parameter determines whether the revoke operation succeeds or fails for the privileges, based on the whether the privileges had been re-granted to another role.\n- restrict: If the privilege being revoked has been re-granted to another role, the REVOKE command fails.\n- cascade: If the privilege being revoked has been re-granted, the REVOKE command recursively revokes these dependent grants. If the same privilege on an object has been granted to the target role by a different grantor (parallel grant), that grant is not affected and the target role retains the privilege."
 																						}
 																					],
@@ -6610,12 +6610,12 @@
 																	"variable": [
 																		{
 																			"key": "database",
-																			"value": "rpzPsxEE",
+																			"value": "\"]=\"\"\"",
 																			"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																		},
 																		{
 																			"key": "name",
-																			"value": "rpzPsxEE",
+																			"value": "\"]=\"\"\"",
 																			"description": "(Required) Identifier (i.e. name) for the resource."
 																		}
 																	]
@@ -7564,7 +7564,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																	"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -7573,7 +7573,7 @@
 																	}
 																},
 																"url": {
-																	"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																	"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																	"host": [
 																		"{{baseUrl}}"
 																	],
@@ -7593,14 +7593,14 @@
 																		},
 																		{
 																			"key": "targetDatabase",
-																			"value": "ldDwq7",
+																			"value": "HwBPBTqv4",
 																			"description": "Database of the target resource. Defaults to the source's database"
 																		}
 																	],
 																	"variable": [
 																		{
 																			"key": "database",
-																			"value": "rpzPsxEE",
+																			"value": "\"]=\"\"\"",
 																			"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																		}
 																	]
@@ -7629,7 +7629,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																			"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -7638,7 +7638,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -7658,7 +7658,7 @@
 																				},
 																				{
 																					"key": "targetDatabase",
-																					"value": "ldDwq7",
+																					"value": "HwBPBTqv4",
 																					"description": "Database of the target resource. Defaults to the source's database"
 																				}
 																			],
@@ -7710,7 +7710,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																			"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -7719,7 +7719,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -7739,7 +7739,7 @@
 																				},
 																				{
 																					"key": "targetDatabase",
-																					"value": "ldDwq7",
+																					"value": "HwBPBTqv4",
 																					"description": "Database of the target resource. Defaults to the source's database"
 																				}
 																			],
@@ -7799,7 +7799,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																			"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -7808,7 +7808,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -7828,7 +7828,7 @@
 																				},
 																				{
 																					"key": "targetDatabase",
-																					"value": "ldDwq7",
+																					"value": "HwBPBTqv4",
 																					"description": "Database of the target resource. Defaults to the source's database"
 																				}
 																			],
@@ -7880,7 +7880,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																			"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -7889,7 +7889,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -7909,7 +7909,7 @@
 																				},
 																				{
 																					"key": "targetDatabase",
-																					"value": "ldDwq7",
+																					"value": "HwBPBTqv4",
 																					"description": "Database of the target resource. Defaults to the source's database"
 																				}
 																			],
@@ -7961,7 +7961,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																			"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -7970,7 +7970,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -7990,7 +7990,7 @@
 																				},
 																				{
 																					"key": "targetDatabase",
-																					"value": "ldDwq7",
+																					"value": "HwBPBTqv4",
 																					"description": "Database of the target resource. Defaults to the source's database"
 																				}
 																			],
@@ -8042,7 +8042,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																			"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -8051,7 +8051,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -8071,7 +8071,7 @@
 																				},
 																				{
 																					"key": "targetDatabase",
-																					"value": "ldDwq7",
+																					"value": "HwBPBTqv4",
 																					"description": "Database of the target resource. Defaults to the source's database"
 																				}
 																			],
@@ -8123,7 +8123,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																			"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -8132,7 +8132,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -8152,7 +8152,7 @@
 																				},
 																				{
 																					"key": "targetDatabase",
-																					"value": "ldDwq7",
+																					"value": "HwBPBTqv4",
 																					"description": "Database of the target resource. Defaults to the source's database"
 																				}
 																			],
@@ -8204,7 +8204,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																			"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -8213,7 +8213,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -8233,7 +8233,7 @@
 																				},
 																				{
 																					"key": "targetDatabase",
-																					"value": "ldDwq7",
+																					"value": "HwBPBTqv4",
 																					"description": "Database of the target resource. Defaults to the source's database"
 																				}
 																			],
@@ -8285,7 +8285,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																			"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -8294,7 +8294,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -8314,7 +8314,7 @@
 																				},
 																				{
 																					"key": "targetDatabase",
-																					"value": "ldDwq7",
+																					"value": "HwBPBTqv4",
 																					"description": "Database of the target resource. Defaults to the source's database"
 																				}
 																			],
@@ -8366,7 +8366,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																			"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -8375,7 +8375,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -8395,7 +8395,7 @@
 																				},
 																				{
 																					"key": "targetDatabase",
-																					"value": "ldDwq7",
+																					"value": "HwBPBTqv4",
 																					"description": "Database of the target resource. Defaults to the source's database"
 																				}
 																			],
@@ -8447,7 +8447,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																			"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -8456,7 +8456,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -8476,7 +8476,7 @@
 																				},
 																				{
 																					"key": "targetDatabase",
-																					"value": "ldDwq7",
+																					"value": "HwBPBTqv4",
 																					"description": "Database of the target resource. Defaults to the source's database"
 																				}
 																			],
@@ -8528,7 +8528,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																			"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -8537,7 +8537,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -8557,7 +8557,7 @@
 																				},
 																				{
 																					"key": "targetDatabase",
-																					"value": "ldDwq7",
+																					"value": "HwBPBTqv4",
 																					"description": "Database of the target resource. Defaults to the source's database"
 																				}
 																			],
@@ -8609,7 +8609,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																			"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -8618,7 +8618,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -8638,7 +8638,7 @@
 																				},
 																				{
 																					"key": "targetDatabase",
-																					"value": "ldDwq7",
+																					"value": "HwBPBTqv4",
 																					"description": "Database of the target resource. Defaults to the source's database"
 																				}
 																			],
@@ -8690,7 +8690,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"k\\\"\\\"\\\"\\\"I\\\"\\\"}\\\"\"\n}",
+																			"raw": "{\n  \"name\": \"vLHNHIXz26\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -8699,7 +8699,7 @@
 																			}
 																		},
 																		"url": {
-																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=ldDwq7",
+																			"raw": "{{baseUrl}}/api/v2/databases/:database/database-roles/{{name}}:clone?createMode=errorIfExists&targetDatabase=HwBPBTqv4",
 																			"host": [
 																				"{{baseUrl}}"
 																			],
@@ -8719,7 +8719,7 @@
 																				},
 																				{
 																					"key": "targetDatabase",
-																					"value": "ldDwq7",
+																					"value": "HwBPBTqv4",
 																					"description": "Database of the target resource. Defaults to the source's database"
 																				}
 																			],
@@ -8791,7 +8791,7 @@
 															"variable": [
 																{
 																	"key": "database",
-																	"value": "rpzPsxEE",
+																	"value": "\"]=\"\"\"",
 																	"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																}
 															]
@@ -8871,7 +8871,7 @@
 																}
 															],
 															"cookie": [],
-															"body": "[\n  {\n    \"name\": \"hcFKkDBYw\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"granted_to_roles\": \"<long>\",\n    \"granted_to_database_roles\": \"<long>\",\n    \"granted_database_roles\": \"<long>\",\n    \"owner\": \"\\\"E\\\"\",\n    \"owner_role_type\": \"Sl8lLlT\"\n  },\n  {\n    \"name\": \"jYzOuhDnK99\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"granted_to_roles\": \"<long>\",\n    \"granted_to_database_roles\": \"<long>\",\n    \"granted_database_roles\": \"<long>\",\n    \"owner\": \"BWRf1B\",\n    \"owner_role_type\": \"W\"\n  }\n]"
+															"body": "[\n  {\n    \"name\": \"B5regww\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"granted_to_roles\": \"<long>\",\n    \"granted_to_database_roles\": \"<long>\",\n    \"granted_database_roles\": \"<long>\",\n    \"owner\": \"\\\"[u\\\"\",\n    \"owner_role_type\": \"\\\"%^\\\"\\\"/[j\\\"\"\n  },\n  {\n    \"name\": \"\\\"O|\\\"\\\"\\\"\\\"g\\\"\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"granted_to_roles\": \"<long>\",\n    \"granted_to_database_roles\": \"<long>\",\n    \"granted_database_roles\": \"<long>\",\n    \"owner\": \"etFCKZWBzj\",\n    \"owner_role_type\": \"K5f\"\n  }\n]"
 														},
 														{
 															"name": "Successfully accepted the request, but it is not completed yet.",
@@ -9757,7 +9757,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+															"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -9787,7 +9787,7 @@
 															"variable": [
 																{
 																	"key": "database",
-																	"value": "rpzPsxEE",
+																	"value": "\"]=\"\"\"",
 																	"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																}
 															]
@@ -9816,7 +9816,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -9891,7 +9891,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -9974,7 +9974,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -10049,7 +10049,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -10124,7 +10124,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -10199,7 +10199,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -10274,7 +10274,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -10349,7 +10349,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -10424,7 +10424,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -10499,7 +10499,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -10574,7 +10574,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -10649,7 +10649,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -10724,7 +10724,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -10799,7 +10799,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"j#\\\"\\\"@p2\\\"\",\n  \"comment\": \"<string>\"\n}",
+																	"raw": "{\n  \"name\": \"\\\"\\\"\\\"0V\\\"\\\"u\\\"\\\"=uD4W\\\"\",\n  \"comment\": \"<string>\"\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -10883,7 +10883,7 @@
 		},
 		{
 			"key": "name",
-			"value": "rpzPsxEE"
+			"value": "\"]=\"\"\""
 		}
 	]
 }

@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "9c3ea128-cf8d-407d-8b15-cbf7fca98c69",
+		"_postman_id": "d117b8d9-a82f-40a0-9344-87704fc55050",
 		"name": "Snowflake Event Table API",
 		"description": "The Snowflake Event Table API is a REST API that you can use to access, update, and perform certain actions on Event Table resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -59,17 +59,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"K\"\"Co\"\"Vj!\"",
+																							"value": "vR8",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"K\"\"Co\"\"Vj!\"",
+																							"value": "vR8",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "\"K\"\"Co\"\"Vj!\"",
+																							"value": "vR8",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -1004,17 +1004,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"K\"\"Co\"\"Vj!\"",
+																							"value": "vR8",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"K\"\"Co\"\"Vj!\"",
+																							"value": "vR8",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "\"K\"\"Co\"\"Vj!\"",
+																							"value": "vR8",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -2057,12 +2057,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"K\"\"Co\"\"Vj!\"",
+																							"value": "vR8",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"K\"\"Co\"\"Vj!\"",
+																							"value": "vR8",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -3139,12 +3139,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"K\"\"Co\"\"Vj!\"",
+																					"value": "vR8",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"K\"\"Co\"\"Vj!\"",
+																					"value": "vR8",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -4349,12 +4349,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"K\"\"Co\"\"Vj!\"",
+																					"value": "vR8",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"K\"\"Co\"\"Vj!\"",
+																					"value": "vR8",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -5594,7 +5594,7 @@
 		},
 		{
 			"key": "name",
-			"value": "\"K\"\"Co\"\"Vj!\""
+			"value": "vR8"
 		}
 	]
 }

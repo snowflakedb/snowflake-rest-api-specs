@@ -206,8 +206,8 @@ paths:
           $ref: common.yaml#/components/responses/503ServiceUnavailable
         '504':
           $ref: common.yaml#/components/responses/504GatewayTimeout
-  ? /api/v2/grants/{granteeType}/{granteeName}/{bulkGrantType}/{securableTypePlural}/{scopeType}/{scopeName}/privileges/{privilege}
-  : delete:
+  /api/v2/grants/{granteeType}/{granteeName}/{bulkGrantType}/{securableTypePlural}/{scopeType}/{scopeName}/privileges/{privilege}:
+    delete:
       summary: Revoke the specified privilege on the specified all/future securable
         in the given scope from the named grantee.
       description: Endpoint to indicate that the privilege listed on the group securable
@@ -254,8 +254,8 @@ paths:
           $ref: common.yaml#/components/responses/503ServiceUnavailable
         '504':
           $ref: common.yaml#/components/responses/504GatewayTimeout
-  ? /api/v2/grants/{granteeType}/{granteeName}/{bulkGrantType}/{securableTypePlural}/{scopeType}/{scopeName}/privileges/{privilege}/grant-option
-  : delete:
+  /api/v2/grants/{granteeType}/{granteeName}/{bulkGrantType}/{securableTypePlural}/{scopeType}/{scopeName}/privileges/{privilege}/grant-option:
+    delete:
       summary: Revoke the grant option for the specified privilege on the specified
         all/future securable in the given scope from the named grantee.
       description: Endpoint to indicate that the grant option for the privilege listed

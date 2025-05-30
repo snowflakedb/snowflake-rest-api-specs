@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "f759f6fa-7f9f-4753-86b7-ea070b607f81",
+		"_postman_id": "cd8cf85b-d591-429d-876c-45d6bfe406a2",
 		"name": "Snowflake User API",
 		"description": "The Snowflake User API is a REST API that you can use to access, update, and perform certain action on Users in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -54,7 +54,7 @@
 															"variable": [
 																{
 																	"key": "name",
-																	"value": "\"/;\"\"\"\"-\"\"\"\"\"",
+																	"value": "\"\"\"\"\"Q\\\"",
 																	"description": "(Required) Identifier (i.e. name) for the resource."
 																}
 															]
@@ -129,7 +129,7 @@
 																}
 															],
 															"cookie": [],
-															"body": "[\n  {\n    \"securable_type\": \"<string>\",\n    \"securable\": {\n      \"name\": \"pYJGTTr\",\n      \"database\": \"D4Vf3$l\",\n      \"schema\": \"\\\"\\\"\\\"\\\"\"\n    },\n    \"containing_scope\": {\n      \"database\": \"ixB\",\n      \"schema\": \"\\\"\\\"\\\"K\\\"\\\"\\\"\\\"W\\\"\\\"\\\"\\\"\\\"\\\"=L\\\"\"\n    },\n    \"privileges\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"created_on\": \"<dateTime>\",\n    \"granted_by\": \"<string>\"\n  },\n  {\n    \"securable_type\": \"<string>\",\n    \"securable\": {\n      \"name\": \"\\\"r\\\"\\\"\\\"\\\"\\\"\",\n      \"database\": \"SpCA0lKEIRu\",\n      \"schema\": \"\\\"7\\\"\\\"yF\\\"\"\n    },\n    \"containing_scope\": {\n      \"database\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"K\\\"\\\"\\\"\",\n      \"schema\": \"\\\"O\\\"\\\"\\\"\\\"hdnV\\\"\\\"\\\"\\\"=\\\"\\\"\\\"\"\n    },\n    \"privileges\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"created_on\": \"<dateTime>\",\n    \"granted_by\": \"<string>\"\n  }\n]"
+															"body": "[\n  {\n    \"securable_type\": \"<string>\",\n    \"securable\": {\n      \"name\": \"nZ\",\n      \"database\": \"\\\"7l\\\"\\\"pHz\\\"\\\"~v\\\"\\\"\\\"\",\n      \"schema\": \"\\\"(M='k.\\\"\\\"\\\"\\\"yB\\\"\"\n    },\n    \"containing_scope\": {\n      \"database\": \"\\\"%\\\"\\\"\\\"\\\"g&iL5\\\"\",\n      \"schema\": \"\\\"k$\\\"\"\n    },\n    \"privileges\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"created_on\": \"<dateTime>\",\n    \"granted_by\": \"<string>\"\n  },\n  {\n    \"securable_type\": \"<string>\",\n    \"securable\": {\n      \"name\": \"\\\"\\\"\\\"0\\\\:w9\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"database\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"schema\": \"\\\"`\\\"\"\n    },\n    \"containing_scope\": {\n      \"database\": \"nelixLdFC\",\n      \"schema\": \"\\\"+[.\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\"\n    },\n    \"privileges\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"created_on\": \"<dateTime>\",\n    \"granted_by\": \"<string>\"\n  }\n]"
 														},
 														{
 															"name": "Successfully accepted the request, but it is not completed yet.",
@@ -950,7 +950,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+															"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -973,7 +973,7 @@
 															"variable": [
 																{
 																	"key": "name",
-																	"value": "\"/;\"\"\"\"-\"\"\"\"\"",
+																	"value": "\"\"\"\"\"Q\\\"",
 																	"description": "(Required) Identifier (i.e. name) for the resource."
 																}
 															]
@@ -1002,7 +1002,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -1070,7 +1070,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -1146,7 +1146,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -1214,7 +1214,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -1282,7 +1282,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -1350,7 +1350,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -1418,7 +1418,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -1486,7 +1486,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -1554,7 +1554,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -1622,7 +1622,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -1690,7 +1690,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -1758,7 +1758,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -1826,7 +1826,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -1894,7 +1894,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -1964,7 +1964,7 @@
 														],
 														"body": {
 															"mode": "raw",
-															"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+															"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 															"options": {
 																"raw": {
 																	"headerFamily": "json",
@@ -1987,7 +1987,7 @@
 															"variable": [
 																{
 																	"key": "name",
-																	"value": "\"/;\"\"\"\"-\"\"\"\"\"",
+																	"value": "\"\"\"\"\"Q\\\"",
 																	"description": "(Required) Identifier (i.e. name) for the resource."
 																}
 															]
@@ -2016,7 +2016,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -2084,7 +2084,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -2160,7 +2160,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -2228,7 +2228,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -2296,7 +2296,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -2364,7 +2364,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -2432,7 +2432,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -2500,7 +2500,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -2568,7 +2568,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -2636,7 +2636,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -2704,7 +2704,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -2772,7 +2772,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -2840,7 +2840,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -2908,7 +2908,7 @@
 																],
 																"body": {
 																	"mode": "raw",
-																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"?c\\\"\\\"4\\\"\",\n    \"database\": \"\\\"\\\"\\\"[\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"v\\\"\\\"y\\\"\",\n    \"schema\": \"B2pReHWF\"\n  },\n  \"containing_scope\": {\n    \"database\": \"TSr8XK\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"Nh\\\"\\\"P\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+																	"raw": "{\n  \"securable_type\": \"<string>\",\n  \"securable\": {\n    \"name\": \"\\\"i\\\"\\\":[\\\"\\\"\\\"\",\n    \"database\": \"WdKNYIa\",\n    \"schema\": \"BdmzU9b72Q4\"\n  },\n  \"containing_scope\": {\n    \"database\": \"jjrfhwTWEr\",\n    \"schema\": \"\\\"\\\"\\\"\\\"\\\"[5\\\"\\\"\\\"\"\n  },\n  \"privileges\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
 																	"options": {
 																		"raw": {
 																			"headerFamily": "json",
@@ -2983,7 +2983,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "\"/;\"\"\"\"-\"\"\"\"\"",
+															"value": "\"\"\"\"\"Q\\\"",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -3782,7 +3782,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "\"/;\"\"\"\"-\"\"\"\"\"",
+															"value": "\"\"\"\"\"Q\\\"",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -4678,7 +4678,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "\"/;\"\"\"\"-\"\"\"\"\"",
+															"value": "\"\"\"\"\"Q\\\"",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]

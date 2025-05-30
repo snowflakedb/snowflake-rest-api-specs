@@ -86,8 +86,85 @@ paths:
           $ref: common.yaml#/components/responses/503ServiceUnavailable
         '504':
           $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/cortex/analyst/verified-query-suggestions:
+    post:
+      operationId: generateVerifiedQuerySuggestions
+      tags:
+      - cortex-analyst
+      summary: Generate VQ suggestions for a semantic model
+      description: Generate VQ suggestions for a semantic model
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerateVerifiedQuerySuggestionsRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerateVerifiedQuerySuggestionsResponse'
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/cortex/analyst/token:
+    get:
+      operationId: getScopedToken
+      summary: Internal endpoint to exchange a Cortex Analyst Oauth token
+      description: Internal endpoint to exchange a Cortex Analyst Oauth token
+      tags:
+      - cortex-analyst
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenInfo'
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
 components:
   schemas:
+    TokenInfo:
+      type: object
+      properties:
+        token:
+          type: string
+        expiration_seconds:
+          type: integer
     StatusUpdate:
       type: object
       properties:
@@ -207,6 +284,9 @@ components:
             $ref: '#/components/schemas/Warning'
         semantic_model_selection:
           $ref: '#/components/schemas/SemanticModelSelection'
+        response_metadata:
+          type: object
+          additionalProperties: true
       required:
       - message
     Warning:
@@ -239,6 +319,10 @@ components:
           description: The name of the Snowflake native semantic model object
           type: string
           example: db.schema.semantic_view
+        inline_semantic_model:
+          description: A string containing the entire semantic model yaml
+          type: string
+          example: 'name: my_semantic_model\ntables:\n  - name: orders\n...'
     MessageObject:
       type: object
       title: The message object
@@ -438,6 +522,48 @@ components:
       required:
       - request_id
       - positive
+    GenerateVerifiedQuerySuggestionsRequest:
+      type: object
+      description: The request object for getting VQ suggestions
+      properties:
+        semantic_model:
+          $ref: '#/components/schemas/SemanticModelObject'
+        warehouse:
+          type: string
+          description: Warehouse name to use for processing suggestions.
+        experimental:
+          type: string
+          description: JSON serialized string of experimental API fields (undocumented).
+      required:
+      - semantic_model
+    GenerateVerifiedQuerySuggestionsResponse:
+      type: object
+      description: The non-streaming response object for the VQ Suggestions request
+      properties:
+        request_id:
+          type: string
+          description: Unique request ID
+        vq_suggestions:
+          type: array
+          items:
+            $ref: '#/components/schemas/VerifiedQuerySuggestion'
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Warning'
+    VerifiedQuerySuggestion:
+      type: object
+      description: A suggestion to add or remove or replace a Verified Query to a
+        semantic model.
+      properties:
+        score:
+          type: number
+          description: Score of the suggestion, higher is better.
+          format: float
+        vq_to_add:
+          $ref: '#/components/schemas/VerifiedQuery'
+        vq_to_remove:
+          $ref: '#/components/schemas/VerifiedQuery'
   securitySchemes:
     KeyPair:
       $ref: common.yaml#/components/securitySchemes/KeyPair

@@ -224,7 +224,7 @@ paths:
       tags:
       - compute-pool
       description: Resume a compute pool, if suspended. If the specified compute pool
-        is already running, no action is taken.
+        is already running, this will cause a 400 Bad Request error.
       operationId: resumeComputePool
       parameters:
       - $ref: common.yaml#/components/parameters/name

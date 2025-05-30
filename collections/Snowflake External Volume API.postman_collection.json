@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "f84d9039-903c-475f-a4c3-293f968e13f3",
+		"_postman_id": "68429740-689d-4e3b-9b47-c274fb0e803d",
 		"name": "Snowflake External Volume API",
 		"description": "The Snowflake External Volume API is a REST API that you can use to access, update, and perform certain actions on External Volume resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -43,7 +43,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "cgQ1jC3NK",
+															"value": "xiW8yP7a",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -110,7 +110,7 @@
 														}
 													],
 													"cookie": [],
-													"body": "{\n  \"name\": \"\\\"YQ\\\"\\\"e\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3GOV\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"owner\": \"WWiBoTC28\",\n  \"owner_role_type\": \"YQhzYQD\"\n}"
+													"body": "{\n  \"name\": \"tf_7tzk_f\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"owner\": \"Kh\",\n  \"owner_role_type\": \"btkHGfcWa\"\n}"
 												},
 												{
 													"name": "Successfully accepted the request, but it is not completed yet.",
@@ -842,7 +842,7 @@
 													"variable": [
 														{
 															"key": "name",
-															"value": "cgQ1jC3NK",
+															"value": "xiW8yP7a",
 															"description": "(Required) Identifier (i.e. name) for the resource."
 														}
 													]
@@ -2505,7 +2505,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "[\n  {\n    \"name\": \"Plaiuzn7uuR\",\n    \"storage_locations\": [\n      {\n        \"name\": \"<string>\",\n        \"storage_provider\": \"AZURE\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"storage_provider\": \"AZURE\"\n      }\n    ],\n    \"allow_writes\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"owner\": \"\\\"Z\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"owner_role_type\": \"\\\"\\\"\\\".\\\"\\\"\\\"\"\n  },\n  {\n    \"name\": \"o1FmnHT\",\n    \"storage_locations\": [\n      {\n        \"name\": \"<string>\",\n        \"storage_provider\": \"S3GOV\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"storage_provider\": \"S3GOV\"\n      }\n    ],\n    \"allow_writes\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"owner\": \"VyD\",\n    \"owner_role_type\": \"\\\"\\\"\\\"\\\"\\\"co\\\"\\\"\\\"\"\n  }\n]"
+											"body": "[\n  {\n    \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"storage_locations\": [\n      {\n        \"name\": \"<string>\",\n        \"storage_provider\": \"GCS\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"storage_provider\": \"AZURE\"\n      }\n    ],\n    \"allow_writes\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"owner\": \"oizQwk85cC\",\n    \"owner_role_type\": \"QZBeTs7GKd6\"\n  },\n  {\n    \"name\": \"Pvjobe\",\n    \"storage_locations\": [\n      {\n        \"name\": \"<string>\",\n        \"storage_provider\": \"AZURE\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"storage_provider\": \"AZURE\"\n      }\n    ],\n    \"allow_writes\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"owner\": \"cMbZo\",\n    \"owner_role_type\": \"\\\"\\\"\\\"h\\\"\"\n  }\n]"
 										},
 										{
 											"name": "Successfully accepted the request, but it is not completed yet.",
@@ -3235,7 +3235,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+											"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -3285,7 +3285,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3353,7 +3353,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3429,7 +3429,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3497,7 +3497,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3565,7 +3565,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3633,7 +3633,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3701,7 +3701,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3769,7 +3769,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3837,7 +3837,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3905,7 +3905,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -3973,7 +3973,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -4041,7 +4041,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -4109,7 +4109,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -4177,7 +4177,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"\\\"\\\"\\\"he_\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"S3\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
+													"raw": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\",\n  \"storage_locations\": [\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"AZURE\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"storage_provider\": \"GCS\"\n    }\n  ],\n  \"allow_writes\": \"<boolean>\",\n  \"comment\": \"<string>\"\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -4250,7 +4250,7 @@
 		},
 		{
 			"key": "name",
-			"value": "cgQ1jC3NK"
+			"value": "xiW8yP7a"
 		}
 	]
 }

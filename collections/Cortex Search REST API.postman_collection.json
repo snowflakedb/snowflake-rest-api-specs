@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "132b6e3d-06df-407d-8b5a-40d4b286e2d6",
+		"_postman_id": "e0d22322-c37a-4d4f-9875-e5366803745a",
 		"name": "Cortex Search REST API",
 		"description": "OpenAPI 3.0 specification for the Cortex Search REST API\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "43111250"
+		"_exporter_id": "45400803"
 	},
 	"item": [
 		{
@@ -59,17 +59,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																							"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																							"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																							"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -146,7 +146,7 @@
 																						}
 																					],
 																					"cookie": [],
-																					"body": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\",\n  \"source_data_num_rows\": \"<long>\",\n  \"data_timestamp\": \"<dateTime>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"ACTIVE\",\n  \"indexing_error\": \"<string>\",\n  \"serving_data_bytes\": \"<long>\"\n}"
+																					"body": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"created_on\": \"<dateTime>\",\n  \"database_name\": \"<string>\",\n  \"schema_name\": \"<string>\",\n  \"source_data_num_rows\": \"<long>\",\n  \"data_timestamp\": \"<dateTime>\",\n  \"indexing_state\": \"SUSPENDED\",\n  \"serving_state\": \"SUSPENDED\",\n  \"indexing_error\": \"<string>\",\n  \"serving_data_bytes\": \"<long>\"\n}"
 																				},
 																				{
 																					"name": "Successfully accepted the request, but it is not completed yet.",
@@ -1012,17 +1012,17 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																							"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																							"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						},
 																						{
 																							"key": "name",
-																							"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																							"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																							"description": "(Required) Identifier (i.e. name) for the resource."
 																						}
 																					]
@@ -2041,7 +2041,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"queries\": {\n    \"qui_d\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    },\n    \"ex_d7e\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    }\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"irure_9\": 52582000.24713254,\n    \"sedc\": \"eiusmod Excepteur\",\n    \"nulla_6\": -80037236.08739865\n  }\n}",
+																					"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"multi_index_query\": {\n    \"adipisicing_8_\": \"dolor cillum commo\",\n    \"Excepteur_f_\": 74420961.0359574\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"query_similarity_boosts\": [\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        },\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"Lorem03d\": -41917011,\n    \"et_b_b\": \"v\"\n  }\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -2067,12 +2067,12 @@
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																							"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																							"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -2101,7 +2101,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"queries\": {\n    \"qui_d\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    },\n    \"ex_d7e\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    }\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"irure_9\": 52582000.24713254,\n    \"sedc\": \"eiusmod Excepteur\",\n    \"nulla_6\": -80037236.08739865\n  }\n}",
+																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"multi_index_query\": {\n    \"adipisicing_8_\": \"dolor cillum commo\",\n    \"Excepteur_f_\": 74420961.0359574\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"query_similarity_boosts\": [\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        },\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"Lorem03d\": -41917011,\n    \"et_b_b\": \"v\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2144,7 +2144,7 @@
 																						}
 																					],
 																					"cookie": [],
-																					"body": "{\n  \"results\": [\n    {\n      \"elit_5\": \"non adipisicing ea Excepteur\"\n    },\n    {\n      \"est_d37\": true,\n      \"est5\": \"esse sint\",\n      \"dolore88\": \"aute irure fugiat sed\"\n    }\n  ],\n  \"request_id\": \"<string>\"\n}"
+																					"body": "{\n  \"results\": [\n    {\n      \"nulla_f\": \"adipisicing laboris qui reprehenderit quis\",\n      \"veniamf\": -93084929\n    },\n    {\n      \"magna47\": false\n    }\n  ],\n  \"request_id\": \"<string>\"\n}"
 																				},
 																				{
 																					"name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -2167,7 +2167,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"queries\": {\n    \"qui_d\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    },\n    \"ex_d7e\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    }\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"irure_9\": 52582000.24713254,\n    \"sedc\": \"eiusmod Excepteur\",\n    \"nulla_6\": -80037236.08739865\n  }\n}",
+																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"multi_index_query\": {\n    \"adipisicing_8_\": \"dolor cillum commo\",\n    \"Excepteur_f_\": 74420961.0359574\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"query_similarity_boosts\": [\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        },\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"Lorem03d\": -41917011,\n    \"et_b_b\": \"v\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2241,7 +2241,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"queries\": {\n    \"qui_d\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    },\n    \"ex_d7e\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    }\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"irure_9\": 52582000.24713254,\n    \"sedc\": \"eiusmod Excepteur\",\n    \"nulla_6\": -80037236.08739865\n  }\n}",
+																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"multi_index_query\": {\n    \"adipisicing_8_\": \"dolor cillum commo\",\n    \"Excepteur_f_\": 74420961.0359574\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"query_similarity_boosts\": [\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        },\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"Lorem03d\": -41917011,\n    \"et_b_b\": \"v\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2315,7 +2315,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"queries\": {\n    \"qui_d\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    },\n    \"ex_d7e\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    }\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"irure_9\": 52582000.24713254,\n    \"sedc\": \"eiusmod Excepteur\",\n    \"nulla_6\": -80037236.08739865\n  }\n}",
+																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"multi_index_query\": {\n    \"adipisicing_8_\": \"dolor cillum commo\",\n    \"Excepteur_f_\": 74420961.0359574\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"query_similarity_boosts\": [\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        },\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"Lorem03d\": -41917011,\n    \"et_b_b\": \"v\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2389,7 +2389,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"queries\": {\n    \"qui_d\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    },\n    \"ex_d7e\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    }\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"irure_9\": 52582000.24713254,\n    \"sedc\": \"eiusmod Excepteur\",\n    \"nulla_6\": -80037236.08739865\n  }\n}",
+																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"multi_index_query\": {\n    \"adipisicing_8_\": \"dolor cillum commo\",\n    \"Excepteur_f_\": 74420961.0359574\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"query_similarity_boosts\": [\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        },\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"Lorem03d\": -41917011,\n    \"et_b_b\": \"v\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2463,7 +2463,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"queries\": {\n    \"qui_d\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    },\n    \"ex_d7e\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    }\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"irure_9\": 52582000.24713254,\n    \"sedc\": \"eiusmod Excepteur\",\n    \"nulla_6\": -80037236.08739865\n  }\n}",
+																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"multi_index_query\": {\n    \"adipisicing_8_\": \"dolor cillum commo\",\n    \"Excepteur_f_\": 74420961.0359574\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"query_similarity_boosts\": [\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        },\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"Lorem03d\": -41917011,\n    \"et_b_b\": \"v\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2537,7 +2537,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"queries\": {\n    \"qui_d\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    },\n    \"ex_d7e\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    }\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"irure_9\": 52582000.24713254,\n    \"sedc\": \"eiusmod Excepteur\",\n    \"nulla_6\": -80037236.08739865\n  }\n}",
+																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"multi_index_query\": {\n    \"adipisicing_8_\": \"dolor cillum commo\",\n    \"Excepteur_f_\": 74420961.0359574\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"query_similarity_boosts\": [\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        },\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"Lorem03d\": -41917011,\n    \"et_b_b\": \"v\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2611,7 +2611,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"queries\": {\n    \"qui_d\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    },\n    \"ex_d7e\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    }\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"irure_9\": 52582000.24713254,\n    \"sedc\": \"eiusmod Excepteur\",\n    \"nulla_6\": -80037236.08739865\n  }\n}",
+																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"multi_index_query\": {\n    \"adipisicing_8_\": \"dolor cillum commo\",\n    \"Excepteur_f_\": 74420961.0359574\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"query_similarity_boosts\": [\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        },\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"Lorem03d\": -41917011,\n    \"et_b_b\": \"v\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2685,7 +2685,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"queries\": {\n    \"qui_d\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    },\n    \"ex_d7e\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    }\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"irure_9\": 52582000.24713254,\n    \"sedc\": \"eiusmod Excepteur\",\n    \"nulla_6\": -80037236.08739865\n  }\n}",
+																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"multi_index_query\": {\n    \"adipisicing_8_\": \"dolor cillum commo\",\n    \"Excepteur_f_\": 74420961.0359574\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"query_similarity_boosts\": [\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        },\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"Lorem03d\": -41917011,\n    \"et_b_b\": \"v\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2759,7 +2759,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"queries\": {\n    \"qui_d\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    },\n    \"ex_d7e\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    }\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"irure_9\": 52582000.24713254,\n    \"sedc\": \"eiusmod Excepteur\",\n    \"nulla_6\": -80037236.08739865\n  }\n}",
+																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"multi_index_query\": {\n    \"adipisicing_8_\": \"dolor cillum commo\",\n    \"Excepteur_f_\": 74420961.0359574\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"query_similarity_boosts\": [\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        },\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"Lorem03d\": -41917011,\n    \"et_b_b\": \"v\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2833,7 +2833,7 @@
 																						],
 																						"body": {
 																							"mode": "raw",
-																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"queries\": {\n    \"qui_d\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    },\n    \"ex_d7e\": {\n      \"text\": \"<string>\",\n      \"vector\": [\n        \"<float>\",\n        \"<float>\"\n      ]\n    }\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"irure_9\": 52582000.24713254,\n    \"sedc\": \"eiusmod Excepteur\",\n    \"nulla_6\": -80037236.08739865\n  }\n}",
+																							"raw": "{\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\",\n  \"multi_index_query\": {\n    \"adipisicing_8_\": \"dolor cillum commo\",\n    \"Excepteur_f_\": 74420961.0359574\n  },\n  \"filter\": {},\n  \"limit\": 10,\n  \"scoring_config\": {\n    \"functions\": {\n      \"numeric_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"time_decays\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\",\n          \"limit_hours\": \"<number>\",\n          \"now\": \"<dateTime>\"\n        }\n      ],\n      \"text_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"vector_boosts\": [\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        },\n        {\n          \"column\": \"<string>\",\n          \"weight\": \"<number>\"\n        }\n      ],\n      \"query_similarity_boosts\": [\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        },\n        {\n          \"cortex_search_service\": \"<string>\",\n          \"previous_query_column\": \"<string>\",\n          \"documents_column\": \"<string>\"\n        }\n      ]\n    },\n    \"reranker\": \"<string>\",\n    \"weights\": {\n      \"texts\": \"<number>\",\n      \"vectors\": \"<number>\",\n      \"reranker\": \"<number>\"\n    }\n  },\n  \"experimental\": {\n    \"Lorem03d\": -41917011,\n    \"et_b_b\": \"v\"\n  }\n}",
 																							"options": {
 																								"raw": {
 																									"headerFamily": "json",
@@ -2904,7 +2904,7 @@
 																					}
 																				],
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -2926,19 +2926,19 @@
 																						},
 																						{
 																							"key": "target",
-																							"value": "SERVING",
+																							"value": "indexing",
 																							"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																						}
 																					],
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																							"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																							"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -2962,7 +2962,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -2984,7 +2984,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -3034,7 +3034,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3056,7 +3056,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -3114,7 +3114,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3136,7 +3136,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -3186,7 +3186,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3208,7 +3208,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -3258,7 +3258,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3280,7 +3280,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -3330,7 +3330,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3352,7 +3352,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -3402,7 +3402,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3424,7 +3424,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -3474,7 +3474,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3496,7 +3496,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -3546,7 +3546,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3568,7 +3568,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -3618,7 +3618,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3640,7 +3640,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -3690,7 +3690,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3712,7 +3712,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -3762,7 +3762,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3784,7 +3784,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -3834,7 +3834,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3856,7 +3856,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -3906,7 +3906,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:suspend?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -3928,7 +3928,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -3980,7 +3980,7 @@
 																					}
 																				],
 																				"url": {
-																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																					"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																					"host": [
 																						"{{baseUrl}}"
 																					],
@@ -4002,19 +4002,19 @@
 																						},
 																						{
 																							"key": "target",
-																							"value": "SERVING",
+																							"value": "indexing",
 																							"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																						}
 																					],
 																					"variable": [
 																						{
 																							"key": "database",
-																							"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																							"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																							"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																						},
 																						{
 																							"key": "schema",
-																							"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																							"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																							"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																						}
 																					]
@@ -4038,7 +4038,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -4060,7 +4060,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -4110,7 +4110,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -4132,7 +4132,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -4190,7 +4190,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -4212,7 +4212,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -4262,7 +4262,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -4284,7 +4284,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -4334,7 +4334,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -4356,7 +4356,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -4406,7 +4406,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -4428,7 +4428,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -4478,7 +4478,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -4500,7 +4500,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -4550,7 +4550,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -4572,7 +4572,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -4622,7 +4622,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -4644,7 +4644,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -4694,7 +4694,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -4716,7 +4716,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -4766,7 +4766,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -4788,7 +4788,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -4838,7 +4838,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -4860,7 +4860,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -4910,7 +4910,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -4932,7 +4932,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -4982,7 +4982,7 @@
 																							}
 																						],
 																						"url": {
-																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=SERVING",
+																							"raw": "{{baseUrl}}/api/v2/databases/:database/schemas/:schema/cortex-search-services/{{name}}:resume?ifExists=false&target=indexing",
 																							"host": [
 																								"{{baseUrl}}"
 																							],
@@ -5004,7 +5004,7 @@
 																								},
 																								{
 																									"key": "target",
-																									"value": "SERVING",
+																									"value": "indexing",
 																									"description": "Query parameter that identifies the target to which suspension or resumption of the cortex search service should be applied."
 																								}
 																							],
@@ -5086,12 +5086,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																					"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																					"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -5181,7 +5181,7 @@
 																				}
 																			],
 																			"cookie": [],
-																			"body": "[\n  {\n    \"name\": \"<string>\",\n    \"search_column\": \"<string>\",\n    \"columns\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"attribute_columns\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"target_lag\": {\n      \"type\": \"<string>\"\n    },\n    \"warehouse\": \"<string>\",\n    \"definition\": \"<string>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"source_data_num_rows\": \"<long>\",\n    \"data_timestamp\": \"<dateTime>\",\n    \"indexing_state\": \"INITIALIZING\",\n    \"serving_state\": \"INITIALIZING\",\n    \"indexing_error\": \"<string>\",\n    \"serving_data_bytes\": \"<long>\"\n  },\n  {\n    \"name\": \"<string>\",\n    \"search_column\": \"<string>\",\n    \"columns\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"attribute_columns\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"target_lag\": {\n      \"type\": \"<string>\"\n    },\n    \"warehouse\": \"<string>\",\n    \"definition\": \"<string>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"source_data_num_rows\": \"<long>\",\n    \"data_timestamp\": \"<dateTime>\",\n    \"indexing_state\": \"INITIALIZING\",\n    \"serving_state\": \"ACTIVE\",\n    \"indexing_error\": \"<string>\",\n    \"serving_data_bytes\": \"<long>\"\n  }\n]"
+																			"body": "[\n  {\n    \"name\": \"<string>\",\n    \"search_column\": \"<string>\",\n    \"columns\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"attribute_columns\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"target_lag\": {\n      \"type\": \"<string>\"\n    },\n    \"warehouse\": \"<string>\",\n    \"definition\": \"<string>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"source_data_num_rows\": \"<long>\",\n    \"data_timestamp\": \"<dateTime>\",\n    \"indexing_state\": \"INITIALIZING\",\n    \"serving_state\": \"INITIALIZING\",\n    \"indexing_error\": \"<string>\",\n    \"serving_data_bytes\": \"<long>\"\n  },\n  {\n    \"name\": \"<string>\",\n    \"search_column\": \"<string>\",\n    \"columns\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"attribute_columns\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"target_lag\": {\n      \"type\": \"<string>\"\n    },\n    \"warehouse\": \"<string>\",\n    \"definition\": \"<string>\",\n    \"comment\": \"<string>\",\n    \"created_on\": \"<dateTime>\",\n    \"database_name\": \"<string>\",\n    \"schema_name\": \"<string>\",\n    \"source_data_num_rows\": \"<long>\",\n    \"data_timestamp\": \"<dateTime>\",\n    \"indexing_state\": \"SUSPENDED\",\n    \"serving_state\": \"SUSPENDED\",\n    \"indexing_error\": \"<string>\",\n    \"serving_data_bytes\": \"<long>\"\n  }\n]"
 																		},
 																		{
 																			"name": "Successfully accepted the request, but it is not completed yet.",
@@ -6197,7 +6197,7 @@
 																		],
 																		"body": {
 																			"mode": "raw",
-																			"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																			"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																			"options": {
 																				"raw": {
 																					"headerFamily": "json",
@@ -6229,12 +6229,12 @@
 																			"variable": [
 																				{
 																					"key": "database",
-																					"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																					"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																					"description": "(Required) Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
 																				},
 																				{
 																					"key": "schema",
-																					"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\"",
+																					"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\"",
 																					"description": "(Required) Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
 																				}
 																			]
@@ -6263,7 +6263,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6343,7 +6343,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6431,7 +6431,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6511,7 +6511,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6591,7 +6591,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6671,7 +6671,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6751,7 +6751,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6831,7 +6831,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6911,7 +6911,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -6991,7 +6991,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -7071,7 +7071,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -7151,7 +7151,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -7231,7 +7231,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -7311,7 +7311,7 @@
 																				],
 																				"body": {
 																					"mode": "raw",
-																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"SUSPENDED\"\n}",
+																					"raw": "{\n  \"name\": \"<string>\",\n  \"search_column\": \"<string>\",\n  \"target_lag\": {\n    \"type\": \"<string>\"\n  },\n  \"warehouse\": \"<string>\",\n  \"definition\": \"<string>\",\n  \"columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"attribute_columns\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"indexing_state\": \"ACTIVE\",\n  \"serving_state\": \"INITIALIZING\"\n}",
 																					"options": {
 																						"raw": {
 																							"headerFamily": "json",
@@ -7408,7 +7408,7 @@
 		},
 		{
 			"key": "name",
-			"value": "\"\"\"\"\"\"\"c\"\"QN1\"\"\""
+			"value": "\"\"\"\"\"2:5d\"\"\"\"B0M\""
 		}
 	]
 }
