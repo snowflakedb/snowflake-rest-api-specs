@@ -256,6 +256,56 @@ paths:
           $ref: common.yaml#/components/responses/503ServiceUnavailable
         '504':
           $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/cortex-search-services/{service_name}:suggest:
+    post:
+      operationId: suggestCortexSearchService
+      summary: Suggest from a Cortex Search Service
+      description: Suggest from a Cortex Search Service to get auto-complete or contextual
+        suggestions
+      tags:
+      - cortex-search-service
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - in: path
+        name: service_name
+        required: true
+        schema:
+          type: string
+        description: The name of the Cortex Search Service
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SuggestQueryRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuggestQueryResponse'
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
   /api/v2/databases/{database}/schemas/{schema}/cortex-search-services/{name}:suspend:
     post:
       operationId: suspendCortexSearchService
@@ -341,6 +391,47 @@ paths:
           $ref: common.yaml#/components/responses/503ServiceUnavailable
         '504':
           $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/cortex-search-services/{name}:feedback:
+    summary: Create a feedback event for a Cortex Search query result.
+    description: 'Create a feedback event for a Cortex Search result.
+
+      '
+    post:
+      operationId: sendFeedback
+      tags:
+      - cortex-search-service
+      description: Send user feedback for a Cortex Search result
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SendFeedbackRequest'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
 components:
   parameters:
     suspendResumeTarget:
@@ -385,12 +476,14 @@ components:
           default: 10
         scoring_config:
           $ref: '#/components/schemas/ScoringConfig'
+        scoring_profile:
+          description: Mutually exclusive with scoring_config. Specifies the pre-defined
+            name of a profile on the cortex search service that resolves to scoring_config.
+          type: string
         experimental:
           description: reserved
           type: object
           additionalProperties: true
-      required:
-      - columns
     ScoringConfig:
       type: object
       description: reserved
@@ -401,6 +494,10 @@ components:
           $ref: '#/components/schemas/Reranker'
         weights:
           $ref: '#/components/schemas/Weights'
+        retrieval_weights:
+          $ref: '#/components/schemas/RetrievalWeights'
+        ranking_weights:
+          $ref: '#/components/schemas/RankingWeights'
     Weights:
       type: object
       description: Weights to apply to each scoring component.
@@ -417,6 +514,34 @@ components:
           description: Weight to apply to reranker-specific scoring component.
           type: number
           example: 0.5
+    RetrievalWeights:
+      type: object
+      description: Weights to apply to retrieval stage components.
+      properties:
+        texts:
+          description: Multiplier for text-based scoring in retrieval.
+          type: number
+          example: 1.0
+        vectors:
+          description: Multiplier for vector-based scoring in retrieval.
+          type: number
+          example: 1.0
+    RankingWeights:
+      type: object
+      description: Weights to apply to ranking stage components.
+      properties:
+        texts:
+          description: Multiplier for text-based scoring in ranking.
+          type: number
+          example: 1.0
+        vectors:
+          description: Multiplier for vector-based scoring in ranking.
+          type: number
+          example: 1.0
+        reranker:
+          description: Multiplier for reranker score in ranking.
+          type: number
+          example: 1.0
     Functions:
       type: object
       description: Functions to apply for scoring this request.
@@ -546,7 +671,55 @@ components:
           items:
             type: object
             additionalProperties: true
-            description: Map of column names to bytes.
+            description: Map of column names to values (as bytes).
+        request_id:
+          type: string
+          description: ID of the request.
+      required:
+      - results
+      - request_id
+    ResultRow:
+      type: object
+      description: Map of column names to values.
+      properties:
+        columns:
+          type: object
+    SuggestQueryRequest:
+      type: object
+      description: A Suggest request.
+      properties:
+        query:
+          description: The text query on which to suggest.
+          type: string
+        columns:
+          description: List of columns to return.
+          type: array
+          items:
+            type: string
+        limit:
+          description: Max number of results to return.
+          type: integer
+          default: 5
+      required:
+      - query
+    SuggestResult:
+      type: object
+      description: Suggest results.
+      properties:
+        rows:
+          type: array
+          description: List of result rows.
+          items:
+            $ref: '#/components/schemas/ResultRow'
+    SuggestQueryResponse:
+      type: object
+      description: Suggest results.
+      properties:
+        results:
+          type: array
+          description: List of result rows.
+          items:
+            $ref: '#/components/schemas/SuggestResult'
         request_id:
           type: string
           description: ID of the request.
@@ -637,6 +810,22 @@ components:
           format: int64
           readOnly: true
           description: Size of the serving index, in bytes.
+    SendFeedbackRequest:
+      type: object
+      description: The request object for sending user feedback on Cortex Search results
+      properties:
+        request_id:
+          type: string
+          description: Request id associated with the feedback
+        positive:
+          type: boolean
+          description: Whether the results were good (true) or bad (false)
+        feedback_message:
+          type: string
+          description: The text for the detailed feedback message
+      required:
+      - request_id
+      - positive
     SchedulingState:
       type: string
       enum:

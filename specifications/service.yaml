@@ -348,7 +348,9 @@ paths:
           $ref: common.yaml#/components/responses/504GatewayTimeout
   /api/v2/databases/{database}/schemas/{schema}/services/{name}/status:
     get:
-      description: Fetch the status for a given service.
+      deprecated: true
+      description: Fetch the status for a given service. Deprecated - use listServiceContainers
+        instead.
       tags:
       - service
       operationId: fetchServiceStatus

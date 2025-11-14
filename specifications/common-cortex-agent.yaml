@@ -1,0 +1,125 @@
+components:
+  schemas:
+    AgentRunRequest:
+      type: object
+      description: 'The main request object for running the Cortex agent.
+
+        Contains all necessary information for processing a user query.
+
+        '
+      required:
+      - messages
+      properties:
+        models:
+          $ref: common-cortex-tool.yaml#/components/schemas/AgentModels
+        orchestration:
+          $ref: common-cortex-tool.yaml#/components/schemas/AgentOrchestration
+        instructions:
+          $ref: common-cortex-tool.yaml#/components/schemas/AgentInstructions
+        model:
+          type: string
+          description: The identifier of the LLM to use for processing.
+          example: anthropic-claude-3.5-Sonnet-v2
+        response_instruction:
+          type: string
+          description: 'Optional instructions to guide the model''s response style
+            and behavior.
+
+            Can be used to set the tone, format, or specific requirements for responses.
+
+            '
+          example: You will always maintain a friendly tone and provide concise responses
+            with bullet points
+        experimental:
+          description: reserved
+          type: object
+        messages:
+          type: array
+          description: 'The conversation history and current message.
+
+            Contains both user queries and assistant responses in chronological order.
+
+            '
+          items:
+            $ref: common-cortex-tool.yaml#/components/schemas/Message
+          minItems: 1
+        tools:
+          type: array
+          description: 'List of tools available for the agent to use.
+
+            Tools may have a corresponding configuration in tool_resources.
+
+            '
+          items:
+            $ref: common-cortex-tool.yaml#/components/schemas/Tool
+          example:
+          - tool_spec:
+              type: cortex_analyst_text_to_sql
+              name: Analyst1
+        tool_resources:
+          $ref: common-cortex-tool.yaml#/components/schemas/ToolResources
+        tool_choice:
+          $ref: common-cortex-tool.yaml#/components/schemas/ToolChoice
+        thread_id:
+          type: integer
+          format: int64
+          description: 'The id of the thread.
+
+            '
+        parent_message_id:
+          type: integer
+          format: int64
+          description: 'The id of the message from which this run should begin.
+
+            '
+    DataAgentRunRequest:
+      type: object
+      description: 'The request object for running the Data Cortex agent.
+
+        '
+      required:
+      - messages
+      properties:
+        thread_id:
+          type: integer
+          format: int64
+          description: 'The id of the thread.
+
+            '
+        parent_message_id:
+          type: integer
+          format: int64
+          description: 'The id of the message from which this run should begin.
+
+            '
+        messages:
+          type: array
+          description: 'If thread id and parent message id are present, the current
+            user messages in this conversation turn.
+
+            Else, the conversation history and current message. Contains both user
+            queries and assistant responses in chronological order.
+
+            '
+          items:
+            $ref: common-cortex-tool.yaml#/components/schemas/Message
+          minItems: 1
+        execution_trace:
+          type: object
+          description: 'Configuration for execution tracing.
+
+            '
+          required:
+          - enabled
+          properties:
+            enabled:
+              type: boolean
+              description: 'Whether execution tracing is enabled.
+
+                '
+          additionalProperties: true
+        tool_choice:
+          $ref: common-cortex-tool.yaml#/components/schemas/ToolChoice
+        experimental:
+          description: reserved
+          type: object

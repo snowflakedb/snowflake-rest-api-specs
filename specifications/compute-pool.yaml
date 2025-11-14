@@ -350,6 +350,46 @@ paths:
           $ref: common.yaml#/components/responses/503ServiceUnavailable
         '504':
           $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/compute-pools/instance-families:
+    get:
+      summary: Lists available compute pool instance families.
+      tags:
+      - compute-pool
+      description: Lists all available instance families that can be used when creating
+        compute pools.
+      operationId: listComputePoolInstanceFamilies
+      responses:
+        '200':
+          description: Successful request.
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ComputePoolInstanceFamily'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
 components:
   schemas:
     ComputePool:
@@ -366,7 +406,8 @@ components:
           description: Maximum number of nodes for the compute pool.
         instance_family:
           type: string
-          description: Instance family for the compute pool.
+          description: Instance family for the compute pool. Use the /api/v2/compute-pools/instance-families
+            endpoint to retrieve available values.
         auto_resume:
           type: boolean
           description: Whether Snowflake automatically resumes the compute pool when
@@ -453,6 +494,24 @@ components:
           type: string
           description: Current status of the compute pool if any.
           readOnly: true
+        desired_nodes:
+          type: integer
+          description: Number of nodes to maintain on the compute pool
+          readOnly: true
+        desired_nodes_expire_after:
+          type: string
+          description: Time after which the desired nodes on the compute pool will
+            expire.
+          format: date-time
+          readOnly: true
+        optimize_for_capacity:
+          type: boolean
+          description: Whether the compute pool is optimized for capacity.
+          readOnly: true
+        placement_group:
+          type: string
+          description: The name of the placement group on the compute pool.
+          readOnly: true
       example:
         name: compute_pool_name
         warehouse: test_wh
@@ -478,11 +537,77 @@ components:
         error_code: '392507'
         status_message: Compute Pool is resizing for last 10 minutes. We have observed
           CAPACITY_ERROR. Please refer to our documentation.
+        desired_nodes: 4
+        desired_nodes_expire_after: '2024-06-19T01:01:01.111111'
+        placement_group: A
       required:
       - name
       - instance_family
       - min_nodes
       - max_nodes
+    ComputePoolInstanceFamily:
+      type: object
+      description: A compute pool instance family.
+      properties:
+        name:
+          type: string
+          description: Name of the instance family.
+          example: CPU_X64_S
+        description:
+          type: string
+          description: Description of the instance family.
+          example: Ideal for hosting multiple services/jobs while saving cost.
+        vcpu:
+          type: integer
+          description: Number of vCPUs.
+          format: int64
+          example: 3
+        memory_gib:
+          type: integer
+          description: Memory in GiB.
+          format: int64
+          example: 13
+        storage_gib:
+          type: number
+          description: Storage in GiB.
+          format: double
+          example: 93.13
+        gpu:
+          type: string
+          description: GPU model (if applicable).
+          example: NVIDIA A10G
+          nullable: true
+        gpu_count:
+          type: integer
+          description: Number of GPUs.
+          format: int64
+          example: 0
+        gpu_memory_gib:
+          type: integer
+          description: GPU memory in GiB (if applicable).
+          format: int64
+          example: 0
+        current_node_usage:
+          type: integer
+          description: Number of nodes currently utilizing this instance family
+          format: int64
+          example: 0
+        message:
+          type: string
+          description: Additional information about the instance family.
+          example: ''
+          nullable: true
+      example:
+        name: CPU_X64_S
+        description: Ideal for hosting multiple services/jobs while saving cost.
+        vcpu: 3
+        memory_gib: 13
+        storage_gib: 93.13
+        gpu: null
+        gpu_count: 0
+        gpu_memory_gib: 0
+        current_node_usage: 0
+        message: ''
   securitySchemes:
     KeyPair:
       $ref: common.yaml#/components/securitySchemes/KeyPair

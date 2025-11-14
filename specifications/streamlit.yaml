@@ -1,0 +1,904 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake REST Server
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Streamlit API
+  description: The Snowflake Streamlit API is a REST API that you can use to access,
+    update, and perform certain actions on Streamlit resources in a Snowflake database.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/databases/{database}/schemas/{schema}/streamlits:
+    get:
+      summary: List Streamlits
+      tags:
+      - streamlit
+      description: List Streamlits in a schema. Supports filtering with pattern matching.
+      operationId: listStreamlits
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/like
+      - $ref: common.yaml#/components/parameters/startsWith
+      - $ref: common.yaml#/components/parameters/showLimit
+      - $ref: common.yaml#/components/parameters/fromName
+      responses:
+        '200':
+          description: Successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Streamlit'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    post:
+      summary: Create a Streamlit
+      tags:
+      - streamlit
+      description: Create a new Streamlit application, or replace an existing one.
+        Supports CREATE, CREATE OR REPLACE, and CREATE IF NOT EXISTS modes.
+      operationId: createStreamlit
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/createMode
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Streamlit'
+  /api/v2/databases/{database}/schemas/{schema}/streamlits/{name}:
+    get:
+      summary: Fetch a Streamlit
+      tags:
+      - streamlit
+      description: Fetch detailed information about a specific Streamlit by name,
+        including metadata, configuration, and version details.
+      operationId: fetchStreamlit
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          description: Successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Streamlit'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    delete:
+      summary: Delete a Streamlit
+      tags:
+      - streamlit
+      description: Delete a Streamlit. The Streamlit can be restored using undrop
+        within the retention period.
+      operationId: deleteStreamlit
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/streamlits/{name}:undrop:
+    post:
+      summary: Undrop a Streamlit
+      tags:
+      - streamlit
+      description: Restore a previously deleted Streamlit within the retention period.
+      operationId: undropStreamlit
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/streamlits/{name}:rename:
+    post:
+      summary: Rename a Streamlit
+      tags:
+      - streamlit
+      description: Rename a Streamlit to a new name, optionally in a different database
+        or schema.
+      operationId: renameStreamlit
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      - name: targetDatabase
+        description: Database of the target resource. Defaults to the source's database
+        in: query
+        required: false
+        schema:
+          $ref: common.yaml#/components/schemas/Identifier
+      - name: targetSchema
+        description: Schema of the target resource. Defaults to the source's schema
+        in: query
+        required: false
+        schema:
+          $ref: common.yaml#/components/schemas/Identifier
+      - name: targetName
+        description: Name of the target resource.
+        in: query
+        required: true
+        schema:
+          $ref: common.yaml#/components/schemas/Identifier
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/streamlits/{name}:add-live-version:
+    post:
+      summary: Add live version
+      tags:
+      - streamlit
+      description: Add a live version to the Streamlit, making a specific version
+        active for users.
+      operationId: addLiveVersionStreamlit
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - name: fromLast
+        in: query
+        required: false
+        description: Set the LIVE version to the LAST version of the Streamlit.
+        schema:
+          type: boolean
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddLiveVersionStreamlitRequest'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/streamlits/{name}:commit:
+    post:
+      summary: Commit live version
+      tags:
+      - streamlit
+      description: If a Git connection is set up, commit the LIVE version of the Streamlit
+        to the Git repository.
+      operationId: commitStreamlit
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CommitStreamlitRequest'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/streamlits/{name}:add-version:
+    post:
+      summary: Add version from source
+      tags:
+      - streamlit
+      description: Add a new version to the Streamlit by copying files from a specified
+        stage location.
+      operationId: addVersionStreamlit
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddVersionStreamlitRequest'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/streamlits/{name}:add-version-from-git:
+    post:
+      summary: Add version from Git
+      tags:
+      - streamlit
+      description: Add a new version to the Streamlit using a Git reference URI. The
+        URI can point to either a tag or a commit.
+      operationId: addVersionFromGitStreamlit
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddVersionFromGitStreamlitRequest'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/streamlits/{name}:abort:
+    post:
+      summary: Abort live version
+      tags:
+      - streamlit
+      description: Abort the live version of the Streamlit, discarding uncommitted
+        changes if a Git connection is configured.
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      operationId: abortStreamlit
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/streamlits/{name}:pull:
+    post:
+      summary: Pull from Git
+      tags:
+      - streamlit
+      description: Pull the latest changes from the Git repository for a Streamlit
+        with Git integration.
+      operationId: pullStreamlit
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/streamlits/{name}:push:
+    post:
+      summary: Push to Git
+      tags:
+      - streamlit
+      description: Push committed changes from the Streamlit back to its connected
+        Git repository.
+      operationId: pushStreamlit
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StreamlitPushOptions'
+components:
+  schemas:
+    Streamlit:
+      type: object
+      description: A Snowflake Streamlit object
+      properties:
+        name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Name of the Streamlit
+        comment:
+          type: string
+          description: Optional description of the Streamlit app, used for documentation
+            or metadata purposes
+        imports:
+          type: array
+          items:
+            type: string
+          description: List of files to be imported from a stage.
+        external_access_integrations:
+          type: array
+          items:
+            type: string
+          description: List of external access integrations needed in order for the
+            Streamlit app code to access external networks.
+        external_access_secrets:
+          type: string
+          readOnly: true
+          description: Secrets needed for the Streamlit app code to access external
+            networks.
+        title:
+          type: string
+          description: User-facing title of the Streamlit app.
+        main_file:
+          type: string
+          description: Name and path of the entry file for the Streamlit app
+        query_warehouse:
+          type: string
+          description: Warehouse used to run queries issued by the Streamlit app
+        default_version:
+          type: string
+          description: The default version name of Streamlit. Valid values are "first"
+            (first version), "last" (latest version), or "version$N" (specific version,
+            e.g., "version$1"). Custom names are not supported.
+        created_on:
+          type: string
+          format: date-time
+          readOnly: true
+          description: Date and time when the Streamlit was created.
+        default_version_details:
+          $ref: '#/components/schemas/VersionDetailsStreamlit'
+          readOnly: true
+        last_version_details:
+          $ref: '#/components/schemas/VersionDetailsStreamlit'
+          readOnly: true
+        database_name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: Database in which the Streamlit is stored
+        schema_name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: Schema in which the Streamlit is stored
+        owner:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: Role that owns the Streamlit
+        owner_role_type:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: The type of role that owns the Streamlit
+        source_location:
+          type: string
+          description: The stage from which the source files are copied to initialize
+            the Streamlit app.
+        url_id:
+          type: string
+          readOnly: true
+          description: A unique ID associated with the Streamlit object's URL.
+        default_packages:
+          type: array
+          items:
+            type: string
+          readOnly: true
+          description: Default Python packages for Streamlit apps.
+        user_packages:
+          type: array
+          items:
+            type: string
+          readOnly: true
+          description: Python packages specified in the environment.yml file.
+        live_version_location_uri:
+          type: string
+          readOnly: true
+          description: The location of the Streamlit object's live version files.
+      required:
+      - name
+    StreamlitPushOptions:
+      type: object
+      description: Options for the PUSH command.
+      properties:
+        auth_type:
+          type: string
+          description: Specifies which authentication method is used.
+      discriminator:
+        propertyName: auth_type
+        mapping:
+          CREDENTIALS: GitPushWithCredentials
+          USERNAME_PASSWORD: GitPushWithUsernamePassword
+    GitPushWithCredentials:
+      description: Git push using Snowflake-managed credentials.
+      allOf:
+      - $ref: '#/components/schemas/StreamlitPushOptions'
+      type: object
+      properties:
+        git_credentials:
+          type: string
+          description: The Snowflake secret containing the credentials to use.
+        git_author_name:
+          type: string
+          description: The name of the Git author.
+        git_author_email:
+          type: string
+          description: The email of the Git author.
+        to_git_branch_uri:
+          type: string
+          description: Pushes committed changes to the specified branch.
+        git_push_comment:
+          type: string
+          description: A comment to include in the Git push.
+      required:
+      - auth_type
+      - git_credentials
+      - git_author_name
+      - git_author_email
+    GitPushWithUsernamePassword:
+      description: Git push using raw username and password.
+      allOf:
+      - $ref: '#/components/schemas/StreamlitPushOptions'
+      type: object
+      properties:
+        git_username:
+          type: string
+          description: A Git username.
+        git_password:
+          type: string
+          description: A Git password.
+        git_author_name:
+          type: string
+          description: The name of the Git author.
+        git_author_email:
+          type: string
+          description: The email of the Git author.
+        to_git_branch_uri:
+          type: string
+          description: Pushes committed changes to the specified branch.
+        git_push_comment:
+          type: string
+          description: A comment to include in the Git push.
+      required:
+      - auth_type
+      - git_username
+      - git_password
+      - git_author_name
+      - git_author_email
+    VersionDetailsStreamlit:
+      type: object
+      description: The version details of a file-based entity
+      properties:
+        name:
+          type: string
+          readOnly: true
+          description: The last version name
+        alias:
+          type: string
+          readOnly: true
+          description: The default/last version alias of a file-based entity.
+        location_url:
+          type: string
+          readOnly: true
+          description: The default/last version location.
+        source_location_uri:
+          type: string
+          readOnly: true
+          description: The default/last version source location.
+        git_commit_hash:
+          type: string
+          readOnly: true
+          description: The default/last version Git commit
+    CommitStreamlitRequest:
+      type: object
+      properties:
+        version:
+          type: object
+          properties:
+            comment:
+              type: string
+              description: Optional commit message.
+    AddLiveVersionStreamlitRequestVersion:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Optional alias name for the live version.
+        comment:
+          type: string
+          description: Optional comment for the live version.
+    AddLiveVersionStreamlitRequest:
+      type: object
+      description: Request body for adding a LIVE version to a Streamlit.
+      properties:
+        version:
+          $ref: '#/components/schemas/AddLiveVersionStreamlitRequestVersion'
+    AddVersionStreamlitRequest:
+      type: object
+      title: AddVersionStreamlitRequest
+      description: Request body for adding a new version to a Streamlit from a source
+        location.
+      properties:
+        source_location:
+          type: string
+          description: URI to the source location.
+        version:
+          type: object
+          properties:
+            name:
+              type: string
+              description: Name/Alias for the new version.
+            comment:
+              type: string
+            ifNotExists:
+              type: boolean
+          required:
+          - name
+      required:
+      - source_location
+    StreamlitVersionForGit:
+      type: object
+      description: Version metadata for ADD VERSION from Git.
+      properties:
+        name:
+          type: string
+          description: Name or alias for the new version.
+        comment:
+          type: string
+          description: Optional comment associated with the pull.
+      required:
+      - name
+    AddVersionFromGitStreamlitRequest:
+      type: object
+      title: AddVersionFromGitStreamlitRequest
+      description: Request body for adding a new version to a Streamlit from a Git
+        tag or commit URI.
+      properties:
+        version:
+          $ref: '#/components/schemas/StreamlitVersionForGit'
+        git_ref:
+          type: string
+          description: Git reference URI. Accepts either a tag URI or a commit URI.
+      required:
+      - version
+      - git_ref
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []

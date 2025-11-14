@@ -1,0 +1,518 @@
+components:
+  schemas:
+    ToolResults:
+      type: object
+      description: 'Represents the results of a tool execution. Contains both the
+        input parameters
+
+        and output results from the tool execution.
+
+        '
+      required:
+      - type
+      - tool_results
+      properties:
+        type:
+          type: string
+          description: Identifies this as tool results content
+          enum:
+          - tool_results
+        tool_results:
+          type: object
+          description: Container for tool execution results and metadata
+          required:
+          - tool_use_id
+          - name
+          - content
+          properties:
+            tool_use_id:
+              type: string
+              description: Unique identifier linking this result to its corresponding
+                tool use request
+              example: tool_123456
+            name:
+              type: string
+              description: Name of the tool that was executed. Must match a tool name
+                from the tools array
+              example: Analyst1
+            content:
+              type: array
+              description: Array of content elements produced by the tool execution
+              example:
+              - type: json
+                json:
+                  sql_query: SELECT * FROM sales LIMIT 10
+              - type: text
+                text: Query generated successfully
+              items:
+                discriminator:
+                  propertyName: type
+                  mapping:
+                    json: '#/components/schemas/JSONContent'
+                    text: '#/components/schemas/TextContent'
+            status:
+              type: string
+              description: status indicators for the tool execution
+              example: success
+            result:
+              type: object
+              description: Additional result data in an arbitrary structure
+              example:
+                query_id: abc123
+                row_count: 150
+              additionalProperties: true
+    TextContent:
+      type: object
+      description: 'Represents plain text content in a message.
+
+        Used for simple text exchanges and natural language responses.
+
+        '
+      required:
+      - type
+      - text
+      properties:
+        type:
+          type: string
+          description: Identifies this as text content.
+          enum:
+          - text
+        text:
+          type: string
+          description: The actual text content of the message.
+          example: Based on the analysis, our top three customers by revenue are Acme
+            Corp ($1.2M), TechGiant ($980K), and MegaCorp ($875K).
+    StreamingTextContent:
+      type: object
+      description: 'Represents plain text content in a message.
+
+        Used for simple text exchanges and natural language responses.
+
+        '
+      properties:
+        type:
+          type: string
+          description: Identifies this as text content.
+          enum:
+          - text
+        content:
+          type: string
+          description: The actual text content of the message.
+          example: Based on the analysis, our top three customers by revenue are Acme
+            Corp ($1.2M), TechGiant ($980K), and MegaCorp ($875K).
+    JSONContent:
+      type: object
+      description: Represents structured JSON data in a message
+      required:
+      - type
+      - json
+      properties:
+        type:
+          type: string
+          description: Identifies this as JSON content
+          enum:
+          - json
+        json:
+          type: object
+          description: Arbitrary JSON data structure
+          example:
+            key: value
+            numbers:
+            - 1
+            - 2
+            - 3
+          additionalProperties: true
+    ToolUse:
+      type: object
+      description: 'Represents a request to use a specific tool. Contains the tool
+        identifier
+
+        and input parameters for the execution.
+
+        '
+      required:
+      - type
+      - tool_use
+      properties:
+        type:
+          type: string
+          description: Identifies this as a tool use request
+          enum:
+          - tool_use
+        tool_use:
+          type: object
+          description: Container for tool use request details
+          required:
+          - tool_use_id
+          - name
+          - input
+          properties:
+            tool_use_id:
+              type: string
+              description: Unique identifier for this tool use request
+              example: tool_001
+            name:
+              type: string
+              description: Name of the tool to execute. Must match a tool name from
+                the tools array
+              example: Analyst1
+            input:
+              type: object
+              description: Input parameters for the tool execution
+              example:
+                query: What are the top selling products?
+                limit: 5
+              additionalProperties: true
+    RichText:
+      type: object
+      description: Rich text object
+    Table:
+      type: object
+      description: Table object
+    Chart:
+      type: object
+      description: Chart object
+    StreamingToolUse:
+      type: object
+      description: 'Represents a request to use a specific tool. Contains the tool
+        identifier
+
+        and input parameters for the execution.
+
+        '
+      properties:
+        tool_use_id:
+          type: string
+          description: Unique identifier for this tool use request
+        name:
+          type: string
+          description: Name of the tool to execute. Must match a tool name from the
+            tools array
+        input:
+          type: string
+    Tool:
+      type: object
+      description: 'Defines a tool that can be used by the agent.
+
+        Tools provide specific capabilities like data analysis, search, or generic
+        functions.
+
+        '
+      required:
+      - tool_spec
+      properties:
+        tool_spec:
+          type: object
+          description: Specification of the tool's type, configuration, and input
+            requirements
+          required:
+          - type
+          - name
+          properties:
+            type:
+              type: string
+              description: 'The type of tool capability. Can be specialized types
+                like
+
+                ''cortex_analyst_text_to_sql'' or ''generic'' for general-purpose
+                tools.
+
+                '
+              example: generic
+            name:
+              type: string
+              description: 'Unique identifier for referencing this tool instance.
+
+                Used to match with configuration in tool_resources.
+
+                '
+              example: get_weather
+            description:
+              type: string
+              description: Description of the tool to be considered for tool use
+            input_schema:
+              type: object
+              description: 'JSON Schema definition of the expected input parameters
+                for this tool.
+
+                Required for generic tools to specify their input requirements.
+
+                '
+              properties:
+                type:
+                  type: string
+                  description: The type of the input schema object
+                  example: object
+                properties:
+                  type: object
+                  description: Definitions of each input parameter
+                required:
+                  type: array
+                  description: List of required input parameter names
+                  items:
+                    type: string
+              additionalProperties: true
+              example:
+                type: object
+                properties:
+                  location:
+                    type: string
+                    description: The city and state, e.g. San Francisco, CA
+                required:
+                - location
+    ToolResources:
+      type: object
+      description: 'Configuration for each tool referenced in the tools array.
+
+        Keys must match the name field of tools.
+
+        '
+      example:
+        Search1:
+          search_service: db.schema.service_name
+          filters:
+            field: value
+          max_results: 5
+      additionalProperties:
+        discriminator:
+          propertyName: type
+          mapping:
+            analyst: '#/components/schemas/AnalystResource'
+            search: '#/components/schemas/SearchResource'
+        additionalProperties: true
+    AnalystResource:
+      type: object
+      description: 'Configuration for text-to-SQL analysis tool.
+
+        Provides parameters for SQL query generation and execution.
+
+        '
+      properties:
+        semantic_model_file:
+          type: string
+          description: 'The path to a file stored in a Snowflake Stage holding the
+            semantic model yaml.
+
+            '
+          example: '@my_stage/my_semantic_model.yaml'
+        semantic_view:
+          type: string
+          description: The name of the Snowflake native semantic model object
+          example: db.schema.semantic_view
+        inline_semantic_model:
+          type: string
+          description: A string containing the entire semantic model yaml
+          example: 'name: my_semantic_model\ntables:\n  - name: orders\n...'
+      additionalProperties: true
+    SearchResource:
+      type: object
+      description: 'Configuration for search functionality.
+
+        Defines how document search and retrieval should be performed.
+
+        '
+      properties:
+        search_service:
+          type: string
+          description: 'The name of the search service.
+
+            Must in format: database.schema.service_name
+
+            '
+        name:
+          description: reserved
+          type: string
+        max_results:
+          type: integer
+          description: 'The number of search results used in LLM prompt.
+
+            '
+        title_column:
+          type: string
+          description: 'The title column of the document.
+
+            '
+        id_column:
+          type: string
+          description: 'The ID column of the document.
+
+            '
+        filter:
+          type: object
+          description: 'Filter query for search results.
+
+            '
+        experimental:
+          description: reserved
+          type: object
+      additionalProperties: true
+    ToolChoice:
+      type: object
+      nullable: true
+      description: 'Configures how tools should be selected and used during the interaction.
+
+        Controls whether tool use is automatic, required, or specific tools should
+        be used.
+
+        '
+      required:
+      - type
+      properties:
+        type:
+          type: string
+          description: 'Determines how tools are selected:
+
+            * auto - Automatic tool selection (default)
+
+            * required - Must use at least one tool
+
+            * tool - Use specific named tools
+
+            '
+          example: required
+        name:
+          type: array
+          description: List of specific tool names to use when type is 'tool'
+          example:
+          - Analyst1
+          - Search1
+          items:
+            type: string
+    Message:
+      type: object
+      description: 'Represents a single message in the conversation.
+
+        Can be either from the user or the assistant.
+
+        '
+      required:
+      - role
+      - content
+      properties:
+        role:
+          type: string
+          description: 'Identifies who sent the message - either the user or the assistant.
+
+            User messages typically contain queries, while assistant messages contain
+            responses and tool results.
+
+            '
+        content:
+          type: array
+          description: 'Array of content elements making up the message.
+
+            Can include text, tool results, or custom content types.
+
+            '
+          items:
+            discriminator:
+              propertyName: type
+              mapping:
+                text: '#/components/schemas/TextContent'
+                tool_result: '#/components/schemas/ToolResults'
+                tool_use: '#/components/schemas/ToolUse'
+                rich_text: '#/components/schemas/RichText'
+                table: '#/components/schemas/Table'
+                chart: '#/components/schemas/Chart'
+    AgentRunResponse:
+      type: object
+      description: 'The response from running the agent.
+
+        Contains the assistant''s response message(s).
+
+        '
+      required:
+      - messages
+      properties:
+        messages:
+          type: array
+          description: 'The messages produced by the assistant in response.
+
+            Usually contains tool results followed by a natural language summary.
+
+            '
+          items:
+            $ref: '#/components/schemas/Message'
+    AgentModels:
+      type: object
+      description: 'Model configuration for the agent.
+
+        '
+      properties:
+        orchestration:
+          type: string
+          description: 'Model to use for orchestration. If not provided, a model is
+            automatically selected.
+
+            '
+          example: llama3.3-70B
+    AgentOrchestration:
+      type: object
+      description: 'Orchestration configuration for the agent.
+
+        '
+      properties:
+        budget:
+          type: object
+          description: 'Budget constraints for the agent.
+
+            '
+          properties:
+            seconds:
+              type: integer
+              description: 'Time budget in seconds.
+
+                '
+              example: 30
+            tokens:
+              type: integer
+              description: 'Token budget.
+
+                '
+              example: 16000
+    AgentInstructions:
+      type: object
+      description: 'Instructions for the agent''s behavior.
+
+        '
+      properties:
+        response:
+          type: string
+          description: 'Instructions for response generation.
+
+            '
+          example: You will respond in a friendly but concise manner
+        orchestration:
+          type: string
+          description: 'Instructions for orchestrating different tools.
+
+            '
+          example: For any query related to revenue we should use Analyst; For all
+            policy questions we should use Search
+        system:
+          type: string
+          description: 'System instructions for the agent.
+
+            '
+          example: You are a friendly agent ..
+        sample_questions:
+          type: array
+          description: 'Sample questions and optional answers for the agent.
+
+            '
+          items:
+            $ref: '#/components/schemas/SampleQuestion'
+    SampleQuestion:
+      type: object
+      description: 'Sample question and optional answer.
+
+        '
+      properties:
+        question:
+          type: string
+          description: 'Sample question.
+
+            '
+        answer:
+          type: string
+          description: Optional sample answer.
