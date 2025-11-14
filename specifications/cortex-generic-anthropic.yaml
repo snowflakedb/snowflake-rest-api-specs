@@ -1,0 +1,64 @@
+openapi: 3.0.2
+info:
+  title: Cortex Messages API
+  description: OpenAPI 3.0 specification for the Cortex Messages REST API
+  version: 0.1.0
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/cortex/v1/messages:
+    post:
+      summary: Perform LLM text completion inference using Cortex Messages API format.
+      tags:
+      - cortex-generic-anthropic
+      description: Perform LLM text completion inference using Cortex Messages API
+        format.
+      operationId: cortexGenericAnthropicMessages
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+            text/event-stream:
+              schema:
+                type: object
+                additionalProperties: true
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []

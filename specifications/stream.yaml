@@ -384,7 +384,8 @@ components:
         point_of_time_type:
           type: string
           description: 'Type of the point of time. Possible values include: timestamp,
-            offset, statement'
+            offset, statement, stream'
+          example: timestamp
         reference:
           type: string
           enum:
@@ -395,6 +396,7 @@ components:
           - BEFORE
           description: Relation to the point of time.  Currently, the API supports
             `at` and `before`
+          example: at
       required:
       - point_of_time_type
       - reference
@@ -412,7 +414,8 @@ components:
       properties:
         timestamp:
           type: string
-          description: Timestamp of the point of time.
+          description: Timestamp of the point of time (e.g. TO_TIMESTAMP(1749423600)).
+          example: TO_TIMESTAMP(1749423600)
       required:
       - timestamp
     PointOfTimeOffset:
@@ -422,8 +425,9 @@ components:
       properties:
         offset:
           type: string
-          description: Point of time identified by an offset in reference to the current
-            time, such as `10 min`.
+          description: The difference in seconds from the current time in the form
+            -N where N can be an integer or arithmetic expression (e.g. -120).
+          example: '-120'
       required:
       - offset
     PointOfTimeStatement:
@@ -433,7 +437,9 @@ components:
       properties:
         statement:
           type: string
-          description: Statement of the point of time.
+          description: Query ID of a statement to use as the reference point (e.g.
+            01bcf40d-0002-197f-0000-045701e2306e).
+          example: 01bcf40d-0002-197f-0000-045701e2306e
       required:
       - statement
     PointOfTimeStream:
@@ -443,8 +449,11 @@ components:
       properties:
         stream:
           type: string
-          description: 'Creates the new stream at the same offset as the specified
-            stream. '
+          description: Creates the new stream at the same offset as the specified
+            stream.
+          example: MY_STREAM
+      required:
+      - stream
     StreamSourceExternalTable:
       type: object
       allOf:

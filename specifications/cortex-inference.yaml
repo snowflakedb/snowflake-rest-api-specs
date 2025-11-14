@@ -102,6 +102,39 @@ components:
         model:
           description: The model name. See documentation for possible values.
           type: string
+        anthropic:
+          type: object
+          description: Anthropic specific configuration.
+          nullable: true
+          properties:
+            thinking:
+              type: object
+              description: Thinking configuration.
+              nullable: true
+              properties:
+                budget_tokens:
+                  type: integer
+                  description: The budget for thinking tokens.
+                  example: 2048
+              required:
+              - budget_tokens
+        openai:
+          type: object
+          description: OpenAI specific configuration.
+          nullable: true
+          properties:
+            reasoning:
+              type: object
+              description: Reasoning configuration.
+              nullable: true
+              properties:
+                effort:
+                  type: string
+                  description: The effort level for reasoning.
+                  enum:
+                  - low
+                  - medium
+                  - high
         messages:
           type: array
           items:
@@ -123,16 +156,18 @@ components:
                   Model?'.
               content_list:
                 type: array
-                description: Contents of toolUse and toolResults
+                description: Contents of text, toolUse, toolResults, or model-specific
+                  output
                 items:
                   discriminator:
                     propertyName: type
                     mapping:
-                      text: common-cortex-tool.yaml#/components/schemas/TextContent
-                      tool_result: common-cortex-tool.yaml#/components/schemas/ToolResults
-                      tool_use: common-cortex-tool.yaml#/components/schemas/ToolUse
-            required:
-            - content
+                      text: '#/components/schemas/TextContent'
+                      tool_result: '#/components/schemas/ToolResults'
+                      tool_use: '#/components/schemas/ToolUse'
+                      image: '#/components/schemas/Image'
+                      anthropic: '#/components/schemas/AnthropicOutput'
+                      openai: '#/components/schemas/OpenAIOutput'
           minItems: 1
         temperature:
           description: Temperature controls the amount of randomness used in response
@@ -180,9 +215,9 @@ components:
           description: List of tools to be used during tool calling
           type: array
           items:
-            $ref: common-cortex-tool.yaml#/components/schemas/Tool
+            $ref: '#/components/schemas/Tool'
         tool_choice:
-          $ref: common-cortex-tool.yaml#/components/schemas/ToolChoice
+          $ref: '#/components/schemas/ToolChoice'
         provisioned_throughput_id:
           type: string
           description: The provisioned throughput ID to be used with the request.
@@ -218,6 +253,470 @@ components:
           description: The response when the guardrails model marks the completion
             as unsafe
           example: Response filtered by Cortex Guard
+    Image:
+      type: object
+      description: reserved
+      properties:
+        type:
+          type: string
+          enum:
+          - image
+        details:
+          $ref: '#/components/schemas/ImageDetails'
+        cache_control:
+          $ref: '#/components/schemas/CacheControl'
+    ImageDetails:
+      type: object
+      description: reserved
+      properties:
+        type:
+          type: string
+          description: Whether the image content is base64.
+          enum:
+          - base64
+        content:
+          type: string
+          description: base64 encoded image.
+        content_type:
+          type: string
+          description: Type of image.
+          enum:
+          - image/jpeg
+          - image/jpg
+          - image/png
+          - image/gif
+          - image/webp
+          - image/heic
+          - image/heif
+        detail:
+          type: string
+          description: Level of detail to process the image. Only applicable for OpenAI
+            models
+          enum:
+          - auto
+          - low
+          - high
+    CacheControl:
+      description: reserved
+      type: object
+      nullable: true
+      properties:
+        type:
+          type: string
+          description: "Identifies the type of cache control.\n\u201Cephemeral\u201D\
+            \ is the only supported cache type currently, which has a 5-minute lifetime.\n"
+          enum:
+          - ephemeral
+    ToolChoice:
+      type: object
+      nullable: true
+      description: 'Configures how tools should be selected and used during the interaction.
+
+        Controls whether tool use is automatic, required, or specific tools should
+        be used.
+
+        '
+      required:
+      - type
+      properties:
+        type:
+          type: string
+          description: 'Determines how tools are selected:
+
+            * auto - Automatic tool selection (default)
+
+            * required - Must use at least one tool
+
+            * tool - Use specific named tools
+
+            '
+          example: required
+        name:
+          type: array
+          description: List of specific tool names to use when type is 'tool'
+          example:
+          - Analyst1
+          - Search1
+          items:
+            type: string
+    TextContent:
+      type: object
+      description: 'Represents plain text content in a message.
+
+        Used for simple text exchanges and natural language responses.
+
+        '
+      required:
+      - type
+      - text
+      properties:
+        type:
+          type: string
+          description: Identifies this as text content.
+          enum:
+          - text
+        text:
+          type: string
+          description: The actual text content of the message.
+          example: Based on the analysis, our top three customers by revenue are Acme
+            Corp ($1.2M), TechGiant ($980K), and MegaCorp ($875K).
+        cache_control:
+          $ref: '#/components/schemas/CacheControl'
+    StreamingTextContent:
+      type: object
+      description: 'Represents plain text content in a message.
+
+        Used for simple text exchanges and natural language responses.
+
+        '
+      properties:
+        type:
+          type: string
+          description: Identifies this as text content.
+          enum:
+          - text
+        content:
+          type: string
+          description: The actual text content of the message.
+          example: Based on the analysis, our top three customers by revenue are Acme
+            Corp ($1.2M), TechGiant ($980K), and MegaCorp ($875K).
+    JSONContent:
+      type: object
+      description: Represents structured JSON data in a message
+      required:
+      - type
+      - json
+      properties:
+        type:
+          type: string
+          description: Identifies this as JSON content
+          enum:
+          - json
+        json:
+          type: object
+          description: Arbitrary JSON data structure
+          example:
+            key: value
+            numbers:
+            - 1
+            - 2
+            - 3
+          additionalProperties: true
+    ToolResults:
+      type: object
+      description: 'Represents the results of a tool execution. Contains both the
+        input parameters
+
+        and output results from the tool execution.
+
+        '
+      required:
+      - type
+      - tool_results
+      properties:
+        type:
+          type: string
+          description: Identifies this as tool results content
+          enum:
+          - tool_results
+        tool_results:
+          type: object
+          description: Container for tool execution results and metadata
+          required:
+          - tool_use_id
+          - name
+          - content
+          properties:
+            tool_use_id:
+              type: string
+              description: Unique identifier linking this result to its corresponding
+                tool use request
+              example: tool_123456
+            name:
+              type: string
+              description: Name of the tool that was executed. Must match a tool name
+                from the tools array
+              example: Analyst1
+            content:
+              type: array
+              description: Array of content elements produced by the tool execution
+              example:
+              - type: json
+                json:
+                  sql_query: SELECT * FROM sales LIMIT 10
+              - type: text
+                text: Query generated successfully
+              items:
+                discriminator:
+                  propertyName: type
+                  mapping:
+                    json: '#/components/schemas/JSONContent'
+                    text: '#/components/schemas/TextContent'
+            status:
+              type: string
+              description: status indicators for the tool execution
+              example: success
+            result:
+              type: object
+              description: Additional result data in an arbitrary structure
+              example:
+                query_id: abc123
+                row_count: 150
+              additionalProperties: true
+        cache_control:
+          $ref: '#/components/schemas/CacheControl'
+    ToolUse:
+      type: object
+      description: 'Represents a request to use a specific tool. Contains the tool
+        identifier
+
+        and input parameters for the execution.
+
+        '
+      required:
+      - type
+      - tool_use
+      properties:
+        type:
+          type: string
+          description: Identifies this as a tool use request
+          enum:
+          - tool_use
+        tool_use:
+          type: object
+          description: Container for tool use request details
+          required:
+          - tool_use_id
+          - name
+          - input
+          properties:
+            tool_use_id:
+              type: string
+              description: Unique identifier for this tool use request
+              example: tool_001
+            name:
+              type: string
+              description: Name of the tool to execute. Must match a tool name from
+                the tools array
+              example: Analyst1
+            input:
+              type: object
+              description: Input parameters for the tool execution
+              example:
+                query: What are the top selling products?
+                limit: 5
+              additionalProperties: true
+        cache_control:
+          $ref: '#/components/schemas/CacheControl'
+    StreamingToolUse:
+      type: object
+      description: 'Represents a request to use a specific tool. Contains the tool
+        identifier
+
+        and input parameters for the execution.
+
+        '
+      properties:
+        tool_use_id:
+          type: string
+          description: Unique identifier for this tool use request
+        name:
+          type: string
+          description: Name of the tool to execute. Must match a tool name from the
+            tools array
+        input:
+          type: string
+    Tool:
+      type: object
+      description: 'Defines a tool that can be used by the agent.
+
+        Tools provide specific capabilities like data analysis, search, or generic
+        functions.
+
+        '
+      required:
+      - tool_spec
+      properties:
+        tool_spec:
+          type: object
+          description: Specification of the tool's type, configuration, and input
+            requirements
+          required:
+          - type
+          - name
+          properties:
+            type:
+              type: string
+              description: 'The type of tool capability. Can be specialized types
+                like
+
+                ''cortex_analyst_text_to_sql'' or ''generic'' for general-purpose
+                tools.
+
+                '
+              example: generic
+            name:
+              type: string
+              description: 'Unique identifier for referencing this tool instance.
+
+                Used to match with configuration in tool_resources.
+
+                '
+              example: get_weather
+            description:
+              type: string
+              description: Description of the tool to be considered for tool use
+            input_schema:
+              type: object
+              description: 'JSON Schema definition of the expected input parameters
+                for this tool.
+
+                Required for generic tools to specify their input requirements.
+
+                '
+              properties:
+                type:
+                  type: string
+                  description: The type of the input schema object
+                  example: object
+                properties:
+                  type: object
+                  description: Definitions of each input parameter
+                required:
+                  type: array
+                  description: List of required input parameter names
+                  items:
+                    type: string
+              additionalProperties: true
+              example:
+                type: object
+                properties:
+                  location:
+                    type: string
+                    description: The city and state, e.g. San Francisco, CA
+                required:
+                - location
+        cache_control:
+          $ref: '#/components/schemas/CacheControl'
+    OpenAIOutput:
+      type: object
+      description: OpenAI specific output.
+      properties:
+        reasoning:
+          $ref: '#/components/schemas/OpenAIReasoning'
+    OpenAIReasoning:
+      type: object
+      nullable: true
+      description: OpenAI reasoning output.
+      properties:
+        summary:
+          type: string
+          description: 'Reasoning summary tokens generated during the model response.
+
+            '
+        encrypted_content:
+          type: string
+          description: 'The encrypted_content field is an opaque field and should
+            not be interpreted or parsed.
+
+            It should only be used for verifying that the reasoning blocks were generated
+            by that specific model.
+
+            '
+      required:
+      - summary
+      - encrypted_content
+    AnthropicOutput:
+      type: object
+      description: Anthropic specific output.
+      properties:
+        thinking:
+          $ref: '#/components/schemas/AnthropicThinking'
+    AnthropicThinking:
+      type: object
+      nullable: true
+      description: Anthropic thinking output.
+      properties:
+        thinking:
+          type: string
+          description: 'Thinking tokens generated during the model response.
+
+            This field can also be used in the follow-up requests to continue the
+            conversation.
+
+            '
+        signature:
+          type: string
+          description: 'The signature field is an opaque field and should not be interpreted
+            or parsed.
+
+            It should only be used for verifying that the thinking blocks were generated
+            by that specific model.
+
+            '
+      required:
+      - thinking
+      - signature
+    StreamingOpenAIOutput:
+      type: object
+      description: OpenAI reasoning output.
+      properties:
+        reasoning:
+          $ref: '#/components/schemas/StreamingOpenAIReasoning'
+    StreamingOpenAIReasoning:
+      type: object
+      nullable: true
+      description: OpenAI reasoning output.
+      properties:
+        summary:
+          type: string
+          description: 'Reasoning summary tokens generated during the model response.
+
+            '
+          nullable: true
+        encrypted_content:
+          type: string
+          description: 'The encrypted_content field is an opaque field and should
+            not be interpreted or parsed.
+
+            It should only be used for verifying that the reasoning blocks were generated
+            by that specific model.
+
+            '
+          nullable: true
+    StreamingAnthropicOutput:
+      type: object
+      description: 'Represents the thinking response from model. Contains either the
+        thinking tokens or signature.
+
+        '
+      properties:
+        thinking:
+          $ref: '#/components/schemas/StreamingAnthropicThinking'
+    StreamingAnthropicThinking:
+      type: object
+      nullable: true
+      description: Anthropic thinking output.
+      properties:
+        thinking:
+          type: string
+          description: 'Thinking tokens generated during the model response.
+
+            This field can also be used in the follow-up requests to continue the
+            conversation.
+
+            '
+          nullable: true
+        signature:
+          type: string
+          description: 'The signature field is an opaque field and should not be interpreted
+            or parsed.
+
+            It should only be used for verifying that the thinking blocks were generated
+            by that specific model.
+
+            '
+          nullable: true
     NonStreamingCompleteResponse:
       type: object
       description: Text-completion response for non-streaming request.
@@ -240,8 +739,19 @@ components:
                       discriminator:
                         propertyName: type
                         mapping:
-                          text: common-cortex-tool.yaml#/components/schemas/TextContent
-                          tool_use: common-cortex-tool.yaml#/components/schemas/ToolUse
+                          text: '#/components/schemas/TextContent'
+                          tool_use: '#/components/schemas/ToolUse'
+                          anthropic: '#/components/schemas/AnthropicOutput'
+                          openai: '#/components/schemas/OpenAIOutput'
+        finish_reason:
+          type: string
+          nullable: true
+          description: The reason the request was finished.
+          enum:
+          - stop
+          - content_filter
+          - tool_calls
+          - length
         usage:
           type: object
           title: Usage
@@ -258,6 +768,16 @@ components:
             total_tokens:
               type: integer
               description: Sum of all tokens.
+            cache_read_input_tokens:
+              type: integer
+              description: reserved
+              nullable: true
+              minimum: 0
+            cache_write_input_tokens:
+              type: integer
+              description: reserved
+              nullable: true
+              minimum: 0
     StreamingCompleteResponse:
       type: object
       description: Server-sent events for streaming text-completion updates.
@@ -282,8 +802,10 @@ components:
       discriminator:
         propertyName: type
         mapping:
-          text: common-cortex-tool.yaml#/components/schemas/StreamingTextContent
-          tool_use: common-cortex-tool.yaml#/components/schemas/StreamingToolUse
+          text: '#/components/schemas/StreamingTextContent'
+          tool_use: '#/components/schemas/StreamingToolUse'
+          anthropic: '#/components/schemas/StreamingAnthropicOutput'
+          openai: '#/components/schemas/StreamingOpenAIOutput'
   securitySchemes:
     KeyPair:
       $ref: common.yaml#/components/securitySchemes/KeyPair

@@ -392,20 +392,17 @@ components:
             refresh_on_create:
               type: boolean
               default: true
-              writeOnly: true
               description: Specifies whether to automatically refresh the directory
                 table metadata once, immediately after the stage is created.
             auto_refresh:
               type: boolean
               default: false
-              writeOnly: true
               description: Specifies whether Snowflake should enable triggering automatic
                 refreshes of the directory table metadata when new or updated data
                 files are available in the named external stage specified in the URL
                 value.
             notification_integration:
               type: string
-              writeOnly: true
               description: Specifies the name of the notification integration used
                 to automatically refresh the directory table metadata.
         created_on:

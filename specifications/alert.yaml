@@ -398,20 +398,14 @@ components:
           $ref: '#/components/schemas/PointOfTime'
           description: 'Type of the point of time. Possible values include:
 
-
             - `timestamp`: Exact time using the standard timezone format. Example:
-            `2023-09-15 10:59:43`.
-
-            - `offset`: Interval relative to ''now.'' Example: `1 day`.
-
-            - `statement`: ID of a query statement to use as the reference point for
-            <a href=https://docs.snowflake.com/en/sql-reference/sql/create-clone#time-travel-parameters>Time
+            `TO_TIMESTAMP(1749423600)`. - `offset`: Interval relative to ''now.''
+            in the form -N where N can be an integer or arithmetic expression. Example:
+            `-120` - `statement`: ID of a query statement to use as the reference
+            point for <a href=https://docs.snowflake.com/en/sql-reference/sql/create-clone#time-travel-parameters>Time
             Travel</a>.
 
-
-            For more information, see https://docs.snowflake.com/en/sql-reference/data-types-datetime.
-
-            '
+            For more information, see https://docs.snowflake.com/en/sql-reference/data-types-datetime.'
       required:
       - name
     PointOfTime:
@@ -421,6 +415,7 @@ components:
           type: string
           description: 'Type of the point of time. Possible values include: timestamp,
             offset, statement'
+          example: timestamp
         reference:
           type: string
           enum:
@@ -431,6 +426,7 @@ components:
           - BEFORE
           description: Relation to the point of time.  Currently, the API supports
             `at` and `before`
+          example: at
       required:
       - point_of_time_type
       - reference
@@ -447,7 +443,8 @@ components:
       properties:
         timestamp:
           type: string
-          description: Timestamp of the point of time.
+          description: Timestamp of the point of time (e.g. TO_TIMESTAMP(1749423600)).
+          example: TO_TIMESTAMP(1749423600)
       required:
       - timestamp
     PointOfTimeOffset:
@@ -457,8 +454,9 @@ components:
       properties:
         offset:
           type: string
-          description: Point of time identified by an offset in reference to the current
-            time, such as `10 min`.
+          description: The difference in seconds from the current time in the form
+            -N where N can be an integer or arithmetic expression (e.g. -120).
+          example: '-120'
       required:
       - offset
     PointOfTimeStatement:
@@ -468,7 +466,9 @@ components:
       properties:
         statement:
           type: string
-          description: Statement of the point of time.
+          description: Query ID of a statement to use as the reference point (e.g.
+            01bcf40d-0002-197f-0000-045701e2306e).
+          example: 01bcf40d-0002-197f-0000-045701e2306e
       required:
       - statement
   securitySchemes:

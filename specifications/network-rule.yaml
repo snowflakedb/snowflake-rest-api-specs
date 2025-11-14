@@ -1,0 +1,265 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake REST Server
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Network Rule API
+  description: The Snowflake Network Rule API is a REST API that you can use to access,
+    update, and perform certain actions on Network Rule resource in a Snowflake database.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/databases/{database}/schemas/{schema}/network-rules:
+    get:
+      summary: List network rules
+      tags:
+      - network-rule
+      description: List network rules
+      operationId: listNetworkRules
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/like
+      - $ref: common.yaml#/components/parameters/startsWith
+      - $ref: common.yaml#/components/parameters/showLimit
+      - $ref: common.yaml#/components/parameters/fromName
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/NetworkRule'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    post:
+      summary: Create a network rule
+      tags:
+      - network-rule
+      description: Create a network rule
+      operationId: createNetworkRule
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/createMode
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NetworkRule'
+  /api/v2/databases/{database}/schemas/{schema}/network-rules/{name}:
+    get:
+      summary: Fetch a network rule
+      tags:
+      - network-rule
+      description: Fetch a network rule
+      operationId: fetchNetworkRule
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NetworkRule'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    delete:
+      summary: Delete a network rule
+      tags:
+      - network-rule
+      description: Delete a network rule
+      operationId: deleteNetworkRule
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  schemas:
+    NetworkRule:
+      type: object
+      description: A Snowflake network rule
+      properties:
+        type:
+          type: string
+          description: Type of the network rule
+        mode:
+          type: string
+          description: 'Specifies what is restricted by the network rule. Possible
+            values: INGRESS, INTERNAL_STAGE, EGRESS'
+        value_list:
+          type: array
+          items:
+            type: string
+          description: List of values in a network rule
+        comment:
+          type: string
+          description: Comment for the network rule
+        name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Name of the network rule
+        created_on:
+          type: string
+          format: date-time
+          readOnly: true
+          description: Date and time when the network rule was created
+        database_name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: Database in which the network rule is stored
+        schema_name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: Schema in which the network rule is stored
+        owner:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          readOnly: true
+          description: Role that owns the network rule
+        owner_role_type:
+          type: string
+          readOnly: true
+          description: The type of role that owns the network rule
+      required:
+      - type
+      - name
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []

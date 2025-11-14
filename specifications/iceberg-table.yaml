@@ -970,7 +970,6 @@ components:
           description: Specifies a comment for the table
       required:
       - name
-      - base_location
     IcebergTableLike:
       type: object
       description: Create iceberg table as select

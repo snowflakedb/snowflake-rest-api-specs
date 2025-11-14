@@ -1,0 +1,688 @@
+{
+  "info": {
+    "_postman_id": "d87ad375-559f-4c14-b405-025bbab65e75",
+    "name": "Cortex Messages API",
+    "description": "OpenAPI 3.0 specification for the Cortex Messages REST API\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "api",
+      "item": [
+        {
+          "name": "v2",
+          "item": [
+            {
+              "name": "cortex",
+              "item": [
+                {
+                  "name": "v1",
+                  "item": [
+                    {
+                      "name": "messages",
+                      "item": [
+                        {
+                          "name": "Perform LLM text completion inference using Cortex Messages API format.",
+                          "id": "98115a18-bfe8-46d4-8392-0e04dfe255f0",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": 991\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/cortex/v1/messages",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "cortex",
+                                "v1",
+                                "messages"
+                              ]
+                            },
+                            "description": "Perform LLM text completion inference using Cortex Messages API format."
+                          },
+                          "response": [
+                            {
+                              "id": "4dcb4dfa-249c-475e-aaa5-bc4a7d0b15e6",
+                              "name": "OK",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": 991\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v2/cortex/v1/messages",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "cortex",
+                                    "v1",
+                                    "messages"
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"key_0\": \"string\",\n  \"key_1\": 991\n}"
+                            },
+                            {
+                              "id": "2aa0f9ef-c533-4a3d-8b2b-137cec17cd78",
+                              "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": 991\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v2/cortex/v1/messages",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "cortex",
+                                    "v1",
+                                    "messages"
+                                  ]
+                                }
+                              },
+                              "status": "Bad Request",
+                              "code": 400,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                },
+                                {
+                                  "disabled": false,
+                                  "description": {
+                                    "content": "Unique ID of the API request.",
+                                    "type": "text/plain"
+                                  },
+                                  "key": "X-Snowflake-Request-ID",
+                                  "value": "22845457-079f-d3af-70f3-807a0ccebee2"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                            },
+                            {
+                              "id": "7698d38e-06e8-4521-84e1-5efe253326b9",
+                              "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": 991\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v2/cortex/v1/messages",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "cortex",
+                                    "v1",
+                                    "messages"
+                                  ]
+                                }
+                              },
+                              "status": "Unauthorized",
+                              "code": 401,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                },
+                                {
+                                  "disabled": false,
+                                  "description": {
+                                    "content": "Unique ID of the API request.",
+                                    "type": "text/plain"
+                                  },
+                                  "key": "X-Snowflake-Request-ID",
+                                  "value": "22845457-079f-d3af-70f3-807a0ccebee2"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                            },
+                            {
+                              "id": "f7dafa86-4a8d-4223-aa49-4db8090c60db",
+                              "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": 991\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v2/cortex/v1/messages",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "cortex",
+                                    "v1",
+                                    "messages"
+                                  ]
+                                }
+                              },
+                              "status": "Forbidden",
+                              "code": 403,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                },
+                                {
+                                  "disabled": false,
+                                  "description": {
+                                    "content": "Unique ID of the API request.",
+                                    "type": "text/plain"
+                                  },
+                                  "key": "X-Snowflake-Request-ID",
+                                  "value": "22845457-079f-d3af-70f3-807a0ccebee2"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                            },
+                            {
+                              "id": "682c5fb2-62ae-448f-85c6-c69e0d45ff10",
+                              "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": 991\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v2/cortex/v1/messages",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "cortex",
+                                    "v1",
+                                    "messages"
+                                  ]
+                                }
+                              },
+                              "status": "Not Found",
+                              "code": 404,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                },
+                                {
+                                  "disabled": false,
+                                  "description": {
+                                    "content": "Unique ID of the API request.",
+                                    "type": "text/plain"
+                                  },
+                                  "key": "X-Snowflake-Request-ID",
+                                  "value": "22845457-079f-d3af-70f3-807a0ccebee2"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                            },
+                            {
+                              "id": "63e5bf6a-ff34-4985-b0b0-13f1a5077bde",
+                              "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": 991\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v2/cortex/v1/messages",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "cortex",
+                                    "v1",
+                                    "messages"
+                                  ]
+                                }
+                              },
+                              "status": "Method Not Allowed",
+                              "code": 405,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                },
+                                {
+                                  "disabled": false,
+                                  "description": {
+                                    "content": "Unique ID of the API request.",
+                                    "type": "text/plain"
+                                  },
+                                  "key": "X-Snowflake-Request-ID",
+                                  "value": "22845457-079f-d3af-70f3-807a0ccebee2"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                            },
+                            {
+                              "id": "b781983f-2889-4eb0-831d-1a8963242a06",
+                              "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": 991\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v2/cortex/v1/messages",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "cortex",
+                                    "v1",
+                                    "messages"
+                                  ]
+                                }
+                              },
+                              "status": "Internal Server Error",
+                              "code": 500,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                },
+                                {
+                                  "disabled": false,
+                                  "description": {
+                                    "content": "Unique ID of the API request.",
+                                    "type": "text/plain"
+                                  },
+                                  "key": "X-Snowflake-Request-ID",
+                                  "value": "22845457-079f-d3af-70f3-807a0ccebee2"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                            },
+                            {
+                              "id": "7fb9eaab-3a8a-4930-87ee-1b06ce97394a",
+                              "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": 991\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v2/cortex/v1/messages",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "cortex",
+                                    "v1",
+                                    "messages"
+                                  ]
+                                }
+                              },
+                              "status": "Service Unavailable",
+                              "code": 503,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                },
+                                {
+                                  "disabled": false,
+                                  "description": {
+                                    "content": "Unique ID of the API request.",
+                                    "type": "text/plain"
+                                  },
+                                  "key": "X-Snowflake-Request-ID",
+                                  "value": "22845457-079f-d3af-70f3-807a0ccebee2"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                            },
+                            {
+                              "id": "13f5ad3e-0ebf-452a-8dbf-fd22eaf9ea40",
+                              "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": 991\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v2/cortex/v1/messages",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "cortex",
+                                    "v1",
+                                    "messages"
+                                  ]
+                                }
+                              },
+                              "status": "Gateway Timeout",
+                              "code": 504,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                },
+                                {
+                                  "disabled": false,
+                                  "description": {
+                                    "content": "Unique ID of the API request.",
+                                    "type": "text/plain"
+                                  },
+                                  "key": "X-Snowflake-Request-ID",
+                                  "value": "22845457-079f-d3af-70f3-807a0ccebee2"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                            }
+                          ]
+                        }
+                      ],
+                      "id": "f8813b4a-2c57-4acf-a194-6d8efdd4a6aa"
+                    }
+                  ],
+                  "id": "3ed75adc-5e1b-4c1f-bc87-a6d6bc3962e9"
+                }
+              ],
+              "id": "970bc30d-832a-4958-a31a-dec21703a2fb"
+            }
+          ],
+          "id": "e1676179-0b85-4416-a96c-4336811665ff"
+        }
+      ],
+      "id": "46236d6e-0495-45cf-887e-cb166f8cbfbd"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "id": "40a4e0c5-bbbe-4d54-9cd3-df9cda8eaa1a",
+      "key": "baseUrl",
+      "value": "/"
+    }
+  ]
+}

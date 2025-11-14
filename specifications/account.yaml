@@ -220,11 +220,8 @@ components:
             or single-tenant (for a Virtual Private Snowflake account).
         edition:
           type: string
-          description: Snowflake Edition of the account.
-          enum:
-          - STANDARD
-          - ENTERPRISE
-          - BUSINESS_CRITICAL
+          description: Snowflake Edition of the account. Possible values to use when
+            creating an account include STANDARD, ENTERPRISE, and BUSINESS_CRITICAL.
         created_on:
           type: string
           format: date-time
