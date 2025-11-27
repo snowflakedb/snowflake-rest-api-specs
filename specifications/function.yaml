@@ -247,18 +247,6 @@ components:
         returns:
           type: string
           description: Specifies the type for the function return value.
-          enum:
-          - FIXED
-          - INT
-          - REAL
-          - NUMBER
-          - TEXT
-          - BOOLEAN
-          - DATE
-          - TIME
-          - TIMESTAMP_TZ
-          - TIMESTAMP_LTZ
-          - TIMESTAMP_NTZ
           default: TEXT
         max_batch_rows:
           type: integer
@@ -289,18 +277,6 @@ components:
         datatype:
           description: Argument's type
           type: string
-          enum:
-          - FIXED
-          - INT
-          - REAL
-          - NUMBER
-          - TEXT
-          - BOOLEAN
-          - DATE
-          - TIME
-          - TIMESTAMP_TZ
-          - TIMESTAMP_LTZ
-          - TIMESTAMP_NTZ
           default: TEXT
         value:
           description: Argument's value
