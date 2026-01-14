@@ -28,9 +28,9 @@ paths:
       tags:
       - statements
       security:
-      - keyPair: []
+      - KeyPair: []
       - ExternalOAuth: []
-      - snowflakeOAuth: []
+      - SnowflakeOAuth: []
       requestBody:
         required: true
         description: Specifies the SQL statement to execute and the statement context.
@@ -226,9 +226,9 @@ paths:
       tags:
       - statements
       security:
-      - keyPair: []
+      - KeyPair: []
       - ExternalOAuth: []
-      - snowflakeOAuth: []
+      - SnowflakeOAuth: []
       responses:
         '200':
           description: The statement was executed successfully, and the response includes
@@ -285,9 +285,9 @@ paths:
       operationId: CancelStatement
       summary: Cancels the execution of a statement.
       security:
-      - keyPair: []
+      - KeyPair: []
       - ExternalOAuth: []
-      - snowflakeOAuth: []
+      - SnowflakeOAuth: []
       description: Cancels the execution of the statement with the specified statement
         handle.
       tags:
@@ -717,7 +717,7 @@ components:
         KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified,
         OAUTH is assumed.
   securitySchemes:
-    keyPair:
+    KeyPair:
       type: http
       scheme: bearer
       bearerFormat: JWT
@@ -729,7 +729,7 @@ components:
       bearerFormat: JWT
       description: Configure External Oauth with Snowflake (refer to docs). Set X-Snowflake-Authorization-Token-Type
         to OAUTH and set the Token to auth token received from the external Auth server.
-    snowflakeOAuth:
+    SnowflakeOAuth:
       type: oauth2
       flows:
         implicit:
@@ -788,8 +788,8 @@ components:
           ('first', 'next', 'prev', and 'last').
         example: </api/statements/e127cc7c-7812-4e72-9a55-3b4d4f969840/fetch?partition=1>;rel="last",</api/statements/e127cc7c-7812-4e72-9a55-3b4d4f969840/fetch?partition=1>;rel="next",</api/statements/e127cc7c-7812-4e72-9a55-3b4d4f969840/fetch?partition=0>;rel="first"
 security:
-- keyPair: []
+- KeyPair: []
 - ExternalOAuth: []
-- snowflakeOAuth: []
+- SnowflakeOAuth: []
 externalDocs:
   url: https://docs.snowflake.com/en/developer-guide/sql-api/index.html
