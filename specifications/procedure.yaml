@@ -331,7 +331,6 @@ components:
       - arguments
       - return_type
       - language_config
-      - body
     Argument:
       type: object
       properties:
