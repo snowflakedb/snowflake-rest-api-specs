@@ -418,7 +418,7 @@ components:
         name:
           type: string
           pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
-          description: Name of the notebook
+          description: Name of the Notebook
         version:
           type: string
           description: User specified version alias
@@ -437,70 +437,66 @@ components:
           description: The default version name of a file based entity.
         query_warehouse:
           type: string
-          description: Warehouse against which the queries issued by the Streamlit
+          description: Warehouse against which the queries issued by the Notebook
             app are run against
         created_on:
           type: string
           format: date-time
           readOnly: true
-          description: Date and time when the notebook was created.
+          description: Date and time when the Notebook was created.
         database_name:
           type: string
           pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
           readOnly: true
-          description: Database in which the notebook is stored
+          description: Database in which the Notebook is stored
         schema_name:
           type: string
           pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
           readOnly: true
-          description: Schema in which the notebook is stored
+          description: Schema in which the Notebook is stored
         owner:
           type: string
           pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
           readOnly: true
-          description: Role that owns the notebook
+          description: Role that owns the Notebook
         owner_role_type:
           type: string
           pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
           readOnly: true
-          description: The type of role that owns the notebook
+          description: The type of role that owns the Notebook
         url_id:
           type: string
           readOnly: true
-          description: Unique ID associated with the notebook object.
+          description: A unique ID associated with the Notebook object's URL.
         title:
           type: string
-          readOnly: true
-          description: User facing title of the Streamlit app or an Organization Profile
+          description: User facing title of the Notebook app
         default_packages:
           type: string
           readOnly: true
-          description: Default packages of the notebook
+          description: Default packages for Notebook apps.
         user_packages:
           type: string
           readOnly: true
-          description: User packages of the notebook
+          description: User packages of the Notebook
         runtime_name:
           type: string
-          readOnly: true
-          description: The runtime to run the Streamlit or Notebook on.  If this is
-            not set, the warehouse is assumed
+          description: The runtime to run the Notebook on. If this is not set, the
+            Warehouse Runtime is assumed
         compute_pool:
           type: string
-          readOnly: true
-          description: Compute pool name where the snowservice runs
+          description: Compute pool name where the Notebook runs. Required when runtime_name
+            is set to SYSTEM$BASIC_RUNTIME or SYSTEM$GPU_RUNTIME
         import_urls:
           type: array
           items:
             type: string
-          readOnly: true
-          description: List of urls
+          description: List of files to be imported from a stage.
         external_access_integrations:
           type: array
           items:
             type: string
-          readOnly: true
-          description: List of external access integrations attached to this function
+          description: List of external access integrations attached to this Notebook
         external_access_secrets:
           type: string
           readOnly: true
@@ -508,7 +504,6 @@ components:
         idle_auto_shutdown_time_seconds:
           type: integer
           format: int64
-          readOnly: true
           description: Sets the time in seconds for when to shutdown an idle Notebook.
         default_version_details:
           $ref: '#/components/schemas/VersionDetails'
@@ -524,7 +519,7 @@ components:
           type: string
           pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
           readOnly: true
-          description: Name of the budget if the notebook is monitored by a budget
+          description: Name of the budget if the Notebook is monitored by a budget
       required:
       - name
     VersionDetails:
