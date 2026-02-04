@@ -1,0 +1,150 @@
+openapi: 3.0.2
+info:
+  title: Cortex Embed API
+  description: OpenAPI 3.0 specification for the Cortex Embed REST API
+  version: 0.1.0
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/cortex/inference:embed:
+    post:
+      summary: Perform LLM embed
+      tags:
+      - cortex-embed
+      description: 'Perform LLM embedding for input text, similar to the Snowflake
+        Cortex `EMBED_TEXT` functions.
+
+        For more details on available functions, see:
+
+        - [EMBED_TEXT_768](https://docs.snowflake.com/en/sql-reference/functions/embed_text-snowflake-cortex)
+
+        - [EMBED_TEXT_1024](https://docs.snowflake.com/en/sql-reference/functions/embed_text_1024-snowflake-cortex)
+
+        '
+      operationId: embed
+      requestBody:
+        description: Request payload containing model identifier and input text.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmbedRequest'
+      responses:
+        '200':
+          description: OK - Successfully generated embeddings.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmbedResponse'
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  schemas:
+    EmbedRequest:
+      type: object
+      description: 'Request to calculate text embeddings using a specified model.
+
+        '
+      properties:
+        model:
+          type: string
+          description: "Identifier of the model to use for generating embeddings.\n\
+            Refer to Snowflake documentation for the list of supported models.\n\n\
+            Examples:\n  - `snowflake-arctic-embed-m`\n  - `snowflake-arctic-embed-m-v1.5`\n"
+        text:
+          type: array
+          items:
+            type: string
+          description: 'An array of input texts for which vector embeddings will be
+            calculated.
+
+            Example: ["Hello world", "Machine learning is fascinating"]
+
+            '
+          minItems: 1
+        provisioned_throughput_id:
+          type: string
+          description: The provisioned throughput ID to be used with the request.
+          nullable: true
+      required:
+      - model
+      - text
+    EmbedResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Type of the response object
+          enum:
+          - list
+        data:
+          type: array
+          description: List of embedding objects
+          items:
+            type: object
+            properties:
+              object:
+                type: string
+                description: Type of the embedding object
+                enum:
+                - embedding
+              embedding:
+                type: array
+                description: Nested array of floating-point numbers representing the
+                  embedding vector
+                items:
+                  type: array
+                  items:
+                    type: number
+                    format: float
+              index:
+                type: integer
+                description: Index of the embedding in the input array
+            required:
+            - object
+            - embedding
+            - index
+        model:
+          type: string
+          description: Name of the embedding model used
+        usage:
+          type: object
+          properties:
+            total_tokens:
+              type: integer
+              description: Total number of tokens processed
+      required:
+      - object
+      - data
+      - model
+      - usage
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+    ProgrammaticAccessToken:
+      $ref: common.yaml#/components/securitySchemes/ProgrammaticAccessToken
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []
+- ProgrammaticAccessToken: []
