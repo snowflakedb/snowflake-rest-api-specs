@@ -178,6 +178,38 @@ components:
       description: Downstream target lag
       allOf:
       - $ref: '#/components/schemas/TargetLag'
+    TagReference:
+      type: object
+      description: Identifier for a tag, including optional database and schema names.
+      properties:
+        tag_database:
+          description: The database in which the tag is defined.
+          allOf:
+          - $ref: ./common.yaml#/components/schemas/Identifier
+        tag_schema:
+          description: The schema in which the tag is defined.
+          allOf:
+          - $ref: ./common.yaml#/components/schemas/Identifier
+        tag_name:
+          description: The name of the tag.
+          allOf:
+          - $ref: ./common.yaml#/components/schemas/Identifier
+      required:
+      - tag_name
+    TagAssignment:
+      description: Defines an association between a tag and value.
+      allOf:
+      - $ref: '#/components/schemas/TagReference'
+      properties:
+        tag_value:
+          type: string
+          description: The value of the tag.
+        level:
+          type: string
+          readOnly: true
+          description: The object domain on which the tag is set.
+      required:
+      - tag_value
   parameters:
     database:
       name: database
@@ -393,6 +425,21 @@ components:
         type: string
         description: Snowflake session token.
         example: ver:3-hint:1000-ABCD=
+    withLineage:
+      name: withLineage
+      description: 'Parameter that specifies whether tag assignments inherited by
+        the object from its ancestors in securable object hierarchy should be returned
+        as well:
+
+        - `true`: All tags assigned to this object should be returned, inheritance
+        included.
+
+        - `false`: Only tags explicitly assigned to this object should be returned.'
+      in: query
+      schema:
+        type: boolean
+        example: true
+        default: false
   headers:
     X-Snowflake-Request-ID:
       description: Unique ID of the API request.
@@ -431,6 +478,12 @@ components:
           scopes: {}
       description: Set `X-Snowflake-Authorization-Token-Type` to `OAUTH` if the token
         is snowflakeOAuth
+    ProgrammaticAccessToken:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Set `X-Snowflake-Authorization-Token-Type` to `PROGRAMMATIC_ACCESS_TOKEN`
+        if the token is a programmatic access token.
   responses:
     200SuccessResponse:
       description: Successful request.
@@ -607,7 +660,3 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
-security:
-- KeyPair: []
-- ExternalOAuth: []
-- SnowflakeOAuth: []

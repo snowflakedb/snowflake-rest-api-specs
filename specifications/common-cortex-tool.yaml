@@ -378,6 +378,54 @@ components:
           - Search1
           items:
             type: string
+    SkillChoice:
+      type: object
+      nullable: true
+      description: 'Configures which skills from the agent specification should be
+        available during the interaction.
+
+        Controls whether all skills are available, specific ones are filtered, or
+        if skill use is required.
+
+        '
+      required:
+      - type
+      properties:
+        type:
+          type: string
+          default: auto
+          description: 'Determines how skills are selected:
+
+            * auto - Skills are automatically selected (default behavior controlled
+            by name array)
+
+            * required - At least one of the specified skills must be used in the
+            response
+
+            '
+          example: auto
+        name:
+          type: array
+          description: 'List of skill names from the agent spec to filter or require.
+
+            Behavior depends on type:
+
+            * If omitted or null: Use all skills from agent spec (default)
+
+            * If provided with skill names: Filter to only these named skills
+
+            * If empty array []: Disable all skills (no skills available)
+
+
+            For type "required": Specifies which skills to consider, and at least
+            one must be used
+
+            '
+          example:
+          - forecaster_skill
+          - profit_sharing_skill
+          items:
+            type: string
     Message:
       type: object
       description: 'Represents a single message in the conversation.
@@ -515,4 +563,76 @@ components:
             '
         answer:
           type: string
-          description: Optional sample answer.
+          description: 'Optional sample answer.
+
+            '
+    McpServerWrapper:
+      type: object
+      description: 'Wrapper for MCP server specification.
+
+        '
+      properties:
+        server_spec:
+          $ref: '#/components/schemas/McpServerSpec'
+    McpServerSpec:
+      type: object
+      description: 'MCP server specification details.
+
+        '
+      properties:
+        name:
+          type: string
+          description: 'Fully qualified name of the MCP server (e.g., "database.schema.mcp_server_name").
+
+            '
+    SkillWrapper:
+      type: object
+      description: 'Wrapper for skill definitions from external sources.
+
+        '
+      required:
+      - name
+      - source
+      properties:
+        name:
+          type: string
+          description: 'Name of the skill. Must be unique within the agent.
+
+            '
+          example: skill_name
+        source:
+          $ref: '#/components/schemas/SkillSource'
+    SkillSource:
+      type: object
+      description: 'Source configuration for a skill, specifying where the skill code
+        is located.
+
+        '
+      required:
+      - type
+      properties:
+        type:
+          type: string
+          description: 'The type of source location.
+
+            STAGE - Skill is stored in a Snowflake stage.
+
+            GIT_INTEGRATION - Skill is stored in a Git repository via integration.
+
+            SYSTEM - System-provided skill that does not require a path.
+
+            '
+          example: STAGE
+        path:
+          type: string
+          description: 'Path to the skill location.
+
+            For STAGE type: path to the skill in a Snowflake stage (e.g., "@db.schema.stage/folder").
+
+            For GIT_INTEGRATION type: path to the skill in a Git repository (e.g.,
+            "@db.schema.repo/commits/abc123def/skills/").
+
+            Not required for SYSTEM type.
+
+            '
+          example: '@my_db.my_schema.my_stage/folder'

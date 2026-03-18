@@ -735,6 +735,12 @@ components:
         implicit:
           authorizationUrl: /oauth/authorize
           scopes: {}
+    ProgrammaticAccessToken:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Set `X-Snowflake-Authorization-Token-Type` to `PROGRAMMATIC_ACCESS_TOKEN`
+        if the token is a programmatic access token.
   responses:
     400BadRequest:
       description: Bad Request. The request payload is invalid or malformed. This
@@ -791,5 +797,6 @@ security:
 - KeyPair: []
 - ExternalOAuth: []
 - SnowflakeOAuth: []
+- ProgrammaticAccessToken: []
 externalDocs:
   url: https://docs.snowflake.com/en/developer-guide/sql-api/index.html

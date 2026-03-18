@@ -358,8 +358,8 @@ paths:
       summary: Fetch the dependent tasks of a task
       tags:
       - task
-      description: This operation returns a list of the dependent tasks of the task
-        with identifier {name}.
+      description: Returns a list of the dependent tasks of the task with identifier
+        {name}. This operation requires an active warehouse.
       operationId: fetchTaskDependents
       parameters:
       - $ref: common.yaml#/components/parameters/database
@@ -466,8 +466,9 @@ paths:
         the next 8 days.
       tags:
       - task
-      description: This function returns details for graph runs that are currently
-        executing or are next scheduled to run within the next 8 days.
+      description: Returns details for graph runs that are currently executing or
+        are next scheduled to run within the next 8 days. This operation requires
+        an active warehouse.
       operationId: getCurrentGraphs
       parameters:
       - $ref: common.yaml#/components/parameters/database
@@ -576,7 +577,8 @@ paths:
       summary: Get the graph runs that are completed for the task.
       tags:
       - task
-      description: This function returns details for graph runs that are completed.
+      description: Returns details for graph runs that are completed. This operation
+        requires an active warehouse.
       operationId: getCompleteGraphs
       parameters:
       - $ref: common.yaml#/components/parameters/database
@@ -608,6 +610,139 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TaskRun'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/tasks/{name}:set-tags:
+    post:
+      summary: Set tags on an existing task.
+      tags:
+      - task
+      description: Sets tags on an existing task.
+      operationId: setTags
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: common.yaml#/components/schemas/TagAssignment
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/tasks/{name}:unset-tags:
+    post:
+      summary: Unset tags from an existing task.
+      tags:
+      - task
+      description: Unsets tags from an existing task.
+      operationId: unsetTags
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/ifExists
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: common.yaml#/components/schemas/TagReference
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/databases/{database}/schemas/{schema}/tasks/{name}:get-tags:
+    get:
+      summary: Get the tag assignments for the task.
+      tags:
+      - task
+      description: Returns all tags assigned to the task. This operation requires
+        an active warehouse.
+      operationId: getTags
+      parameters:
+      - $ref: common.yaml#/components/parameters/database
+      - $ref: common.yaml#/components/parameters/schema
+      - $ref: common.yaml#/components/parameters/name
+      - $ref: common.yaml#/components/parameters/withLineage
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: common.yaml#/components/schemas/TagAssignment
         '202':
           $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
         '400':
@@ -817,6 +952,22 @@ components:
           type: string
           description: Specifies the name of the notification integration used to
             communicate with Amazon SNS, MS Azure Event Grid, or Google Pub/Sub.
+        success_integration:
+          type: string
+          description: Specifies the name of the notification integration used for
+            success notifications when the task graph completes successfully.
+        overlap_policy:
+          type: string
+          description: Specifies the overlap policy for the task graph. Only applicable
+            to root tasks.
+          enum:
+          - NO_OVERLAP
+          - ALLOW_CHILD_OVERLAP
+          - ALLOW_ALL_OVERLAP
+        execute_as_user:
+          type: string
+          description: Specifies the name of the user whose privileges are used to
+            run the task.
         created_on:
           type: string
           description: The time the task was created on.
@@ -884,6 +1035,9 @@ components:
         condition: select 1
         allow_overlapping_execution: false
         error_integration: my_notification_int
+        success_integration: my_success_notification_int
+        overlap_policy: NO_OVERLAP
+        execute_as_user: my_user
         created_on: '2024-06-18T01:01:01.111111'
         id: task_id
         owner: TASK_ADMIN
@@ -944,10 +1098,13 @@ components:
       $ref: common.yaml#/components/securitySchemes/ExternalOAuth
     SnowflakeOAuth:
       $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+    ProgrammaticAccessToken:
+      $ref: common.yaml#/components/securitySchemes/ProgrammaticAccessToken
 security:
 - KeyPair: []
 - ExternalOAuth: []
 - SnowflakeOAuth: []
+- ProgrammaticAccessToken: []
 externalDocs:
   description: Streams and Tasks Reference
   url: https://docs.snowflake.com/en/sql-reference/commands-stream

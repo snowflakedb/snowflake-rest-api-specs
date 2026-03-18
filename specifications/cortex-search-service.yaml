@@ -498,6 +498,12 @@ components:
           $ref: '#/components/schemas/RetrievalWeights'
         ranking_weights:
           $ref: '#/components/schemas/RankingWeights'
+        disable_vector_embedding_query_prefix:
+          type: boolean
+          description: whether to disable query prefix for embedding while searching
+          default: false
+        diversity:
+          $ref: '#/components/schemas/Diversity'
     Weights:
       type: object
       description: Weights to apply to each scoring component.
@@ -542,6 +548,19 @@ components:
           description: Multiplier for reranker score in ranking.
           type: number
           example: 1.0
+    Diversity:
+      type: object
+      description: Configuration to control result diversity with respect to one or
+        more metadata columns.
+      properties:
+        group_by:
+          description: Columns to group by.
+          type: array
+          items:
+            type: string
+        max_results:
+          description: Maximum number of results per group to return.
+          type: integer
     Functions:
       type: object
       description: Functions to apply for scoring this request.
@@ -623,6 +642,10 @@ components:
           description: Weight to apply for boosting this vector column.
           type: number
           example: 0.5
+        disable_vector_embedding_query_prefix:
+          description: Whether to disable the embedding query prefix
+          type: boolean
+          default: false
     QuerySimilarityBoost:
       type: object
       properties:
@@ -839,7 +862,10 @@ components:
       $ref: common.yaml#/components/securitySchemes/ExternalOAuth
     SnowflakeOAuth:
       $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+    ProgrammaticAccessToken:
+      $ref: common.yaml#/components/securitySchemes/ProgrammaticAccessToken
 security:
 - KeyPair: []
 - ExternalOAuth: []
 - SnowflakeOAuth: []
+- ProgrammaticAccessToken: []
