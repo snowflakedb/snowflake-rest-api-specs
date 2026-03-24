@@ -1,0 +1,3665 @@
+{
+  "info": {
+    "_postman_id": "7741459e-a6e1-4278-856b-142c4be55ebe",
+    "name": "Snowflake Account API",
+    "description": "The Snowflake Account API is a REST API that you can use to access, update, and perform certain actions on Account resource in Snowflake.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53314882",
+    "_collection_link": "https://go.postman.co/collection/53314882-7741459e-a6e1-4278-856b-142c4be55ebe?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "api",
+      "item": [
+        {
+          "name": "v2",
+          "item": [
+            {
+              "name": "accounts",
+              "item": [
+                {
+                  "name": "{name}",
+                  "item": [
+                    {
+                      "name": "Delete an account.",
+                      "request": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts",
+                            ":name"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                              "key": "ifExists",
+                              "value": "true"
+                            },
+                            {
+                              "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                              "key": "gracePeriodInDays",
+                              "value": "2174"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "name",
+                              "value": "TEST_NAME",
+                              "description": "Identifier (i.e. name) for the resource."
+                            }
+                          ]
+                        },
+                        "description": "Deletes the specified account. If you enable the `ifExists` parameter, the operation succeeds even if the account does not exist. Otherwise, a 404 failure is returned if the account does not exist. if the drop is unsuccessful."
+                      },
+                      "response": [
+                        {
+                          "name": "Successful request.",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                ":name"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                                  "key": "ifExists",
+                                  "value": "true"
+                                },
+                                {
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                                  "key": "gracePeriodInDays",
+                                  "value": "2174"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"status\": \"Request successfully completed\"\n}"
+                        },
+                        {
+                          "name": "Successfully accepted the request, but it is not completed yet.",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                ":name"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                                  "key": "ifExists",
+                                  "value": "true"
+                                },
+                                {
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                                  "key": "gracePeriodInDays",
+                                  "value": "2174"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Accepted",
+                          "code": 202,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "Location",
+                              "value": "string"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                        },
+                        {
+                          "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                ":name"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                                  "key": "ifExists",
+                                  "value": "true"
+                                },
+                                {
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                                  "key": "gracePeriodInDays",
+                                  "value": "2174"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Bad Request",
+                          "code": 400,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                ":name"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                                  "key": "ifExists",
+                                  "value": "true"
+                                },
+                                {
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                                  "key": "gracePeriodInDays",
+                                  "value": "2174"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                ":name"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                                  "key": "ifExists",
+                                  "value": "true"
+                                },
+                                {
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                                  "key": "gracePeriodInDays",
+                                  "value": "2174"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Forbidden",
+                          "code": 403,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                ":name"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                                  "key": "ifExists",
+                                  "value": "true"
+                                },
+                                {
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                                  "key": "gracePeriodInDays",
+                                  "value": "2174"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Not Found",
+                          "code": 404,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                ":name"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                                  "key": "ifExists",
+                                  "value": "true"
+                                },
+                                {
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                                  "key": "gracePeriodInDays",
+                                  "value": "2174"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Method Not Allowed",
+                          "code": 405,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                ":name"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                                  "key": "ifExists",
+                                  "value": "true"
+                                },
+                                {
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                                  "key": "gracePeriodInDays",
+                                  "value": "2174"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Request Timeout",
+                          "code": 408,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                ":name"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                                  "key": "ifExists",
+                                  "value": "true"
+                                },
+                                {
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                                  "key": "gracePeriodInDays",
+                                  "value": "2174"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Conflict",
+                          "code": 409,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                ":name"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                                  "key": "ifExists",
+                                  "value": "true"
+                                },
+                                {
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                                  "key": "gracePeriodInDays",
+                                  "value": "2174"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Gone",
+                          "code": 410,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                ":name"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                                  "key": "ifExists",
+                                  "value": "true"
+                                },
+                                {
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                                  "key": "gracePeriodInDays",
+                                  "value": "2174"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Too Many Requests",
+                          "code": 429,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                ":name"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                                  "key": "ifExists",
+                                  "value": "true"
+                                },
+                                {
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                                  "key": "gracePeriodInDays",
+                                  "value": "2174"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Internal Server Error",
+                          "code": 500,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                ":name"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                                  "key": "ifExists",
+                                  "value": "true"
+                                },
+                                {
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                                  "key": "gracePeriodInDays",
+                                  "value": "2174"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Service Unavailable",
+                          "code": 503,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                ":name"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Parameter that specifies how to handle the request for a resource that does not exist:\n- `true`: The endpoint does not throw an error if the resource does not exist. It returns a 200 success response, but does not take any action on the resource.\n- `false`: The endpoint throws an error if the resource doesn't exist.",
+                                  "key": "ifExists",
+                                  "value": "true"
+                                },
+                                {
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
+                                  "key": "gracePeriodInDays",
+                                  "value": "2174"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Gateway Timeout",
+                          "code": 504,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "{name}:undrop",
+                  "item": [
+                    {
+                      "name": "Restore an account.",
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts",
+                            "{{name}}:undrop"
+                          ]
+                        },
+                        "description": "Restores a dropped account that has not yet been permanently deleted (a dropped account that is within its grace period)."
+                      },
+                      "response": [
+                        {
+                          "name": "Successful request.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                "{{name}}:undrop"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"status\": \"Request successfully completed\"\n}"
+                        },
+                        {
+                          "name": "Successfully accepted the request, but it is not completed yet.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                "{{name}}:undrop"
+                              ]
+                            }
+                          },
+                          "status": "Accepted",
+                          "code": 202,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "Location",
+                              "value": "string"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                        },
+                        {
+                          "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                "{{name}}:undrop"
+                              ]
+                            }
+                          },
+                          "status": "Bad Request",
+                          "code": 400,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                "{{name}}:undrop"
+                              ]
+                            }
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                "{{name}}:undrop"
+                              ]
+                            }
+                          },
+                          "status": "Forbidden",
+                          "code": 403,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                "{{name}}:undrop"
+                              ]
+                            }
+                          },
+                          "status": "Not Found",
+                          "code": 404,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                "{{name}}:undrop"
+                              ]
+                            }
+                          },
+                          "status": "Method Not Allowed",
+                          "code": 405,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                "{{name}}:undrop"
+                              ]
+                            }
+                          },
+                          "status": "Request Timeout",
+                          "code": 408,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                "{{name}}:undrop"
+                              ]
+                            }
+                          },
+                          "status": "Conflict",
+                          "code": 409,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                "{{name}}:undrop"
+                              ]
+                            }
+                          },
+                          "status": "Gone",
+                          "code": 410,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                "{{name}}:undrop"
+                              ]
+                            }
+                          },
+                          "status": "Too Many Requests",
+                          "code": 429,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                "{{name}}:undrop"
+                              ]
+                            }
+                          },
+                          "status": "Internal Server Error",
+                          "code": 500,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                "{{name}}:undrop"
+                              ]
+                            }
+                          },
+                          "status": "Service Unavailable",
+                          "code": 503,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/accounts/{{name}}:undrop",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "accounts",
+                                "{{name}}:undrop"
+                              ]
+                            }
+                          },
+                          "status": "Gateway Timeout",
+                          "code": 504,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "List accounts.",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v2",
+                        "accounts"
+                      ],
+                      "query": [
+                        {
+                          "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                          "key": "like",
+                          "value": "test_%"
+                        },
+                        {
+                          "description": "Parameter to limit the maximum number of rows returned by a command.",
+                          "key": "showLimit",
+                          "value": "10"
+                        },
+                        {
+                          "description": "Optionally includes dropped accounts that have not yet been purged.",
+                          "key": "history",
+                          "value": "true"
+                        }
+                      ]
+                    },
+                    "description": "Lists the accessible accounts."
+                  },
+                  "response": [
+                    {
+                      "name": "Successful request.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                              "key": "like",
+                              "value": "test_%"
+                            },
+                            {
+                              "description": "Parameter to limit the maximum number of rows returned by a command.",
+                              "key": "showLimit",
+                              "value": "10"
+                            },
+                            {
+                              "description": "Optionally includes dropped accounts that have not yet been purged.",
+                              "key": "history",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "[\n  {\n    \"name\": \"TEST_NAME\",\n    \"edition\": \"string\",\n    \"organization_name\": \"string\",\n    \"region_group\": \"string\",\n    \"region\": \"string\",\n    \"created_on\": \"2004-09-10T00:25:38.487Z\",\n    \"account_url\": \"string\",\n    \"account_locator\": \"string\",\n    \"account_locator_url\": \"string\",\n    \"managed_accounts\": 3096,\n    \"consumption_billing_entity_name\": \"string\",\n    \"marketplace_consumer_billing_entity_name\": \"string\",\n    \"marketplace_provider_billing_entity_name\": \"string\",\n    \"old_account_url\": \"string\",\n    \"comment\": \"string\",\n    \"is_org_admin\": false,\n    \"retention_time\": 5754,\n    \"dropped_on\": \"1981-03-06T16:22:34.473Z\",\n    \"scheduled_deletion_time\": \"2023-07-04T02:27:41.593Z\",\n    \"restored_on\": \"1954-01-05T17:18:51.565Z\",\n    \"account_old_url_saved_on\": \"1951-06-07T16:22:45.913Z\",\n    \"account_old_url_last_used\": \"1975-07-23T16:45:26.517Z\",\n    \"organization_old_url\": \"string\",\n    \"organization_old_url_saved_on\": \"1949-02-13T10:29:44.057Z\",\n    \"organization_old_url_last_used\": \"2006-09-19T13:47:13.937Z\",\n    \"organization_URL_expiration_on\": \"1985-08-08T00:02:19.519Z\",\n    \"moved_on\": \"1963-05-22T19:49:16.366Z\",\n    \"is_events_account\": true,\n    \"moved_to_organization\": \"string\"\n  },\n  {\n    \"name\": \"TEST_NAME\",\n    \"edition\": \"string\",\n    \"organization_name\": \"string\",\n    \"region_group\": \"string\",\n    \"region\": \"string\",\n    \"created_on\": \"2024-06-03T02:04:26.488Z\",\n    \"account_url\": \"string\",\n    \"account_locator\": \"string\",\n    \"account_locator_url\": \"string\",\n    \"managed_accounts\": 6186,\n    \"consumption_billing_entity_name\": \"string\",\n    \"marketplace_consumer_billing_entity_name\": \"string\",\n    \"marketplace_provider_billing_entity_name\": \"string\",\n    \"old_account_url\": \"string\",\n    \"comment\": \"string\",\n    \"is_org_admin\": true,\n    \"retention_time\": 9439,\n    \"dropped_on\": \"1953-11-09T23:18:55.475Z\",\n    \"scheduled_deletion_time\": \"2001-04-30T21:13:39.041Z\",\n    \"restored_on\": \"2024-12-13T00:38:22.604Z\",\n    \"account_old_url_saved_on\": \"1951-05-17T08:45:20.682Z\",\n    \"account_old_url_last_used\": \"1985-09-28T17:50:19.069Z\",\n    \"organization_old_url\": \"string\",\n    \"organization_old_url_saved_on\": \"2007-05-02T14:29:52.108Z\",\n    \"organization_old_url_last_used\": \"1968-12-13T16:23:52.869Z\",\n    \"organization_URL_expiration_on\": \"2012-12-01T03:33:41.233Z\",\n    \"moved_on\": \"2014-04-07T03:18:56.774Z\",\n    \"is_events_account\": false,\n    \"moved_to_organization\": \"string\"\n  }\n]"
+                    },
+                    {
+                      "name": "Successfully accepted the request, but it is not completed yet.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                              "key": "like",
+                              "value": "test_%"
+                            },
+                            {
+                              "description": "Parameter to limit the maximum number of rows returned by a command.",
+                              "key": "showLimit",
+                              "value": "10"
+                            },
+                            {
+                              "description": "Optionally includes dropped accounts that have not yet been purged.",
+                              "key": "history",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Accepted",
+                      "code": 202,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "Location",
+                          "value": "string"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                    },
+                    {
+                      "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                              "key": "like",
+                              "value": "test_%"
+                            },
+                            {
+                              "description": "Parameter to limit the maximum number of rows returned by a command.",
+                              "key": "showLimit",
+                              "value": "10"
+                            },
+                            {
+                              "description": "Optionally includes dropped accounts that have not yet been purged.",
+                              "key": "history",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Bad Request",
+                      "code": 400,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                              "key": "like",
+                              "value": "test_%"
+                            },
+                            {
+                              "description": "Parameter to limit the maximum number of rows returned by a command.",
+                              "key": "showLimit",
+                              "value": "10"
+                            },
+                            {
+                              "description": "Optionally includes dropped accounts that have not yet been purged.",
+                              "key": "history",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Unauthorized",
+                      "code": 401,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                              "key": "like",
+                              "value": "test_%"
+                            },
+                            {
+                              "description": "Parameter to limit the maximum number of rows returned by a command.",
+                              "key": "showLimit",
+                              "value": "10"
+                            },
+                            {
+                              "description": "Optionally includes dropped accounts that have not yet been purged.",
+                              "key": "history",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Forbidden",
+                      "code": 403,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                              "key": "like",
+                              "value": "test_%"
+                            },
+                            {
+                              "description": "Parameter to limit the maximum number of rows returned by a command.",
+                              "key": "showLimit",
+                              "value": "10"
+                            },
+                            {
+                              "description": "Optionally includes dropped accounts that have not yet been purged.",
+                              "key": "history",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                              "key": "like",
+                              "value": "test_%"
+                            },
+                            {
+                              "description": "Parameter to limit the maximum number of rows returned by a command.",
+                              "key": "showLimit",
+                              "value": "10"
+                            },
+                            {
+                              "description": "Optionally includes dropped accounts that have not yet been purged.",
+                              "key": "history",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Method Not Allowed",
+                      "code": 405,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                              "key": "like",
+                              "value": "test_%"
+                            },
+                            {
+                              "description": "Parameter to limit the maximum number of rows returned by a command.",
+                              "key": "showLimit",
+                              "value": "10"
+                            },
+                            {
+                              "description": "Optionally includes dropped accounts that have not yet been purged.",
+                              "key": "history",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Request Timeout",
+                      "code": 408,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                              "key": "like",
+                              "value": "test_%"
+                            },
+                            {
+                              "description": "Parameter to limit the maximum number of rows returned by a command.",
+                              "key": "showLimit",
+                              "value": "10"
+                            },
+                            {
+                              "description": "Optionally includes dropped accounts that have not yet been purged.",
+                              "key": "history",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Conflict",
+                      "code": 409,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                              "key": "like",
+                              "value": "test_%"
+                            },
+                            {
+                              "description": "Parameter to limit the maximum number of rows returned by a command.",
+                              "key": "showLimit",
+                              "value": "10"
+                            },
+                            {
+                              "description": "Optionally includes dropped accounts that have not yet been purged.",
+                              "key": "history",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Gone",
+                      "code": 410,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                              "key": "like",
+                              "value": "test_%"
+                            },
+                            {
+                              "description": "Parameter to limit the maximum number of rows returned by a command.",
+                              "key": "showLimit",
+                              "value": "10"
+                            },
+                            {
+                              "description": "Optionally includes dropped accounts that have not yet been purged.",
+                              "key": "history",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Too Many Requests",
+                      "code": 429,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                              "key": "like",
+                              "value": "test_%"
+                            },
+                            {
+                              "description": "Parameter to limit the maximum number of rows returned by a command.",
+                              "key": "showLimit",
+                              "value": "10"
+                            },
+                            {
+                              "description": "Optionally includes dropped accounts that have not yet been purged.",
+                              "key": "history",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Internal Server Error",
+                      "code": 500,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                              "key": "like",
+                              "value": "test_%"
+                            },
+                            {
+                              "description": "Parameter to limit the maximum number of rows returned by a command.",
+                              "key": "showLimit",
+                              "value": "10"
+                            },
+                            {
+                              "description": "Optionally includes dropped accounts that have not yet been purged.",
+                              "key": "history",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Service Unavailable",
+                      "code": 503,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ],
+                          "query": [
+                            {
+                              "description": "Parameter to filter the command output by resource name. Uses case-insensitive pattern matching, with support for SQL wildcard characters.",
+                              "key": "like",
+                              "value": "test_%"
+                            },
+                            {
+                              "description": "Parameter to limit the maximum number of rows returned by a command.",
+                              "key": "showLimit",
+                              "value": "10"
+                            },
+                            {
+                              "description": "Optionally includes dropped accounts that have not yet been purged.",
+                              "key": "history",
+                              "value": "true"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Gateway Timeout",
+                      "code": 504,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Create an account.",
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v2/accounts",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v2",
+                        "accounts"
+                      ]
+                    },
+                    "description": "Creates a account. You must provide the full account definition when creating a account."
+                  },
+                  "response": [
+                    {
+                      "name": "Successful request.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"status\": \"Request successfully completed\"\n}"
+                    },
+                    {
+                      "name": "Successfully accepted the request, but it is not completed yet.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ]
+                        }
+                      },
+                      "status": "Accepted",
+                      "code": 202,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "Location",
+                          "value": "string"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                    },
+                    {
+                      "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ]
+                        }
+                      },
+                      "status": "Bad Request",
+                      "code": 400,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ]
+                        }
+                      },
+                      "status": "Unauthorized",
+                      "code": 401,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ]
+                        }
+                      },
+                      "status": "Forbidden",
+                      "code": 403,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ]
+                        }
+                      },
+                      "status": "Method Not Allowed",
+                      "code": 405,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ]
+                        }
+                      },
+                      "status": "Request Timeout",
+                      "code": 408,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ]
+                        }
+                      },
+                      "status": "Conflict",
+                      "code": 409,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ]
+                        }
+                      },
+                      "status": "Gone",
+                      "code": 410,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ]
+                        }
+                      },
+                      "status": "Too Many Requests",
+                      "code": 429,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ]
+                        }
+                      },
+                      "status": "Internal Server Error",
+                      "code": 500,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ]
+                        }
+                      },
+                      "status": "Service Unavailable",
+                      "code": 503,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"TEST_NAME\",\n  \"admin_name\": \"string\",\n  \"email\": \"string\",\n  \"edition\": \"string\",\n  \"region_group\": \"string\",\n  \"region\": \"string\",\n  \"comment\": \"string\",\n  \"admin_password\": \"string\",\n  \"admin_rsa_public_key\": \"string\",\n  \"admin_user_type\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"must_change_password\": false,\n  \"polaris\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/accounts",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "accounts"
+                          ]
+                        }
+                      },
+                      "status": "Gateway Timeout",
+                      "code": 504,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "",
+                            "type": "text/plain"
+                          },
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://org-account.snowflakecomputing.com"
+    },
+    {
+      "key": "name",
+      "value": "TEST_NAME"
+    }
+  ]
+}
