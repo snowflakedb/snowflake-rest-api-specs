@@ -1,9 +1,11 @@
 {
   "info": {
-    "_postman_id": "53651b50-6c5e-43ad-ad56-7856a3855c37",
+    "_postman_id": "53f73333-8f0f-429b-a767-6d642894ea43",
     "name": "Snowflake SQL API",
     "description": "The Snowflake SQL API is a REST API that you can use to access and update data in a Snowflake database. \n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53314882",
+    "_collection_link": "https://go.postman.co/collection/53314882-53f73333-8f0f-429b-a767-6d642894ea43?source=collection_link"
   },
   "item": [
     {
@@ -37,14 +39,14 @@
                             "method": "POST",
                             "header": [
                               {
+                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                 "key": "User-Agent",
-                                "value": "myApplication/1.0",
-                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                "value": "myApplication/1.0"
                               },
                               {
+                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                 "key": "X-Snowflake-Authorization-Token-Type",
-                                "value": "KEYPAIR_JWT",
-                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                "value": "KEYPAIR_JWT"
                               },
                               {
                                 "key": "Accept",
@@ -52,7 +54,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=94820e57-41ea-8403-201b-d45f56dcf35c",
+                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=88600cd6-5319-40d5-a9f5-315447f93444",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -65,9 +67,9 @@
                               ],
                               "query": [
                                 {
+                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                   "key": "requestId",
-                                  "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                  "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                 }
                               ],
                               "variable": [
@@ -87,27 +89,27 @@
                                 "method": "POST",
                                 "header": [
                                   {
+                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                     "key": "User-Agent",
-                                    "value": "myApplication/1.0",
-                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                    "value": "myApplication/1.0"
                                   },
                                   {
+                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                     "key": "X-Snowflake-Authorization-Token-Type",
-                                    "value": "KEYPAIR_JWT",
-                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                    "value": "KEYPAIR_JWT"
                                   },
                                   {
                                     "key": "Accept",
                                     "value": "application/json"
                                   },
                                   {
+                                    "description": "Added as a part of security scheme: bearer",
                                     "key": "Authorization",
-                                    "value": "Bearer <token>",
-                                    "description": "Added as a part of security scheme: bearer"
+                                    "value": "Bearer <token>"
                                   }
                                 ],
                                 "url": {
-                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=94820e57-41ea-8403-201b-d45f56dcf35c",
+                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=88600cd6-5319-40d5-a9f5-315447f93444",
                                   "host": [
                                     "{{baseUrl}}"
                                   ],
@@ -120,9 +122,9 @@
                                   ],
                                   "query": [
                                     {
+                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                       "key": "requestId",
-                                      "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                      "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                     }
                                   ],
                                   "variable": [
@@ -152,23 +154,23 @@
                                 "method": "POST",
                                 "header": [
                                   {
+                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                     "key": "User-Agent",
-                                    "value": "myApplication/1.0",
-                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                    "value": "myApplication/1.0"
                                   },
                                   {
+                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                     "key": "X-Snowflake-Authorization-Token-Type",
-                                    "value": "KEYPAIR_JWT",
-                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                    "value": "KEYPAIR_JWT"
                                   },
                                   {
+                                    "description": "Added as a part of security scheme: bearer",
                                     "key": "Authorization",
-                                    "value": "Bearer <token>",
-                                    "description": "Added as a part of security scheme: bearer"
+                                    "value": "Bearer <token>"
                                   }
                                 ],
                                 "url": {
-                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=94820e57-41ea-8403-201b-d45f56dcf35c",
+                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=88600cd6-5319-40d5-a9f5-315447f93444",
                                   "host": [
                                     "{{baseUrl}}"
                                   ],
@@ -181,9 +183,9 @@
                                   ],
                                   "query": [
                                     {
+                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                       "key": "requestId",
-                                      "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                      "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                     }
                                   ],
                                   "variable": [
@@ -208,23 +210,23 @@
                                 "method": "POST",
                                 "header": [
                                   {
+                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                     "key": "User-Agent",
-                                    "value": "myApplication/1.0",
-                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                    "value": "myApplication/1.0"
                                   },
                                   {
+                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                     "key": "X-Snowflake-Authorization-Token-Type",
-                                    "value": "KEYPAIR_JWT",
-                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                    "value": "KEYPAIR_JWT"
                                   },
                                   {
+                                    "description": "Added as a part of security scheme: bearer",
                                     "key": "Authorization",
-                                    "value": "Bearer <token>",
-                                    "description": "Added as a part of security scheme: bearer"
+                                    "value": "Bearer <token>"
                                   }
                                 ],
                                 "url": {
-                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=94820e57-41ea-8403-201b-d45f56dcf35c",
+                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=88600cd6-5319-40d5-a9f5-315447f93444",
                                   "host": [
                                     "{{baseUrl}}"
                                   ],
@@ -237,9 +239,9 @@
                                   ],
                                   "query": [
                                     {
+                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                       "key": "requestId",
-                                      "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                      "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                     }
                                   ],
                                   "variable": [
@@ -264,23 +266,23 @@
                                 "method": "POST",
                                 "header": [
                                   {
+                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                     "key": "User-Agent",
-                                    "value": "myApplication/1.0",
-                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                    "value": "myApplication/1.0"
                                   },
                                   {
+                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                     "key": "X-Snowflake-Authorization-Token-Type",
-                                    "value": "KEYPAIR_JWT",
-                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                    "value": "KEYPAIR_JWT"
                                   },
                                   {
+                                    "description": "Added as a part of security scheme: bearer",
                                     "key": "Authorization",
-                                    "value": "Bearer <token>",
-                                    "description": "Added as a part of security scheme: bearer"
+                                    "value": "Bearer <token>"
                                   }
                                 ],
                                 "url": {
-                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=94820e57-41ea-8403-201b-d45f56dcf35c",
+                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=88600cd6-5319-40d5-a9f5-315447f93444",
                                   "host": [
                                     "{{baseUrl}}"
                                   ],
@@ -293,9 +295,9 @@
                                   ],
                                   "query": [
                                     {
+                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                       "key": "requestId",
-                                      "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                      "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                     }
                                   ],
                                   "variable": [
@@ -320,23 +322,23 @@
                                 "method": "POST",
                                 "header": [
                                   {
+                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                     "key": "User-Agent",
-                                    "value": "myApplication/1.0",
-                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                    "value": "myApplication/1.0"
                                   },
                                   {
+                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                     "key": "X-Snowflake-Authorization-Token-Type",
-                                    "value": "KEYPAIR_JWT",
-                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                    "value": "KEYPAIR_JWT"
                                   },
                                   {
+                                    "description": "Added as a part of security scheme: bearer",
                                     "key": "Authorization",
-                                    "value": "Bearer <token>",
-                                    "description": "Added as a part of security scheme: bearer"
+                                    "value": "Bearer <token>"
                                   }
                                 ],
                                 "url": {
-                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=94820e57-41ea-8403-201b-d45f56dcf35c",
+                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=88600cd6-5319-40d5-a9f5-315447f93444",
                                   "host": [
                                     "{{baseUrl}}"
                                   ],
@@ -349,9 +351,9 @@
                                   ],
                                   "query": [
                                     {
+                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                       "key": "requestId",
-                                      "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                      "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                     }
                                   ],
                                   "variable": [
@@ -376,23 +378,23 @@
                                 "method": "POST",
                                 "header": [
                                   {
+                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                     "key": "User-Agent",
-                                    "value": "myApplication/1.0",
-                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                    "value": "myApplication/1.0"
                                   },
                                   {
+                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                     "key": "X-Snowflake-Authorization-Token-Type",
-                                    "value": "KEYPAIR_JWT",
-                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                    "value": "KEYPAIR_JWT"
                                   },
                                   {
+                                    "description": "Added as a part of security scheme: bearer",
                                     "key": "Authorization",
-                                    "value": "Bearer <token>",
-                                    "description": "Added as a part of security scheme: bearer"
+                                    "value": "Bearer <token>"
                                   }
                                 ],
                                 "url": {
-                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=94820e57-41ea-8403-201b-d45f56dcf35c",
+                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=88600cd6-5319-40d5-a9f5-315447f93444",
                                   "host": [
                                     "{{baseUrl}}"
                                   ],
@@ -405,9 +407,9 @@
                                   ],
                                   "query": [
                                     {
+                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                       "key": "requestId",
-                                      "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                      "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                     }
                                   ],
                                   "variable": [
@@ -432,27 +434,27 @@
                                 "method": "POST",
                                 "header": [
                                   {
+                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                     "key": "User-Agent",
-                                    "value": "myApplication/1.0",
-                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                    "value": "myApplication/1.0"
                                   },
                                   {
+                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                     "key": "X-Snowflake-Authorization-Token-Type",
-                                    "value": "KEYPAIR_JWT",
-                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                    "value": "KEYPAIR_JWT"
                                   },
                                   {
                                     "key": "Accept",
                                     "value": "application/json"
                                   },
                                   {
+                                    "description": "Added as a part of security scheme: bearer",
                                     "key": "Authorization",
-                                    "value": "Bearer <token>",
-                                    "description": "Added as a part of security scheme: bearer"
+                                    "value": "Bearer <token>"
                                   }
                                 ],
                                 "url": {
-                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=94820e57-41ea-8403-201b-d45f56dcf35c",
+                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=88600cd6-5319-40d5-a9f5-315447f93444",
                                   "host": [
                                     "{{baseUrl}}"
                                   ],
@@ -465,9 +467,9 @@
                                   ],
                                   "query": [
                                     {
+                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                       "key": "requestId",
-                                      "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                      "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                     }
                                   ],
                                   "variable": [
@@ -497,23 +499,23 @@
                                 "method": "POST",
                                 "header": [
                                   {
+                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                     "key": "User-Agent",
-                                    "value": "myApplication/1.0",
-                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                    "value": "myApplication/1.0"
                                   },
                                   {
+                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                     "key": "X-Snowflake-Authorization-Token-Type",
-                                    "value": "KEYPAIR_JWT",
-                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                    "value": "KEYPAIR_JWT"
                                   },
                                   {
+                                    "description": "Added as a part of security scheme: bearer",
                                     "key": "Authorization",
-                                    "value": "Bearer <token>",
-                                    "description": "Added as a part of security scheme: bearer"
+                                    "value": "Bearer <token>"
                                   }
                                 ],
                                 "url": {
-                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=94820e57-41ea-8403-201b-d45f56dcf35c",
+                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=88600cd6-5319-40d5-a9f5-315447f93444",
                                   "host": [
                                     "{{baseUrl}}"
                                   ],
@@ -526,9 +528,9 @@
                                   ],
                                   "query": [
                                     {
+                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                       "key": "requestId",
-                                      "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                      "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                     }
                                   ],
                                   "variable": [
@@ -553,23 +555,23 @@
                                 "method": "POST",
                                 "header": [
                                   {
+                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                     "key": "User-Agent",
-                                    "value": "myApplication/1.0",
-                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                    "value": "myApplication/1.0"
                                   },
                                   {
+                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                     "key": "X-Snowflake-Authorization-Token-Type",
-                                    "value": "KEYPAIR_JWT",
-                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                    "value": "KEYPAIR_JWT"
                                   },
                                   {
+                                    "description": "Added as a part of security scheme: bearer",
                                     "key": "Authorization",
-                                    "value": "Bearer <token>",
-                                    "description": "Added as a part of security scheme: bearer"
+                                    "value": "Bearer <token>"
                                   }
                                 ],
                                 "url": {
-                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=94820e57-41ea-8403-201b-d45f56dcf35c",
+                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=88600cd6-5319-40d5-a9f5-315447f93444",
                                   "host": [
                                     "{{baseUrl}}"
                                   ],
@@ -582,9 +584,9 @@
                                   ],
                                   "query": [
                                     {
+                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                       "key": "requestId",
-                                      "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                      "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                     }
                                   ],
                                   "variable": [
@@ -609,23 +611,23 @@
                                 "method": "POST",
                                 "header": [
                                   {
+                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                     "key": "User-Agent",
-                                    "value": "myApplication/1.0",
-                                    "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                    "value": "myApplication/1.0"
                                   },
                                   {
+                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                     "key": "X-Snowflake-Authorization-Token-Type",
-                                    "value": "KEYPAIR_JWT",
-                                    "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                    "value": "KEYPAIR_JWT"
                                   },
                                   {
+                                    "description": "Added as a part of security scheme: bearer",
                                     "key": "Authorization",
-                                    "value": "Bearer <token>",
-                                    "description": "Added as a part of security scheme: bearer"
+                                    "value": "Bearer <token>"
                                   }
                                 ],
                                 "url": {
-                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=94820e57-41ea-8403-201b-d45f56dcf35c",
+                                  "raw": "{{baseUrl}}/api/v2/statements/:statementHandle/cancel?requestId=88600cd6-5319-40d5-a9f5-315447f93444",
                                   "host": [
                                     "{{baseUrl}}"
                                   ],
@@ -638,9 +640,9 @@
                                   ],
                                   "query": [
                                     {
+                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                       "key": "requestId",
-                                      "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                      "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                      "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                     }
                                   ],
                                   "variable": [
@@ -679,14 +681,14 @@
                         "method": "GET",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Accept",
@@ -694,7 +696,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&partition=2",
+                          "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=88600cd6-5319-40d5-a9f5-315447f93444&partition=2",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -706,14 +708,14 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1.",
                               "key": "partition",
-                              "value": "2",
-                              "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1."
+                              "value": "2"
                             }
                           ],
                           "variable": [
@@ -733,27 +735,27 @@
                             "method": "GET",
                             "header": [
                               {
+                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                 "key": "User-Agent",
-                                "value": "myApplication/1.0",
-                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                "value": "myApplication/1.0"
                               },
                               {
+                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                 "key": "X-Snowflake-Authorization-Token-Type",
-                                "value": "KEYPAIR_JWT",
-                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                "value": "KEYPAIR_JWT"
                               },
                               {
                                 "key": "Accept",
                                 "value": "application/json"
                               },
                               {
+                                "description": "Added as a part of security scheme: bearer",
                                 "key": "Authorization",
-                                "value": "Bearer <token>",
-                                "description": "Added as a part of security scheme: bearer"
+                                "value": "Bearer <token>"
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&partition=2",
+                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=88600cd6-5319-40d5-a9f5-315447f93444&partition=2",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -765,14 +767,14 @@
                               ],
                               "query": [
                                 {
+                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                   "key": "requestId",
-                                  "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                  "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                 },
                                 {
+                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1.",
                                   "key": "partition",
-                                  "value": "2",
-                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1."
+                                  "value": "2"
                                 }
                               ],
                               "variable": [
@@ -793,16 +795,17 @@
                               "value": "application/json"
                             },
                             {
-                              "key": "link",
-                              "value": "",
+                              "disabled": false,
                               "description": {
                                 "content": "",
                                 "type": "text/plain"
-                              }
+                              },
+                              "key": "link",
+                              "value": ""
                             }
                           ],
                           "cookie": [],
-                          "body": "{\n  \"code\": \"000123\",\n  \"sqlState\": \"42601\",\n  \"message\": \"successfully executed\",\n  \"statementHandle\": \"536fad38-b564-4dc5-9892-a4543504df6c\",\n  \"createdOn\": 1597090533987,\n  \"statementStatusUrl\": \"https://OeSFMiVPpZdZY.oqcpew2NEA.1yn71+0SrDnp+WwAxmhR45FCFvHlNI\",\n  \"resultSetMetaData\": {\n    \"format\": \"jsonv2\",\n    \"numRows\": 100,\n    \"rowType\": [\n      {\n        \"name\": \"ROWNUM\",\n        \"type\": \"FIXED\",\n        \"length\": 0,\n        \"precision\": 38,\n        \"scale\": 0,\n        \"nullable\": false\n      },\n      {\n        \"name\": \"ACCOUNT_ID\",\n        \"type\": \"FIXED\",\n        \"length\": 0,\n        \"precision\": 38,\n        \"scale\": 0,\n        \"nullable\": false\n      },\n      {\n        \"name\": \"ACCOUNT_NAME\",\n        \"type\": \"TEXT\",\n        \"length\": 1024,\n        \"precision\": 0,\n        \"scale\": 0,\n        \"nullable\": false\n      },\n      {\n        \"name\": \"ADDRESS\",\n        \"type\": \"TEXT\",\n        \"length\": 16777216,\n        \"precision\": 0,\n        \"scale\": 0,\n        \"nullable\": true\n      },\n      {\n        \"name\": \"ZIP\",\n        \"type\": \"TEXT\",\n        \"length\": 100,\n        \"precision\": 0,\n        \"scale\": 0,\n        \"nullable\": true\n      },\n      {\n        \"name\": \"CREATED_ON\",\n        \"type\": \"TIMESTAMP_NTZ\",\n        \"length\": 0,\n        \"precision\": 0,\n        \"scale\": 3,\n        \"nullable\": false\n      }\n    ],\n    \"partitionInfo\": [\n      {\n        \"rowCount\": 1324,\n        \"compressedSize\": 37436824,\n        \"uncompressedSize\": 1343787384\n      },\n      {\n        \"rowCount\": 1324,\n        \"compressedSize\": 37436824,\n        \"uncompressedSize\": 1343787384\n      }\n    ],\n    \"nullable\": false,\n    \"parameters\": {\n      \"binary_output_format\": \"HEX\",\n      \"date_output_format\": \"YYYY-MM-DD\",\n      \"time_output_format\": \"HH24:MI:SS\",\n      \"timestamp_output_format\": \"YYYY-MM-DD HH24:MI:SS.FF6\",\n      \"timestamp_ltz_output_format\": \"YYYY-MM-DD HH24:MI:SS.FF6\",\n      \"timestamp_ntz_output_format\": \"YYYY-MM-DD HH24:MI:SS.FF6\",\n      \"timestamp_tz_output_format\": \"YYYY-MM-DDTHH24:MI:SS.FF6 TZHTZM\",\n      \"multi_statement_count\": 4\n    }\n  },\n  \"data\": [\n    [\n      \"customer1\",\n      \"1234 A Avenue\",\n      \"98765\",\n      \"2019-08-10 23:56:34.123\"\n    ],\n    [\n      \"customer2\",\n      \"987 B Street\",\n      \"98765\",\n      \"2019-08-11 09:45:12.890\"\n    ],\n    [\n      \"customer3\",\n      \"8777 C Blvd\",\n      \"98765\",\n      \"2019-08-12 10:23:51.999\"\n    ],\n    [\n      \"customer4\",\n      \"64646 D Circle\",\n      \"98765\",\n      \"2019-08-13 01:54:32.000\"\n    ]\n  ],\n  \"stats\": {\n    \"numRowsInserted\": 12,\n    \"numRowsUpdated\": 9,\n    \"numRowsDeleted\": 8,\n    \"numDuplicateRowsUpdated\": 20\n  }\n}"
+                          "body": "{\n  \"code\": \"000123\",\n  \"sqlState\": \"42601\",\n  \"message\": \"successfully executed\",\n  \"statementHandle\": \"536fad38-b564-4dc5-9892-a4543504df6c\",\n  \"createdOn\": 1597090533987,\n  \"statementStatusUrl\": \"https://kwmUnTOnTGkkDjyRZsvMWAfDDfMJDv.cnwOJNHZZw6rS-qk.MyMP2nifLJAmtv.,Cp2zys8y54R8wn\",\n  \"resultSetMetaData\": {\n    \"format\": \"jsonv2\",\n    \"numRows\": 100,\n    \"rowType\": [\n      {\n        \"name\": \"ROWNUM\",\n        \"type\": \"FIXED\",\n        \"length\": 0,\n        \"precision\": 38,\n        \"scale\": 0,\n        \"nullable\": false\n      },\n      {\n        \"name\": \"ACCOUNT_ID\",\n        \"type\": \"FIXED\",\n        \"length\": 0,\n        \"precision\": 38,\n        \"scale\": 0,\n        \"nullable\": false\n      },\n      {\n        \"name\": \"ACCOUNT_NAME\",\n        \"type\": \"TEXT\",\n        \"length\": 1024,\n        \"precision\": 0,\n        \"scale\": 0,\n        \"nullable\": false\n      },\n      {\n        \"name\": \"ADDRESS\",\n        \"type\": \"TEXT\",\n        \"length\": 16777216,\n        \"precision\": 0,\n        \"scale\": 0,\n        \"nullable\": true\n      },\n      {\n        \"name\": \"ZIP\",\n        \"type\": \"TEXT\",\n        \"length\": 100,\n        \"precision\": 0,\n        \"scale\": 0,\n        \"nullable\": true\n      },\n      {\n        \"name\": \"CREATED_ON\",\n        \"type\": \"TIMESTAMP_NTZ\",\n        \"length\": 0,\n        \"precision\": 0,\n        \"scale\": 3,\n        \"nullable\": false\n      }\n    ],\n    \"partitionInfo\": [\n      {\n        \"rowCount\": 1324,\n        \"compressedSize\": 37436824,\n        \"uncompressedSize\": 1343787384\n      },\n      {\n        \"rowCount\": 1324,\n        \"compressedSize\": 37436824,\n        \"uncompressedSize\": 1343787384\n      }\n    ],\n    \"nullable\": false,\n    \"parameters\": {\n      \"binary_output_format\": \"HEX\",\n      \"date_output_format\": \"YYYY-MM-DD\",\n      \"time_output_format\": \"HH24:MI:SS\",\n      \"timestamp_output_format\": \"YYYY-MM-DD HH24:MI:SS.FF6\",\n      \"timestamp_ltz_output_format\": \"YYYY-MM-DD HH24:MI:SS.FF6\",\n      \"timestamp_ntz_output_format\": \"YYYY-MM-DD HH24:MI:SS.FF6\",\n      \"timestamp_tz_output_format\": \"YYYY-MM-DDTHH24:MI:SS.FF6 TZHTZM\",\n      \"multi_statement_count\": 4\n    }\n  },\n  \"data\": [\n    [\n      \"customer1\",\n      \"1234 A Avenue\",\n      \"98765\",\n      \"2019-08-10 23:56:34.123\"\n    ],\n    [\n      \"customer2\",\n      \"987 B Street\",\n      \"98765\",\n      \"2019-08-11 09:45:12.890\"\n    ],\n    [\n      \"customer3\",\n      \"8777 C Blvd\",\n      \"98765\",\n      \"2019-08-12 10:23:51.999\"\n    ],\n    [\n      \"customer4\",\n      \"64646 D Circle\",\n      \"98765\",\n      \"2019-08-13 01:54:32.000\"\n    ]\n  ],\n  \"stats\": {\n    \"numRowsInserted\": 12,\n    \"numRowsUpdated\": 9,\n    \"numRowsDeleted\": 8,\n    \"numDuplicateRowsUpdated\": 20\n  }\n}"
                         },
                         {
                           "name": "The execution of the statement is still in progress. Use this method again to check the status of the statement execution.",
@@ -810,27 +813,27 @@
                             "method": "GET",
                             "header": [
                               {
+                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                 "key": "User-Agent",
-                                "value": "myApplication/1.0",
-                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                "value": "myApplication/1.0"
                               },
                               {
+                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                 "key": "X-Snowflake-Authorization-Token-Type",
-                                "value": "KEYPAIR_JWT",
-                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                "value": "KEYPAIR_JWT"
                               },
                               {
                                 "key": "Accept",
                                 "value": "application/json"
                               },
                               {
+                                "description": "Added as a part of security scheme: bearer",
                                 "key": "Authorization",
-                                "value": "Bearer <token>",
-                                "description": "Added as a part of security scheme: bearer"
+                                "value": "Bearer <token>"
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&partition=2",
+                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=88600cd6-5319-40d5-a9f5-315447f93444&partition=2",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -842,14 +845,14 @@
                               ],
                               "query": [
                                 {
+                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                   "key": "requestId",
-                                  "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                  "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                 },
                                 {
+                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1.",
                                   "key": "partition",
-                                  "value": "2",
-                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1."
+                                  "value": "2"
                                 }
                               ],
                               "variable": [
@@ -879,23 +882,23 @@
                             "method": "GET",
                             "header": [
                               {
+                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                 "key": "User-Agent",
-                                "value": "myApplication/1.0",
-                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                "value": "myApplication/1.0"
                               },
                               {
+                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                 "key": "X-Snowflake-Authorization-Token-Type",
-                                "value": "KEYPAIR_JWT",
-                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                "value": "KEYPAIR_JWT"
                               },
                               {
+                                "description": "Added as a part of security scheme: bearer",
                                 "key": "Authorization",
-                                "value": "Bearer <token>",
-                                "description": "Added as a part of security scheme: bearer"
+                                "value": "Bearer <token>"
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&partition=2",
+                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=88600cd6-5319-40d5-a9f5-315447f93444&partition=2",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -907,14 +910,14 @@
                               ],
                               "query": [
                                 {
+                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                   "key": "requestId",
-                                  "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                  "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                 },
                                 {
+                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1.",
                                   "key": "partition",
-                                  "value": "2",
-                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1."
+                                  "value": "2"
                                 }
                               ],
                               "variable": [
@@ -939,23 +942,23 @@
                             "method": "GET",
                             "header": [
                               {
+                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                 "key": "User-Agent",
-                                "value": "myApplication/1.0",
-                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                "value": "myApplication/1.0"
                               },
                               {
+                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                 "key": "X-Snowflake-Authorization-Token-Type",
-                                "value": "KEYPAIR_JWT",
-                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                "value": "KEYPAIR_JWT"
                               },
                               {
+                                "description": "Added as a part of security scheme: bearer",
                                 "key": "Authorization",
-                                "value": "Bearer <token>",
-                                "description": "Added as a part of security scheme: bearer"
+                                "value": "Bearer <token>"
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&partition=2",
+                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=88600cd6-5319-40d5-a9f5-315447f93444&partition=2",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -967,14 +970,14 @@
                               ],
                               "query": [
                                 {
+                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                   "key": "requestId",
-                                  "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                  "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                 },
                                 {
+                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1.",
                                   "key": "partition",
-                                  "value": "2",
-                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1."
+                                  "value": "2"
                                 }
                               ],
                               "variable": [
@@ -999,23 +1002,23 @@
                             "method": "GET",
                             "header": [
                               {
+                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                 "key": "User-Agent",
-                                "value": "myApplication/1.0",
-                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                "value": "myApplication/1.0"
                               },
                               {
+                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                 "key": "X-Snowflake-Authorization-Token-Type",
-                                "value": "KEYPAIR_JWT",
-                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                "value": "KEYPAIR_JWT"
                               },
                               {
+                                "description": "Added as a part of security scheme: bearer",
                                 "key": "Authorization",
-                                "value": "Bearer <token>",
-                                "description": "Added as a part of security scheme: bearer"
+                                "value": "Bearer <token>"
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&partition=2",
+                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=88600cd6-5319-40d5-a9f5-315447f93444&partition=2",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -1027,14 +1030,14 @@
                               ],
                               "query": [
                                 {
+                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                   "key": "requestId",
-                                  "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                  "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                 },
                                 {
+                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1.",
                                   "key": "partition",
-                                  "value": "2",
-                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1."
+                                  "value": "2"
                                 }
                               ],
                               "variable": [
@@ -1059,23 +1062,23 @@
                             "method": "GET",
                             "header": [
                               {
+                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                 "key": "User-Agent",
-                                "value": "myApplication/1.0",
-                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                "value": "myApplication/1.0"
                               },
                               {
+                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                 "key": "X-Snowflake-Authorization-Token-Type",
-                                "value": "KEYPAIR_JWT",
-                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                "value": "KEYPAIR_JWT"
                               },
                               {
+                                "description": "Added as a part of security scheme: bearer",
                                 "key": "Authorization",
-                                "value": "Bearer <token>",
-                                "description": "Added as a part of security scheme: bearer"
+                                "value": "Bearer <token>"
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&partition=2",
+                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=88600cd6-5319-40d5-a9f5-315447f93444&partition=2",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -1087,14 +1090,14 @@
                               ],
                               "query": [
                                 {
+                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                   "key": "requestId",
-                                  "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                  "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                 },
                                 {
+                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1.",
                                   "key": "partition",
-                                  "value": "2",
-                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1."
+                                  "value": "2"
                                 }
                               ],
                               "variable": [
@@ -1119,23 +1122,23 @@
                             "method": "GET",
                             "header": [
                               {
+                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                 "key": "User-Agent",
-                                "value": "myApplication/1.0",
-                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                "value": "myApplication/1.0"
                               },
                               {
+                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                 "key": "X-Snowflake-Authorization-Token-Type",
-                                "value": "KEYPAIR_JWT",
-                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                "value": "KEYPAIR_JWT"
                               },
                               {
+                                "description": "Added as a part of security scheme: bearer",
                                 "key": "Authorization",
-                                "value": "Bearer <token>",
-                                "description": "Added as a part of security scheme: bearer"
+                                "value": "Bearer <token>"
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&partition=2",
+                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=88600cd6-5319-40d5-a9f5-315447f93444&partition=2",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -1147,14 +1150,14 @@
                               ],
                               "query": [
                                 {
+                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                   "key": "requestId",
-                                  "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                  "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                 },
                                 {
+                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1.",
                                   "key": "partition",
-                                  "value": "2",
-                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1."
+                                  "value": "2"
                                 }
                               ],
                               "variable": [
@@ -1179,23 +1182,23 @@
                             "method": "GET",
                             "header": [
                               {
+                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                 "key": "User-Agent",
-                                "value": "myApplication/1.0",
-                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                "value": "myApplication/1.0"
                               },
                               {
+                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                 "key": "X-Snowflake-Authorization-Token-Type",
-                                "value": "KEYPAIR_JWT",
-                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                "value": "KEYPAIR_JWT"
                               },
                               {
+                                "description": "Added as a part of security scheme: bearer",
                                 "key": "Authorization",
-                                "value": "Bearer <token>",
-                                "description": "Added as a part of security scheme: bearer"
+                                "value": "Bearer <token>"
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&partition=2",
+                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=88600cd6-5319-40d5-a9f5-315447f93444&partition=2",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -1207,14 +1210,14 @@
                               ],
                               "query": [
                                 {
+                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                   "key": "requestId",
-                                  "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                  "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                 },
                                 {
+                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1.",
                                   "key": "partition",
-                                  "value": "2",
-                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1."
+                                  "value": "2"
                                 }
                               ],
                               "variable": [
@@ -1239,27 +1242,27 @@
                             "method": "GET",
                             "header": [
                               {
+                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                 "key": "User-Agent",
-                                "value": "myApplication/1.0",
-                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                "value": "myApplication/1.0"
                               },
                               {
+                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                 "key": "X-Snowflake-Authorization-Token-Type",
-                                "value": "KEYPAIR_JWT",
-                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                "value": "KEYPAIR_JWT"
                               },
                               {
                                 "key": "Accept",
                                 "value": "application/json"
                               },
                               {
+                                "description": "Added as a part of security scheme: bearer",
                                 "key": "Authorization",
-                                "value": "Bearer <token>",
-                                "description": "Added as a part of security scheme: bearer"
+                                "value": "Bearer <token>"
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&partition=2",
+                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=88600cd6-5319-40d5-a9f5-315447f93444&partition=2",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -1271,14 +1274,14 @@
                               ],
                               "query": [
                                 {
+                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                   "key": "requestId",
-                                  "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                  "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                 },
                                 {
+                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1.",
                                   "key": "partition",
-                                  "value": "2",
-                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1."
+                                  "value": "2"
                                 }
                               ],
                               "variable": [
@@ -1308,23 +1311,23 @@
                             "method": "GET",
                             "header": [
                               {
+                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                 "key": "User-Agent",
-                                "value": "myApplication/1.0",
-                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                "value": "myApplication/1.0"
                               },
                               {
+                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                 "key": "X-Snowflake-Authorization-Token-Type",
-                                "value": "KEYPAIR_JWT",
-                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                "value": "KEYPAIR_JWT"
                               },
                               {
+                                "description": "Added as a part of security scheme: bearer",
                                 "key": "Authorization",
-                                "value": "Bearer <token>",
-                                "description": "Added as a part of security scheme: bearer"
+                                "value": "Bearer <token>"
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&partition=2",
+                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=88600cd6-5319-40d5-a9f5-315447f93444&partition=2",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -1336,14 +1339,14 @@
                               ],
                               "query": [
                                 {
+                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                   "key": "requestId",
-                                  "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                  "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                 },
                                 {
+                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1.",
                                   "key": "partition",
-                                  "value": "2",
-                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1."
+                                  "value": "2"
                                 }
                               ],
                               "variable": [
@@ -1368,23 +1371,23 @@
                             "method": "GET",
                             "header": [
                               {
+                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                 "key": "User-Agent",
-                                "value": "myApplication/1.0",
-                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                "value": "myApplication/1.0"
                               },
                               {
+                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                 "key": "X-Snowflake-Authorization-Token-Type",
-                                "value": "KEYPAIR_JWT",
-                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                "value": "KEYPAIR_JWT"
                               },
                               {
+                                "description": "Added as a part of security scheme: bearer",
                                 "key": "Authorization",
-                                "value": "Bearer <token>",
-                                "description": "Added as a part of security scheme: bearer"
+                                "value": "Bearer <token>"
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&partition=2",
+                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=88600cd6-5319-40d5-a9f5-315447f93444&partition=2",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -1396,14 +1399,14 @@
                               ],
                               "query": [
                                 {
+                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                   "key": "requestId",
-                                  "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                  "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                 },
                                 {
+                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1.",
                                   "key": "partition",
-                                  "value": "2",
-                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1."
+                                  "value": "2"
                                 }
                               ],
                               "variable": [
@@ -1428,23 +1431,23 @@
                             "method": "GET",
                             "header": [
                               {
+                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                 "key": "User-Agent",
-                                "value": "myApplication/1.0",
-                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                "value": "myApplication/1.0"
                               },
                               {
+                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                 "key": "X-Snowflake-Authorization-Token-Type",
-                                "value": "KEYPAIR_JWT",
-                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                "value": "KEYPAIR_JWT"
                               },
                               {
+                                "description": "Added as a part of security scheme: bearer",
                                 "key": "Authorization",
-                                "value": "Bearer <token>",
-                                "description": "Added as a part of security scheme: bearer"
+                                "value": "Bearer <token>"
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&partition=2",
+                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=88600cd6-5319-40d5-a9f5-315447f93444&partition=2",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -1456,14 +1459,14 @@
                               ],
                               "query": [
                                 {
+                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                   "key": "requestId",
-                                  "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                  "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                 },
                                 {
+                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1.",
                                   "key": "partition",
-                                  "value": "2",
-                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1."
+                                  "value": "2"
                                 }
                               ],
                               "variable": [
@@ -1488,23 +1491,23 @@
                             "method": "GET",
                             "header": [
                               {
+                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                                 "key": "User-Agent",
-                                "value": "myApplication/1.0",
-                                "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                                "value": "myApplication/1.0"
                               },
                               {
+                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                                 "key": "X-Snowflake-Authorization-Token-Type",
-                                "value": "KEYPAIR_JWT",
-                                "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                                "value": "KEYPAIR_JWT"
                               },
                               {
+                                "description": "Added as a part of security scheme: bearer",
                                 "key": "Authorization",
-                                "value": "Bearer <token>",
-                                "description": "Added as a part of security scheme: bearer"
+                                "value": "Bearer <token>"
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&partition=2",
+                              "raw": "{{baseUrl}}/api/v2/statements/:statementHandle?requestId=88600cd6-5319-40d5-a9f5-315447f93444&partition=2",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -1516,14 +1519,14 @@
                               ],
                               "query": [
                                 {
+                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                                   "key": "requestId",
-                                  "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                                  "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                                  "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                                 },
                                 {
+                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1.",
                                   "key": "partition",
-                                  "value": "2",
-                                  "description": "Number of the partition of results to return. The number can range from 0 to the total number of partitions minus 1."
+                                  "value": "2"
                                 }
                               ],
                               "variable": [
@@ -1562,14 +1565,14 @@
                     "method": "POST",
                     "header": [
                       {
+                        "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                         "key": "User-Agent",
-                        "value": "myApplication/1.0",
-                        "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                        "value": "myApplication/1.0"
                       },
                       {
+                        "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                         "key": "X-Snowflake-Authorization-Token-Type",
-                        "value": "KEYPAIR_JWT",
-                        "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                        "value": "KEYPAIR_JWT"
                       },
                       {
                         "key": "Content-Type",
@@ -1591,7 +1594,7 @@
                       }
                     },
                     "url": {
-                      "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                      "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                       "host": [
                         "{{baseUrl}}"
                       ],
@@ -1602,19 +1605,19 @@
                       ],
                       "query": [
                         {
+                          "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                           "key": "requestId",
-                          "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                          "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                          "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                         },
                         {
+                          "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                           "key": "async",
-                          "value": "true",
-                          "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                          "value": "true"
                         },
                         {
+                          "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                           "key": "nullable",
-                          "value": "true",
-                          "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                          "value": "true"
                         }
                       ]
                     },
@@ -1627,14 +1630,14 @@
                         "method": "POST",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Content-Type",
@@ -1645,9 +1648,9 @@
                             "value": "application/json"
                           },
                           {
+                            "description": "Added as a part of security scheme: bearer",
                             "key": "Authorization",
-                            "value": "Bearer <token>",
-                            "description": "Added as a part of security scheme: bearer"
+                            "value": "Bearer <token>"
                           }
                         ],
                         "body": {
@@ -1661,7 +1664,7 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                          "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -1672,19 +1675,19 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                               "key": "async",
-                              "value": "true",
-                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                              "value": "true"
                             },
                             {
+                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                               "key": "nullable",
-                              "value": "true",
-                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                              "value": "true"
                             }
                           ]
                         }
@@ -1698,16 +1701,17 @@
                           "value": "application/json"
                         },
                         {
-                          "key": "link",
-                          "value": "",
+                          "disabled": false,
                           "description": {
                             "content": "",
                             "type": "text/plain"
-                          }
+                          },
+                          "key": "link",
+                          "value": ""
                         }
                       ],
                       "cookie": [],
-                      "body": "{\n  \"code\": \"000123\",\n  \"sqlState\": \"42601\",\n  \"message\": \"successfully executed\",\n  \"statementHandle\": \"536fad38-b564-4dc5-9892-a4543504df6c\",\n  \"createdOn\": 1597090533987,\n  \"statementStatusUrl\": \"https://OeSFMiVPpZdZY.oqcpew2NEA.1yn71+0SrDnp+WwAxmhR45FCFvHlNI\",\n  \"resultSetMetaData\": {\n    \"format\": \"jsonv2\",\n    \"numRows\": 100,\n    \"rowType\": [\n      {\n        \"name\": \"ROWNUM\",\n        \"type\": \"FIXED\",\n        \"length\": 0,\n        \"precision\": 38,\n        \"scale\": 0,\n        \"nullable\": false\n      },\n      {\n        \"name\": \"ACCOUNT_ID\",\n        \"type\": \"FIXED\",\n        \"length\": 0,\n        \"precision\": 38,\n        \"scale\": 0,\n        \"nullable\": false\n      },\n      {\n        \"name\": \"ACCOUNT_NAME\",\n        \"type\": \"TEXT\",\n        \"length\": 1024,\n        \"precision\": 0,\n        \"scale\": 0,\n        \"nullable\": false\n      },\n      {\n        \"name\": \"ADDRESS\",\n        \"type\": \"TEXT\",\n        \"length\": 16777216,\n        \"precision\": 0,\n        \"scale\": 0,\n        \"nullable\": true\n      },\n      {\n        \"name\": \"ZIP\",\n        \"type\": \"TEXT\",\n        \"length\": 100,\n        \"precision\": 0,\n        \"scale\": 0,\n        \"nullable\": true\n      },\n      {\n        \"name\": \"CREATED_ON\",\n        \"type\": \"TIMESTAMP_NTZ\",\n        \"length\": 0,\n        \"precision\": 0,\n        \"scale\": 3,\n        \"nullable\": false\n      }\n    ],\n    \"partitionInfo\": [\n      {\n        \"rowCount\": 1324,\n        \"compressedSize\": 37436824,\n        \"uncompressedSize\": 1343787384\n      },\n      {\n        \"rowCount\": 1324,\n        \"compressedSize\": 37436824,\n        \"uncompressedSize\": 1343787384\n      }\n    ],\n    \"nullable\": false,\n    \"parameters\": {\n      \"binary_output_format\": \"HEX\",\n      \"date_output_format\": \"YYYY-MM-DD\",\n      \"time_output_format\": \"HH24:MI:SS\",\n      \"timestamp_output_format\": \"YYYY-MM-DD HH24:MI:SS.FF6\",\n      \"timestamp_ltz_output_format\": \"YYYY-MM-DD HH24:MI:SS.FF6\",\n      \"timestamp_ntz_output_format\": \"YYYY-MM-DD HH24:MI:SS.FF6\",\n      \"timestamp_tz_output_format\": \"YYYY-MM-DDTHH24:MI:SS.FF6 TZHTZM\",\n      \"multi_statement_count\": 4\n    }\n  },\n  \"data\": [\n    [\n      \"customer1\",\n      \"1234 A Avenue\",\n      \"98765\",\n      \"2019-08-10 23:56:34.123\"\n    ],\n    [\n      \"customer2\",\n      \"987 B Street\",\n      \"98765\",\n      \"2019-08-11 09:45:12.890\"\n    ],\n    [\n      \"customer3\",\n      \"8777 C Blvd\",\n      \"98765\",\n      \"2019-08-12 10:23:51.999\"\n    ],\n    [\n      \"customer4\",\n      \"64646 D Circle\",\n      \"98765\",\n      \"2019-08-13 01:54:32.000\"\n    ]\n  ],\n  \"stats\": {\n    \"numRowsInserted\": 12,\n    \"numRowsUpdated\": 9,\n    \"numRowsDeleted\": 8,\n    \"numDuplicateRowsUpdated\": 20\n  }\n}"
+                      "body": "{\n  \"code\": \"000123\",\n  \"sqlState\": \"42601\",\n  \"message\": \"successfully executed\",\n  \"statementHandle\": \"536fad38-b564-4dc5-9892-a4543504df6c\",\n  \"createdOn\": 1597090533987,\n  \"statementStatusUrl\": \"https://kwmUnTOnTGkkDjyRZsvMWAfDDfMJDv.cnwOJNHZZw6rS-qk.MyMP2nifLJAmtv.,Cp2zys8y54R8wn\",\n  \"resultSetMetaData\": {\n    \"format\": \"jsonv2\",\n    \"numRows\": 100,\n    \"rowType\": [\n      {\n        \"name\": \"ROWNUM\",\n        \"type\": \"FIXED\",\n        \"length\": 0,\n        \"precision\": 38,\n        \"scale\": 0,\n        \"nullable\": false\n      },\n      {\n        \"name\": \"ACCOUNT_ID\",\n        \"type\": \"FIXED\",\n        \"length\": 0,\n        \"precision\": 38,\n        \"scale\": 0,\n        \"nullable\": false\n      },\n      {\n        \"name\": \"ACCOUNT_NAME\",\n        \"type\": \"TEXT\",\n        \"length\": 1024,\n        \"precision\": 0,\n        \"scale\": 0,\n        \"nullable\": false\n      },\n      {\n        \"name\": \"ADDRESS\",\n        \"type\": \"TEXT\",\n        \"length\": 16777216,\n        \"precision\": 0,\n        \"scale\": 0,\n        \"nullable\": true\n      },\n      {\n        \"name\": \"ZIP\",\n        \"type\": \"TEXT\",\n        \"length\": 100,\n        \"precision\": 0,\n        \"scale\": 0,\n        \"nullable\": true\n      },\n      {\n        \"name\": \"CREATED_ON\",\n        \"type\": \"TIMESTAMP_NTZ\",\n        \"length\": 0,\n        \"precision\": 0,\n        \"scale\": 3,\n        \"nullable\": false\n      }\n    ],\n    \"partitionInfo\": [\n      {\n        \"rowCount\": 1324,\n        \"compressedSize\": 37436824,\n        \"uncompressedSize\": 1343787384\n      },\n      {\n        \"rowCount\": 1324,\n        \"compressedSize\": 37436824,\n        \"uncompressedSize\": 1343787384\n      }\n    ],\n    \"nullable\": false,\n    \"parameters\": {\n      \"binary_output_format\": \"HEX\",\n      \"date_output_format\": \"YYYY-MM-DD\",\n      \"time_output_format\": \"HH24:MI:SS\",\n      \"timestamp_output_format\": \"YYYY-MM-DD HH24:MI:SS.FF6\",\n      \"timestamp_ltz_output_format\": \"YYYY-MM-DD HH24:MI:SS.FF6\",\n      \"timestamp_ntz_output_format\": \"YYYY-MM-DD HH24:MI:SS.FF6\",\n      \"timestamp_tz_output_format\": \"YYYY-MM-DDTHH24:MI:SS.FF6 TZHTZM\",\n      \"multi_statement_count\": 4\n    }\n  },\n  \"data\": [\n    [\n      \"customer1\",\n      \"1234 A Avenue\",\n      \"98765\",\n      \"2019-08-10 23:56:34.123\"\n    ],\n    [\n      \"customer2\",\n      \"987 B Street\",\n      \"98765\",\n      \"2019-08-11 09:45:12.890\"\n    ],\n    [\n      \"customer3\",\n      \"8777 C Blvd\",\n      \"98765\",\n      \"2019-08-12 10:23:51.999\"\n    ],\n    [\n      \"customer4\",\n      \"64646 D Circle\",\n      \"98765\",\n      \"2019-08-13 01:54:32.000\"\n    ]\n  ],\n  \"stats\": {\n    \"numRowsInserted\": 12,\n    \"numRowsUpdated\": 9,\n    \"numRowsDeleted\": 8,\n    \"numDuplicateRowsUpdated\": 20\n  }\n}"
                     },
                     {
                       "name": "The execution of the statement is still in progress. Use GET /statements/ and specify the statement handle to check the status of the statement execution.",
@@ -1715,14 +1719,14 @@
                         "method": "POST",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Content-Type",
@@ -1733,9 +1737,9 @@
                             "value": "application/json"
                           },
                           {
+                            "description": "Added as a part of security scheme: bearer",
                             "key": "Authorization",
-                            "value": "Bearer <token>",
-                            "description": "Added as a part of security scheme: bearer"
+                            "value": "Bearer <token>"
                           }
                         ],
                         "body": {
@@ -1749,7 +1753,7 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                          "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -1760,19 +1764,19 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                               "key": "async",
-                              "value": "true",
-                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                              "value": "true"
                             },
                             {
+                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                               "key": "nullable",
-                              "value": "true",
-                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                              "value": "true"
                             }
                           ]
                         }
@@ -1795,23 +1799,23 @@
                         "method": "POST",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Content-Type",
                             "value": "application/json"
                           },
                           {
+                            "description": "Added as a part of security scheme: bearer",
                             "key": "Authorization",
-                            "value": "Bearer <token>",
-                            "description": "Added as a part of security scheme: bearer"
+                            "value": "Bearer <token>"
                           }
                         ],
                         "body": {
@@ -1825,7 +1829,7 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                          "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -1836,19 +1840,19 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                               "key": "async",
-                              "value": "true",
-                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                              "value": "true"
                             },
                             {
+                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                               "key": "nullable",
-                              "value": "true",
-                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                              "value": "true"
                             }
                           ]
                         }
@@ -1866,23 +1870,23 @@
                         "method": "POST",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Content-Type",
                             "value": "application/json"
                           },
                           {
+                            "description": "Added as a part of security scheme: bearer",
                             "key": "Authorization",
-                            "value": "Bearer <token>",
-                            "description": "Added as a part of security scheme: bearer"
+                            "value": "Bearer <token>"
                           }
                         ],
                         "body": {
@@ -1896,7 +1900,7 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                          "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -1907,19 +1911,19 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                               "key": "async",
-                              "value": "true",
-                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                              "value": "true"
                             },
                             {
+                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                               "key": "nullable",
-                              "value": "true",
-                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                              "value": "true"
                             }
                           ]
                         }
@@ -1937,23 +1941,23 @@
                         "method": "POST",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Content-Type",
                             "value": "application/json"
                           },
                           {
+                            "description": "Added as a part of security scheme: bearer",
                             "key": "Authorization",
-                            "value": "Bearer <token>",
-                            "description": "Added as a part of security scheme: bearer"
+                            "value": "Bearer <token>"
                           }
                         ],
                         "body": {
@@ -1967,7 +1971,7 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                          "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -1978,19 +1982,19 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                               "key": "async",
-                              "value": "true",
-                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                              "value": "true"
                             },
                             {
+                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                               "key": "nullable",
-                              "value": "true",
-                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                              "value": "true"
                             }
                           ]
                         }
@@ -2008,23 +2012,23 @@
                         "method": "POST",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Content-Type",
                             "value": "application/json"
                           },
                           {
+                            "description": "Added as a part of security scheme: bearer",
                             "key": "Authorization",
-                            "value": "Bearer <token>",
-                            "description": "Added as a part of security scheme: bearer"
+                            "value": "Bearer <token>"
                           }
                         ],
                         "body": {
@@ -2038,7 +2042,7 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                          "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2049,19 +2053,19 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                               "key": "async",
-                              "value": "true",
-                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                              "value": "true"
                             },
                             {
+                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                               "key": "nullable",
-                              "value": "true",
-                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                              "value": "true"
                             }
                           ]
                         }
@@ -2079,23 +2083,23 @@
                         "method": "POST",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Content-Type",
                             "value": "application/json"
                           },
                           {
+                            "description": "Added as a part of security scheme: bearer",
                             "key": "Authorization",
-                            "value": "Bearer <token>",
-                            "description": "Added as a part of security scheme: bearer"
+                            "value": "Bearer <token>"
                           }
                         ],
                         "body": {
@@ -2109,7 +2113,7 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                          "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2120,19 +2124,19 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                               "key": "async",
-                              "value": "true",
-                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                              "value": "true"
                             },
                             {
+                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                               "key": "nullable",
-                              "value": "true",
-                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                              "value": "true"
                             }
                           ]
                         }
@@ -2150,14 +2154,14 @@
                         "method": "POST",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Content-Type",
@@ -2168,9 +2172,9 @@
                             "value": "application/json"
                           },
                           {
+                            "description": "Added as a part of security scheme: bearer",
                             "key": "Authorization",
-                            "value": "Bearer <token>",
-                            "description": "Added as a part of security scheme: bearer"
+                            "value": "Bearer <token>"
                           }
                         ],
                         "body": {
@@ -2184,7 +2188,7 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                          "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2195,19 +2199,19 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                               "key": "async",
-                              "value": "true",
-                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                              "value": "true"
                             },
                             {
+                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                               "key": "nullable",
-                              "value": "true",
-                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                              "value": "true"
                             }
                           ]
                         }
@@ -2230,23 +2234,23 @@
                         "method": "POST",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Content-Type",
                             "value": "application/json"
                           },
                           {
+                            "description": "Added as a part of security scheme: bearer",
                             "key": "Authorization",
-                            "value": "Bearer <token>",
-                            "description": "Added as a part of security scheme: bearer"
+                            "value": "Bearer <token>"
                           }
                         ],
                         "body": {
@@ -2260,7 +2264,7 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                          "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2271,19 +2275,19 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                               "key": "async",
-                              "value": "true",
-                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                              "value": "true"
                             },
                             {
+                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                               "key": "nullable",
-                              "value": "true",
-                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                              "value": "true"
                             }
                           ]
                         }
@@ -2301,14 +2305,14 @@
                         "method": "POST",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Content-Type",
@@ -2319,9 +2323,9 @@
                             "value": "application/json"
                           },
                           {
+                            "description": "Added as a part of security scheme: bearer",
                             "key": "Authorization",
-                            "value": "Bearer <token>",
-                            "description": "Added as a part of security scheme: bearer"
+                            "value": "Bearer <token>"
                           }
                         ],
                         "body": {
@@ -2335,7 +2339,7 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                          "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2346,19 +2350,19 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                               "key": "async",
-                              "value": "true",
-                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                              "value": "true"
                             },
                             {
+                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                               "key": "nullable",
-                              "value": "true",
-                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                              "value": "true"
                             }
                           ]
                         }
@@ -2381,23 +2385,23 @@
                         "method": "POST",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Content-Type",
                             "value": "application/json"
                           },
                           {
+                            "description": "Added as a part of security scheme: bearer",
                             "key": "Authorization",
-                            "value": "Bearer <token>",
-                            "description": "Added as a part of security scheme: bearer"
+                            "value": "Bearer <token>"
                           }
                         ],
                         "body": {
@@ -2411,7 +2415,7 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                          "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2422,19 +2426,19 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                               "key": "async",
-                              "value": "true",
-                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                              "value": "true"
                             },
                             {
+                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                               "key": "nullable",
-                              "value": "true",
-                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                              "value": "true"
                             }
                           ]
                         }
@@ -2452,23 +2456,23 @@
                         "method": "POST",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Content-Type",
                             "value": "application/json"
                           },
                           {
+                            "description": "Added as a part of security scheme: bearer",
                             "key": "Authorization",
-                            "value": "Bearer <token>",
-                            "description": "Added as a part of security scheme: bearer"
+                            "value": "Bearer <token>"
                           }
                         ],
                         "body": {
@@ -2482,7 +2486,7 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                          "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2493,19 +2497,19 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                               "key": "async",
-                              "value": "true",
-                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                              "value": "true"
                             },
                             {
+                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                               "key": "nullable",
-                              "value": "true",
-                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                              "value": "true"
                             }
                           ]
                         }
@@ -2523,23 +2527,23 @@
                         "method": "POST",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Content-Type",
                             "value": "application/json"
                           },
                           {
+                            "description": "Added as a part of security scheme: bearer",
                             "key": "Authorization",
-                            "value": "Bearer <token>",
-                            "description": "Added as a part of security scheme: bearer"
+                            "value": "Bearer <token>"
                           }
                         ],
                         "body": {
@@ -2553,7 +2557,7 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                          "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2564,19 +2568,19 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                               "key": "async",
-                              "value": "true",
-                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                              "value": "true"
                             },
                             {
+                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                               "key": "nullable",
-                              "value": "true",
-                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                              "value": "true"
                             }
                           ]
                         }
@@ -2594,23 +2598,23 @@
                         "method": "POST",
                         "header": [
                           {
+                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231.",
                             "key": "User-Agent",
-                            "value": "myApplication/1.0",
-                            "description": "Set this to the name and version of your application (e.g. “applicationName/applicationVersion”). You must use a value that complies with RFC 7231."
+                            "value": "myApplication/1.0"
                           },
                           {
+                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed.",
                             "key": "X-Snowflake-Authorization-Token-Type",
-                            "value": "KEYPAIR_JWT",
-                            "description": "Specify the authorization token type for the Authorization header. KEYPAIR_JWT is for Keypair JWT or OAUTH for oAuth token. If not specified, OAUTH is assumed."
+                            "value": "KEYPAIR_JWT"
                           },
                           {
                             "key": "Content-Type",
                             "value": "application/json"
                           },
                           {
+                            "description": "Added as a part of security scheme: bearer",
                             "key": "Authorization",
-                            "value": "Bearer <token>",
-                            "description": "Added as a part of security scheme: bearer"
+                            "value": "Bearer <token>"
                           }
                         ],
                         "body": {
@@ -2624,7 +2628,7 @@
                           }
                         },
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/statements?requestId=94820e57-41ea-8403-201b-d45f56dcf35c&async=true&nullable=true",
+                          "raw": "{{baseUrl}}/api/v2/statements?requestId=88600cd6-5319-40d5-a9f5-315447f93444&async=true&nullable=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2635,19 +2639,19 @@
                           ],
                           "query": [
                             {
+                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned.",
                               "key": "requestId",
-                              "value": "94820e57-41ea-8403-201b-d45f56dcf35c",
-                              "description": "Unique ID of the API request. This ensures that the execution is idempotent. If not specified, a new UUID is generated and assigned."
+                              "value": "88600cd6-5319-40d5-a9f5-315447f93444"
                             },
                             {
+                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned.",
                               "key": "async",
-                              "value": "true",
-                              "description": "Set to true to execute the statement asynchronously and return the statement handle. If the parameter is not specified or is set to false, a statement is executed and the first result is returned if the execution is completed in 45 seconds. If the statement execution takes longer to complete, the statement handle is returned."
+                              "value": "true"
                             },
                             {
+                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'.",
                               "key": "nullable",
-                              "value": "true",
-                              "description": "Set to true to execute the statement to generate the result set including null. If the parameter is set to false, the result set value null will be replaced with a string 'null'."
+                              "value": "true"
                             }
                           ]
                         }

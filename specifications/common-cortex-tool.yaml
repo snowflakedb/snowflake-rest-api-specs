@@ -5,9 +5,7 @@ components:
       description: 'Represents the results of a tool execution. Contains both the
         input parameters
 
-        and output results from the tool execution.
-
-        '
+        and output results from the tool execution.'
       required:
       - type
       - tool_results
@@ -65,9 +63,7 @@ components:
       type: object
       description: 'Represents plain text content in a message.
 
-        Used for simple text exchanges and natural language responses.
-
-        '
+        Used for simple text exchanges and natural language responses.'
       required:
       - type
       - text
@@ -86,9 +82,7 @@ components:
       type: object
       description: 'Represents plain text content in a message.
 
-        Used for simple text exchanges and natural language responses.
-
-        '
+        Used for simple text exchanges and natural language responses.'
       properties:
         type:
           type: string
@@ -127,9 +121,7 @@ components:
       description: 'Represents a request to use a specific tool. Contains the tool
         identifier
 
-        and input parameters for the execution.
-
-        '
+        and input parameters for the execution.'
       required:
       - type
       - tool_use
@@ -177,9 +169,7 @@ components:
       description: 'Represents a request to use a specific tool. Contains the tool
         identifier
 
-        and input parameters for the execution.
-
-        '
+        and input parameters for the execution.'
       properties:
         tool_use_id:
           type: string
@@ -195,9 +185,7 @@ components:
       description: 'Defines a tool that can be used by the agent.
 
         Tools provide specific capabilities like data analysis, search, or generic
-        functions.
-
-        '
+        functions.'
       required:
       - tool_spec
       properties:
@@ -215,17 +203,13 @@ components:
                 like
 
                 ''cortex_analyst_text_to_sql'' or ''generic'' for general-purpose
-                tools.
-
-                '
+                tools.'
               example: generic
             name:
               type: string
               description: 'Unique identifier for referencing this tool instance.
 
-                Used to match with configuration in tool_resources.
-
-                '
+                Used to match with configuration in tool_resources.'
               example: get_weather
             description:
               type: string
@@ -235,9 +219,7 @@ components:
               description: 'JSON Schema definition of the expected input parameters
                 for this tool.
 
-                Required for generic tools to specify their input requirements.
-
-                '
+                Required for generic tools to specify their input requirements.'
               properties:
                 type:
                   type: string
@@ -264,9 +246,7 @@ components:
       type: object
       description: 'Configuration for each tool referenced in the tools array.
 
-        Keys must match the name field of tools.
-
-        '
+        Keys must match the name field of tools.'
       example:
         Search1:
           search_service: db.schema.service_name
@@ -284,16 +264,12 @@ components:
       type: object
       description: 'Configuration for text-to-SQL analysis tool.
 
-        Provides parameters for SQL query generation and execution.
-
-        '
+        Provides parameters for SQL query generation and execution.'
       properties:
         semantic_model_file:
           type: string
           description: 'The path to a file stored in a Snowflake Stage holding the
-            semantic model yaml.
-
-            '
+            semantic model yaml.'
           example: '@my_stage/my_semantic_model.yaml'
         semantic_view:
           type: string
@@ -308,40 +284,28 @@ components:
       type: object
       description: 'Configuration for search functionality.
 
-        Defines how document search and retrieval should be performed.
-
-        '
+        Defines how document search and retrieval should be performed.'
       properties:
         search_service:
           type: string
           description: 'The name of the search service.
 
-            Must in format: database.schema.service_name
-
-            '
+            Must in format: database.schema.service_name'
         name:
           description: reserved
           type: string
         max_results:
           type: integer
-          description: 'The number of search results used in LLM prompt.
-
-            '
+          description: 'The number of search results used in LLM prompt.'
         title_column:
           type: string
-          description: 'The title column of the document.
-
-            '
+          description: 'The title column of the document.'
         id_column:
           type: string
-          description: 'The ID column of the document.
-
-            '
+          description: 'The ID column of the document.'
         filter:
           type: object
-          description: 'Filter query for search results.
-
-            '
+          description: 'Filter query for search results.'
         experimental:
           description: reserved
           type: object
@@ -352,9 +316,7 @@ components:
       description: 'Configures how tools should be selected and used during the interaction.
 
         Controls whether tool use is automatic, required, or specific tools should
-        be used.
-
-        '
+        be used.'
       required:
       - type
       properties:
@@ -366,9 +328,7 @@ components:
 
             * required - Must use at least one tool
 
-            * tool - Use specific named tools
-
-            '
+            * tool - Use specific named tools'
           example: required
         name:
           type: array
@@ -378,13 +338,53 @@ components:
           - Search1
           items:
             type: string
+    SkillChoice:
+      type: object
+      nullable: true
+      description: 'Configures which skills from the agent specification should be
+        available during the interaction.
+
+        Controls whether all skills are available, specific ones are filtered, or
+        if skill use is required.'
+      required:
+      - type
+      properties:
+        type:
+          type: string
+          default: auto
+          description: 'Determines how skills are selected:
+
+            * auto - Skills are automatically selected (default behavior controlled
+            by name array)
+
+            * required - At least one of the specified skills must be used in the
+            response'
+          example: auto
+        name:
+          type: array
+          description: 'List of skill names from the agent spec to filter or require.
+
+            Behavior depends on type:
+
+            * If omitted or null: Use all skills from agent spec (default)
+
+            * If provided with skill names: Filter to only these named skills
+
+            * If empty array []: Disable all skills (no skills available)
+
+
+            For type "required": Specifies which skills to consider, and at least
+            one must be used'
+          example:
+          - forecaster_skill
+          - profit_sharing_skill
+          items:
+            type: string
     Message:
       type: object
       description: 'Represents a single message in the conversation.
 
-        Can be either from the user or the assistant.
-
-        '
+        Can be either from the user or the assistant.'
       required:
       - role
       - content
@@ -394,16 +394,12 @@ components:
           description: 'Identifies who sent the message - either the user or the assistant.
 
             User messages typically contain queries, while assistant messages contain
-            responses and tool results.
-
-            '
+            responses and tool results.'
         content:
           type: array
           description: 'Array of content elements making up the message.
 
-            Can include text, tool results, or custom content types.
-
-            '
+            Can include text, tool results, or custom content types.'
           items:
             discriminator:
               propertyName: type
@@ -418,9 +414,7 @@ components:
       type: object
       description: 'The response from running the agent.
 
-        Contains the assistant''s response message(s).
-
-        '
+        Contains the assistant''s response message(s).'
       required:
       - messages
       properties:
@@ -428,91 +422,117 @@ components:
           type: array
           description: 'The messages produced by the assistant in response.
 
-            Usually contains tool results followed by a natural language summary.
-
-            '
+            Usually contains tool results followed by a natural language summary.'
           items:
             $ref: '#/components/schemas/Message'
     AgentModels:
       type: object
-      description: 'Model configuration for the agent.
-
-        '
+      description: 'Model configuration for the agent.'
       properties:
         orchestration:
           type: string
           description: 'Model to use for orchestration. If not provided, a model is
-            automatically selected.
-
-            '
+            automatically selected.'
           example: llama3.3-70B
     AgentOrchestration:
       type: object
-      description: 'Orchestration configuration for the agent.
-
-        '
+      description: 'Orchestration configuration for the agent.'
       properties:
         budget:
           type: object
-          description: 'Budget constraints for the agent.
-
-            '
+          description: 'Budget constraints for the agent.'
           properties:
             seconds:
               type: integer
-              description: 'Time budget in seconds.
-
-                '
+              description: 'Time budget in seconds.'
               example: 30
             tokens:
               type: integer
-              description: 'Token budget.
-
-                '
+              description: 'Token budget.'
               example: 16000
     AgentInstructions:
       type: object
-      description: 'Instructions for the agent''s behavior.
-
-        '
+      description: 'Instructions for the agent''s behavior.'
       properties:
         response:
           type: string
-          description: 'Instructions for response generation.
-
-            '
+          description: 'Instructions for response generation.'
           example: You will respond in a friendly but concise manner
         orchestration:
           type: string
-          description: 'Instructions for orchestrating different tools.
-
-            '
+          description: 'Instructions for orchestrating different tools.'
           example: For any query related to revenue we should use Analyst; For all
             policy questions we should use Search
         system:
           type: string
-          description: 'System instructions for the agent.
-
-            '
+          description: 'System instructions for the agent.'
           example: You are a friendly agent ..
         sample_questions:
           type: array
-          description: 'Sample questions and optional answers for the agent.
-
-            '
+          description: 'Sample questions and optional answers for the agent.'
           items:
             $ref: '#/components/schemas/SampleQuestion'
     SampleQuestion:
       type: object
-      description: 'Sample question and optional answer.
-
-        '
+      description: 'Sample question and optional answer.'
       properties:
         question:
           type: string
-          description: 'Sample question.
-
-            '
+          description: 'Sample question.'
         answer:
           type: string
           description: Optional sample answer.
+    McpServerWrapper:
+      type: object
+      description: Wrapper for MCP server specification.
+      properties:
+        server_spec:
+          $ref: '#/components/schemas/McpServerSpec'
+    McpServerSpec:
+      type: object
+      description: MCP server specification details.
+      properties:
+        name:
+          type: string
+          description: 'Fully qualified name of the MCP server (e.g., "database.schema.mcp_server_name").'
+    SkillWrapper:
+      type: object
+      description: Wrapper for skill definitions from external sources.
+      required:
+      - name
+      - source
+      properties:
+        name:
+          type: string
+          description: Name of the skill. Must be unique within the agent.
+          example: skill_name
+        source:
+          $ref: '#/components/schemas/SkillSource'
+    SkillSource:
+      type: object
+      description: 'Source configuration for a skill, specifying where the skill code
+        is located.'
+      required:
+      - type
+      properties:
+        type:
+          type: string
+          description: 'The type of source location.
+
+            STAGE - Skill is stored in a Snowflake stage.
+
+            GIT_INTEGRATION - Skill is stored in a Git repository via integration.
+
+            SYSTEM - System-provided skill that does not require a path.'
+          example: STAGE
+        path:
+          type: string
+          description: 'Path to the skill location.
+
+            For STAGE type: path to the skill in a Snowflake stage (e.g., "@db.schema.stage/folder").
+
+            For GIT_INTEGRATION type: path to the skill in a Git repository (e.g.,
+            "@db.schema.repo/commits/abc123def/skills/").
+
+            Not required for SYSTEM type.'
+          example: '@my_db.my_schema.my_stage/folder'

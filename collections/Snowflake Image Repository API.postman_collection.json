@@ -1,9 +1,11 @@
 {
   "info": {
-    "_postman_id": "a963183b-e64e-4ebc-9a32-84e45eff90ad",
+    "_postman_id": "4f8d9097-e327-43ba-ad3d-8a8174142562",
     "name": "Snowflake Image Repository API",
     "description": "The Snowflake Image Repository API is a REST API that you can use to access, update, and perform common actions on Image Repository resource in Snowflake.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53314882",
+    "_collection_link": "https://go.postman.co/collection/53314882-4f8d9097-e327-43ba-ad3d-8a8174142562?source=collection_link"
   },
   "item": [
     {
@@ -35,10 +37,6 @@
                                       "item": [
                                         {
                                           "name": "List images in the image repository.",
-                                          "id": "59fcf1ed-d0e6-416f-ae79-cc1b3e89174f",
-                                          "protocolProfileBehavior": {
-                                            "disableBodyPruning": true
-                                          },
                                           "request": {
                                             "method": "GET",
                                             "header": [
@@ -65,19 +63,16 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "id": "b318d925-3755-4dc5-9f2f-057bc34b6d50",
                                                   "key": "database",
                                                   "value": "TEST_NAME",
                                                   "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "id": "62f48b03-7279-412a-a0fb-8a8a5b910ccc",
                                                   "key": "schema",
                                                   "value": "TEST_NAME",
                                                   "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "id": "a32ea0b7-5a51-4c9b-97ff-84ce87a4bc36",
                                                   "key": "name",
                                                   "value": "TEST_NAME",
                                                   "description": "Identifier (i.e. name) for the resource."
@@ -88,7 +83,6 @@
                                           },
                                           "response": [
                                             {
-                                              "id": "844f256b-58bb-4da2-9140-0577d56fff0c",
                                               "name": "Successful request.",
                                               "originalRequest": {
                                                 "method": "GET",
@@ -121,13 +115,19 @@
                                                   ],
                                                   "variable": [
                                                     {
-                                                      "key": "database"
+                                                      "key": "database",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                     },
                                                     {
-                                                      "key": "schema"
+                                                      "key": "schema",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                     },
                                                     {
-                                                      "key": "name"
+                                                      "key": "name",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the resource."
                                                     }
                                                   ]
                                                 }
@@ -160,11 +160,9 @@
                                                 }
                                               ],
                                               "cookie": [],
-                                              "responseTime": null,
                                               "body": "[\n  {\n    \"created_on\": \"string\",\n    \"image_name\": \"string\",\n    \"tags\": \"string\",\n    \"digest\": \"string\",\n    \"image_path\": \"string\"\n  },\n  {\n    \"created_on\": \"string\",\n    \"image_name\": \"string\",\n    \"tags\": \"string\",\n    \"digest\": \"string\",\n    \"image_path\": \"string\"\n  }\n]"
                                             },
                                             {
-                                              "id": "2c8a3441-7731-4a76-943e-6c6e4e9f3bfa",
                                               "name": "Successfully accepted the request, but it is not completed yet.",
                                               "originalRequest": {
                                                 "method": "GET",
@@ -197,13 +195,19 @@
                                                   ],
                                                   "variable": [
                                                     {
-                                                      "key": "database"
+                                                      "key": "database",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                     },
                                                     {
-                                                      "key": "schema"
+                                                      "key": "schema",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                     },
                                                     {
-                                                      "key": "name"
+                                                      "key": "name",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the resource."
                                                     }
                                                   ]
                                                 }
@@ -236,11 +240,9 @@
                                                 }
                                               ],
                                               "cookie": [],
-                                              "responseTime": null,
                                               "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
                                             },
                                             {
-                                              "id": "64b8a406-4b3e-4f32-9e97-ab917914fab3",
                                               "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                                               "originalRequest": {
                                                 "method": "GET",
@@ -273,13 +275,19 @@
                                                   ],
                                                   "variable": [
                                                     {
-                                                      "key": "database"
+                                                      "key": "database",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                     },
                                                     {
-                                                      "key": "schema"
+                                                      "key": "schema",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                     },
                                                     {
-                                                      "key": "name"
+                                                      "key": "name",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the resource."
                                                     }
                                                   ]
                                                 }
@@ -303,11 +311,9 @@
                                                 }
                                               ],
                                               "cookie": [],
-                                              "responseTime": null,
                                               "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                             },
                                             {
-                                              "id": "31fe8602-afe5-4e6d-9074-fe10f62ee137",
                                               "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                                               "originalRequest": {
                                                 "method": "GET",
@@ -340,13 +346,19 @@
                                                   ],
                                                   "variable": [
                                                     {
-                                                      "key": "database"
+                                                      "key": "database",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                     },
                                                     {
-                                                      "key": "schema"
+                                                      "key": "schema",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                     },
                                                     {
-                                                      "key": "name"
+                                                      "key": "name",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the resource."
                                                     }
                                                   ]
                                                 }
@@ -370,11 +382,9 @@
                                                 }
                                               ],
                                               "cookie": [],
-                                              "responseTime": null,
                                               "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                             },
                                             {
-                                              "id": "0486c94b-f3fc-4b95-87e9-0e58024d0054",
                                               "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                                               "originalRequest": {
                                                 "method": "GET",
@@ -407,13 +417,19 @@
                                                   ],
                                                   "variable": [
                                                     {
-                                                      "key": "database"
+                                                      "key": "database",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                     },
                                                     {
-                                                      "key": "schema"
+                                                      "key": "schema",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                     },
                                                     {
-                                                      "key": "name"
+                                                      "key": "name",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the resource."
                                                     }
                                                   ]
                                                 }
@@ -437,11 +453,9 @@
                                                 }
                                               ],
                                               "cookie": [],
-                                              "responseTime": null,
                                               "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                             },
                                             {
-                                              "id": "4103b4f0-87b5-4232-8b22-b2097c5d5e36",
                                               "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                                               "originalRequest": {
                                                 "method": "GET",
@@ -474,13 +488,19 @@
                                                   ],
                                                   "variable": [
                                                     {
-                                                      "key": "database"
+                                                      "key": "database",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                     },
                                                     {
-                                                      "key": "schema"
+                                                      "key": "schema",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                     },
                                                     {
-                                                      "key": "name"
+                                                      "key": "name",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the resource."
                                                     }
                                                   ]
                                                 }
@@ -504,11 +524,9 @@
                                                 }
                                               ],
                                               "cookie": [],
-                                              "responseTime": null,
                                               "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                             },
                                             {
-                                              "id": "f6bf6921-ea7d-44e7-a684-16f35a4f4f81",
                                               "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                                               "originalRequest": {
                                                 "method": "GET",
@@ -541,13 +559,19 @@
                                                   ],
                                                   "variable": [
                                                     {
-                                                      "key": "database"
+                                                      "key": "database",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                     },
                                                     {
-                                                      "key": "schema"
+                                                      "key": "schema",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                     },
                                                     {
-                                                      "key": "name"
+                                                      "key": "name",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the resource."
                                                     }
                                                   ]
                                                 }
@@ -571,11 +595,9 @@
                                                 }
                                               ],
                                               "cookie": [],
-                                              "responseTime": null,
                                               "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                             },
                                             {
-                                              "id": "4e9ba2b9-33b5-48fa-a8d6-4891be7a0b0d",
                                               "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
                                               "originalRequest": {
                                                 "method": "GET",
@@ -608,13 +630,19 @@
                                                   ],
                                                   "variable": [
                                                     {
-                                                      "key": "database"
+                                                      "key": "database",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                     },
                                                     {
-                                                      "key": "schema"
+                                                      "key": "schema",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                     },
                                                     {
-                                                      "key": "name"
+                                                      "key": "name",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the resource."
                                                     }
                                                   ]
                                                 }
@@ -638,11 +666,9 @@
                                                 }
                                               ],
                                               "cookie": [],
-                                              "responseTime": null,
                                               "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                             },
                                             {
-                                              "id": "415c868e-ff7c-48d0-a4e1-397b9cef2845",
                                               "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                                               "originalRequest": {
                                                 "method": "GET",
@@ -675,13 +701,19 @@
                                                   ],
                                                   "variable": [
                                                     {
-                                                      "key": "database"
+                                                      "key": "database",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                     },
                                                     {
-                                                      "key": "schema"
+                                                      "key": "schema",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                     },
                                                     {
-                                                      "key": "name"
+                                                      "key": "name",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the resource."
                                                     }
                                                   ]
                                                 }
@@ -705,11 +737,9 @@
                                                 }
                                               ],
                                               "cookie": [],
-                                              "responseTime": null,
                                               "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                             },
                                             {
-                                              "id": "dc4894d8-b508-445d-a626-1fe49d0ba760",
                                               "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                                               "originalRequest": {
                                                 "method": "GET",
@@ -742,13 +772,19 @@
                                                   ],
                                                   "variable": [
                                                     {
-                                                      "key": "database"
+                                                      "key": "database",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                     },
                                                     {
-                                                      "key": "schema"
+                                                      "key": "schema",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                     },
                                                     {
-                                                      "key": "name"
+                                                      "key": "name",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the resource."
                                                     }
                                                   ]
                                                 }
@@ -772,11 +808,9 @@
                                                 }
                                               ],
                                               "cookie": [],
-                                              "responseTime": null,
                                               "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                             },
                                             {
-                                              "id": "3df62dd6-dd10-4786-8dc0-43362e317606",
                                               "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                                               "originalRequest": {
                                                 "method": "GET",
@@ -809,13 +843,19 @@
                                                   ],
                                                   "variable": [
                                                     {
-                                                      "key": "database"
+                                                      "key": "database",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                     },
                                                     {
-                                                      "key": "schema"
+                                                      "key": "schema",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                     },
                                                     {
-                                                      "key": "name"
+                                                      "key": "name",
+                                                      "value": "TEST_NAME",
+                                                      "description": "Identifier (i.e. name) for the resource."
                                                     }
                                                   ]
                                                 }
@@ -839,20 +879,14 @@
                                                 }
                                               ],
                                               "cookie": [],
-                                              "responseTime": null,
                                               "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                             }
                                           ]
                                         }
-                                      ],
-                                      "id": "494ebeeb-f092-44af-9160-19b867c0ffbd"
+                                      ]
                                     },
                                     {
                                       "name": "Fetches an image repository.",
-                                      "id": "72ce0f3e-b938-4e28-b1e3-d7a8602d033d",
-                                      "protocolProfileBehavior": {
-                                        "disableBodyPruning": true
-                                      },
                                       "request": {
                                         "method": "GET",
                                         "header": [
@@ -878,19 +912,16 @@
                                           ],
                                           "variable": [
                                             {
-                                              "id": "8e029b50-644a-4ad2-9e07-ebd1caa6aff3",
                                               "key": "database",
                                               "value": "TEST_NAME",
                                               "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "id": "a54cd406-8897-4322-8d38-88a70bcc510c",
                                               "key": "schema",
                                               "value": "TEST_NAME",
                                               "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             },
                                             {
-                                              "id": "38496d0a-b52f-49c0-93d3-3a5e2ab0e229",
                                               "key": "name",
                                               "value": "TEST_NAME",
                                               "description": "Identifier (i.e. name) for the resource."
@@ -901,7 +932,6 @@
                                       },
                                       "response": [
                                         {
-                                          "id": "c6a01024-f68d-488f-bb4c-fd1d5718057b",
                                           "name": "Successful request.",
                                           "originalRequest": {
                                             "method": "GET",
@@ -933,13 +963,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -972,11 +1008,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"name\": \"image_repository_name\",\n  \"database_name\": \"test_db\",\n  \"schema_name\": \"test_schema\",\n  \"created_on\": \"2024-06-18T01:01:01.111111\",\n  \"repository_url\": \"https://www.snowflake.com\",\n  \"owner\": \"IMAGE_ADMIN\",\n  \"owner_role_type\": \"ADMIN\"\n}"
                                         },
                                         {
-                                          "id": "6997d7b7-3a2a-43f7-bd5e-e51d28fcdf6f",
                                           "name": "Successfully accepted the request, but it is not completed yet.",
                                           "originalRequest": {
                                             "method": "GET",
@@ -1008,13 +1042,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -1047,11 +1087,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
                                         },
                                         {
-                                          "id": "4389841c-331f-4744-b5fb-a914dd90d52c",
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                                           "originalRequest": {
                                             "method": "GET",
@@ -1083,13 +1121,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -1113,11 +1157,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "419f2474-df1f-43b0-b052-d0d4cf7d4490",
                                           "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                                           "originalRequest": {
                                             "method": "GET",
@@ -1149,13 +1191,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -1179,11 +1227,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "208608f8-b816-4101-92f6-368db71cea29",
                                           "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                                           "originalRequest": {
                                             "method": "GET",
@@ -1215,13 +1261,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -1245,11 +1297,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "7dc5e8da-aa64-4887-9a52-145f0908906b",
                                           "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                                           "originalRequest": {
                                             "method": "GET",
@@ -1281,13 +1331,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -1311,11 +1367,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "5f86916e-7c58-44fa-b57f-f42fb96a959d",
                                           "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                                           "originalRequest": {
                                             "method": "GET",
@@ -1347,13 +1401,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -1377,11 +1437,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "52348793-ca2a-4fb7-8464-c404bad54d48",
                                           "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
                                           "originalRequest": {
                                             "method": "GET",
@@ -1413,13 +1471,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -1443,11 +1507,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "68a1014f-5071-4c9b-afc3-6634c87f4948",
                                           "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                                           "originalRequest": {
                                             "method": "GET",
@@ -1479,13 +1541,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -1509,11 +1577,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "1050d2a0-d9af-47a5-9409-96da568d3197",
                                           "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                                           "originalRequest": {
                                             "method": "GET",
@@ -1545,13 +1611,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -1575,11 +1647,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "cdbb71e7-5a3c-410f-899c-9e21e73a1e31",
                                           "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                                           "originalRequest": {
                                             "method": "GET",
@@ -1611,13 +1681,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -1641,17 +1717,12 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         }
                                       ]
                                     },
                                     {
                                       "name": "Deletes an image repository.",
-                                      "id": "e2f10eec-b132-4aaf-a98a-bf89fde7ccc8",
-                                      "protocolProfileBehavior": {
-                                        "disableBodyPruning": true
-                                      },
                                       "request": {
                                         "method": "DELETE",
                                         "header": [
@@ -1684,19 +1755,16 @@
                                           ],
                                           "variable": [
                                             {
-                                              "id": "1d1ecd21-5499-4768-a93f-52f27c275429",
                                               "key": "database",
                                               "value": "TEST_NAME",
                                               "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "id": "495fc45e-7644-4cd5-8b8d-76d6eccb7b58",
                                               "key": "schema",
                                               "value": "TEST_NAME",
                                               "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             },
                                             {
-                                              "id": "f684c38f-08b4-449d-a499-6b637e40aea5",
                                               "key": "name",
                                               "value": "TEST_NAME",
                                               "description": "Identifier (i.e. name) for the resource."
@@ -1707,7 +1775,6 @@
                                       },
                                       "response": [
                                         {
-                                          "id": "1ec37544-2bd0-4595-a391-318153426612",
                                           "name": "Successful request.",
                                           "originalRequest": {
                                             "method": "DELETE",
@@ -1746,13 +1813,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -1776,11 +1849,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"status\": \"Request successfully completed\"\n}"
                                         },
                                         {
-                                          "id": "a81db8a7-d881-4e36-a931-8d6647a4b67b",
                                           "name": "Successfully accepted the request, but it is not completed yet.",
                                           "originalRequest": {
                                             "method": "DELETE",
@@ -1819,13 +1890,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -1858,11 +1935,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
                                         },
                                         {
-                                          "id": "fada87c5-50cb-4155-852a-09c8ef8da074",
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                                           "originalRequest": {
                                             "method": "DELETE",
@@ -1901,13 +1976,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -1931,11 +2012,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "4469e1e4-0460-424a-9c86-2e315bcf4329",
                                           "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                                           "originalRequest": {
                                             "method": "DELETE",
@@ -1974,13 +2053,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -2004,11 +2089,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "5960da12-6888-4861-8efc-61b136201bf1",
                                           "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                                           "originalRequest": {
                                             "method": "DELETE",
@@ -2047,13 +2130,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -2077,11 +2166,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "74164436-3751-4c6e-b46b-a007245b486d",
                                           "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                                           "originalRequest": {
                                             "method": "DELETE",
@@ -2120,13 +2207,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -2150,11 +2243,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "1141924b-7594-4eb0-8c97-f905304c1c11",
                                           "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                                           "originalRequest": {
                                             "method": "DELETE",
@@ -2193,13 +2284,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -2223,11 +2320,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "7ce47c99-deb8-4d53-b321-ef328d4969b1",
                                           "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
                                           "originalRequest": {
                                             "method": "DELETE",
@@ -2266,13 +2361,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -2296,11 +2397,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "815ab5d2-e5c7-490c-a6ac-686021f0f32d",
                                           "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                                           "originalRequest": {
                                             "method": "DELETE",
@@ -2339,13 +2438,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -2369,11 +2474,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "80604db0-c722-494c-9ab5-74cccc3ba61f",
                                           "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                                           "originalRequest": {
                                             "method": "DELETE",
@@ -2412,13 +2515,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -2442,11 +2551,9 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
-                                          "id": "14a98666-6cb3-4e6b-b022-70b55079d2b9",
                                           "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                                           "originalRequest": {
                                             "method": "DELETE",
@@ -2485,13 +2592,19 @@
                                               ],
                                               "variable": [
                                                 {
-                                                  "key": "database"
+                                                  "key": "database",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                                 },
                                                 {
-                                                  "key": "schema"
+                                                  "key": "schema",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                                 },
                                                 {
-                                                  "key": "name"
+                                                  "key": "name",
+                                                  "value": "TEST_NAME",
+                                                  "description": "Identifier (i.e. name) for the resource."
                                                 }
                                               ]
                                             }
@@ -2515,20 +2628,14 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "responseTime": null,
                                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         }
                                       ]
                                     }
-                                  ],
-                                  "id": "6bbb838b-28f2-46a8-ab22-b2f3225ef5fc"
+                                  ]
                                 },
                                 {
                                   "name": "Lists image repositories.",
-                                  "id": "a77acff3-4058-4e8d-99af-b5f18ac7a574",
-                                  "protocolProfileBehavior": {
-                                    "disableBodyPruning": true
-                                  },
                                   "request": {
                                     "method": "GET",
                                     "header": [
@@ -2560,13 +2667,11 @@
                                       ],
                                       "variable": [
                                         {
-                                          "id": "7ad0d158-171a-4b9c-9950-5dac90faeb58",
                                           "key": "database",
                                           "value": "TEST_NAME",
                                           "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                         },
                                         {
-                                          "id": "88b9c6fb-455a-4920-9f1d-787c62c11b68",
                                           "key": "schema",
                                           "value": "TEST_NAME",
                                           "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
@@ -2577,7 +2682,6 @@
                                   },
                                   "response": [
                                     {
-                                      "id": "769e3b67-94da-4be2-bc95-266300443587",
                                       "name": "Successful request.",
                                       "originalRequest": {
                                         "method": "GET",
@@ -2615,10 +2719,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -2651,11 +2759,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "[\n  {\n    \"name\": \"image_repository_name\",\n    \"database_name\": \"test_db\",\n    \"schema_name\": \"test_schema\",\n    \"created_on\": \"2024-06-18T01:01:01.111111\",\n    \"repository_url\": \"https://www.snowflake.com\",\n    \"owner\": \"IMAGE_ADMIN\",\n    \"owner_role_type\": \"ADMIN\"\n  },\n  {\n    \"name\": \"image_repository_name\",\n    \"database_name\": \"test_db\",\n    \"schema_name\": \"test_schema\",\n    \"created_on\": \"2024-06-18T01:01:01.111111\",\n    \"repository_url\": \"https://www.snowflake.com\",\n    \"owner\": \"IMAGE_ADMIN\",\n    \"owner_role_type\": \"ADMIN\"\n  }\n]"
                                     },
                                     {
-                                      "id": "e102c035-cff8-423f-b9e5-6f57ff138814",
                                       "name": "Successfully accepted the request, but it is not completed yet.",
                                       "originalRequest": {
                                         "method": "GET",
@@ -2693,10 +2799,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -2729,11 +2839,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
                                     },
                                     {
-                                      "id": "4093117d-a7f8-44ed-b80d-4c0cead0fb48",
                                       "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                                       "originalRequest": {
                                         "method": "GET",
@@ -2771,10 +2879,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -2798,11 +2910,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "bc2baa47-a6ee-47e1-86ad-6663048de93e",
                                       "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                                       "originalRequest": {
                                         "method": "GET",
@@ -2840,10 +2950,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -2867,11 +2981,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "8362c5ac-468a-4756-9bc3-82308f79081a",
                                       "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                                       "originalRequest": {
                                         "method": "GET",
@@ -2909,10 +3021,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -2936,11 +3052,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "14a362c9-774e-4243-bf24-38a9bf9f9812",
                                       "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                                       "originalRequest": {
                                         "method": "GET",
@@ -2978,10 +3092,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -3005,11 +3123,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "fadc7636-369e-4284-8987-1c767848ebd2",
                                       "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                                       "originalRequest": {
                                         "method": "GET",
@@ -3047,10 +3163,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -3074,11 +3194,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "ec3e395b-a861-4fc4-8740-351203debd87",
                                       "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
                                       "originalRequest": {
                                         "method": "GET",
@@ -3116,10 +3234,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -3143,11 +3265,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "bc6be284-3514-4b4c-afd9-41ab590fded0",
                                       "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
                                       "originalRequest": {
                                         "method": "GET",
@@ -3185,10 +3305,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -3212,11 +3336,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "139c096e-de92-46bc-bef5-59055d3bd3a6",
                                       "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
                                       "originalRequest": {
                                         "method": "GET",
@@ -3254,10 +3376,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -3281,11 +3407,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "975791a0-6de7-41b3-90b6-9b82643ac829",
                                       "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                                       "originalRequest": {
                                         "method": "GET",
@@ -3323,10 +3447,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -3350,11 +3478,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "f60b4e80-f676-46c1-88f1-ff47538850d9",
                                       "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                                       "originalRequest": {
                                         "method": "GET",
@@ -3392,10 +3518,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -3419,11 +3549,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "194aa68a-8d20-47e7-836b-5980d19ef151",
                                       "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                                       "originalRequest": {
                                         "method": "GET",
@@ -3461,10 +3589,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -3488,17 +3620,12 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     }
                                   ]
                                 },
                                 {
                                   "name": "Creates an image repository in the specified database and schema.",
-                                  "id": "c51e3623-c349-4f27-a39d-addcdf08b1c5",
-                                  "protocolProfileBehavior": {
-                                    "disableBodyPruning": true
-                                  },
                                   "request": {
                                     "method": "POST",
                                     "header": [
@@ -3544,13 +3671,11 @@
                                       ],
                                       "variable": [
                                         {
-                                          "id": "5d8574f8-7191-436b-a227-ff4d7bbe8ca2",
                                           "key": "database",
                                           "value": "TEST_NAME",
                                           "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                         },
                                         {
-                                          "id": "895ca3f7-8738-4a3d-813b-b6e2f83b7866",
                                           "key": "schema",
                                           "value": "TEST_NAME",
                                           "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
@@ -3561,7 +3686,6 @@
                                   },
                                   "response": [
                                     {
-                                      "id": "52bbb52c-e0c2-44bb-83d3-adf60cda62cc",
                                       "name": "Successful request.",
                                       "originalRequest": {
                                         "method": "POST",
@@ -3613,10 +3737,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -3640,11 +3768,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"status\": \"Request successfully completed\"\n}"
                                     },
                                     {
-                                      "id": "b2387891-965a-4b0c-a1fc-8f537de19c50",
                                       "name": "Successfully accepted the request, but it is not completed yet.",
                                       "originalRequest": {
                                         "method": "POST",
@@ -3696,10 +3822,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -3732,11 +3862,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
                                     },
                                     {
-                                      "id": "83ab9ee3-f2c6-43e1-a2fa-873ab64dc98d",
                                       "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                                       "originalRequest": {
                                         "method": "POST",
@@ -3788,10 +3916,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -3815,11 +3947,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "1233cbb9-e8e6-44ba-9ec8-71a4aaba0d6d",
                                       "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                                       "originalRequest": {
                                         "method": "POST",
@@ -3871,10 +4001,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -3898,11 +4032,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "dc17bb3b-e55b-4cb9-94a6-c14f9ea1c427",
                                       "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                                       "originalRequest": {
                                         "method": "POST",
@@ -3954,10 +4086,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -3981,11 +4117,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "7bb8e7ea-13f4-4c26-95d0-c2589041a287",
                                       "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                                       "originalRequest": {
                                         "method": "POST",
@@ -4037,10 +4171,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -4064,11 +4202,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "4da41277-0fd0-4f9a-81fb-6cee221ddb7c",
                                       "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                                       "originalRequest": {
                                         "method": "POST",
@@ -4120,10 +4256,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -4147,11 +4287,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "748ec7a9-e8f1-4d1c-b614-f9b5ac170203",
                                       "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
                                       "originalRequest": {
                                         "method": "POST",
@@ -4203,10 +4341,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -4230,11 +4372,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "7266dec4-cd5d-47d9-a9bf-4691e7430261",
                                       "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
                                       "originalRequest": {
                                         "method": "POST",
@@ -4286,10 +4426,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -4313,11 +4457,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "a6a15e85-aedf-4494-a886-943be3077932",
                                       "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
                                       "originalRequest": {
                                         "method": "POST",
@@ -4369,10 +4511,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -4396,11 +4542,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "ddf07594-6d8c-4868-92fa-ffce5948676f",
                                       "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                                       "originalRequest": {
                                         "method": "POST",
@@ -4452,10 +4596,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -4479,11 +4627,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "760e30ea-e3e4-47ec-8fc4-90c64f57463a",
                                       "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                                       "originalRequest": {
                                         "method": "POST",
@@ -4535,10 +4681,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -4562,11 +4712,9 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
-                                      "id": "12fb23f9-cecd-47da-b813-ba37df14d4f6",
                                       "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                                       "originalRequest": {
                                         "method": "POST",
@@ -4618,10 +4766,14 @@
                                           ],
                                           "variable": [
                                             {
-                                              "key": "database"
+                                              "key": "database",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the database to which the resource belongs. You can use the `/api/v2/databases` GET request to get a list of available databases."
                                             },
                                             {
-                                              "key": "schema"
+                                              "key": "schema",
+                                              "value": "TEST_NAME",
+                                              "description": "Identifier (i.e. name) for the schema to which the resource belongs. You can use the `/api/v2/databases/{database}/schemas` GET request to get a list of available schemas for the specified database."
                                             }
                                           ]
                                         }
@@ -4645,31 +4797,23 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "responseTime": null,
                                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     }
                                   ]
                                 }
-                              ],
-                              "id": "09174843-4225-4552-a985-d01497b7fa68"
+                              ]
                             }
-                          ],
-                          "id": "eb5a1ce8-8b8f-4d12-aed7-9aaee8ace005"
+                          ]
                         }
-                      ],
-                      "id": "abe8ce52-0ee1-4f9b-b529-6c410d331eb1"
+                      ]
                     }
-                  ],
-                  "id": "9a383cc0-776a-49d7-a0b6-fcc8de06d499"
+                  ]
                 }
-              ],
-              "id": "56e8c539-6f7d-4138-8131-8c854aeac128"
+              ]
             }
-          ],
-          "id": "8407c572-95c1-4e3d-98cf-6605928290fc"
+          ]
         }
-      ],
-      "id": "c1bd588f-c108-4a85-8864-724ecc577087"
+      ]
     }
   ],
   "auth": {
@@ -4684,7 +4828,6 @@
   },
   "variable": [
     {
-      "id": "1e965ecf-e7d4-42f4-a016-c60e0cd5f5b8",
       "key": "baseUrl",
       "value": "https://org-account.snowflakecomputing.com"
     }

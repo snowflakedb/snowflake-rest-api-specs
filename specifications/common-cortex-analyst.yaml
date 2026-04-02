@@ -170,6 +170,15 @@ components:
         experimental:
           type: string
           description: JSON serialized string of experimental API fields (undocumented).
+        semantic_sql:
+          type: string
+          enum:
+          - auto
+          - require
+          - disable
+          description: Controls semantic SQL generation behavior. 'auto' (default)
+            uses the current cascade behavior, 'require' forces semantic SQL, 'disable'
+            disables it entirely.
       required:
       - messages
     Confidence:

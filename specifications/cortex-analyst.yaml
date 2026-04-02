@@ -155,9 +155,7 @@ paths:
                   - `error`: Contains a `StreamingError` payload if an error occurs
                   during streaming.
 
-                  - `done`: Contains the string payload "done"
-
-                  '
+                  - `done`: Contains the string payload "done"'
         '400':
           $ref: common.yaml#/components/responses/400BadRequest
         '401':
@@ -578,6 +576,10 @@ components:
           $ref: common-cortex-analyst.yaml#/components/schemas/VerifiedQuery
         vq_to_remove:
           $ref: common-cortex-analyst.yaml#/components/schemas/VerifiedQuery
+        metadata:
+          type: object
+          description: Arbitrary metadata associated with this suggestion.
+          additionalProperties: true
     FastGenerationRequest:
       type: object
       description: The request for the FastGeneration rpc
@@ -753,6 +755,12 @@ components:
             separate from the state. This should be the JSON-encoded form of an AgenticOptimizationOutcome
             protobuf message.
           example: '{"extensions": ""}'
+        base_semantic_view_name:
+          type: string
+          description: The fully-qualified name of the base semantic model. This can
+            be either a semantic view FQN (e.g., 'DB.SCHEMA.VIEW') or a stage file
+            path (e.g., '@STAGE/path/file.yaml').
+          example: MY_DB.MY_SCHEMA.MY_SEMANTIC_VIEW
     ListAgenticOptimizationsRequest:
       type: object
       description: A request to list all agentic optimization runs for a given base
@@ -795,6 +803,68 @@ components:
       - COMPLETED
       - FAILED
       - CANCELED
+    CreateAnalystEvalOptimizationRequest:
+      type: object
+      description: A request to create an analyst evaluation optimization for a semantic
+        view. This creates a lightweight optimization without GRPC processing, used
+        for evaluation and observability purposes.
+      properties:
+        semantic_view:
+          type: string
+          description: Fully qualified name of the semantic view for the eval.
+          example: DATABASE.SCHEMA.SEMANTIC_VIEW
+        experimental:
+          type: string
+          description: JSON serialized string of experimental API fields (undocumented).
+      required:
+      - semantic_view
+    CreateAnalystEvalOptimizationResponse:
+      type: object
+      description: The result of creating an analyst evaluation optimization.
+      properties:
+        request_id:
+          type: string
+          description: Unique request ID
+          example: abcd1234-5678-90ab-cdef-1234567890ab
+        optimization_name:
+          type: string
+          description: The fully-qualified name of the created optimization. Uses
+            format SYSTEM_AI_OBS_ANALYST_EVAL_{view_name}.
+          example: DATABASE.SCHEMA.SYSTEM_AI_OBS_ANALYST_EVAL_SEMANTIC_VIEW
+        experimental:
+          type: string
+          description: JSON serialized string of experimental API fields (undocumented).
+    GetAnalystEvalOptimizationRequest:
+      type: object
+      description: A request to retrieve the analyst eval optimization for a semantic
+        view.
+      properties:
+        semantic_view:
+          type: string
+          description: Fully qualified name of the semantic view.
+          example: DATABASE.SCHEMA.SEMANTIC_VIEW
+        experimental:
+          type: string
+          description: JSON serialized string of experimental API fields (undocumented).
+      required:
+      - semantic_view
+    GetAnalystEvalOptimizationResponse:
+      type: object
+      description: The response from retrieving an analyst eval optimization for a
+        semantic view.
+      properties:
+        request_id:
+          type: string
+          description: Unique request ID
+          example: abcd1234-5678-90ab-cdef-1234567890ab
+        optimization_name:
+          type: string
+          description: The fully-qualified name of the analyst evaluation optimization.
+            Uses format SYSTEM_AI_OBS_ANALYST_EVAL_{view_name}.
+          example: DATABASE.SCHEMA.SYSTEM_AI_OBS_ANALYST_EVAL_SEMANTIC_VIEW
+        experimental:
+          type: string
+          description: JSON serialized string of experimental API fields (undocumented).
     TableauInput:
       type: object
       description: Input required to extract data from Tableau. Tableau Cloud users
@@ -910,6 +980,10 @@ components:
           type: integer
           format: int32
           description: Version of SemanticModelUpdateSuggestion
+        metadata:
+          type: object
+          description: Arbitrary metadata associated with this suggestion.
+          additionalProperties: true
     SemanticModelChange:
       type: object
       description: A single change to apply to the semantic object
@@ -963,6 +1037,36 @@ components:
       required:
       - database
       - schema
+    ExpandQueryRequest:
+      type: object
+      description: A request to expand logical SQL queries to physical SQL based on
+        a semantic view
+      required:
+      - semantic_view
+      - queries
+      properties:
+        semantic_view:
+          type: string
+          description: The fully qualified name of the semantic view
+          example: MY_DB.MY_SCHEMA.MY_SEMANTIC_VIEW
+        queries:
+          type: array
+          description: Array of SQL queries to expand from logical to physical
+          items:
+            type: string
+          example:
+          - SELECT revenue FROM sales
+          - SELECT COUNT(*) FROM customers
+    ExpandQueryResponse:
+      type: object
+      description: The response containing the expanded SQL queries. Results are returned
+        in the same order as the input queries.
+      properties:
+        queries:
+          type: array
+          description: Array of expanded physical SQL queries
+          items:
+            type: string
   securitySchemes:
     KeyPair:
       $ref: common.yaml#/components/securitySchemes/KeyPair
@@ -970,7 +1074,10 @@ components:
       $ref: common.yaml#/components/securitySchemes/ExternalOAuth
     SnowflakeOAuth:
       $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+    ProgrammaticAccessToken:
+      $ref: common.yaml#/components/securitySchemes/ProgrammaticAccessToken
 security:
 - KeyPair: []
 - ExternalOAuth: []
 - SnowflakeOAuth: []
+- ProgrammaticAccessToken: []

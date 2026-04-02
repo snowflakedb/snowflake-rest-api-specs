@@ -1,9 +1,11 @@
 {
   "info": {
-    "_postman_id": "a42480c5-8467-456a-9454-8b09c72755a1",
+    "_postman_id": "76e2e4c6-93e7-4efd-b1a9-71009d0dbfe2",
     "name": "Snowflake API Integration API",
     "description": "The Snowflake API Integration API is a REST API that you can use to access, update, and perform certain actions on API Integration resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53314882",
+    "_collection_link": "https://go.postman.co/collection/53314882-76e2e4c6-93e7-4efd-b1a9-71009d0dbfe2?source=collection_link"
   },
   "item": [
     {
@@ -20,10 +22,6 @@
                   "item": [
                     {
                       "name": "Fetch an API integration",
-                      "id": "fc1d845c-4a20-4f4b-b137-d939ad8b9745",
-                      "protocolProfileBehavior": {
-                        "disableBodyPruning": true
-                      },
                       "request": {
                         "method": "GET",
                         "header": [
@@ -45,7 +43,6 @@
                           ],
                           "variable": [
                             {
-                              "id": "af922bd9-24d6-4dfc-b4e8-fb89fa989b71",
                               "key": "name",
                               "value": "TEST_NAME",
                               "description": "Identifier (i.e. name) for the resource."
@@ -56,7 +53,6 @@
                       },
                       "response": [
                         {
-                          "id": "1574ad1d-6e0d-47f6-910e-bf82b0959b77",
                           "name": "successful",
                           "originalRequest": {
                             "method": "GET",
@@ -84,7 +80,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -117,11 +115,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
-                          "body": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\")p\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"'\\\"\",\n  \"api_hook\": {\n    \"type\": \"GC\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\",\n  \"created_on\": \"1949-06-23T13:15:50.544Z\"\n}"
+                          "body": "{\n  \"name\": \"\\\"\\\"\\\"\\\"\\\"W\\\"\",\n  \"api_hook\": {\n    \"type\": \"AZURE\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": false,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\",\n  \"created_on\": \"1968-02-27T18:07:02.862Z\"\n}"
                         },
                         {
-                          "id": "76a8d84a-2f38-4aff-ad4e-bf8165ed276e",
                           "name": "Successfully accepted the request, but it is not completed yet.",
                           "originalRequest": {
                             "method": "GET",
@@ -149,7 +145,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -182,11 +180,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
                         },
                         {
-                          "id": "b00277df-578f-4577-ad9a-55a84809c79f",
                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                           "originalRequest": {
                             "method": "GET",
@@ -214,7 +210,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -238,11 +236,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "4f8c87bc-7577-4ae0-b506-39ed7f28de81",
                           "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                           "originalRequest": {
                             "method": "GET",
@@ -270,7 +266,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -294,11 +292,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "cd070d57-f91b-4691-9cf2-fcd8cf9342b3",
                           "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                           "originalRequest": {
                             "method": "GET",
@@ -326,7 +322,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -350,11 +348,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "e387184d-046a-4986-827d-e3241f57a571",
                           "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                           "originalRequest": {
                             "method": "GET",
@@ -382,7 +378,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -406,11 +404,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "91556b31-72bb-4543-bc47-1bb8217cbcb8",
                           "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                           "originalRequest": {
                             "method": "GET",
@@ -438,7 +434,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -462,11 +460,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "223a1a06-4d68-4ff9-8f16-a09ce4f3f976",
                           "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
                           "originalRequest": {
                             "method": "GET",
@@ -494,7 +490,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -518,11 +516,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "ade613d5-eb6d-4b3e-b613-6c30a2069223",
                           "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
                           "originalRequest": {
                             "method": "GET",
@@ -550,7 +546,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -574,11 +572,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "9e425f9a-5b75-443b-a3ef-a29d2617819a",
                           "name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
                           "originalRequest": {
                             "method": "GET",
@@ -606,7 +602,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -630,11 +628,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "aca4d8bb-f728-4812-8029-e4d5e435f021",
                           "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
                           "originalRequest": {
                             "method": "GET",
@@ -662,7 +658,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -686,11 +684,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "1fce2156-bf71-4acb-9891-0c756685e229",
                           "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                           "originalRequest": {
                             "method": "GET",
@@ -718,7 +714,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -742,11 +740,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "e9ae264b-f3c0-40a9-85b1-f703491323cf",
                           "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                           "originalRequest": {
                             "method": "GET",
@@ -774,7 +770,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -798,11 +796,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "668d94fe-5929-469e-8416-c582e3a8d5d3",
                           "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                           "originalRequest": {
                             "method": "GET",
@@ -830,7 +826,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -854,17 +852,12 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         }
                       ]
                     },
                     {
                       "name": "Create an (or alter an existing) API integration",
-                      "id": "b2921a69-d35e-425a-91b5-42c3db66bd33",
-                      "protocolProfileBehavior": {
-                        "disableBodyPruning": true
-                      },
                       "request": {
                         "method": "PUT",
                         "header": [
@@ -879,7 +872,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -900,7 +893,6 @@
                           ],
                           "variable": [
                             {
-                              "id": "ea8167ec-90c3-4deb-8ad2-315ce4e20ac8",
                               "key": "name",
                               "value": "TEST_NAME",
                               "description": "Identifier (i.e. name) for the resource."
@@ -911,7 +903,6 @@
                       },
                       "response": [
                         {
-                          "id": "523f9271-f4bd-4606-b430-846dde4f8d2c",
                           "name": "Successful request.",
                           "originalRequest": {
                             "method": "PUT",
@@ -932,7 +923,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                              "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                               "options": {
                                 "raw": {
                                   "headerFamily": "json",
@@ -953,7 +944,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -977,11 +970,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"status\": \"Request successfully completed\"\n}"
                         },
                         {
-                          "id": "dfafb5cc-4767-4e38-a10b-b228eb1f5efa",
                           "name": "Successfully accepted the request, but it is not completed yet.",
                           "originalRequest": {
                             "method": "PUT",
@@ -1002,7 +993,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                              "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                               "options": {
                                 "raw": {
                                   "headerFamily": "json",
@@ -1023,7 +1014,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1056,11 +1049,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
                         },
                         {
-                          "id": "f1941a5c-ae4f-4eb3-b25e-e597d1c12e50",
                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                           "originalRequest": {
                             "method": "PUT",
@@ -1081,7 +1072,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                              "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                               "options": {
                                 "raw": {
                                   "headerFamily": "json",
@@ -1102,7 +1093,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1126,11 +1119,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "1bce307c-b252-4a0c-bbe0-1b4085963714",
                           "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                           "originalRequest": {
                             "method": "PUT",
@@ -1151,7 +1142,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                              "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                               "options": {
                                 "raw": {
                                   "headerFamily": "json",
@@ -1172,7 +1163,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1196,11 +1189,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "e634299c-41b4-4cb4-a4ed-9c1e2f2ef951",
                           "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                           "originalRequest": {
                             "method": "PUT",
@@ -1221,7 +1212,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                              "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                               "options": {
                                 "raw": {
                                   "headerFamily": "json",
@@ -1242,7 +1233,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1266,11 +1259,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "278dbef4-dfe7-4201-b57c-80c970487f6c",
                           "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                           "originalRequest": {
                             "method": "PUT",
@@ -1291,7 +1282,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                              "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                               "options": {
                                 "raw": {
                                   "headerFamily": "json",
@@ -1312,7 +1303,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1336,11 +1329,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "4befae13-aefe-4efa-8444-e355ef1ad31c",
                           "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                           "originalRequest": {
                             "method": "PUT",
@@ -1361,7 +1352,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                              "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                               "options": {
                                 "raw": {
                                   "headerFamily": "json",
@@ -1382,7 +1373,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1406,11 +1399,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "311644ae-634f-48d3-bde0-bf5d94ca1061",
                           "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                           "originalRequest": {
                             "method": "PUT",
@@ -1431,7 +1422,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                              "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                               "options": {
                                 "raw": {
                                   "headerFamily": "json",
@@ -1452,7 +1443,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1476,11 +1469,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "f58c14d8-03a6-448a-b7b5-76b6e557eb43",
                           "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                           "originalRequest": {
                             "method": "PUT",
@@ -1501,7 +1492,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                              "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                               "options": {
                                 "raw": {
                                   "headerFamily": "json",
@@ -1522,7 +1513,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1546,11 +1539,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "74887502-bafc-4f4c-9bfa-a7c841a74d52",
                           "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                           "originalRequest": {
                             "method": "PUT",
@@ -1571,7 +1562,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                              "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                               "options": {
                                 "raw": {
                                   "headerFamily": "json",
@@ -1592,7 +1583,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1616,17 +1609,12 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         }
                       ]
                     },
                     {
                       "name": "Delete an API integration",
-                      "id": "cfc23cfa-0636-435d-8587-a9978f5fe204",
-                      "protocolProfileBehavior": {
-                        "disableBodyPruning": true
-                      },
                       "request": {
                         "method": "DELETE",
                         "header": [
@@ -1655,7 +1643,6 @@
                           ],
                           "variable": [
                             {
-                              "id": "173924f4-0e35-4229-a476-3d18c654f2d8",
                               "key": "name",
                               "value": "TEST_NAME",
                               "description": "Identifier (i.e. name) for the resource."
@@ -1666,7 +1653,6 @@
                       },
                       "response": [
                         {
-                          "id": "12e71a20-0056-4fbf-937c-19fcc342b671",
                           "name": "Successful request.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -1701,7 +1687,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1725,11 +1713,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"status\": \"Request successfully completed\"\n}"
                         },
                         {
-                          "id": "314fc5da-e9c8-4851-b7e5-c7890fd3c0cf",
                           "name": "Successfully accepted the request, but it is not completed yet.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -1764,7 +1750,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1797,11 +1785,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
                         },
                         {
-                          "id": "6f72ac67-42cb-46c7-8dfd-73ed2253328d",
                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                           "originalRequest": {
                             "method": "DELETE",
@@ -1836,7 +1822,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1860,11 +1848,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "141a0b2b-a76f-42a9-a440-c3367aed64e5",
                           "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                           "originalRequest": {
                             "method": "DELETE",
@@ -1899,7 +1885,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1923,11 +1911,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "f77e0751-aa17-4066-845a-4b870e7b8226",
                           "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -1962,7 +1948,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1986,11 +1974,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "bb3ac437-361f-451d-82c1-89ef3557d6d9",
                           "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -2025,7 +2011,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -2049,11 +2037,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "2e9643db-951e-42d8-9143-eeb6ecc9c14d",
                           "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -2088,7 +2074,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -2112,11 +2100,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "dc2361b1-d7f9-4e68-9cfe-be212b48528a",
                           "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -2151,7 +2137,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -2175,11 +2163,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "eb2c49a8-575c-43f3-a77b-0eda51f7b92a",
                           "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
                           "originalRequest": {
                             "method": "DELETE",
@@ -2214,7 +2200,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -2238,11 +2226,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "f7ed2534-166c-4fd6-b9b4-b5e6b1ba6ca6",
                           "name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -2277,7 +2263,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -2301,11 +2289,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "20d70703-1035-401d-b7ba-8006d56a309c",
                           "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -2340,7 +2326,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -2364,11 +2352,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "91b1f889-ae6b-4646-b488-5e70a36bdf68",
                           "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -2403,7 +2389,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -2427,11 +2415,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "0d4ccfde-d93b-4158-8b65-bea2390b2e01",
                           "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -2466,7 +2452,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -2490,11 +2478,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "97945858-777f-494e-bb65-77fb42f9b3b4",
                           "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -2529,7 +2515,9 @@
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -2553,20 +2541,14 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         }
                       ]
                     }
-                  ],
-                  "id": "5731fae6-a0ac-4352-846d-080e62263a61"
+                  ]
                 },
                 {
                   "name": "List API integrations",
-                  "id": "c71e4ef9-2e62-43b1-928c-d2148ad8742b",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
                   "request": {
                     "method": "GET",
                     "header": [
@@ -2597,7 +2579,6 @@
                   },
                   "response": [
                     {
-                      "id": "31c3f1f9-45a4-475c-8ad0-6c2f2cf28336",
                       "name": "successful",
                       "originalRequest": {
                         "method": "GET",
@@ -2659,11 +2640,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
-                      "body": "[\n  {\n    \"name\": \"Ab56D\",\n    \"api_hook\": {\n      \"type\": \"AWS\"\n    },\n    \"api_allowed_prefixes\": [\n      \"string\",\n      \"string\"\n    ],\n    \"enabled\": true,\n    \"api_blocked_prefixes\": [\n      \"string\",\n      \"string\"\n    ],\n    \"comment\": \"string\",\n    \"created_on\": \"1951-01-05T05:04:08.403Z\"\n  },\n  {\n    \"name\": \"hOm80\",\n    \"api_hook\": {\n      \"type\": \"GC\"\n    },\n    \"api_allowed_prefixes\": [\n      \"string\",\n      \"string\"\n    ],\n    \"enabled\": false,\n    \"api_blocked_prefixes\": [\n      \"string\",\n      \"string\"\n    ],\n    \"comment\": \"string\",\n    \"created_on\": \"2006-10-12T09:52:45.304Z\"\n  }\n]"
+                      "body": "[\n  {\n    \"name\": \"\\\"\\\"\\\"v\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"7\\\"\\\"5\\\"\",\n    \"api_hook\": {\n      \"type\": \"GIT\"\n    },\n    \"api_allowed_prefixes\": [\n      \"string\",\n      \"string\"\n    ],\n    \"enabled\": true,\n    \"api_blocked_prefixes\": [\n      \"string\",\n      \"string\"\n    ],\n    \"comment\": \"string\",\n    \"created_on\": \"1946-04-22T04:28:38.691Z\"\n  },\n  {\n    \"name\": \"\\\"U\\\"\\\"\\\"\",\n    \"api_hook\": {\n      \"type\": \"GIT\"\n    },\n    \"api_allowed_prefixes\": [\n      \"string\",\n      \"string\"\n    ],\n    \"enabled\": true,\n    \"api_blocked_prefixes\": [\n      \"string\",\n      \"string\"\n    ],\n    \"comment\": \"string\",\n    \"created_on\": \"1994-04-24T08:07:00.611Z\"\n  }\n]"
                     },
                     {
-                      "id": "f2d37ac3-9add-437e-afb7-5c199b8a074f",
                       "name": "Successfully accepted the request, but it is not completed yet.",
                       "originalRequest": {
                         "method": "GET",
@@ -2725,11 +2704,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
                     },
                     {
-                      "id": "c2882eac-7a60-4e69-aad6-0e258a7be2d5",
                       "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                       "originalRequest": {
                         "method": "GET",
@@ -2782,11 +2759,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "61d409a1-514f-49fd-b32d-b2e5b5f6188f",
                       "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                       "originalRequest": {
                         "method": "GET",
@@ -2839,11 +2814,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "6b339d70-1760-44d0-a623-54a6de812284",
                       "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                       "originalRequest": {
                         "method": "GET",
@@ -2896,11 +2869,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "66bd6ad3-734d-489b-8b86-22b0eb17ef1c",
                       "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                       "originalRequest": {
                         "method": "GET",
@@ -2953,11 +2924,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "a16efde9-c452-47c5-8ec6-a9686a9a2a53",
                       "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                       "originalRequest": {
                         "method": "GET",
@@ -3010,11 +2979,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "6de05e28-ec72-44ca-b149-2b78074999e2",
                       "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
                       "originalRequest": {
                         "method": "GET",
@@ -3067,11 +3034,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "502e0a4e-fc4b-4218-ab4d-718ba1b4fa48",
                       "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
                       "originalRequest": {
                         "method": "GET",
@@ -3124,11 +3089,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "d3172117-d6c6-45c3-ba4e-7ed0b24af7e1",
                       "name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
                       "originalRequest": {
                         "method": "GET",
@@ -3181,11 +3144,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "a855e036-4cfb-4efd-9376-45f35095bcdb",
                       "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
                       "originalRequest": {
                         "method": "GET",
@@ -3238,11 +3199,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "c7e9fd1c-33bd-41da-a358-119f9c4a94ff",
                       "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                       "originalRequest": {
                         "method": "GET",
@@ -3295,11 +3254,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "66732c96-f4a3-4952-b5da-7de5f575ee2c",
                       "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                       "originalRequest": {
                         "method": "GET",
@@ -3352,11 +3309,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "bb7ee159-1327-45ec-8eb0-61ebc1479cf3",
                       "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                       "originalRequest": {
                         "method": "GET",
@@ -3409,17 +3364,12 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     }
                   ]
                 },
                 {
                   "name": "Create an API integration",
-                  "id": "d0b7f067-8e2d-45d8-93e6-64633d4cb0ef",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
                   "request": {
                     "method": "POST",
                     "header": [
@@ -3434,7 +3384,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                      "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                       "options": {
                         "raw": {
                           "headerFamily": "json",
@@ -3464,7 +3414,6 @@
                   },
                   "response": [
                     {
-                      "id": "cfc82421-4c1f-4018-ad7b-3981fa42e643",
                       "name": "Successful request.",
                       "originalRequest": {
                         "method": "POST",
@@ -3485,7 +3434,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -3531,11 +3480,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"status\": \"Request successfully completed\"\n}"
                     },
                     {
-                      "id": "180ef138-ddbd-4c9b-9a17-172f9945aa12",
                       "name": "Successfully accepted the request, but it is not completed yet.",
                       "originalRequest": {
                         "method": "POST",
@@ -3556,7 +3503,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -3611,11 +3558,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
                     },
                     {
-                      "id": "05f2fd9e-4794-4240-89e1-fee2bbb3ae51",
                       "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                       "originalRequest": {
                         "method": "POST",
@@ -3636,7 +3581,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -3682,11 +3627,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "fa4d1b2d-772a-4e92-a616-8154df07738d",
                       "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                       "originalRequest": {
                         "method": "POST",
@@ -3707,7 +3650,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -3753,11 +3696,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "5217532b-24a9-4bf8-9e16-36adcd301d32",
                       "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                       "originalRequest": {
                         "method": "POST",
@@ -3778,7 +3719,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -3824,11 +3765,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "d2545ce2-e87d-4b6b-b5b6-c79958068a9f",
                       "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                       "originalRequest": {
                         "method": "POST",
@@ -3849,7 +3788,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -3895,11 +3834,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "e1a48cb7-bf8d-4ca5-bbdd-eef08cfa3f1a",
                       "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                       "originalRequest": {
                         "method": "POST",
@@ -3920,7 +3857,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -3966,11 +3903,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "1d33dc47-f3b1-44c3-b582-4a56501249f3",
                       "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
                       "originalRequest": {
                         "method": "POST",
@@ -3991,7 +3926,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -4037,11 +3972,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "fa85a3a2-b638-4b1d-b49a-bf4cec43c949",
                       "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
                       "originalRequest": {
                         "method": "POST",
@@ -4062,7 +3995,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -4108,11 +4041,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "ed742645-510d-4e96-b0eb-c9cad1027eb8",
                       "name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
                       "originalRequest": {
                         "method": "POST",
@@ -4133,7 +4064,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -4179,11 +4110,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "efef05e1-40c0-4e51-a4fa-dd3c91f0d6c3",
                       "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
                       "originalRequest": {
                         "method": "POST",
@@ -4204,7 +4133,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -4250,11 +4179,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "a97c1942-4d8d-4132-9f10-edf1bf39658a",
                       "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                       "originalRequest": {
                         "method": "POST",
@@ -4275,7 +4202,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -4321,11 +4248,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "0c83d49b-026e-48de-ba35-b5a49e3e2411",
                       "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                       "originalRequest": {
                         "method": "POST",
@@ -4346,7 +4271,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -4392,11 +4317,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "46f1928e-f24b-495b-acf4-1160c1aed291",
                       "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                       "originalRequest": {
                         "method": "POST",
@@ -4417,7 +4340,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n  \"name\": \"\\\"/\\\"\\\"9\\\"\\\"\\\"\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
+                          "raw": "{\n  \"name\": \"b_ahY\",\n  \"api_hook\": {\n    \"type\": \"GIT\"\n  },\n  \"api_allowed_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"enabled\": true,\n  \"api_blocked_prefixes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"comment\": \"string\"\n}",
                           "options": {
                             "raw": {
                               "headerFamily": "json",
@@ -4463,19 +4386,15 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     }
                   ]
                 }
-              ],
-              "id": "f9a74045-6f7a-4c31-aa45-ea34e034a2e3"
+              ]
             }
-          ],
-          "id": "ffda8cbc-d38c-4b85-b2f4-311ebb55e85c"
+          ]
         }
-      ],
-      "id": "e15aea71-43d3-4a55-8187-1ee10a7bda1b"
+      ]
     }
   ],
   "auth": {
@@ -4490,7 +4409,6 @@
   },
   "variable": [
     {
-      "id": "4cccaac9-7d22-4f45-8062-7cbaaf70eddb",
       "key": "baseUrl",
       "value": "https://org-account.snowflakecomputing.com"
     }

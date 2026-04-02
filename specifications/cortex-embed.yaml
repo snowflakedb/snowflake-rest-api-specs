@@ -20,9 +20,7 @@ paths:
 
         - [EMBED_TEXT_768](https://docs.snowflake.com/en/sql-reference/functions/embed_text-snowflake-cortex)
 
-        - [EMBED_TEXT_1024](https://docs.snowflake.com/en/sql-reference/functions/embed_text_1024-snowflake-cortex)
-
-        '
+        - [EMBED_TEXT_1024](https://docs.snowflake.com/en/sql-reference/functions/embed_text_1024-snowflake-cortex)'
       operationId: embed
       requestBody:
         description: Request payload containing model identifier and input text.
@@ -58,9 +56,7 @@ components:
   schemas:
     EmbedRequest:
       type: object
-      description: 'Request to calculate text embeddings using a specified model.
-
-        '
+      description: 'Request to calculate text embeddings using a specified model.'
       properties:
         model:
           type: string
@@ -74,9 +70,7 @@ components:
           description: 'An array of input texts for which vector embeddings will be
             calculated.
 
-            Example: ["Hello world", "Machine learning is fascinating"]
-
-            '
+            Example: ["Hello world", "Machine learning is fascinating"]'
           minItems: 1
         provisioned_throughput_id:
           type: string

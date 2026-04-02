@@ -1,9 +1,11 @@
 {
   "info": {
-    "_postman_id": "971be1ba-1629-40a4-868f-8a8691ca9d58",
+    "_postman_id": "7741459e-a6e1-4278-856b-142c4be55ebe",
     "name": "Snowflake Account API",
     "description": "The Snowflake Account API is a REST API that you can use to access, update, and perform certain actions on Account resource in Snowflake.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53314882",
+    "_collection_link": "https://go.postman.co/collection/53314882-7741459e-a6e1-4278-856b-142c4be55ebe?source=collection_link"
   },
   "item": [
     {
@@ -20,10 +22,6 @@
                   "item": [
                     {
                       "name": "Delete an account.",
-                      "id": "4c81560d-002c-4f0e-9b0e-af327d52ad83",
-                      "protocolProfileBehavior": {
-                        "disableBodyPruning": true
-                      },
                       "request": {
                         "method": "DELETE",
                         "header": [
@@ -33,7 +31,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                          "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -50,14 +48,13 @@
                               "value": "true"
                             },
                             {
-                              "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                              "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                               "key": "gracePeriodInDays",
-                              "value": "73"
+                              "value": "2174"
                             }
                           ],
                           "variable": [
                             {
-                              "id": "4a41f335-cd62-41e3-af48-556d486a1273",
                               "key": "name",
                               "value": "TEST_NAME",
                               "description": "Identifier (i.e. name) for the resource."
@@ -68,7 +65,6 @@
                       },
                       "response": [
                         {
-                          "id": "69eb9c38-a67d-4f37-9a92-304456663e80",
                           "name": "Successful request.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -84,7 +80,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -101,14 +97,16 @@
                                   "value": "true"
                                 },
                                 {
-                                  "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                                   "key": "gracePeriodInDays",
-                                  "value": "73"
+                                  "value": "2174"
                                 }
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -132,11 +130,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"status\": \"Request successfully completed\"\n}"
                         },
                         {
-                          "id": "7f1a93c2-0402-4ef1-96c0-5c9bc3f8369d",
                           "name": "Successfully accepted the request, but it is not completed yet.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -152,7 +148,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -169,14 +165,16 @@
                                   "value": "true"
                                 },
                                 {
-                                  "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                                   "key": "gracePeriodInDays",
-                                  "value": "73"
+                                  "value": "2174"
                                 }
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -209,11 +207,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
                         },
                         {
-                          "id": "b0795e0c-ecc1-44b2-be11-9802eaff0323",
                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                           "originalRequest": {
                             "method": "DELETE",
@@ -229,7 +225,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -246,14 +242,16 @@
                                   "value": "true"
                                 },
                                 {
-                                  "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                                   "key": "gracePeriodInDays",
-                                  "value": "73"
+                                  "value": "2174"
                                 }
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -277,11 +275,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "d099a6e8-ed23-4db6-b38d-e5c8142e11aa",
                           "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                           "originalRequest": {
                             "method": "DELETE",
@@ -297,7 +293,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -314,14 +310,16 @@
                                   "value": "true"
                                 },
                                 {
-                                  "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                                   "key": "gracePeriodInDays",
-                                  "value": "73"
+                                  "value": "2174"
                                 }
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -345,11 +343,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "c3af8284-71dd-46a8-a009-dc9a4c30ebd8",
                           "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -365,7 +361,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -382,14 +378,16 @@
                                   "value": "true"
                                 },
                                 {
-                                  "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                                   "key": "gracePeriodInDays",
-                                  "value": "73"
+                                  "value": "2174"
                                 }
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -413,11 +411,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "ec6df1ba-0f8c-4f93-a61a-c24e63d38ed4",
                           "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -433,7 +429,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -450,14 +446,16 @@
                                   "value": "true"
                                 },
                                 {
-                                  "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                                   "key": "gracePeriodInDays",
-                                  "value": "73"
+                                  "value": "2174"
                                 }
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -481,11 +479,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "cec72874-ebea-4edf-8ef8-11d38dc64f6a",
                           "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -501,7 +497,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -518,14 +514,16 @@
                                   "value": "true"
                                 },
                                 {
-                                  "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                                   "key": "gracePeriodInDays",
-                                  "value": "73"
+                                  "value": "2174"
                                 }
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -549,11 +547,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "5d0d858a-9b59-4177-96f6-b9b80df3cbff",
                           "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -569,7 +565,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -586,14 +582,16 @@
                                   "value": "true"
                                 },
                                 {
-                                  "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                                   "key": "gracePeriodInDays",
-                                  "value": "73"
+                                  "value": "2174"
                                 }
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -617,11 +615,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "4ce2e855-51b2-436f-b01d-571de3c42912",
                           "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
                           "originalRequest": {
                             "method": "DELETE",
@@ -637,7 +633,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -654,14 +650,16 @@
                                   "value": "true"
                                 },
                                 {
-                                  "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                                   "key": "gracePeriodInDays",
-                                  "value": "73"
+                                  "value": "2174"
                                 }
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -685,11 +683,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "139f1683-d6f3-4582-8578-784f16f056f1",
                           "name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -705,7 +701,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -722,14 +718,16 @@
                                   "value": "true"
                                 },
                                 {
-                                  "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                                   "key": "gracePeriodInDays",
-                                  "value": "73"
+                                  "value": "2174"
                                 }
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -753,11 +751,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "3253e74c-b3d0-4f3f-a79a-dbab289ce32b",
                           "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -773,7 +769,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -790,14 +786,16 @@
                                   "value": "true"
                                 },
                                 {
-                                  "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                                   "key": "gracePeriodInDays",
-                                  "value": "73"
+                                  "value": "2174"
                                 }
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -821,11 +819,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "a80f19a2-5b52-4927-a0b6-71a4a35a528d",
                           "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -841,7 +837,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -858,14 +854,16 @@
                                   "value": "true"
                                 },
                                 {
-                                  "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                                   "key": "gracePeriodInDays",
-                                  "value": "73"
+                                  "value": "2174"
                                 }
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -889,11 +887,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "8472ed7a-5ffc-42fb-816a-1b22e9363742",
                           "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -909,7 +905,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -926,14 +922,16 @@
                                   "value": "true"
                                 },
                                 {
-                                  "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                                   "key": "gracePeriodInDays",
-                                  "value": "73"
+                                  "value": "2174"
                                 }
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -957,11 +955,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "e3ffaf4b-0743-4e5c-8ded-51b932528fd8",
                           "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                           "originalRequest": {
                             "method": "DELETE",
@@ -977,7 +973,7 @@
                               }
                             ],
                             "url": {
-                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=73",
+                              "raw": "{{baseUrl}}/api/v2/accounts/:name?ifExists=true&gracePeriodInDays=2174",
                               "host": [
                                 "{{baseUrl}}"
                               ],
@@ -994,14 +990,16 @@
                                   "value": "true"
                                 },
                                 {
-                                  "description": "Specifies the number of days during which the account can be restored (\u201cundropped\u201d). The minimum is 3 days and the maximum is 90 days.",
+                                  "description": "Specifies the number of days during which the account can be restored (“undropped”). The minimum is 3 days and the maximum is 90 days.",
                                   "key": "gracePeriodInDays",
-                                  "value": "73"
+                                  "value": "2174"
                                 }
                               ],
                               "variable": [
                                 {
-                                  "key": "name"
+                                  "key": "name",
+                                  "value": "TEST_NAME",
+                                  "description": "Identifier (i.e. name) for the resource."
                                 }
                               ]
                             }
@@ -1025,23 +1023,17 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         }
                       ]
                     }
-                  ],
-                  "id": "31d2eb1b-7206-4e5f-a685-b12f81e66069"
+                  ]
                 },
                 {
                   "name": "{name}:undrop",
                   "item": [
                     {
                       "name": "Restore an account.",
-                      "id": "4dd9dfbd-a4e7-46dd-b2e7-24dca761be59",
-                      "protocolProfileBehavior": {
-                        "disableBodyPruning": true
-                      },
                       "request": {
                         "method": "POST",
                         "header": [
@@ -1066,7 +1058,6 @@
                       },
                       "response": [
                         {
-                          "id": "49a477c4-2c3e-488a-908e-4f45100196cf",
                           "name": "Successful request.",
                           "originalRequest": {
                             "method": "POST",
@@ -1113,11 +1104,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"status\": \"Request successfully completed\"\n}"
                         },
                         {
-                          "id": "82c9b30d-ac44-4cde-8b1f-6d8d8bf42f40",
                           "name": "Successfully accepted the request, but it is not completed yet.",
                           "originalRequest": {
                             "method": "POST",
@@ -1173,11 +1162,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
                         },
                         {
-                          "id": "31d56a67-278c-4d75-b28c-539bd37894a4",
                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                           "originalRequest": {
                             "method": "POST",
@@ -1224,11 +1211,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "b53389b9-e544-4ebb-afe9-ae510bdb454a",
                           "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                           "originalRequest": {
                             "method": "POST",
@@ -1275,11 +1260,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "d3ad8cd6-a92b-4ac8-8685-3d005075c095",
                           "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                           "originalRequest": {
                             "method": "POST",
@@ -1326,11 +1309,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "891962e1-cab7-4e75-8f9e-d03a546db412",
                           "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                           "originalRequest": {
                             "method": "POST",
@@ -1377,11 +1358,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "bde6ce86-e8c1-4e06-b058-5cd18b43e59b",
                           "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                           "originalRequest": {
                             "method": "POST",
@@ -1428,11 +1407,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "2cb64d70-c33f-47c1-b8af-27332cb5ca47",
                           "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
                           "originalRequest": {
                             "method": "POST",
@@ -1479,11 +1456,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "fdac1b5f-e513-41e4-948a-b53b78733e63",
                           "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
                           "originalRequest": {
                             "method": "POST",
@@ -1530,11 +1505,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "f9b05201-ebfa-415a-91d0-3da2cb4da043",
                           "name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
                           "originalRequest": {
                             "method": "POST",
@@ -1581,11 +1554,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "a7a9df28-6eaa-428c-8ca4-46028f7167fc",
                           "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
                           "originalRequest": {
                             "method": "POST",
@@ -1632,11 +1603,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "8210c9ec-e592-4f2e-9783-d4cfe07b5257",
                           "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                           "originalRequest": {
                             "method": "POST",
@@ -1683,11 +1652,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "cda82e3e-07a0-4c7c-a8b0-a95f8aa25d4f",
                           "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                           "originalRequest": {
                             "method": "POST",
@@ -1734,11 +1701,9 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "id": "d61aa780-bb4f-4eea-b47e-cdb5071d87cf",
                           "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                           "originalRequest": {
                             "method": "POST",
@@ -1785,20 +1750,14 @@
                             }
                           ],
                           "cookie": [],
-                          "responseTime": null,
                           "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         }
                       ]
                     }
-                  ],
-                  "id": "aaab7edc-4b77-4c86-a968-6fa2919befa8"
+                  ]
                 },
                 {
                   "name": "List accounts.",
-                  "id": "3adc469a-55bc-4e9b-94da-ceb03a252366",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
                   "request": {
                     "method": "GET",
                     "header": [
@@ -1808,7 +1767,7 @@
                       }
                     ],
                     "url": {
-                      "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                      "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                       "host": [
                         "{{baseUrl}}"
                       ],
@@ -1831,7 +1790,7 @@
                         {
                           "description": "Optionally includes dropped accounts that have not yet been purged.",
                           "key": "history",
-                          "value": "false"
+                          "value": "true"
                         }
                       ]
                     },
@@ -1839,7 +1798,6 @@
                   },
                   "response": [
                     {
-                      "id": "f37ed0cd-d705-4cc0-a560-947b6478ace4",
                       "name": "Successful request.",
                       "originalRequest": {
                         "method": "GET",
@@ -1855,7 +1813,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -1878,7 +1836,7 @@
                             {
                               "description": "Optionally includes dropped accounts that have not yet been purged.",
                               "key": "history",
-                              "value": "false"
+                              "value": "true"
                             }
                           ]
                         }
@@ -1902,11 +1860,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
-                      "body": "[\n  {\n    \"name\": \"TEST_NAME\",\n    \"edition\": \"string\",\n    \"organization_name\": \"string\",\n    \"region_group\": \"string\",\n    \"region\": \"string\",\n    \"created_on\": \"1965-03-13T23:13:56.957Z\",\n    \"account_url\": \"string\",\n    \"account_locator\": \"string\",\n    \"account_locator_url\": \"string\",\n    \"managed_accounts\": 1770,\n    \"consumption_billing_entity_name\": \"string\",\n    \"marketplace_consumer_billing_entity_name\": \"string\",\n    \"marketplace_provider_billing_entity_name\": \"string\",\n    \"old_account_url\": \"string\",\n    \"comment\": \"string\",\n    \"is_org_admin\": true,\n    \"retention_time\": 5141,\n    \"dropped_on\": \"2023-02-17T07:30:58.832Z\",\n    \"scheduled_deletion_time\": \"2011-05-08T19:01:12.335Z\",\n    \"restored_on\": \"1964-04-03T09:16:35.966Z\",\n    \"account_old_url_saved_on\": \"1991-10-14T14:10:31.126Z\",\n    \"account_old_url_last_used\": \"1962-10-21T12:43:57.095Z\",\n    \"organization_old_url\": \"string\",\n    \"organization_old_url_saved_on\": \"2023-07-04T22:39:03.731Z\",\n    \"organization_old_url_last_used\": \"1956-04-17T12:47:58.930Z\",\n    \"organization_URL_expiration_on\": \"1988-09-09T00:34:57.576Z\",\n    \"moved_on\": \"1981-06-22T08:59:25.828Z\",\n    \"is_events_account\": false,\n    \"moved_to_organization\": \"string\"\n  },\n  {\n    \"name\": \"TEST_NAME\",\n    \"edition\": \"string\",\n    \"organization_name\": \"string\",\n    \"region_group\": \"string\",\n    \"region\": \"string\",\n    \"created_on\": \"1973-05-27T09:06:12.657Z\",\n    \"account_url\": \"string\",\n    \"account_locator\": \"string\",\n    \"account_locator_url\": \"string\",\n    \"managed_accounts\": 7183,\n    \"consumption_billing_entity_name\": \"string\",\n    \"marketplace_consumer_billing_entity_name\": \"string\",\n    \"marketplace_provider_billing_entity_name\": \"string\",\n    \"old_account_url\": \"string\",\n    \"comment\": \"string\",\n    \"is_org_admin\": false,\n    \"retention_time\": 7867,\n    \"dropped_on\": \"1975-10-23T14:20:26.991Z\",\n    \"scheduled_deletion_time\": \"2015-05-26T04:22:54.381Z\",\n    \"restored_on\": \"1982-08-16T19:08:32.299Z\",\n    \"account_old_url_saved_on\": \"1998-11-26T10:48:09.846Z\",\n    \"account_old_url_last_used\": \"1957-09-19T18:59:09.365Z\",\n    \"organization_old_url\": \"string\",\n    \"organization_old_url_saved_on\": \"1976-02-07T19:35:34.372Z\",\n    \"organization_old_url_last_used\": \"1958-09-01T18:33:33.499Z\",\n    \"organization_URL_expiration_on\": \"1969-09-02T03:23:23.663Z\",\n    \"moved_on\": \"2010-01-12T19:01:44.403Z\",\n    \"is_events_account\": false,\n    \"moved_to_organization\": \"string\"\n  }\n]"
+                      "body": "[\n  {\n    \"name\": \"TEST_NAME\",\n    \"edition\": \"string\",\n    \"organization_name\": \"string\",\n    \"region_group\": \"string\",\n    \"region\": \"string\",\n    \"created_on\": \"2004-09-10T00:25:38.487Z\",\n    \"account_url\": \"string\",\n    \"account_locator\": \"string\",\n    \"account_locator_url\": \"string\",\n    \"managed_accounts\": 3096,\n    \"consumption_billing_entity_name\": \"string\",\n    \"marketplace_consumer_billing_entity_name\": \"string\",\n    \"marketplace_provider_billing_entity_name\": \"string\",\n    \"old_account_url\": \"string\",\n    \"comment\": \"string\",\n    \"is_org_admin\": false,\n    \"retention_time\": 5754,\n    \"dropped_on\": \"1981-03-06T16:22:34.473Z\",\n    \"scheduled_deletion_time\": \"2023-07-04T02:27:41.593Z\",\n    \"restored_on\": \"1954-01-05T17:18:51.565Z\",\n    \"account_old_url_saved_on\": \"1951-06-07T16:22:45.913Z\",\n    \"account_old_url_last_used\": \"1975-07-23T16:45:26.517Z\",\n    \"organization_old_url\": \"string\",\n    \"organization_old_url_saved_on\": \"1949-02-13T10:29:44.057Z\",\n    \"organization_old_url_last_used\": \"2006-09-19T13:47:13.937Z\",\n    \"organization_URL_expiration_on\": \"1985-08-08T00:02:19.519Z\",\n    \"moved_on\": \"1963-05-22T19:49:16.366Z\",\n    \"is_events_account\": true,\n    \"moved_to_organization\": \"string\"\n  },\n  {\n    \"name\": \"TEST_NAME\",\n    \"edition\": \"string\",\n    \"organization_name\": \"string\",\n    \"region_group\": \"string\",\n    \"region\": \"string\",\n    \"created_on\": \"2024-06-03T02:04:26.488Z\",\n    \"account_url\": \"string\",\n    \"account_locator\": \"string\",\n    \"account_locator_url\": \"string\",\n    \"managed_accounts\": 6186,\n    \"consumption_billing_entity_name\": \"string\",\n    \"marketplace_consumer_billing_entity_name\": \"string\",\n    \"marketplace_provider_billing_entity_name\": \"string\",\n    \"old_account_url\": \"string\",\n    \"comment\": \"string\",\n    \"is_org_admin\": true,\n    \"retention_time\": 9439,\n    \"dropped_on\": \"1953-11-09T23:18:55.475Z\",\n    \"scheduled_deletion_time\": \"2001-04-30T21:13:39.041Z\",\n    \"restored_on\": \"2024-12-13T00:38:22.604Z\",\n    \"account_old_url_saved_on\": \"1951-05-17T08:45:20.682Z\",\n    \"account_old_url_last_used\": \"1985-09-28T17:50:19.069Z\",\n    \"organization_old_url\": \"string\",\n    \"organization_old_url_saved_on\": \"2007-05-02T14:29:52.108Z\",\n    \"organization_old_url_last_used\": \"1968-12-13T16:23:52.869Z\",\n    \"organization_URL_expiration_on\": \"2012-12-01T03:33:41.233Z\",\n    \"moved_on\": \"2014-04-07T03:18:56.774Z\",\n    \"is_events_account\": false,\n    \"moved_to_organization\": \"string\"\n  }\n]"
                     },
                     {
-                      "id": "6a6753b2-4ae7-4e80-9818-1b5673783da1",
                       "name": "Successfully accepted the request, but it is not completed yet.",
                       "originalRequest": {
                         "method": "GET",
@@ -1922,7 +1878,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -1945,7 +1901,7 @@
                             {
                               "description": "Optionally includes dropped accounts that have not yet been purged.",
                               "key": "history",
-                              "value": "false"
+                              "value": "true"
                             }
                           ]
                         }
@@ -1978,11 +1934,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
                     },
                     {
-                      "id": "bb2a182b-8d73-4ed8-bfc1-4fa85c103ab1",
                       "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                       "originalRequest": {
                         "method": "GET",
@@ -1998,7 +1952,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2021,7 +1975,7 @@
                             {
                               "description": "Optionally includes dropped accounts that have not yet been purged.",
                               "key": "history",
-                              "value": "false"
+                              "value": "true"
                             }
                           ]
                         }
@@ -2045,11 +1999,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "70691ac6-f5fc-43c4-83d6-88a37419e519",
                       "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                       "originalRequest": {
                         "method": "GET",
@@ -2065,7 +2017,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2088,7 +2040,7 @@
                             {
                               "description": "Optionally includes dropped accounts that have not yet been purged.",
                               "key": "history",
-                              "value": "false"
+                              "value": "true"
                             }
                           ]
                         }
@@ -2112,11 +2064,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "007e64f7-524b-49da-9c1d-a95fded97238",
                       "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                       "originalRequest": {
                         "method": "GET",
@@ -2132,7 +2082,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2155,7 +2105,7 @@
                             {
                               "description": "Optionally includes dropped accounts that have not yet been purged.",
                               "key": "history",
-                              "value": "false"
+                              "value": "true"
                             }
                           ]
                         }
@@ -2179,11 +2129,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "88e8f796-ed23-4b72-9f49-6a16a6b750e9",
                       "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                       "originalRequest": {
                         "method": "GET",
@@ -2199,7 +2147,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2222,7 +2170,7 @@
                             {
                               "description": "Optionally includes dropped accounts that have not yet been purged.",
                               "key": "history",
-                              "value": "false"
+                              "value": "true"
                             }
                           ]
                         }
@@ -2246,11 +2194,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "80e21316-f57b-45aa-befc-dfe574bc3b6f",
                       "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                       "originalRequest": {
                         "method": "GET",
@@ -2266,7 +2212,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2289,7 +2235,7 @@
                             {
                               "description": "Optionally includes dropped accounts that have not yet been purged.",
                               "key": "history",
-                              "value": "false"
+                              "value": "true"
                             }
                           ]
                         }
@@ -2313,11 +2259,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "211106ac-4317-4a09-ae09-d44810ceaebc",
                       "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
                       "originalRequest": {
                         "method": "GET",
@@ -2333,7 +2277,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2356,7 +2300,7 @@
                             {
                               "description": "Optionally includes dropped accounts that have not yet been purged.",
                               "key": "history",
-                              "value": "false"
+                              "value": "true"
                             }
                           ]
                         }
@@ -2380,11 +2324,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "7b1e532b-4080-4139-93df-f66b0234277e",
                       "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
                       "originalRequest": {
                         "method": "GET",
@@ -2400,7 +2342,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2423,7 +2365,7 @@
                             {
                               "description": "Optionally includes dropped accounts that have not yet been purged.",
                               "key": "history",
-                              "value": "false"
+                              "value": "true"
                             }
                           ]
                         }
@@ -2447,11 +2389,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "3bc02926-8a23-47d1-8835-7d121ab8e0db",
                       "name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
                       "originalRequest": {
                         "method": "GET",
@@ -2467,7 +2407,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2490,7 +2430,7 @@
                             {
                               "description": "Optionally includes dropped accounts that have not yet been purged.",
                               "key": "history",
-                              "value": "false"
+                              "value": "true"
                             }
                           ]
                         }
@@ -2514,11 +2454,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "adb919f6-e303-4573-b1ec-d850cd358008",
                       "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
                       "originalRequest": {
                         "method": "GET",
@@ -2534,7 +2472,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2557,7 +2495,7 @@
                             {
                               "description": "Optionally includes dropped accounts that have not yet been purged.",
                               "key": "history",
-                              "value": "false"
+                              "value": "true"
                             }
                           ]
                         }
@@ -2581,11 +2519,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "ae439e27-fd97-4f1a-845a-de89434ac3ec",
                       "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                       "originalRequest": {
                         "method": "GET",
@@ -2601,7 +2537,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2624,7 +2560,7 @@
                             {
                               "description": "Optionally includes dropped accounts that have not yet been purged.",
                               "key": "history",
-                              "value": "false"
+                              "value": "true"
                             }
                           ]
                         }
@@ -2648,11 +2584,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "48571d4d-ee6f-43db-bc9b-bb6c1a9d0bc7",
                       "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                       "originalRequest": {
                         "method": "GET",
@@ -2668,7 +2602,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2691,7 +2625,7 @@
                             {
                               "description": "Optionally includes dropped accounts that have not yet been purged.",
                               "key": "history",
-                              "value": "false"
+                              "value": "true"
                             }
                           ]
                         }
@@ -2715,11 +2649,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "be2a13dd-32f3-4b89-9025-07cfe6558be4",
                       "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                       "originalRequest": {
                         "method": "GET",
@@ -2735,7 +2667,7 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=false",
+                          "raw": "{{baseUrl}}/api/v2/accounts?like=test_%&showLimit=10&history=true",
                           "host": [
                             "{{baseUrl}}"
                           ],
@@ -2758,7 +2690,7 @@
                             {
                               "description": "Optionally includes dropped accounts that have not yet been purged.",
                               "key": "history",
-                              "value": "false"
+                              "value": "true"
                             }
                           ]
                         }
@@ -2782,17 +2714,12 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     }
                   ]
                 },
                 {
                   "name": "Create an account.",
-                  "id": "d3040616-6c11-402c-aef0-bade0ca4ed61",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
                   "request": {
                     "method": "POST",
                     "header": [
@@ -2830,7 +2757,6 @@
                   },
                   "response": [
                     {
-                      "id": "a4ce6d79-24ba-409d-86d1-7de451868056",
                       "name": "Successful request.",
                       "originalRequest": {
                         "method": "POST",
@@ -2890,11 +2816,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"status\": \"Request successfully completed\"\n}"
                     },
                     {
-                      "id": "929218c1-9d27-4f0e-9366-979e51d1b0b4",
                       "name": "Successfully accepted the request, but it is not completed yet.",
                       "originalRequest": {
                         "method": "POST",
@@ -2963,11 +2887,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
                     },
                     {
-                      "id": "5ea2947b-cd18-4e90-b39e-8d54653293d4",
                       "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                       "originalRequest": {
                         "method": "POST",
@@ -3027,11 +2949,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "29afc09c-f817-43cf-ac49-88fde5922832",
                       "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                       "originalRequest": {
                         "method": "POST",
@@ -3091,11 +3011,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "1e2f61c6-0175-4b29-9b24-19c039594213",
                       "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                       "originalRequest": {
                         "method": "POST",
@@ -3155,11 +3073,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "2c08c933-bb95-4fa5-ab86-751bc4ea5312",
                       "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                       "originalRequest": {
                         "method": "POST",
@@ -3219,11 +3135,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "e0244bd8-68dd-4bb5-9fe5-b24c352273ad",
                       "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                       "originalRequest": {
                         "method": "POST",
@@ -3283,11 +3197,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "eddd3410-10be-4db4-b96b-50fea2dbc5a7",
                       "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
                       "originalRequest": {
                         "method": "POST",
@@ -3347,11 +3259,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "1c6949a3-8401-410f-b205-fbdc97f957f6",
                       "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the ",
                       "originalRequest": {
                         "method": "POST",
@@ -3411,11 +3321,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "592c8dd4-b265-41bb-824f-70fc55f37c31",
                       "name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
                       "originalRequest": {
                         "method": "POST",
@@ -3475,11 +3383,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "8e3d9e41-e9b5-49d3-bc4e-895e8e24d07f",
                       "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
                       "originalRequest": {
                         "method": "POST",
@@ -3539,11 +3445,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "014c0cb7-b720-4751-a955-fd09cd44b9ad",
                       "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                       "originalRequest": {
                         "method": "POST",
@@ -3603,11 +3507,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "3738b424-dee3-4734-b092-879680984b15",
                       "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                       "originalRequest": {
                         "method": "POST",
@@ -3667,11 +3569,9 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     },
                     {
-                      "id": "18d80064-6153-42fd-8cf2-171ed6cf70b8",
                       "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                       "originalRequest": {
                         "method": "POST",
@@ -3731,19 +3631,15 @@
                         }
                       ],
                       "cookie": [],
-                      "responseTime": null,
                       "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                     }
                   ]
                 }
-              ],
-              "id": "6b69d336-16bf-4890-a140-a1d94144a15b"
+              ]
             }
-          ],
-          "id": "dee399ea-4d48-459b-8542-5ba644a32ce2"
+          ]
         }
-      ],
-      "id": "293f97ba-9577-470c-bc51-317728de07a9"
+      ]
     }
   ],
   "auth": {
@@ -3758,12 +3654,10 @@
   },
   "variable": [
     {
-      "id": "d93fb085-70fb-4b91-861a-f9252d9f64e5",
       "key": "baseUrl",
       "value": "https://org-account.snowflakecomputing.com"
     },
     {
-      "id": "72eddd0d-ff80-4180-b840-a010ffc9f93c",
       "key": "name",
       "value": "TEST_NAME"
     }

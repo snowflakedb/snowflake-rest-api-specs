@@ -1,9 +1,11 @@
 {
   "info": {
-    "_postman_id": "bacb08f5-bb8b-4993-9dc0-78e4814ced65",
+    "_postman_id": "67b10021-e56e-4ace-a031-f3ced6a987b2",
     "name": "Cortex Embed API",
     "description": "OpenAPI 3.0 specification for the Cortex Embed REST API\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53314882",
+    "_collection_link": "https://go.postman.co/collection/53314882-67b10021-e56e-4ace-a031-f3ced6a987b2?source=collection_link"
   },
   "item": [
     {
@@ -69,6 +71,11 @@
                               {
                                 "key": "Accept",
                                 "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
                               }
                             ],
                             "body": {
@@ -104,16 +111,25 @@
                             }
                           ],
                           "cookie": [],
-                          "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"embedding\",\n      \"embedding\": [\n        [\n          4086.500909733919,\n          6301.153265264938\n        ],\n        [\n          8574.55011077067,\n          5244.645091075022\n        ]\n      ],\n      \"index\": 5726\n    },\n    {\n      \"object\": \"embedding\",\n      \"embedding\": [\n        [\n          8645.009201479912,\n          2569.417663350819\n        ],\n        [\n          4080.126028909741,\n          8847.563825802687\n        ]\n      ],\n      \"index\": 493\n    }\n  ],\n  \"model\": \"string\",\n  \"usage\": {\n    \"total_tokens\": 839\n  }\n}"
+                          "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"embedding\",\n      \"embedding\": [\n        [\n          9966.667203602208,\n          5144.462536937382\n        ],\n        [\n          1843.2092645055275,\n          951.088917798617\n        ]\n      ],\n      \"index\": 9438\n    },\n    {\n      \"object\": \"embedding\",\n      \"embedding\": [\n        [\n          932.6945884687809,\n          8576.976018226327\n        ],\n        [\n          1027.8291607071765,\n          5681.078175986587\n        ]\n      ],\n      \"index\": 9189\n    }\n  ],\n  \"model\": \"string\",\n  \"usage\": {\n    \"total_tokens\": 4589\n  }\n}"
                         },
                         {
-                          "name": "400",
+                          "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
                           "originalRequest": {
                             "method": "POST",
                             "header": [
                               {
                                 "key": "Content-Type",
                                 "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
                               }
                             ],
                             "body": {
@@ -141,19 +157,42 @@
                           },
                           "status": "Bad Request",
                           "code": 400,
-                          "_postman_previewlanguage": "text",
-                          "header": [],
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "Unique ID of the API request.",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": "61ccbfa2-4e70-c32c-86d9-71d6ed58cd7d"
+                            }
+                          ],
                           "cookie": [],
-                          "body": null
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "name": "401",
+                          "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a",
                           "originalRequest": {
                             "method": "POST",
                             "header": [
                               {
                                 "key": "Content-Type",
                                 "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
                               }
                             ],
                             "body": {
@@ -181,19 +220,42 @@
                           },
                           "status": "Unauthorized",
                           "code": 401,
-                          "_postman_previewlanguage": "text",
-                          "header": [],
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "Unique ID of the API request.",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": "61ccbfa2-4e70-c32c-86d9-71d6ed58cd7d"
+                            }
+                          ],
                           "cookie": [],
-                          "body": null
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "name": "403",
+                          "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
                           "originalRequest": {
                             "method": "POST",
                             "header": [
                               {
                                 "key": "Content-Type",
                                 "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
                               }
                             ],
                             "body": {
@@ -221,19 +283,42 @@
                           },
                           "status": "Forbidden",
                           "code": 403,
-                          "_postman_previewlanguage": "text",
-                          "header": [],
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "Unique ID of the API request.",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": "61ccbfa2-4e70-c32c-86d9-71d6ed58cd7d"
+                            }
+                          ],
                           "cookie": [],
-                          "body": null
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "name": "404",
+                          "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
                           "originalRequest": {
                             "method": "POST",
                             "header": [
                               {
                                 "key": "Content-Type",
                                 "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
                               }
                             ],
                             "body": {
@@ -261,19 +346,42 @@
                           },
                           "status": "Not Found",
                           "code": 404,
-                          "_postman_previewlanguage": "text",
-                          "header": [],
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "Unique ID of the API request.",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": "61ccbfa2-4e70-c32c-86d9-71d6ed58cd7d"
+                            }
+                          ],
                           "cookie": [],
-                          "body": null
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "name": "405",
+                          "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
                           "originalRequest": {
                             "method": "POST",
                             "header": [
                               {
                                 "key": "Content-Type",
                                 "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
                               }
                             ],
                             "body": {
@@ -301,19 +409,42 @@
                           },
                           "status": "Method Not Allowed",
                           "code": 405,
-                          "_postman_previewlanguage": "text",
-                          "header": [],
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "Unique ID of the API request.",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": "61ccbfa2-4e70-c32c-86d9-71d6ed58cd7d"
+                            }
+                          ],
                           "cookie": [],
-                          "body": null
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "name": "500",
+                          "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
                           "originalRequest": {
                             "method": "POST",
                             "header": [
                               {
                                 "key": "Content-Type",
                                 "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
                               }
                             ],
                             "body": {
@@ -341,19 +472,42 @@
                           },
                           "status": "Internal Server Error",
                           "code": 500,
-                          "_postman_previewlanguage": "text",
-                          "header": [],
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "Unique ID of the API request.",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": "61ccbfa2-4e70-c32c-86d9-71d6ed58cd7d"
+                            }
+                          ],
                           "cookie": [],
-                          "body": null
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "name": "503",
+                          "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                           "originalRequest": {
                             "method": "POST",
                             "header": [
                               {
                                 "key": "Content-Type",
                                 "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
                               }
                             ],
                             "body": {
@@ -381,19 +535,42 @@
                           },
                           "status": "Service Unavailable",
                           "code": 503,
-                          "_postman_previewlanguage": "text",
-                          "header": [],
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "Unique ID of the API request.",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": "61ccbfa2-4e70-c32c-86d9-71d6ed58cd7d"
+                            }
+                          ],
                           "cookie": [],
-                          "body": null
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         },
                         {
-                          "name": "504",
+                          "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
                           "originalRequest": {
                             "method": "POST",
                             "header": [
                               {
                                 "key": "Content-Type",
                                 "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
                               }
                             ],
                             "body": {
@@ -421,10 +598,24 @@
                           },
                           "status": "Gateway Timeout",
                           "code": 504,
-                          "_postman_previewlanguage": "text",
-                          "header": [],
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "disabled": false,
+                              "description": {
+                                "content": "Unique ID of the API request.",
+                                "type": "text/plain"
+                              },
+                              "key": "X-Snowflake-Request-ID",
+                              "value": "61ccbfa2-4e70-c32c-86d9-71d6ed58cd7d"
+                            }
+                          ],
                           "cookie": [],
-                          "body": null
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                         }
                       ]
                     }
@@ -437,6 +628,16 @@
       ]
     }
   ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}",
+        "type": "string"
+      }
+    ]
+  },
   "variable": [
     {
       "key": "baseUrl",
