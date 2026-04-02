@@ -386,7 +386,6 @@ components:
 
         Controls whether all skills are available, specific ones are filtered, or
         if skill use is required.
-
         '
       required:
       - type
@@ -401,7 +400,6 @@ components:
 
             * required - At least one of the specified skills must be used in the
             response
-
             '
           example: auto
         name:
@@ -419,7 +417,6 @@ components:
 
             For type "required": Specifies which skills to consider, and at least
             one must be used
-
             '
           example:
           - forecaster_skill
@@ -563,42 +560,30 @@ components:
             '
         answer:
           type: string
-          description: 'Optional sample answer.
-
-            '
+          description: Optional sample answer.
     McpServerWrapper:
       type: object
-      description: 'Wrapper for MCP server specification.
-
-        '
+      description: Wrapper for MCP server specification.
       properties:
         server_spec:
           $ref: '#/components/schemas/McpServerSpec'
     McpServerSpec:
       type: object
-      description: 'MCP server specification details.
-
-        '
+      description: MCP server specification details.
       properties:
         name:
           type: string
-          description: 'Fully qualified name of the MCP server (e.g., "database.schema.mcp_server_name").
-
-            '
+          description: 'Fully qualified name of the MCP server (e.g., "database.schema.mcp_server_name").'
     SkillWrapper:
       type: object
-      description: 'Wrapper for skill definitions from external sources.
-
-        '
+      description: Wrapper for skill definitions from external sources.
       required:
       - name
       - source
       properties:
         name:
           type: string
-          description: 'Name of the skill. Must be unique within the agent.
-
-            '
+          description: Name of the skill. Must be unique within the agent.
           example: skill_name
         source:
           $ref: '#/components/schemas/SkillSource'
@@ -606,7 +591,6 @@ components:
       type: object
       description: 'Source configuration for a skill, specifying where the skill code
         is located.
-
         '
       required:
       - type
@@ -620,7 +604,6 @@ components:
             GIT_INTEGRATION - Skill is stored in a Git repository via integration.
 
             SYSTEM - System-provided skill that does not require a path.
-
             '
           example: STAGE
         path:
@@ -633,6 +616,5 @@ components:
             "@db.schema.repo/commits/abc123def/skills/").
 
             Not required for SYSTEM type.
-
             '
           example: '@my_db.my_schema.my_stage/folder'
