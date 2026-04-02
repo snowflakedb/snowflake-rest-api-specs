@@ -313,9 +313,7 @@ components:
       description: 'Configures how tools should be selected and used during the interaction.
 
         Controls whether tool use is automatic, required, or specific tools should
-        be used.
-
-        '
+        be used.'
       required:
       - type
       properties:
@@ -327,9 +325,7 @@ components:
 
             * required - Must use at least one tool
 
-            * tool - Use specific named tools
-
-            '
+            * tool - Use specific named tools'
           example: required
         name:
           type: array
@@ -343,9 +339,7 @@ components:
       type: object
       description: 'Represents plain text content in a message.
 
-        Used for simple text exchanges and natural language responses.
-
-        '
+        Used for simple text exchanges and natural language responses.'
       required:
       - type
       - text
@@ -366,9 +360,7 @@ components:
       type: object
       description: 'Represents plain text content in a message.
 
-        Used for simple text exchanges and natural language responses.
-
-        '
+        Used for simple text exchanges and natural language responses.'
       properties:
         type:
           type: string
@@ -407,9 +399,7 @@ components:
       description: 'Represents the results of a tool execution. Contains both the
         input parameters
 
-        and output results from the tool execution.
-
-        '
+        and output results from the tool execution.'
       required:
       - type
       - tool_results
@@ -470,9 +460,7 @@ components:
       description: 'Represents a request to use a specific tool. Contains the tool
         identifier
 
-        and input parameters for the execution.
-
-        '
+        and input parameters for the execution.'
       required:
       - type
       - tool_use
@@ -513,9 +501,7 @@ components:
       description: 'Represents a request to use a specific tool. Contains the tool
         identifier
 
-        and input parameters for the execution.
-
-        '
+        and input parameters for the execution.'
       properties:
         tool_use_id:
           type: string
@@ -531,9 +517,7 @@ components:
       description: 'Defines a tool that can be used by the agent.
 
         Tools provide specific capabilities like data analysis, search, or generic
-        functions.
-
-        '
+        functions.'
       required:
       - tool_spec
       properties:
@@ -551,17 +535,13 @@ components:
                 like
 
                 ''cortex_analyst_text_to_sql'' or ''generic'' for general-purpose
-                tools.
-
-                '
+                tools.'
               example: generic
             name:
               type: string
               description: 'Unique identifier for referencing this tool instance.
 
-                Used to match with configuration in tool_resources.
-
-                '
+                Used to match with configuration in tool_resources.'
               example: get_weather
             description:
               type: string
@@ -571,9 +551,7 @@ components:
               description: 'JSON Schema definition of the expected input parameters
                 for this tool.
 
-                Required for generic tools to specify their input requirements.
-
-                '
+                Required for generic tools to specify their input requirements.'
               properties:
                 type:
                   type: string
@@ -611,18 +589,14 @@ components:
       properties:
         summary:
           type: string
-          description: 'Reasoning summary tokens generated during the model response.
-
-            '
+          description: 'Reasoning summary tokens generated during the model response.'
         encrypted_content:
           type: string
           description: 'The encrypted_content field is an opaque field and should
             not be interpreted or parsed.
 
             It should only be used for verifying that the reasoning blocks were generated
-            by that specific model.
-
-            '
+            by that specific model.'
       required:
       - summary
       - encrypted_content
@@ -642,18 +616,14 @@ components:
           description: 'Thinking tokens generated during the model response.
 
             This field can also be used in the follow-up requests to continue the
-            conversation.
-
-            '
+            conversation.'
         signature:
           type: string
           description: 'The signature field is an opaque field and should not be interpreted
             or parsed.
 
             It should only be used for verifying that the thinking blocks were generated
-            by that specific model.
-
-            '
+            by that specific model.'
       required:
       - thinking
       - signature
@@ -670,9 +640,7 @@ components:
       properties:
         summary:
           type: string
-          description: 'Reasoning summary tokens generated during the model response.
-
-            '
+          description: 'Reasoning summary tokens generated during the model response.'
           nullable: true
         encrypted_content:
           type: string
@@ -680,16 +648,12 @@ components:
             not be interpreted or parsed.
 
             It should only be used for verifying that the reasoning blocks were generated
-            by that specific model.
-
-            '
+            by that specific model.'
           nullable: true
     StreamingAnthropicOutput:
       type: object
       description: 'Represents the thinking response from model. Contains either the
-        thinking tokens or signature.
-
-        '
+        thinking tokens or signature.'
       properties:
         thinking:
           $ref: '#/components/schemas/StreamingAnthropicThinking'
@@ -703,9 +667,7 @@ components:
           description: 'Thinking tokens generated during the model response.
 
             This field can also be used in the follow-up requests to continue the
-            conversation.
-
-            '
+            conversation.'
           nullable: true
         signature:
           type: string
@@ -713,9 +675,7 @@ components:
             or parsed.
 
             It should only be used for verifying that the thinking blocks were generated
-            by that specific model.
-
-            '
+            by that specific model.'
           nullable: true
     NonStreamingCompleteResponse:
       type: object

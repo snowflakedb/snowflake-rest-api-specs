@@ -393,9 +393,7 @@ paths:
           $ref: common.yaml#/components/responses/504GatewayTimeout
   /api/v2/databases/{database}/schemas/{schema}/cortex-search-services/{name}:feedback:
     summary: Create a feedback event for a Cortex Search query result.
-    description: 'Create a feedback event for a Cortex Search result.
-
-      '
+    description: 'Create a feedback event for a Cortex Search result.'
     post:
       operationId: sendFeedback
       tags:

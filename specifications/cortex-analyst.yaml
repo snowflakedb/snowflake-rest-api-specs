@@ -155,9 +155,7 @@ paths:
                   - `error`: Contains a `StreamingError` payload if an error occurs
                   during streaming.
 
-                  - `done`: Contains the string payload "done"
-
-                  '
+                  - `done`: Contains the string payload "done"'
         '400':
           $ref: common.yaml#/components/responses/400BadRequest
         '401':
