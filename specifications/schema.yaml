@@ -646,6 +646,65 @@ components:
           type: string
           description: Specifies the maximum allowed warehouse size for the serverless
             task. Minimum XSMALL, Maximum XXLARGE.
+        external_volume:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Default external volume for Iceberg tables in this schema.
+        catalog:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Default catalog integration for Iceberg tables in this schema.
+        iceberg_version_default:
+          type: integer
+          nullable: true
+          readOnly: true
+          description: Default Apache Iceberg specification version (2 or 3).
+        iceberg_merge_on_read_behavior:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Row-level update strategy for Iceberg tables (auto, enabled,
+            disabled).
+        storage_serialization_policy:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Storage serialization policy for Iceberg tables (COMPATIBLE
+            or OPTIMIZED).
+        catalog_sync:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Catalog integration to sync Snowflake-managed Iceberg tables
+            with.
+        enable_data_compaction:
+          type: boolean
+          nullable: true
+          readOnly: true
+          description: Whether automatic data compaction is enabled for Iceberg tables.
+        replace_invalid_characters:
+          type: boolean
+          nullable: true
+          readOnly: true
+          description: Whether to replace invalid UTF-8 characters with the replacement
+            character.
+        classification_profile:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Classification profile associated with this schema.
+        object_visibility:
+          type: object
+          nullable: true
+          readOnly: true
+          description: Object visibility configuration for this schema.
+          properties:
+            privileged_visibility:
+              type: boolean
+              nullable: true
+              description: Whether the object's visibility is controlled by RBAC privileges.
       required:
       - name
     SchemaClone:

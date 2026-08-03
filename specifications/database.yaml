@@ -995,6 +995,63 @@ components:
           type: string
           description: Specifies the maximum allowed warehouse size for the serverless
             task. Minimum XSMALL, Maximum XXLARGE.
+        external_volume:
+          type: string
+          nullable: true
+          description: Default external volume for Iceberg tables in this database.
+        catalog:
+          type: string
+          nullable: true
+          description: Default catalog integration for Iceberg tables in this database.
+        iceberg_version_default:
+          type: integer
+          nullable: true
+          description: Default Apache Iceberg specification version (2 or 3).
+        iceberg_merge_on_read_behavior:
+          type: string
+          nullable: true
+          description: Row-level update strategy for Iceberg tables (auto, enabled,
+            disabled).
+        storage_serialization_policy:
+          type: string
+          nullable: true
+          description: Storage serialization policy for Iceberg tables (COMPATIBLE
+            or OPTIMIZED).
+        catalog_sync:
+          type: string
+          nullable: true
+          description: Catalog integration to sync Snowflake-managed Iceberg tables
+            with.
+        enable_data_compaction:
+          type: boolean
+          nullable: true
+          description: Whether automatic data compaction is enabled for Iceberg tables.
+        replace_invalid_characters:
+          type: boolean
+          nullable: true
+          description: Whether to replace invalid UTF-8 characters with the replacement
+            character.
+        classification_profile:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Classification profile associated with this database.
+        catalog_sync_namespace_mode:
+          type: string
+          nullable: true
+          description: Namespace mode used when syncing this database to an external
+            catalog (nest or flatten).
+        catalog_sync_namespace_flatten_delimiter:
+          type: string
+          nullable: true
+          description: Delimiter used to flatten namespaces when catalog_sync_namespace_mode
+            is flatten.
+        object_visibility:
+          type: object
+          additionalProperties: true
+          nullable: true
+          description: Object visibility configuration for this database, as set via
+            OBJECT_VISIBILITY (e.g. privileged_visibility, organization_targets, set_domain).
       required:
       - name
     DatabaseClone:

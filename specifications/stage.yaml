@@ -405,6 +405,24 @@ components:
               type: string
               description: Specifies the name of the notification integration used
                 to automatically refresh the directory table metadata.
+            aws_sns_topic:
+              type: string
+              description: Specifies the Amazon SNS topic used to automatically refresh
+                the directory table metadata for stages on Amazon S3. Mutually exclusive
+                with notification_integration, which is used for Azure/GCP stages
+                instead.
+        file_format:
+          $ref: '#/components/schemas/StageFileFormat'
+          nullable: true
+          description: File format for the stage. type is always required. Use type=FORMAT_REF
+            with format_name for a named file format reference; use type=CSV/JSON/AVRO/ORC/PARQUET/XML
+            for inline format options. On read, named references are returned as-is;
+            inline options are returned as the full expanded option set for the format
+            type.
+        copy_options:
+          $ref: '#/components/schemas/StageCopyOptions'
+          nullable: true
+          description: Copy options for the stage.
         created_on:
           type: string
           description: Date and time when the stage was created.
@@ -490,6 +508,111 @@ components:
           format: password
           description: Specifies the SAS (shared access signature) token for connecting
             to Azure.
+    StageFileFormat:
+      type: object
+      nullable: true
+      description: Stage file format discriminated by type. type is always required.
+        Use type=FORMAT_REF with format_name for a named file format reference; use
+        type=CSV/JSON/AVRO/ORC/PARQUET/XML for inline format options.
+      properties:
+        type:
+          type: string
+          description: "Discriminator field \u2014 always required."
+      discriminator:
+        propertyName: type
+        mapping:
+          FORMAT_REF: StageFormatRef
+          CSV: StageCsvFileFormat
+          JSON: StageJsonFileFormat
+          AVRO: StageAvroFileFormat
+          ORC: StageOrcFileFormat
+          PARQUET: StageParquetFileFormat
+          XML: StageXmlFileFormat
+          CUSTOM: StageCustomFileFormat
+    StageFormatRef:
+      description: Named file format reference. On read the qualified name is returned
+        as-is.
+      allOf:
+      - $ref: '#/components/schemas/StageFileFormat'
+      required:
+      - type
+      - format_name
+      properties:
+        type:
+          type: string
+          enum:
+          - FORMAT_REF
+          description: Discriminator value for a named file format reference.
+        format_name:
+          type: string
+          description: Qualified name of the named file format (database.schema.name).
+    StageCsvFileFormat:
+      description: Stage file format for CSV.
+      allOf:
+      - $ref: '#/components/schemas/StageFileFormat'
+      - $ref: file-format.yaml#/components/schemas/CsvFileFormatOptions
+    StageJsonFileFormat:
+      description: Stage file format for JSON.
+      allOf:
+      - $ref: '#/components/schemas/StageFileFormat'
+      - $ref: file-format.yaml#/components/schemas/JsonFileFormatOptions
+    StageAvroFileFormat:
+      description: Stage file format for AVRO.
+      allOf:
+      - $ref: '#/components/schemas/StageFileFormat'
+      - $ref: file-format.yaml#/components/schemas/AvroFileFormatOptions
+    StageOrcFileFormat:
+      description: Stage file format for ORC.
+      allOf:
+      - $ref: '#/components/schemas/StageFileFormat'
+      - $ref: file-format.yaml#/components/schemas/OrcFileFormatOptions
+    StageParquetFileFormat:
+      description: Stage file format for PARQUET.
+      allOf:
+      - $ref: '#/components/schemas/StageFileFormat'
+      - $ref: file-format.yaml#/components/schemas/ParquetFileFormatOptions
+    StageXmlFileFormat:
+      description: Stage file format for XML.
+      allOf:
+      - $ref: '#/components/schemas/StageFileFormat'
+      - $ref: file-format.yaml#/components/schemas/XmlFileFormatOptions
+    StageCustomFileFormat:
+      description: Stage file format for CUSTOM (internal format type, no user-settable
+        options).
+      allOf:
+      - $ref: '#/components/schemas/StageFileFormat'
+    StageCopyOptions:
+      type: object
+      description: Copy options controlling how data files are loaded from a stage.
+      properties:
+        on_error:
+          type: string
+          description: 'Action to take when a data loading error occurs. Values: CONTINUE,
+            SKIP_FILE, SKIP_FILE_<num>, SKIP_FILE_<num>%, or ABORT_STATEMENT.'
+        size_limit:
+          type: integer
+          format: int64
+          description: Maximum size (in bytes) of data loaded for a given COPY statement.
+        purge:
+          type: boolean
+          description: Whether to remove data files from the stage after loading.
+        return_failed_only:
+          type: boolean
+          description: Whether to return only files that have failed to load in the
+            query result.
+        enforce_length:
+          type: boolean
+          description: Whether to truncate text strings that exceed the target column
+            length or raise an error. When true (ENFORCE_LENGTH), an error is raised;
+            when false (TRUNCATECOLUMNS overrides).
+        truncatecolumns:
+          type: boolean
+          description: Whether to truncate text strings that exceed the target column
+            length.
+        force:
+          type: boolean
+          description: Whether to load all files, regardless of whether they have
+            been loaded before.
   securitySchemes:
     KeyPair:
       $ref: common.yaml#/components/securitySchemes/KeyPair

@@ -1127,6 +1127,11 @@ components:
             table as the clustering key
           items:
             type: string
+        cluster_by_raw:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Raw clustering key string from the DDL statement.
         enable_schema_evolution:
           type: boolean
           description: Table has schema evolution enabled or disabled
@@ -1147,6 +1152,8 @@ components:
           type: string
           description: Specifies a default collation specification for the columns
             in the table, including columns added to the table in the future
+        data_metric_schedule:
+          $ref: common.yaml#/components/schemas/DataMetricSchedule
         columns:
           type: array
           items:
@@ -1158,6 +1165,14 @@ components:
         comment:
           type: string
           description: Comment for the table
+        row_timestamp:
+          type: boolean
+          nullable: true
+          description: Whether ROW_TIMESTAMP is enabled on this table.
+        error_logging:
+          type: boolean
+          nullable: true
+          description: Whether ERROR_LOGGING is enabled on this table.
         created_on:
           type: string
           format: date-time
@@ -1212,6 +1227,14 @@ components:
           readOnly: true
           description: Number of additional bytes of storage that the search optimization
             service consumes for this table
+        search_optimization_configuration:
+          type: array
+          readOnly: true
+          description: Per-expression search optimization configuration. Configuration
+            is not settable through this API (POST/PUT); use ALTER TABLE ... ADD/DROP
+            SEARCH OPTIMIZATION.
+          items:
+            $ref: '#/components/schemas/SearchOptimizationExpression'
         owner_role_type:
           type: string
           readOnly: true
@@ -1267,6 +1290,12 @@ components:
           type: integer
           description: Each successive value for the column automatically increments
             by the specified amount
+        autoincrement_order:
+          type: string
+          nullable: true
+          description: Identity sequence ordering keyword. "ORDER" guarantees monotonically
+            increasing values across concurrent sessions; "NOORDER" allows session-local
+            allocation for higher concurrency.
         constraints:
           type: array
           items:
@@ -1293,12 +1322,42 @@ components:
         constraint_type:
           type: string
           description: Type of the constraint
+        deferrability:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Constraint deferrability.
+        enforced:
+          type: boolean
+          nullable: true
+          readOnly: true
+          description: Whether the constraint is enforced.
+        enable:
+          type: boolean
+          nullable: true
+          readOnly: true
+          description: Always null.
+        validate:
+          type: boolean
+          nullable: true
+          readOnly: true
+          description: Whether existing data is validated against the constraint.
+        rely:
+          type: boolean
+          nullable: true
+          description: Whether the optimizer can rely on the constraint.
+        comment:
+          type: string
+          nullable: true
+          description: Comment associated with the constraint. Used only on out-of-line
+            (table-level) constraints; ignored on inline (column-level) constraints.
       discriminator:
         propertyName: constraint_type
         mapping:
           PRIMARY KEY: PrimaryKey
           FOREIGN KEY: ForeignKey
           UNIQUE: UniqueKey
+          CHECK: CheckConstraint
     PrimaryKey:
       allOf:
       - $ref: '#/components/schemas/Constraint'
@@ -1324,9 +1383,61 @@ components:
           type: array
           items:
             type: string
+        match:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Match type for the foreign key.
+        on_delete:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Action taken on delete of the referenced row.
+        on_update:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Action taken on update of the referenced row.
       required:
       - referenced_table_name
       - referenced_column_names
+    SearchOptimizationExpression:
+      type: object
+      description: A single configured search optimization expression. Read-only;
+        configure with ALTER TABLE ... ADD/DROP SEARCH OPTIMIZATION.
+      properties:
+        expression_id:
+          type: integer
+          format: int64
+          description: Stable identifier assigned by Snowflake to this configuration.
+            Matches the id shown by DESCRIBE SEARCH OPTIMIZATION and usable with ALTER
+            TABLE ... DROP SEARCH OPTIMIZATION ON <expression_id>.
+        method:
+          type: string
+          enum:
+          - EQUALITY
+          - SUBSTRING
+          - FULL_TEXT
+          - GEO
+          description: User-facing search method for this expression.
+        target:
+          type: string
+          description: SQL target of this expression (e.g. "EQUALITY(col)", "SUBSTRING(col)",
+            including any nested VARIANT path).
+      required:
+      - expression_id
+      - method
+      - target
+    CheckConstraint:
+      allOf:
+      - $ref: '#/components/schemas/Constraint'
+      type: object
+      description: CHECK constraint (informational; not enforced by Snowflake).
+      properties:
+        check_expression:
+          type: string
+      required:
+      - check_expression
     TableClone:
       type: object
       description: Clone table
