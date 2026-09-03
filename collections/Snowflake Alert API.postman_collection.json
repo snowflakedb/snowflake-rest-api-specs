@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "57c6bc57-59c3-41ba-8bbe-80b6c5c32cbf",
+    "_postman_id": "9cce2535-d039-4c79-b51d-36e29e88e527",
     "name": "Snowflake Alert API",
     "description": "The Snowflake Alert API is a REST API that you can use to access, update, and perform certain actions on Alert resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-57c6bc57-59c3-41ba-8bbe-80b6c5c32cbf?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-9cce2535-d039-4c79-b51d-36e29e88e527?source=collection_link"
   },
   "item": [
     {
@@ -146,7 +146,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"created_on\": \"1981-08-10T13:09:03.068Z\",\n  \"database_name\": \"string\",\n  \"schema_name\": \"string\",\n  \"owner\": \"string\",\n  \"owner_role_type\": \"string\",\n  \"state\": \"string\"\n}"
+                                          "body": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"created_on\": \"1981-08-10T13:09:03.068Z\",\n  \"database_name\": \"string\",\n  \"schema_name\": \"string\",\n  \"owner\": \"string\",\n  \"owner_role_type\": \"string\",\n  \"state\": \"string\",\n  \"config\": {\n    \"key_0\": 6585,\n    \"key_1\": \"string\"\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 8673,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  },\n  \"measurement\": \"string\",\n  \"evaluation\": \"string\"\n}"
                                         },
                                         {
                                           "name": "Successfully accepted the request, but it is not completed yet.",
@@ -225,7 +225,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -1283,7 +1283,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -2487,7 +2487,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -3826,7 +3826,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -4758,7 +4758,7 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "body": "[\n  {\n    \"name\": \"string\",\n    \"schedule\": {\n      \"schedule_type\": \"string\"\n    },\n    \"condition\": \"string\",\n    \"action\": \"string\",\n    \"comment\": \"string\",\n    \"warehouse\": \"string\",\n    \"created_on\": \"1988-01-24T18:15:49.928Z\",\n    \"database_name\": \"string\",\n    \"schema_name\": \"string\",\n    \"owner\": \"string\",\n    \"owner_role_type\": \"string\",\n    \"state\": \"string\"\n  },\n  {\n    \"name\": \"string\",\n    \"schedule\": {\n      \"schedule_type\": \"string\"\n    },\n    \"condition\": \"string\",\n    \"action\": \"string\",\n    \"comment\": \"string\",\n    \"warehouse\": \"string\",\n    \"created_on\": \"2017-07-03T22:22:05.632Z\",\n    \"database_name\": \"string\",\n    \"schema_name\": \"string\",\n    \"owner\": \"string\",\n    \"owner_role_type\": \"string\",\n    \"state\": \"string\"\n  }\n]"
+                                      "body": "[\n  {\n    \"name\": \"string\",\n    \"schedule\": {\n      \"schedule_type\": \"string\"\n    },\n    \"condition\": \"string\",\n    \"action\": \"string\",\n    \"comment\": \"string\",\n    \"warehouse\": \"string\",\n    \"created_on\": \"1988-01-24T18:15:49.928Z\",\n    \"database_name\": \"string\",\n    \"schema_name\": \"string\",\n    \"owner\": \"string\",\n    \"owner_role_type\": \"string\",\n    \"state\": \"string\",\n    \"config\": {\n      \"key_0\": 8423.057824867825\n    },\n    \"runbook\": \"string\",\n    \"suspend_alert_after_num_failures\": 6523,\n    \"template\": {\n      \"name\": \"string\",\n      \"version\": \"string\",\n      \"category\": \"string\"\n    },\n    \"measurement\": \"string\",\n    \"evaluation\": \"string\"\n  },\n  {\n    \"name\": \"string\",\n    \"schedule\": {\n      \"schedule_type\": \"string\"\n    },\n    \"condition\": \"string\",\n    \"action\": \"string\",\n    \"comment\": \"string\",\n    \"warehouse\": \"string\",\n    \"created_on\": \"2017-07-03T22:22:05.632Z\",\n    \"database_name\": \"string\",\n    \"schema_name\": \"string\",\n    \"owner\": \"string\",\n    \"owner_role_type\": \"string\",\n    \"state\": \"string\",\n    \"config\": {\n      \"key_0\": \"string\",\n      \"key_1\": \"string\",\n      \"key_2\": false\n    },\n    \"runbook\": \"string\",\n    \"suspend_alert_after_num_failures\": 9184,\n    \"template\": {\n      \"name\": \"string\",\n      \"version\": \"string\",\n      \"category\": \"string\"\n    },\n    \"measurement\": \"string\",\n    \"evaluation\": \"string\"\n  }\n]"
                                     },
                                     {
                                       "name": "Successfully accepted the request, but it is not completed yet.",
@@ -4853,7 +4853,7 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
                                       "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -5905,7 +5905,7 @@
                                     ],
                                     "body": {
                                       "mode": "raw",
-                                      "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                      "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                       "options": {
                                         "raw": {
                                           "headerFamily": "json",
@@ -5971,7 +5971,7 @@
                                         ],
                                         "body": {
                                           "mode": "raw",
-                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                           "options": {
                                             "raw": {
                                               "headerFamily": "json",
@@ -6056,7 +6056,7 @@
                                         ],
                                         "body": {
                                           "mode": "raw",
-                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                           "options": {
                                             "raw": {
                                               "headerFamily": "json",
@@ -6127,7 +6127,7 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
                                       "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -6150,7 +6150,7 @@
                                         ],
                                         "body": {
                                           "mode": "raw",
-                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                           "options": {
                                             "raw": {
                                               "headerFamily": "json",
@@ -6235,7 +6235,7 @@
                                         ],
                                         "body": {
                                           "mode": "raw",
-                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                           "options": {
                                             "raw": {
                                               "headerFamily": "json",
@@ -6320,7 +6320,7 @@
                                         ],
                                         "body": {
                                           "mode": "raw",
-                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                           "options": {
                                             "raw": {
                                               "headerFamily": "json",
@@ -6405,7 +6405,7 @@
                                         ],
                                         "body": {
                                           "mode": "raw",
-                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                           "options": {
                                             "raw": {
                                               "headerFamily": "json",
@@ -6490,7 +6490,7 @@
                                         ],
                                         "body": {
                                           "mode": "raw",
-                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                           "options": {
                                             "raw": {
                                               "headerFamily": "json",
@@ -6575,7 +6575,7 @@
                                         ],
                                         "body": {
                                           "mode": "raw",
-                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                           "options": {
                                             "raw": {
                                               "headerFamily": "json",
@@ -6660,7 +6660,7 @@
                                         ],
                                         "body": {
                                           "mode": "raw",
-                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                           "options": {
                                             "raw": {
                                               "headerFamily": "json",
@@ -6745,7 +6745,7 @@
                                         ],
                                         "body": {
                                           "mode": "raw",
-                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                           "options": {
                                             "raw": {
                                               "headerFamily": "json",
@@ -6830,7 +6830,7 @@
                                         ],
                                         "body": {
                                           "mode": "raw",
-                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                           "options": {
                                             "raw": {
                                               "headerFamily": "json",
@@ -6915,7 +6915,7 @@
                                         ],
                                         "body": {
                                           "mode": "raw",
-                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                           "options": {
                                             "raw": {
                                               "headerFamily": "json",
@@ -7000,7 +7000,7 @@
                                         ],
                                         "body": {
                                           "mode": "raw",
-                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                           "options": {
                                             "raw": {
                                               "headerFamily": "json",
@@ -7085,7 +7085,7 @@
                                         ],
                                         "body": {
                                           "mode": "raw",
-                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\"\n}",
+                                          "raw": "{\n  \"name\": \"string\",\n  \"schedule\": {\n    \"schedule_type\": \"string\"\n  },\n  \"condition\": \"string\",\n  \"action\": \"string\",\n  \"comment\": \"string\",\n  \"warehouse\": \"string\",\n  \"config\": {\n    \"key_0\": false\n  },\n  \"runbook\": \"string\",\n  \"suspend_alert_after_num_failures\": 5371,\n  \"template\": {\n    \"name\": \"string\",\n    \"version\": \"string\",\n    \"category\": \"string\"\n  }\n}",
                                           "options": {
                                             "raw": {
                                               "headerFamily": "json",

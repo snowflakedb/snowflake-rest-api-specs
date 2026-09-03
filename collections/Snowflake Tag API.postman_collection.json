@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "55cecfcb-a46f-4135-bed1-f28dd6133dee",
+    "_postman_id": "8b0657d8-6fae-4b2a-b013-7fe848c16e30",
     "name": "Snowflake Tag API",
     "description": "The Snowflake Tag API is a REST API that you can use to access, update, and perform certain actions on Tag resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-55cecfcb-a46f-4135-bed1-f28dd6133dee?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-8b0657d8-6fae-4b2a-b013-7fe848c16e30?source=collection_link"
   },
   "item": [
     {

@@ -5,7 +5,7 @@ components:
       description: A Snowflake object identifier. If the identifier contains spaces
         or special characters, the entire string must be enclosed in double quotes.
         Identifiers enclosed in double quotes are also case-sensitive.
-      pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+      pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$|^[$][0-9]+$
       example: TEST_NAME
     ErrorResponse:
       type: object
@@ -51,10 +51,16 @@ components:
           type: string
           description: Opaque result ID used for checking for request completion through
             one or more subsequent completion check operations.
+        job_id:
+          type: string
+          description: ID of the job/query backing the in-progress request. This is
+            the result handler without the trailing result-type indicator appended
+            to it.
       example:
         code: '392604'
         message: Request execution in progress. Use the provided location header or
           result handler ID to perform query monitoring and management.
+        job_id: 01afef9d-0607-0550-0001-dd270c3902d7
     PointOfTime:
       type: object
       description: Point of time.
@@ -178,6 +184,53 @@ components:
       description: Downstream target lag
       allOf:
       - $ref: '#/components/schemas/TargetLag'
+    DataMetricSchedule:
+      type: object
+      description: Schedule on which data metric functions associated with an entity
+        run. Polymorphic; the concrete subtype is selected by schedule_type.
+      properties:
+        schedule_type:
+          type: string
+          description: Discriminator. One of MINUTES, CRON, TRIGGER_ON_CHANGES.
+      required:
+      - schedule_type
+      discriminator:
+        propertyName: schedule_type
+        mapping:
+          MINUTES: DataMetricMinutesSchedule
+          CRON: DataMetricCronSchedule
+          TRIGGER_ON_CHANGES: DataMetricTriggerOnChangesSchedule
+    DataMetricMinutesSchedule:
+      description: Schedule expressed as a fixed minute interval (the "<N> MINUTE"
+        form of DATA_METRIC_SCHEDULE).
+      allOf:
+      - $ref: '#/components/schemas/DataMetricSchedule'
+      properties:
+        minutes:
+          type: integer
+          description: Interval in minutes between successive evaluations.
+      required:
+      - minutes
+    DataMetricCronSchedule:
+      description: Schedule expressed as a cron expression with timezone (the "USING
+        CRON <expr> <tz>" form of DATA_METRIC_SCHEDULE).
+      allOf:
+      - $ref: '#/components/schemas/DataMetricSchedule'
+      properties:
+        cron_expr:
+          type: string
+          description: 5-field cron expression.
+        timezone:
+          type: string
+          description: IANA timezone name (e.g. "UTC", "America/Los_Angeles").
+      required:
+      - cron_expr
+      - timezone
+    DataMetricTriggerOnChangesSchedule:
+      description: Schedule that triggers DMF evaluation when the underlying data
+        changes (the "TRIGGER_ON_CHANGES" form of DATA_METRIC_SCHEDULE).
+      allOf:
+      - $ref: '#/components/schemas/DataMetricSchedule'
     TagReference:
       type: object
       description: Identifier for a tag, including optional database and schema names.
@@ -631,6 +684,16 @@ components:
       description: Internal Server Error. The server hit an unrecoverable system error.
         The response body may include the error code and message for further guidance.
         The application owner may need to reach out the customer support.
+      headers:
+        X-Snowflake-Request-ID:
+          $ref: '#/components/headers/X-Snowflake-Request-ID'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    501NotImplemented:
+      description: Not Implemented. The server does not support the functionality
+        required to fulfill the request. The application should not retry.
       headers:
         X-Snowflake-Request-ID:
           $ref: '#/components/headers/X-Snowflake-Request-ID'

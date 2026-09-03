@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "a7f2a77f-4b5e-4696-bb27-f4c0a6fec921",
+    "_postman_id": "fb45fc5a-b9d0-431f-8aea-4aa0fa46bfc5",
     "name": "Snowflake Network Policy API",
     "description": "The Snowflake Network Policy API is a REST API that you can use to access, update, and perform certain actions on Network Policy resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-a7f2a77f-4b5e-4696-bb27-f4c0a6fec921?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-fb45fc5a-b9d0-431f-8aea-4aa0fa46bfc5?source=collection_link"
   },
   "item": [
     {

@@ -756,6 +756,8 @@ components:
           - AUTO
           - FULL
           - INCREMENTAL
+          - ADAPTIVE
+          - CUSTOM_INCREMENTAL
         initialize:
           type: string
           description: Specifies the behavior of the initial refresh of the dynamic
@@ -768,17 +770,52 @@ components:
           description: Specifies the name of the warehouse that provides the compute
             resources for refreshing the dynamic table
           example: test_wh
+        initialization_warehouse:
+          type: string
+          nullable: true
+          description: Specifies the warehouse used for the initial (or re-initialization)
+            refresh of the dynamic table. If unset, falls back to the regular warehouse.
         cluster_by:
           type: array
           description: Specifies one or more columns or column expressions in the
             dynamic table as the clustering key
           items:
             type: string
+        cluster_by_raw:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Raw clustering key string from the DDL statement.
         query:
           type: string
           description: Specifies the query whose results the dynamic table should
             contain
           example: SELECT * FROM foo
+        frozen_where:
+          type: string
+          nullable: true
+          description: "The predicate of the dynamic table's frozen region \u2014\
+            \ the expression inside the FROZEN WHERE ( ... ) clause (formerly IMMUTABLE\
+            \ WHERE). Rows matching this predicate are frozen and blocked from further\
+            \ changes. Null when the dynamic table has no frozen region."
+          example: id < 100
+        backfill_from:
+          type: string
+          nullable: true
+          description: The source table the dynamic table backfills its frozen region
+            from (the BACKFILL FROM <table> clause). Null when the dynamic table has
+            no backfill source.
+          example: my_db.my_schema.source_table
+        start_at:
+          type: string
+          nullable: true
+          readOnly: true
+          description: "The point from which the dynamic table began incremental processing\
+            \ \u2014 the resolved START AT ( ... ) clause (e.g. AT(STREAM => ...),\
+            \ AT(TIMESTAMP => ...), AT(OFFSET => ...)), stored as the unparsed clause\
+            \ text. Requires BACKFILL FROM on a custom-incremental dynamic table.\
+            \ Null when the dynamic table has no START AT clause."
+          example: AT(OFFSET => -3600)
         data_retention_time_in_days:
           type: integer
           description: Specifies the retention period for the dynamic table so that
@@ -792,6 +829,23 @@ components:
         comment:
           type: string
           description: Specifies a comment for the dynamic table.
+        default_ddl_collation:
+          type: string
+          nullable: true
+          description: Specifies a default collation specification for the columns
+            in the dynamic table, including columns added in the future.
+        data_metric_schedule:
+          $ref: common.yaml#/components/schemas/DataMetricSchedule
+          readOnly: true
+        log_level:
+          type: string
+          nullable: true
+          description: Severity level of messages emitted by the dynamic table that
+            should be ingested and made available in the active event table.
+        row_timestamp:
+          type: boolean
+          nullable: true
+          description: Whether ROW_TIMESTAMP is enabled on this dynamic table.
         created_on:
           type: string
           format: date-time

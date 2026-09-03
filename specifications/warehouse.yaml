@@ -679,6 +679,15 @@ components:
           type: string
           description: 'Size of warehouse, possible sizes: XSMALL, SMALL, MEDIUM,
             LARGE, XLARGE, XXLARGE, XXXLARGE, X4LARGE, X5LARGE, X6LARGE'
+        generation:
+          type: string
+          nullable: true
+          description: 'Generation of a standard warehouse. Possible values: 1, 2'
+        resource_constraint:
+          type: string
+          nullable: true
+          description: Resource constraint defining the memory/compute architecture
+            of the warehouse
         wait_for_completion:
           type: string
           enum:
@@ -858,11 +867,25 @@ components:
         warehouse_credit_limit:
           type: integer
           format: int64
-          description: Credit limit that are can be executed by the warehouse.
+          description: This property is deprecated and will be removed in a future
+            major release.
+          deprecated: true
         target_statement_size:
           type: string
-          description: 'Names of size: X-Small, Small, Medium, Large, X-Large, 2X-Large,
-            3X-Large, 4X-Large, 5X-Large, 6X-Large'
+          description: This property is deprecated and will be removed in a future
+            major release.
+          deprecated: true
+        query_throughput_multiplier:
+          type: integer
+          format: int32
+          description: Multiplier used to compute the maximum throughput at any given
+            time, expressed as a non-negative integer scale factor over the system-computed
+            minimum. This property can only be set on an adaptive warehouse.
+        max_query_performance_level:
+          type: string
+          description: 'Upper bound on the performance level for a single statement.
+            This property can only be set on an adaptive warehouse. Possible values:
+            XSMALL, SMALL, MEDIUM, LARGE, XLARGE, XXLARGE, XXXLARGE, X4LARGE.'
       required:
       - name
   securitySchemes:

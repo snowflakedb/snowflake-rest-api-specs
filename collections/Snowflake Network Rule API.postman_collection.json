@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "a8686aca-26c8-478b-a187-b068aa5c73ec",
+    "_postman_id": "88e91917-5d4f-4c02-8912-16c45d12b334",
     "name": "Snowflake Network Rule API",
     "description": "The Snowflake Network Rule API is a REST API that you can use to access, update, and perform certain actions on Network Rule resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-a8686aca-26c8-478b-a187-b068aa5c73ec?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-88e91917-5d4f-4c02-8912-16c45d12b334?source=collection_link"
   },
   "item": [
     {

@@ -464,6 +464,10 @@ components:
         warehouse:
           type: string
           description: The warehouse the alert runs in
+        config:
+          type: object
+          additionalProperties: true
+          description: Alert Config
         condition:
           type: string
           description: The SQL statement that must be evaluated to determine whether
@@ -471,6 +475,30 @@ components:
         action:
           type: string
           description: The SQL statement to execute when the alert is triggered
+        runbook:
+          type: string
+          nullable: true
+          description: Optional runbook (URL or text) associated with the alert.
+        suspend_alert_after_num_failures:
+          type: integer
+          nullable: true
+          description: Number of consecutive failures after which the alert is auto-suspended.
+        template:
+          $ref: '#/components/schemas/Template'
+          nullable: true
+          description: The template the alert was created from, if any.
+        measurement:
+          type: string
+          nullable: true
+          readOnly: true
+          description: For next-gen alerts, the MEASUREMENT clause display form ("<name>
+            AS <expr> [GROUP BY <cols>]"). Null for legacy alerts.
+        evaluation:
+          type: string
+          nullable: true
+          readOnly: true
+          description: For next-gen alerts, the EVALUATION predicate expression. Null
+            for legacy alerts.
         created_on:
           type: string
           format: date-time
@@ -537,6 +565,19 @@ components:
           type: integer
       required:
       - minutes
+    Template:
+      type: object
+      description: The template an alert was created from
+      properties:
+        name:
+          type: string
+          description: Name of the template
+        version:
+          type: string
+          description: Version of the template
+        category:
+          type: string
+          description: Category of the template
     AlertClone:
       type: object
       properties:

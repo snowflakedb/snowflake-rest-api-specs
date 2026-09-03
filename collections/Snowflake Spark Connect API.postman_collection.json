@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "49219ee7-5665-4d5d-90c5-f9477f92ebeb",
+    "_postman_id": "6c35c5f6-608a-45ff-bbb1-10e1000f2c4f",
     "name": "Snowflake Spark Connect API",
     "description": "The Snowflake Spark Connect API is a REST API that you can use to access, update, and perform certain actions on Spark Connect resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-49219ee7-5665-4d5d-90c5-f9477f92ebeb?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-6c35c5f6-608a-45ff-bbb1-10e1000f2c4f?source=collection_link"
   },
   "item": [
     {

@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "fb7ea9eb-472a-4877-8d9a-72666a85f3f0",
+    "_postman_id": "5444aaa5-d396-4f73-944d-f8184dd85ca6",
     "name": "Snowflake Managed Account API",
     "description": "The Snowflake Managed Account API is a REST API that you can use to access, update, and perform certain actions on Managed Account resource in Snowflake.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-fb7ea9eb-472a-4877-8d9a-72666a85f3f0?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-5444aaa5-d396-4f73-944d-f8184dd85ca6?source=collection_link"
   },
   "item": [
     {

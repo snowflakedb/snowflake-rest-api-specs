@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "56fa6782-fd67-465c-8755-508c348970bf",
+    "_postman_id": "8fcb8622-b06f-402f-980e-2805121044d3",
     "name": "Snowflake Iceberg Table API",
     "description": "The Snowflake Iceberg Table API is a REST API that you can use to access, update, and perform certain actions on Iceberg Table resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-56fa6782-fd67-465c-8755-508c348970bf?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-8fcb8622-b06f-402f-980e-2805121044d3?source=collection_link"
   },
   "item": [
     {

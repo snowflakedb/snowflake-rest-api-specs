@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "2781753f-3645-4e9c-a39c-e1adf40cd978",
+    "_postman_id": "a0731349-0bfa-4e5a-a4b3-f700a10e03dd",
     "name": "Snowflake Pipe API",
     "description": "The Snowflake Pipe API is a REST API that you can use to access, update, and perform certain actions on Pipe resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-2781753f-3645-4e9c-a39c-e1adf40cd978?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-a0731349-0bfa-4e5a-a4b3-f700a10e03dd?source=collection_link"
   },
   "item": [
     {

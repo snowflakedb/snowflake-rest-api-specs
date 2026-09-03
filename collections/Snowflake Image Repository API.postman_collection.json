@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "4f8d9097-e327-43ba-ad3d-8a8174142562",
+    "_postman_id": "07124599-70ab-4fb5-8b9b-c0218718f23b",
     "name": "Snowflake Image Repository API",
     "description": "The Snowflake Image Repository API is a REST API that you can use to access, update, and perform common actions on Image Repository resource in Snowflake.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-4f8d9097-e327-43ba-ad3d-8a8174142562?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-07124599-70ab-4fb5-8b9b-c0218718f23b?source=collection_link"
   },
   "item": [
     {

@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "e1076ba4-47cd-4285-bb97-284fd45e7f53",
+    "_postman_id": "30bdf064-6274-4e3d-8e41-244e03f8be15",
     "name": "Cortex Analyst API",
     "description": "The Snowflake Cortex Analyst API is a REST API that allows end user to chat with their data leveraging semantic models to generate SQL queries.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-e1076ba4-47cd-4285-bb97-284fd45e7f53?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-30bdf064-6274-4e3d-8e41-244e03f8be15?source=collection_link"
   },
   "item": [
     {

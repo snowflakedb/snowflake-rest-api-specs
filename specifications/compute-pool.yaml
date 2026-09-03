@@ -657,6 +657,12 @@ components:
           type: string
           description: The name of the placement group on the compute pool.
           readOnly: true
+        backup_instance_families:
+          type: string
+          nullable: true
+          description: Comma-separated list of backup instance families for the compute
+            pool (e.g. 'CPU_X64_S,CPU_X64_M').
+          readOnly: true
       example:
         name: compute_pool_name
         warehouse: test_wh
@@ -748,7 +754,7 @@ components:
         vcpu: 3
         memory_gib: 13
         storage_gib: 93.13
-        gpu: null
+        gpu: NVIDIA A10G
         gpu_count: 0
         gpu_memory_gib: 0
         current_node_usage: 0
