@@ -288,8 +288,8 @@ paths:
       summary: Resume a suspended task.
       tags:
       - task
-      description: Resumes a suspended task object. This is equivalento an ALTER TASK
-        ... RESUME.
+      description: Resumes a suspended task object. This is equivalent to an ALTER
+        TASK ... RESUME.
       operationId: resumeTask
       parameters:
       - $ref: common.yaml#/components/parameters/database
@@ -858,7 +858,6 @@ components:
       - schema_name
       - state
       - scheduled_time
-      - next_scheduled_time
       - root_task_id
       - graph_version
       - run_id
@@ -867,10 +866,12 @@ components:
       description: A Snowflake task, used to execute SQL code.
       properties:
         name:
-          $ref: ./common.yaml#/components/schemas/Identifier
+          allOf:
+          - $ref: ./common.yaml#/components/schemas/Identifier
           description: String that specifies the identifier (i.e. name) for the task.
         warehouse:
-          $ref: ./common.yaml#/components/schemas/Identifier
+          allOf:
+          - $ref: ./common.yaml#/components/schemas/Identifier
           description: Specifies the virtual warehouse that provides compute resources
             for task runs. Omit this parameter to use serverless compute resources
             for runs of this task.
@@ -940,6 +941,12 @@ components:
           type: integer
           description: Specifies the number of consecutive failed task runs after
             which the current task is suspended automatically.
+        user_task_minimum_trigger_interval_in_seconds:
+          type: integer
+          description: Specifies the minimum number of seconds between triggered runs
+            of this task. Only applies to triggered tasks. Valid range 10 to 604800.
+          minimum: 10
+          maximum: 604800
         condition:
           type: string
           description: Specifies a Boolean SQL expression condition; multiple conditions
@@ -1080,13 +1087,21 @@ components:
       - cron_expr
       - timezone
     MinutesSchedule:
-      description: A schedule for executing a task at specified intervals of minutes.
+      description: A schedule for executing a task at specified intervals of minutes
+        (with optional sub-minute remainder in seconds).
       allOf:
       - $ref: '#/components/schemas/TaskSchedule'
       properties:
         minutes:
           type: integer
-          description: The number of minutes between each task run.
+          description: The number of whole minutes between each task run.
+        seconds:
+          type: integer
+          minimum: 0
+          maximum: 59
+          description: Additional seconds past `minutes` between each task run. Combined
+            with `minutes`, the total interval is `minutes * 60 + seconds` seconds.
+            When omitted in a request, the server treats the remainder as 0.
       example:
         minutes: 10
       required:

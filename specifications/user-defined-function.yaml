@@ -545,6 +545,17 @@ components:
           type: boolean
           readOnly: true
           description: If the function/procedure is built-in or not (user-defined)
+        log_level:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Severity level of messages that should be ingested and displayed
+            in the event table.
+        trace_level:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Controls how trace events are ingested into the event table.
       required:
       - name
       - arguments
@@ -712,6 +723,15 @@ components:
             \ of Python are:\n                        * 3.8\n                    \
             \    * 3.9\n                        * 3.10\n                        *\
             \ 3.11"
+        artifact_repository:
+          type: string
+          description: Name of the artifact repository used to install PyPI packages
+            for this function
+        artifact_repository_packages:
+          type: array
+          items:
+            type: string
+          description: Packages installed from the artifact repository for this function
       required:
       - runtime_version
     ScalaFunction:

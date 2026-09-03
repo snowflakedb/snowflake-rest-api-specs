@@ -6,7 +6,7 @@ info:
   version: 0.0.1
   title: Snowflake Function API
   description: The Snowflake Function API is a REST API that allows caller to create,
-    execute and drop functions in a Snowflake database.
+    execute and drop service functions in a Snowflake database.
   contact:
     name: Snowflake, Inc.
     url: https://snowflake.com
@@ -14,10 +14,10 @@ info:
 paths:
   /api/v2/databases/{database}/schemas/{schema}/functions:
     get:
-      summary: List Functions
+      summary: List service functions.
       tags:
       - function
-      description: Lists the user functions under the database and schema.
+      description: Lists service functions under the database and schema.
       operationId: listFunctions
       parameters:
       - $ref: common.yaml#/components/parameters/database
@@ -58,10 +58,10 @@ paths:
         '504':
           $ref: common.yaml#/components/responses/504GatewayTimeout
     post:
-      summary: Create a Function
+      summary: Create a service function.
       tags:
       - function
-      description: Create a function.
+      description: Create a service function.
       operationId: createFunction
       parameters:
       - $ref: common.yaml#/components/parameters/database
@@ -102,10 +102,10 @@ paths:
           $ref: common.yaml#/components/responses/504GatewayTimeout
   /api/v2/databases/{database}/schemas/{schema}/functions/{nameWithArgs}:
     get:
-      summary: Fetch a Function.
+      summary: Fetch a service function.
       tags:
       - function
-      description: Fetch a Function using the describe command output.
+      description: Fetch a service function.
       operationId: fetchFunction
       parameters:
       - $ref: common.yaml#/components/parameters/database
@@ -149,10 +149,10 @@ paths:
       - $ref: common.yaml#/components/parameters/schema
       - $ref: common.yaml#/components/parameters/nameWithArgs
       - $ref: common.yaml#/components/parameters/ifExists
-      summary: Delete a function
+      summary: Delete a service function.
       tags:
       - function
-      description: Delete a function with the given name and args.
+      description: Delete a service function with the given name and args.
       operationId: deleteFunction
       responses:
         '200':
@@ -179,10 +179,10 @@ paths:
           $ref: common.yaml#/components/responses/504GatewayTimeout
   /api/v2/databases/{database}/schemas/{schema}/functions/{name}:execute:
     post:
-      summary: Execute a Function.
+      summary: Execute a service function.
       tags:
       - function
-      description: Execute a Function.
+      description: Execute a service function.
       operationId: executeFunction
       parameters:
       - $ref: common.yaml#/components/parameters/database
@@ -225,10 +225,10 @@ paths:
           $ref: common.yaml#/components/responses/504GatewayTimeout
   /api/v2/databases/{database}/schemas/{schema}/functions/{nameWithArgs}:set-tags:
     post:
-      summary: Set tags on a function.
+      summary: Set tags on a service function.
       tags:
       - function
-      description: Set tags on a function.
+      description: Set tags on a service function.
       operationId: setTags
       parameters:
       - $ref: common.yaml#/components/parameters/database
@@ -274,10 +274,10 @@ paths:
                 $ref: common.yaml#/components/schemas/TagAssignment
   /api/v2/databases/{database}/schemas/{schema}/functions/{nameWithArgs}:unset-tags:
     post:
-      summary: Unset tags from a function.
+      summary: Unset tags from a service function.
       tags:
       - function
-      description: Unset tags from a function.
+      description: Unset tags from a service function.
       operationId: unsetTags
       parameters:
       - $ref: common.yaml#/components/parameters/database
@@ -323,11 +323,11 @@ paths:
                 $ref: common.yaml#/components/schemas/TagReference
   /api/v2/databases/{database}/schemas/{schema}/functions/{nameWithArgs}:get-tags:
     get:
-      summary: Get the tag assignments for a function.
+      summary: Get the tag assignments for a service function.
       tags:
       - function
-      description: Returns all tags assigned to a function. This operation requires
-        an active warehouse.
+      description: Returns all tags assigned to a service function. This operation
+        requires an active warehouse.
       operationId: getTags
       parameters:
       - $ref: common.yaml#/components/parameters/database
@@ -438,20 +438,23 @@ components:
     ServiceFunction:
       allOf:
       - $ref: '#/components/schemas/Function'
-      description: Service based function
+      description: A Snowflake service function
       required:
       - service
       - endpoint
       - path
       properties:
         service:
-          $ref: ./common.yaml#/components/schemas/Identifier
+          allOf:
+          - $ref: ./common.yaml#/components/schemas/Identifier
           description: Service's name
         service_database:
-          $ref: ./common.yaml#/components/schemas/Identifier
+          allOf:
+          - $ref: ./common.yaml#/components/schemas/Identifier
           description: Service's database name
         service_schema:
-          $ref: ./common.yaml#/components/schemas/Identifier
+          allOf:
+          - $ref: ./common.yaml#/components/schemas/Identifier
           description: Service's schema name
         endpoint:
           type: string

@@ -815,6 +815,79 @@ components:
         query_warehouse:
           type: string
           description: Warehouse used to run queries issued by the Streamlit app
+        code_warehouse:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          nullable: true
+          readOnly: true
+          description: Warehouse used to run the Streamlit app code.
+        runtime_name:
+          type: string
+          nullable: true
+          readOnly: true
+          description: The runtime the Streamlit app runs on. If unset, the Warehouse
+            Runtime is assumed.
+        compute_pool:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          nullable: true
+          readOnly: true
+          description: Compute pool the Streamlit app runs on. Required when runtime_name
+            names a container runtime.
+        runtime_environment_version:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Version of the Python environment the Streamlit app runs in.
+        execute_as:
+          type: string
+          nullable: true
+          readOnly: true
+          enum:
+          - OWNER
+          - RESTRICTED CALLER
+          description: Rights the Streamlit app code executes with.
+        execute_as_role:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          nullable: true
+          readOnly: true
+          description: Role the Streamlit app code executes as when execute_as is
+            RESTRICTED CALLER.
+        idle_auto_shutdown_time_seconds:
+          type: integer
+          format: int64
+          nullable: true
+          readOnly: true
+          description: Time in seconds of inactivity after which the Streamlit app
+            is shut down.
+        scheduled_tasks:
+          type: array
+          nullable: true
+          readOnly: true
+          items:
+            type: string
+          description: Fully qualified names of the tasks scheduled to run against
+            the Streamlit app.
+        min_instances:
+          type: integer
+          format: int32
+          nullable: true
+          readOnly: true
+          description: Minimum number of instances the Streamlit app scales down to.
+        max_instances:
+          type: integer
+          format: int32
+          nullable: true
+          readOnly: true
+          description: Maximum number of instances the Streamlit app scales up to.
+        artifact_repositories:
+          type: array
+          nullable: true
+          readOnly: true
+          items:
+            type: string
+          description: Artifact repositories the Streamlit app resolves packages from.
         default_version:
           type: string
           description: The default version name of Streamlit. Valid values are "first"

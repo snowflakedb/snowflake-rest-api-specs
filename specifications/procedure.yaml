@@ -420,6 +420,7 @@ components:
           enum:
           - CALLER
           - OWNER
+          - RESTRICTED CALLER
           description: What permissions should the procedure execution be called with
         is_secure:
           type: boolean
@@ -477,6 +478,17 @@ components:
           type: boolean
           readOnly: true
           description: If the function/procedure is built-in or not (user-defined)
+        log_level:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Severity level of messages that should be ingested and displayed
+            in the event table.
+        trace_level:
+          type: string
+          nullable: true
+          readOnly: true
+          description: Controls how trace events are ingested into the event table.
       required:
       - name
       - arguments
@@ -624,6 +636,17 @@ components:
             type: string
           description: Secrets to be used with this function/procedure for external
             access
+        artifact_repository:
+          type: string
+          nullable: true
+          description: Name of the artifact repository that packages are resolved
+            from
+        artifact_repository_packages:
+          type: array
+          nullable: true
+          items:
+            type: string
+          description: List of packages resolved from the artifact repository
     ScalaFunction:
       allOf:
       - $ref: '#/components/schemas/BaseLanguage'

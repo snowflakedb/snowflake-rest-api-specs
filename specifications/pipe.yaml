@@ -415,6 +415,7 @@ components:
           description: user comment associated to an object in the dictionary
         auto_ingest:
           type: boolean
+          nullable: true
           description: TRUE if all files from stage need to be auto-ingested
         error_integration:
           type: string
@@ -424,6 +425,7 @@ components:
             to notify customers
         aws_sns_topic:
           type: string
+          nullable: true
           description: Optional, if provided, auto_ingest pipe will only receive messages
             from this SNS topic.
         integration:

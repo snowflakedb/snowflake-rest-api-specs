@@ -1,0 +1,248 @@
+components:
+  schemas:
+    CsvFileFormatOptions:
+      type: object
+      description: Inline CSV file format options.
+      properties:
+        compression:
+          type: string
+          description: Compression algorithm.
+        record_delimiter:
+          type: string
+          description: Characters that separate records in an input file.
+        field_delimiter:
+          type: string
+          description: Characters that separate fields in an input file.
+        file_extension:
+          type: string
+          description: Specifies the extension for files unloaded to a stage.
+        parse_header:
+          type: boolean
+          description: Boolean that specifies whether to use the first row headers
+            in the data files to determine column names.
+        skip_header:
+          type: integer
+          description: Number of lines at the start of the file to skip.
+        skip_blank_lines:
+          type: boolean
+          description: Boolean that specifies to skip any blank lines encountered
+            in the data files.
+        date_format:
+          type: string
+          description: Defines the format of date values in data files.
+        time_format:
+          type: string
+          description: Defines the format of time values in data files.
+        timestamp_format:
+          type: string
+          description: Defines the format of timestamp values in data files.
+        binary_format:
+          type: string
+          description: Defines the encoding format for binary input or output.
+        escape:
+          type: string
+          description: A singlebyte character used as the escape character for enclosed
+            or unenclosed field values.
+        escape_unenclosed_field:
+          type: string
+          description: A singlebyte character used as the escape character for unenclosed
+            field values only.
+        trim_space:
+          type: boolean
+          description: Boolean that specifies whether to remove white space from fields.
+        field_optionally_enclosed_by:
+          type: string
+          description: Character used to enclose strings.
+        null_if:
+          type: array
+          items:
+            type: string
+          description: List of strings to convert to and from SQL NULL.
+        error_on_column_count_mismatch:
+          type: boolean
+          description: Boolean that specifies whether to generate a parsing error
+            if the number of delimited columns does not match the number of columns
+            in the corresponding table.
+        replace_invalid_characters:
+          type: boolean
+          description: Boolean that specifies whether to replace invalid UTF-8 characters
+            with the Unicode replacement character.
+        empty_field_as_null:
+          type: boolean
+          description: When loading data, specifies whether to insert SQL NULL for
+            empty fields.
+        skip_byte_order_mark:
+          type: boolean
+          description: Boolean that specifies whether to skip the BOM (byte order
+            mark) in a data file.
+        encoding:
+          type: string
+          description: String (constant) that specifies the character set of the source
+            data when loading data into a table.
+        multi_line:
+          type: boolean
+          description: Boolean that specifies whether multiple lines are allowed for
+            a single record.
+    JsonFileFormatOptions:
+      type: object
+      description: Inline JSON file format options.
+      properties:
+        compression:
+          type: string
+          description: Compression algorithm.
+        date_format:
+          type: string
+          description: Defines the format of date values in data files.
+        time_format:
+          type: string
+          description: Defines the format of time values in data files.
+        timestamp_format:
+          type: string
+          description: Defines the format of timestamp values in data files.
+        binary_format:
+          type: string
+          description: Defines the encoding format for binary input or output.
+        trim_space:
+          type: boolean
+          description: Boolean that specifies whether to remove white space from fields.
+        null_if:
+          type: array
+          items:
+            type: string
+          description: List of strings to convert to and from SQL NULL.
+        file_extension:
+          type: string
+          description: Specifies the extension for files unloaded to a stage.
+        enable_octal:
+          type: boolean
+          description: Boolean that enables parsing of octal numbers.
+        allow_duplicate:
+          type: boolean
+          description: Boolean that specifies to allow duplicate object field names.
+        strip_outer_array:
+          type: boolean
+          description: Boolean that instructs the JSON parser to remove outer brackets.
+        strip_null_values:
+          type: boolean
+          description: Boolean that instructs the JSON parser to remove object fields
+            or array elements containing null values.
+        replace_invalid_characters:
+          type: boolean
+          description: Boolean that specifies whether to replace invalid UTF-8 characters
+            with the Unicode replacement character.
+        ignore_utf8_errors:
+          type: boolean
+          description: Boolean that specifies whether UTF-8 encoding errors produce
+            error conditions.
+        skip_byte_order_mark:
+          type: boolean
+          description: Boolean that specifies whether to skip the BOM (byte order
+            mark) in a data file.
+        multi_line:
+          type: boolean
+          description: Boolean that specifies whether multiple lines are allowed for
+            a single record.
+    AvroFileFormatOptions:
+      type: object
+      description: Inline AVRO file format options.
+      properties:
+        compression:
+          type: string
+          description: Compression algorithm.
+        trim_space:
+          type: boolean
+          description: Boolean that specifies whether to remove white space from fields.
+        replace_invalid_characters:
+          type: boolean
+          description: Boolean that specifies whether to replace invalid UTF-8 characters
+            with the Unicode replacement character.
+        null_if:
+          type: array
+          items:
+            type: string
+          description: List of strings to convert to and from SQL NULL.
+        use_logical_type:
+          type: boolean
+          description: Boolean that specifies whether to use Avro logical types when
+            interpreting the data.
+    OrcFileFormatOptions:
+      type: object
+      description: Inline ORC file format options.
+      properties:
+        trim_space:
+          type: boolean
+          description: Boolean that specifies whether to remove white space from fields.
+        replace_invalid_characters:
+          type: boolean
+          description: Boolean that specifies whether to replace invalid UTF-8 characters
+            with the Unicode replacement character.
+        null_if:
+          type: array
+          items:
+            type: string
+          description: List of strings to convert to and from SQL NULL.
+    ParquetFileFormatOptions:
+      type: object
+      description: Inline PARQUET file format options.
+      properties:
+        compression:
+          type: string
+          description: Compression algorithm.
+        binary_as_text:
+          type: boolean
+          description: Boolean that specifies whether to interpret columns with no
+            defined logical data type as UTF-8 text.
+        use_logical_type:
+          type: boolean
+          description: Boolean that specifies whether to use Parquet logical types.
+        use_vectorized_scanner:
+          type: boolean
+          description: Boolean that specifies whether to use a vectorized scanner
+            for Parquet.
+        trim_space:
+          type: boolean
+          description: Boolean that specifies whether to remove white space from fields.
+        replace_invalid_characters:
+          type: boolean
+          description: Boolean that specifies whether to replace invalid UTF-8 characters
+            with the Unicode replacement character.
+        null_if:
+          type: array
+          items:
+            type: string
+          description: List of strings to convert to and from SQL NULL.
+    XmlFileFormatOptions:
+      type: object
+      description: Inline XML file format options.
+      properties:
+        compression:
+          type: string
+          description: Compression algorithm.
+        ignore_utf8_errors:
+          type: boolean
+          description: Boolean that specifies whether UTF-8 encoding errors produce
+            error conditions.
+        preserve_space:
+          type: boolean
+          description: Boolean that specifies whether the XML parser preserves leading
+            and trailing spaces in element content.
+        strip_outer_element:
+          type: boolean
+          description: Boolean that specifies whether the XML parser strips out the
+            outer XML element.
+        disable_auto_convert:
+          type: boolean
+          description: Boolean that specifies whether the XML parser disables automatic
+            conversion of numeric and Boolean values from text to native representation.
+        replace_invalid_characters:
+          type: boolean
+          description: Boolean that specifies whether to replace invalid UTF-8 characters
+            with the Unicode replacement character.
+        skip_byte_order_mark:
+          type: boolean
+          description: Boolean that specifies whether to skip the BOM (byte order
+            mark) in a data file.
+        row_tag:
+          type: string
+          description: Specifies the XML element tag that delimits records in the
+            data file.

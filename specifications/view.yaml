@@ -387,6 +387,19 @@ components:
         query:
           type: string
           description: Query used to create the view
+        select_query:
+          type: string
+          nullable: true
+          readOnly: true
+          description: The SELECT body of the view definition, without the surrounding
+            CREATE/DEFINE statement.
+        change_tracking:
+          type: boolean
+          nullable: true
+          readOnly: true
+          description: Whether change tracking is enabled on the view.
+        data_metric_schedule:
+          $ref: common.yaml#/components/schemas/DataMetricSchedule
         created_on:
           type: string
           format: date-time
