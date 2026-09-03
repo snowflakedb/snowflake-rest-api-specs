@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "0cd87f72-bb45-48a3-9eea-edb4365244ae",
+    "_postman_id": "57e7e3d3-8205-4cf0-bdad-c5b0039752ce",
     "name": "Snowflake Catalog Integration API",
     "description": "The Snowflake Catalog Integration API is a REST API that you can use to access, update, and perform certain actions on Catalog Integration resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-0cd87f72-bb45-48a3-9eea-edb4365244ae?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-57e7e3d3-8205-4cf0-bdad-c5b0039752ce?source=collection_link"
   },
   "item": [
     {

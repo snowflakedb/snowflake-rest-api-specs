@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "7b42e4e0-debe-4d74-a707-0a48f573448e",
+    "_postman_id": "4bb1d147-367c-44eb-917b-1906d12628f2",
     "name": "Snowflake Services API",
     "description": "The Snowflake Services API is a REST API that you can use to access, update, and perform certain actions on Services resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-7b42e4e0-debe-4d74-a707-0a48f573448e?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-4bb1d147-367c-44eb-917b-1906d12628f2?source=collection_link"
   },
   "item": [
     {

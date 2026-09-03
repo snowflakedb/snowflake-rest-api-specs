@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "1e56e171-4f97-4256-a594-04c3767df5c4",
+    "_postman_id": "505d93b9-29df-4adc-a2d1-fb097fa41865",
     "name": "Cortex Chat Completions API",
     "description": "OpenAPI 3.0 specification for the Cortex Chat Completions API\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-1e56e171-4f97-4256-a594-04c3767df5c4?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-505d93b9-29df-4adc-a2d1-fb097fa41865?source=collection_link"
   },
   "item": [
     {

@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "ee8ef6d2-bb8c-45a3-aed5-152a4a7212f5",
+    "_postman_id": "4925aeeb-5fa0-4117-9f47-cb9c4a1bc904",
     "name": "Snowflake Function API",
-    "description": "The Snowflake Function API is a REST API that allows caller to create, execute and drop functions in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
+    "description": "The Snowflake Function API is a REST API that allows caller to create, execute and drop service functions in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-ee8ef6d2-bb8c-45a3-aed5-152a4a7212f5?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-4925aeeb-5fa0-4117-9f47-cb9c4a1bc904?source=collection_link"
   },
   "item": [
     {

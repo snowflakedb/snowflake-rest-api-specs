@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "a9df559d-84dd-4e97-afce-3944bdd1279f",
+    "_postman_id": "c89d266c-55f0-47b3-af6a-01790fe5d4a1",
     "name": "Snowflake Event Table API",
     "description": "The Snowflake Event Table API is a REST API that you can use to access, update, and perform certain actions on Event Table resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-a9df559d-84dd-4e97-afce-3944bdd1279f?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-c89d266c-55f0-47b3-af6a-01790fe5d4a1?source=collection_link"
   },
   "item": [
     {

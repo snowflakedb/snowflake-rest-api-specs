@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "7460d12f-dded-4605-9efb-439cdb0d02c5",
+    "_postman_id": "a051e205-ab16-4411-8efb-57dd1d5ef9d9",
     "name": "Snowflake Procedure API",
     "description": "The Snowflake Procedure API is a REST API that you can use to access, update, and perform certain actions on Procedure resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-7460d12f-dded-4605-9efb-439cdb0d02c5?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-a051e205-ab16-4411-8efb-57dd1d5ef9d9?source=collection_link"
   },
   "item": [
     {
@@ -155,7 +155,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"name\": \"\\\"EX-sS\\\"\\\"\\\"\\\"\\\"\",\n  \"arguments\": [\n    {\n      \"name\": \"\\\"p\\\"\\\"?\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"string\",\n      \"default_value\": \"string\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"yw\\\"\\\"\\\"\\\"I\\\"\\\"\\\"\",\n      \"datatype\": \"string\",\n      \"default_value\": \"string\"\n    }\n  ],\n  \"return_type\": {\n    \"type\": \"l\"\n  },\n  \"language_config\": {\n    \"language\": \"string\",\n    \"called_on_null_input\": true\n  },\n  \"execute_as\": \"CALLER\",\n  \"is_secure\": true,\n  \"comment\": \"string\",\n  \"body\": \"string\",\n  \"created_on\": \"1994-11-11T02:52:48.197Z\",\n  \"schema_name\": \"dnKje\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\",\n  \"min_num_arguments\": 1794,\n  \"max_num_arguments\": 886,\n  \"owner\": \"string\",\n  \"owner_role_type\": \"string\",\n  \"is_builtin\": false\n}"
+                                          "body": "{\n  \"name\": \"\\\"EX-sS\\\"\\\"\\\"\\\"\\\"\",\n  \"arguments\": [\n    {\n      \"name\": \"\\\"p\\\"\\\"?\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\".\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n      \"datatype\": \"string\",\n      \"default_value\": \"string\"\n    },\n    {\n      \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"yw\\\"\\\"\\\"\\\"I\\\"\\\"\\\"\",\n      \"datatype\": \"string\",\n      \"default_value\": \"string\"\n    }\n  ],\n  \"return_type\": {\n    \"type\": \"l\"\n  },\n  \"language_config\": {\n    \"language\": \"string\",\n    \"called_on_null_input\": true\n  },\n  \"execute_as\": \"CALLER\",\n  \"is_secure\": true,\n  \"comment\": \"string\",\n  \"body\": \"string\",\n  \"created_on\": \"1994-11-11T02:52:48.197Z\",\n  \"schema_name\": \"dnKje\",\n  \"database_name\": \"\\\"\\\"\\\"\\\"\",\n  \"min_num_arguments\": 1794,\n  \"max_num_arguments\": 886,\n  \"owner\": \"string\",\n  \"owner_role_type\": \"string\",\n  \"is_builtin\": false,\n  \"log_level\": \"string\",\n  \"trace_level\": \"string\"\n}"
                                         },
                                         {
                                           "name": "Successfully accepted the request, but it is not completed yet.",
@@ -234,7 +234,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -1292,7 +1292,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -2454,7 +2454,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -3533,7 +3533,7 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "body": "[\n  {\n    \"name\": \"jPsIHh6$QX\",\n    \"arguments\": [\n      {\n        \"name\": \"\\\"\\\"\\\"{\\\"\\\"\\\"\\\"I\\\"\\\"\\\"\\\"\\\"\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      },\n      {\n        \"name\": \"\\\"S\\\"\\\"o\\\"\\\"2\\\"\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      }\n    ],\n    \"return_type\": {\n      \"type\": \"\\\"7\\\"\\\"\\\"\\\"n\\\"\"\n    },\n    \"language_config\": {\n      \"language\": \"string\",\n      \"called_on_null_input\": true\n    },\n    \"execute_as\": \"CALLER\",\n    \"is_secure\": true,\n    \"comment\": \"string\",\n    \"body\": \"string\",\n    \"created_on\": \"1958-11-20T03:17:59.582Z\",\n    \"schema_name\": \"\\\"\\\"\\\"h0\\\"\\\"Ta\\\"\\\"\\\"\",\n    \"database_name\": \"\\\"1\\\"\\\"\\\"\\\"\\\"\\\"S\\\"\\\"-\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"min_num_arguments\": 7823,\n    \"max_num_arguments\": 1162,\n    \"owner\": \"string\",\n    \"owner_role_type\": \"string\",\n    \"is_builtin\": false\n  },\n  {\n    \"name\": \"\\\"<\\\"\",\n    \"arguments\": [\n      {\n        \"name\": \"OD5TfafQI\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      },\n      {\n        \"name\": \"\\\"[{\\\"\\\"Ch\\\"\\\"\\\"\\\"pT\\\"\\\"\\\"\\\"\\\"\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      }\n    ],\n    \"return_type\": {\n      \"type\": \"\\\"\\\"\\\"X\\\"\\\"4\\\"\\\":\\\"\\\"wx] \\\"\"\n    },\n    \"language_config\": {\n      \"language\": \"string\",\n      \"called_on_null_input\": false\n    },\n    \"execute_as\": \"CALLER\",\n    \"is_secure\": false,\n    \"comment\": \"string\",\n    \"body\": \"string\",\n    \"created_on\": \"1973-11-23T07:42:55.257Z\",\n    \"schema_name\": \"G\",\n    \"database_name\": \"\\\"[\\\"\\\"%x/a\\\"\\\"r\\\"\",\n    \"min_num_arguments\": 1182,\n    \"max_num_arguments\": 9675,\n    \"owner\": \"string\",\n    \"owner_role_type\": \"string\",\n    \"is_builtin\": true\n  }\n]"
+                                      "body": "[\n  {\n    \"name\": \"jPsIHh6$QX\",\n    \"arguments\": [\n      {\n        \"name\": \"\\\"\\\"\\\"{\\\"\\\"\\\"\\\"I\\\"\\\"\\\"\\\"\\\"\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      },\n      {\n        \"name\": \"\\\"S\\\"\\\"o\\\"\\\"2\\\"\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      }\n    ],\n    \"return_type\": {\n      \"type\": \"\\\"7\\\"\\\"\\\"\\\"n\\\"\"\n    },\n    \"language_config\": {\n      \"language\": \"string\",\n      \"called_on_null_input\": true\n    },\n    \"execute_as\": \"CALLER\",\n    \"is_secure\": true,\n    \"comment\": \"string\",\n    \"body\": \"string\",\n    \"created_on\": \"1958-11-20T03:17:59.582Z\",\n    \"schema_name\": \"\\\"\\\"\\\"h0\\\"\\\"Ta\\\"\\\"\\\"\",\n    \"database_name\": \"\\\"1\\\"\\\"\\\"\\\"\\\"\\\"S\\\"\\\"-\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"min_num_arguments\": 7823,\n    \"max_num_arguments\": 1162,\n    \"owner\": \"string\",\n    \"owner_role_type\": \"string\",\n    \"is_builtin\": false,\n    \"log_level\": \"string\",\n    \"trace_level\": \"string\"\n  },\n  {\n    \"name\": \"\\\"<\\\"\",\n    \"arguments\": [\n      {\n        \"name\": \"OD5TfafQI\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      },\n      {\n        \"name\": \"\\\"[{\\\"\\\"Ch\\\"\\\"\\\"\\\"pT\\\"\\\"\\\"\\\"\\\"\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      }\n    ],\n    \"return_type\": {\n      \"type\": \"\\\"\\\"\\\"X\\\"\\\"4\\\"\\\":\\\"\\\"wx] \\\"\"\n    },\n    \"language_config\": {\n      \"language\": \"string\",\n      \"called_on_null_input\": false\n    },\n    \"execute_as\": \"CALLER\",\n    \"is_secure\": false,\n    \"comment\": \"string\",\n    \"body\": \"string\",\n    \"created_on\": \"1973-11-23T07:42:55.257Z\",\n    \"schema_name\": \"G\",\n    \"database_name\": \"\\\"[\\\"\\\"%x/a\\\"\\\"r\\\"\",\n    \"min_num_arguments\": 1182,\n    \"max_num_arguments\": 9675,\n    \"owner\": \"string\",\n    \"owner_role_type\": \"string\",\n    \"is_builtin\": true,\n    \"log_level\": \"string\",\n    \"trace_level\": \"string\"\n  }\n]"
                                     },
                                     {
                                       "name": "Successfully accepted the request, but it is not completed yet.",
@@ -3613,7 +3613,7 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
                                       "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -4722,7 +4722,7 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
                                       "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",

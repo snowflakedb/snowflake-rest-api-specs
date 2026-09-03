@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "2b16bef0-7428-4b94-bd5e-05309f923e32",
+    "_postman_id": "d8c0b22a-5b37-4ab8-b4f5-773f1174b821",
     "name": "Cortex Search REST API",
     "description": "OpenAPI 3.0 specification for the Cortex Search REST API\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-2b16bef0-7428-4b94-bd5e-05309f923e32?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-d8c0b22a-5b37-4ab8-b4f5-773f1174b821?source=collection_link"
   },
   "item": [
     {

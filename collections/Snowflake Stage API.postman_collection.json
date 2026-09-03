@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "b879ccbc-0694-41be-9112-162a8325d6f6",
+    "_postman_id": "ea2a3be4-b9b9-4fd6-907a-a5f46970eaac",
     "name": "Snowflake Stage API",
     "description": "The Snowflake Stage API is a REST API that you can use to access, update, and perform certain actions on stage resources in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-b879ccbc-0694-41be-9112-162a8325d6f6?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-ea2a3be4-b9b9-4fd6-907a-a5f46970eaac?source=collection_link"
   },
   "item": [
     {
@@ -279,7 +279,7 @@
                                                     }
                                                   ],
                                                   "cookie": [],
-                                                  "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                                  "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                                 },
                                                 {
                                                   "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -1285,7 +1285,7 @@
                                                 }
                                               ],
                                               "cookie": [],
-                                              "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                              "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                             },
                                             {
                                               "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -2195,7 +2195,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -3043,7 +3043,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -3947,7 +3947,7 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
                                       "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -4970,7 +4970,7 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
                                       "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",

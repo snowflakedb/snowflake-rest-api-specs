@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "76e2e4c6-93e7-4efd-b1a9-71009d0dbfe2",
+    "_postman_id": "71702d3e-478f-46d4-ac8e-fcb9aa72064e",
     "name": "Snowflake API Integration API",
     "description": "The Snowflake API Integration API is a REST API that you can use to access, update, and perform certain actions on API Integration resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-76e2e4c6-93e7-4efd-b1a9-71009d0dbfe2?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-71702d3e-478f-46d4-ac8e-fcb9aa72064e?source=collection_link"
   },
   "item": [
     {

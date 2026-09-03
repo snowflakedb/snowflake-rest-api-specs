@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "2fd950c6-9f8e-445b-b8f8-d5f6d314df00",
+    "_postman_id": "ce75bdd6-3f61-4a20-8feb-bf12fe597032",
     "name": "Snowflake Database Role API",
     "description": "The Snowflake Database Role API is a REST API that you can use to access, update, and perform certain actions on Database Role resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-2fd950c6-9f8e-445b-b8f8-d5f6d314df00?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-ce75bdd6-3f61-4a20-8feb-bf12fe597032?source=collection_link"
   },
   "item": [
     {

@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "53f73333-8f0f-429b-a767-6d642894ea43",
+    "_postman_id": "247c23aa-1149-48e8-92ee-d96402ff3bc4",
     "name": "Snowflake SQL API",
     "description": "The Snowflake SQL API is a REST API that you can use to access and update data in a Snowflake database. \n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-53f73333-8f0f-429b-a767-6d642894ea43?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-247c23aa-1149-48e8-92ee-d96402ff3bc4?source=collection_link"
   },
   "item": [
     {

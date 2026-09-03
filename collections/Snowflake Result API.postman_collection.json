@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "e895ad90-5cd9-4b6c-a61c-d1ed93bc8daa",
+    "_postman_id": "cffb7ce4-ab77-417a-8dcc-aa7112f0ea7e",
     "name": "Snowflake Result API",
     "description": "The Snowflake Result API is a REST API that you can use to check request status and fetch request response.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-e895ad90-5cd9-4b6c-a61c-d1ed93bc8daa?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-cffb7ce4-ab77-417a-8dcc-aa7112f0ea7e?source=collection_link"
   },
   "item": [
     {

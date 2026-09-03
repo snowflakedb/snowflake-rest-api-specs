@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "f7c886e9-6813-48a0-9f77-5d435a1c838d",
+    "_postman_id": "74a83116-43fb-4d5f-b881-31f4a7efd264",
     "name": "Snowflake Stream API",
     "description": "The Snowflake Stream API is a REST API that you can use to access, update, and perform certain actions on Stream resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-f7c886e9-6813-48a0-9f77-5d435a1c838d?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-74a83116-43fb-4d5f-b881-31f4a7efd264?source=collection_link"
   },
   "item": [
     {

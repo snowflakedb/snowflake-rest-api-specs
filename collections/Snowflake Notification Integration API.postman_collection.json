@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "0ea4c3ad-4fec-4dd4-89e0-47f192b29483",
+    "_postman_id": "761504b4-71a1-4216-9bf1-d10618b7c2ec",
     "name": "Snowflake Notification Integration API",
     "description": "The Snowflake Notification Integration API is a REST API that you can use to access, update, and perform certain actions on Notification Integration resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-0ea4c3ad-4fec-4dd4-89e0-47f192b29483?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-761504b4-71a1-4216-9bf1-d10618b7c2ec?source=collection_link"
   },
   "item": [
     {

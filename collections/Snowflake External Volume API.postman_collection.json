@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "dbd9a5a5-44d2-4796-8501-72e87728a4a2",
+    "_postman_id": "696ed37f-2c7b-4b2e-84e1-8c9533411b39",
     "name": "Snowflake External Volume API",
     "description": "The Snowflake External Volume API is a REST API that you can use to access, update, and perform certain actions on External Volume resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-dbd9a5a5-44d2-4796-8501-72e87728a4a2?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-696ed37f-2c7b-4b2e-84e1-8c9533411b39?source=collection_link"
   },
   "item": [
     {

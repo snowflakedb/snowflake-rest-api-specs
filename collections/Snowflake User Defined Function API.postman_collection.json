@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "ffdc75fd-424f-415c-94a3-fef486fc05ab",
+    "_postman_id": "556d8bc8-a549-4dec-8d2c-c7882892c64e",
     "name": "Snowflake User Defined Function API",
     "description": "The Snowflake User Defined Function API is a REST API that you can use to access, update, and perform certain actions on User Defined Function resource in a Snowflake database.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53314882",
-    "_collection_link": "https://go.postman.co/collection/53314882-ffdc75fd-424f-415c-94a3-fef486fc05ab?source=collection_link"
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-556d8bc8-a549-4dec-8d2c-c7882892c64e?source=collection_link"
   },
   "item": [
     {
@@ -155,7 +155,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"name\": \"\\\"\\\"\\\"n\\\"\\\"\\\"\",\n  \"arguments\": [\n    {\n      \"name\": \"\\\"U1\\\"\",\n      \"datatype\": \"string\",\n      \"default_value\": \"string\"\n    },\n    {\n      \"name\": \"\\\">D*\\\"\\\"b\\\"\\\"\\\"\\\"\\\"\\\"4\\\"\\\"\\\"\",\n      \"datatype\": \"string\",\n      \"default_value\": \"string\"\n    }\n  ],\n  \"return_type\": {\n    \"type\": \"\\\"hV\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"T[\\\"\\\"\\\"\"\n  },\n  \"language_config\": {\n    \"language\": \"string\",\n    \"called_on_null_input\": true,\n    \"is_volatile\": false\n  },\n  \"is_temporary\": false,\n  \"is_aggregate\": true,\n  \"is_memoizable\": true,\n  \"is_table_function\": true,\n  \"valid_for_clustering\": false,\n  \"is_secure\": true,\n  \"comment\": \"string\",\n  \"body\": \"string\",\n  \"created_on\": \"2010-09-26T18:34:42.079Z\",\n  \"schema_name\": \"\\\"\\\"\\\"j*\\\"\\\"\\\"\\\"\\\"\",\n  \"database_name\": \"FZFwCJZgn\",\n  \"min_num_arguments\": 9574,\n  \"max_num_arguments\": 4614,\n  \"owner\": \"\\\"S!\\\"\",\n  \"owner_role_type\": \"\\\"\\\"\\\"\\\"\\\"y\\\"\\\" M\\\"\",\n  \"is_builtin\": false\n}"
+                                          "body": "{\n  \"name\": \"\\\"\\\"\\\"n\\\"\\\"\\\"\",\n  \"arguments\": [\n    {\n      \"name\": \"\\\"U1\\\"\",\n      \"datatype\": \"string\",\n      \"default_value\": \"string\"\n    },\n    {\n      \"name\": \"\\\">D*\\\"\\\"b\\\"\\\"\\\"\\\"\\\"\\\"4\\\"\\\"\\\"\",\n      \"datatype\": \"string\",\n      \"default_value\": \"string\"\n    }\n  ],\n  \"return_type\": {\n    \"type\": \"\\\"hV\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"\\\"T[\\\"\\\"\\\"\"\n  },\n  \"language_config\": {\n    \"language\": \"string\",\n    \"called_on_null_input\": true,\n    \"is_volatile\": false\n  },\n  \"is_temporary\": false,\n  \"is_aggregate\": true,\n  \"is_memoizable\": true,\n  \"is_table_function\": true,\n  \"valid_for_clustering\": false,\n  \"is_secure\": true,\n  \"comment\": \"string\",\n  \"body\": \"string\",\n  \"created_on\": \"2010-09-26T18:34:42.079Z\",\n  \"schema_name\": \"\\\"\\\"\\\"j*\\\"\\\"\\\"\\\"\\\"\",\n  \"database_name\": \"FZFwCJZgn\",\n  \"min_num_arguments\": 9574,\n  \"max_num_arguments\": 4614,\n  \"owner\": \"\\\"S!\\\"\",\n  \"owner_role_type\": \"\\\"\\\"\\\"\\\"\\\"y\\\"\\\" M\\\"\",\n  \"is_builtin\": false,\n  \"log_level\": \"string\",\n  \"trace_level\": \"string\"\n}"
                                         },
                                         {
                                           "name": "Successfully accepted the request, but it is not completed yet.",
@@ -234,7 +234,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -1292,7 +1292,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -2445,7 +2445,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -3409,7 +3409,7 @@
                                             }
                                           ],
                                           "cookie": [],
-                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                         },
                                         {
                                           "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -4712,7 +4712,7 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
                                       "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
@@ -5921,7 +5921,7 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "body": "[\n  {\n    \"name\": \"C\",\n    \"arguments\": [\n      {\n        \"name\": \"Vf\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      },\n      {\n        \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"7i\\\"\\\"\\\"\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      }\n    ],\n    \"return_type\": {\n      \"type\": \"Jat7jR1D\"\n    },\n    \"language_config\": {\n      \"language\": \"string\",\n      \"called_on_null_input\": false,\n      \"is_volatile\": false\n    },\n    \"is_temporary\": false,\n    \"is_aggregate\": true,\n    \"is_memoizable\": true,\n    \"is_table_function\": true,\n    \"valid_for_clustering\": true,\n    \"is_secure\": true,\n    \"comment\": \"string\",\n    \"body\": \"string\",\n    \"created_on\": \"2003-02-24T14:15:56.893Z\",\n    \"schema_name\": \"E$nTHiDUHl\",\n    \"database_name\": \"EvX_VEbvf\",\n    \"min_num_arguments\": 4134,\n    \"max_num_arguments\": 2184,\n    \"owner\": \"sCs6gL\",\n    \"owner_role_type\": \"\\\"F9\\\"\\\"hZ#v\\\"\\\"L\\\"\",\n    \"is_builtin\": true\n  },\n  {\n    \"name\": \"\\\"\\\"\\\"H\\\"\\\"\\\"\\\"\\\"\\\"f\\\"\\\"\\\"\\\"S\\\"\\\"\\\"\",\n    \"arguments\": [\n      {\n        \"name\": \"LnnUo\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      },\n      {\n        \"name\": \"lSESxtr90\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      }\n    ],\n    \"return_type\": {\n      \"type\": \"\\\"\\\"\\\"7!7\\\"\\\"j\\\"\"\n    },\n    \"language_config\": {\n      \"language\": \"string\",\n      \"called_on_null_input\": false,\n      \"is_volatile\": false\n    },\n    \"is_temporary\": true,\n    \"is_aggregate\": true,\n    \"is_memoizable\": false,\n    \"is_table_function\": false,\n    \"valid_for_clustering\": false,\n    \"is_secure\": true,\n    \"comment\": \"string\",\n    \"body\": \"string\",\n    \"created_on\": \"2004-10-05T19:27:40.421Z\",\n    \"schema_name\": \"c\",\n    \"database_name\": \"\\\"\\\"\\\"\\\"\",\n    \"min_num_arguments\": 6078,\n    \"max_num_arguments\": 2794,\n    \"owner\": \"\\\"\\\"\\\"hkL`\\\"\\\"5\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"owner_role_type\": \"\\\"&\\\"\\\"bA\\\"\\\"F\\\"\\\"\\\"\\\"ll0\\\"\",\n    \"is_builtin\": false\n  }\n]"
+                                      "body": "[\n  {\n    \"name\": \"C\",\n    \"arguments\": [\n      {\n        \"name\": \"Vf\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      },\n      {\n        \"name\": \"\\\"\\\"\\\"\\\"\\\"\\\"\\\"7i\\\"\\\"\\\"\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      }\n    ],\n    \"return_type\": {\n      \"type\": \"Jat7jR1D\"\n    },\n    \"language_config\": {\n      \"language\": \"string\",\n      \"called_on_null_input\": false,\n      \"is_volatile\": false\n    },\n    \"is_temporary\": false,\n    \"is_aggregate\": true,\n    \"is_memoizable\": true,\n    \"is_table_function\": true,\n    \"valid_for_clustering\": true,\n    \"is_secure\": true,\n    \"comment\": \"string\",\n    \"body\": \"string\",\n    \"created_on\": \"2003-02-24T14:15:56.893Z\",\n    \"schema_name\": \"E$nTHiDUHl\",\n    \"database_name\": \"EvX_VEbvf\",\n    \"min_num_arguments\": 4134,\n    \"max_num_arguments\": 2184,\n    \"owner\": \"sCs6gL\",\n    \"owner_role_type\": \"\\\"F9\\\"\\\"hZ#v\\\"\\\"L\\\"\",\n    \"is_builtin\": true,\n    \"log_level\": \"string\",\n    \"trace_level\": \"string\"\n  },\n  {\n    \"name\": \"\\\"\\\"\\\"H\\\"\\\"\\\"\\\"\\\"\\\"f\\\"\\\"\\\"\\\"S\\\"\\\"\\\"\",\n    \"arguments\": [\n      {\n        \"name\": \"LnnUo\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      },\n      {\n        \"name\": \"lSESxtr90\",\n        \"datatype\": \"string\",\n        \"default_value\": \"string\"\n      }\n    ],\n    \"return_type\": {\n      \"type\": \"\\\"\\\"\\\"7!7\\\"\\\"j\\\"\"\n    },\n    \"language_config\": {\n      \"language\": \"string\",\n      \"called_on_null_input\": false,\n      \"is_volatile\": false\n    },\n    \"is_temporary\": true,\n    \"is_aggregate\": true,\n    \"is_memoizable\": false,\n    \"is_table_function\": false,\n    \"valid_for_clustering\": false,\n    \"is_secure\": true,\n    \"comment\": \"string\",\n    \"body\": \"string\",\n    \"created_on\": \"2004-10-05T19:27:40.421Z\",\n    \"schema_name\": \"c\",\n    \"database_name\": \"\\\"\\\"\\\"\\\"\",\n    \"min_num_arguments\": 6078,\n    \"max_num_arguments\": 2794,\n    \"owner\": \"\\\"\\\"\\\"hkL`\\\"\\\"5\\\"\\\"\\\"\\\"\\\"\\\"\\\"\",\n    \"owner_role_type\": \"\\\"&\\\"\\\"bA\\\"\\\"F\\\"\\\"\\\"\\\"ll0\\\"\",\n    \"is_builtin\": false,\n    \"log_level\": \"string\",\n    \"trace_level\": \"string\"\n  }\n]"
                                     },
                                     {
                                       "name": "Successfully accepted the request, but it is not completed yet.",
@@ -6001,7 +6001,7 @@
                                         }
                                       ],
                                       "cookie": [],
-                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\"\n}"
+                                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
                                     },
                                     {
                                       "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the r",
