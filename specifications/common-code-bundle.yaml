@@ -1,0 +1,110 @@
+components:
+  schemas:
+    CodeBundleSpecification:
+      type: object
+      description: Inline code bundle specification. The top-level object has a single
+        `bundle` key describing the bundle to execute.
+      required:
+      - bundle
+      properties:
+        bundle:
+          $ref: '#/components/schemas/BundleSpec'
+    BundleSpec:
+      type: object
+      description: The code bundle definition. Well-known fields are documented below.
+        Type-specific and compute-specific extensions belong in the open `properties`
+        and `compute_options` maps.
+      required:
+      - type
+      - compute_type
+      properties:
+        type:
+          type: string
+          description: 'Bundle type: custom | spark | ml.'
+          example: custom
+        compute_type:
+          type: string
+          description: 'Compute environment: warehouse | compute_pool | serverless.'
+          example: warehouse
+        language:
+          type: string
+          description: 'Language: python | java | scala. Required when type is custom.'
+          example: python
+        compute_options:
+          type: object
+          additionalProperties: true
+          description: 'compute_type-specific options. For warehouse: warehouse and
+            runtime_version. For compute_pool: compute_pool, query_warehouse, and
+            runtime_version.'
+          example:
+            warehouse: db.schema.warehouse_name
+            runtime_version: '3.13'
+        properties:
+          type: object
+          additionalProperties: true
+          description: 'type-specific property bag. For example, for python: requirements_file
+            or python_packages.'
+          example:
+            requirements_file: requirements.txt
+        artifact_repositories:
+          type: array
+          description: Fully qualified artifact repositories (database.schema.object_name)
+            to install packages from. Warehouse execution supports at most one entry.
+            Defaults to snowflake.snowpark.pypi_shared_repository when omitted.
+          items:
+            type: string
+          example:
+          - db.my_schema.my_repo
+        stage_mounts:
+          type: object
+          description: Stage mounts keyed by mount name; each value describes a stage
+            path mounted at a container path.
+          additionalProperties:
+            $ref: '#/components/schemas/StageMount'
+          example:
+            my_mount:
+              stage_url: '@stage/dir'
+              mount_path: /tmp/dir1
+        secrets:
+          type: array
+          description: Snowflake secret objects (database.schema.secret_object_name)
+            to attach at runtime.
+          items:
+            type: string
+        external_access_integrations:
+          type: array
+          description: External access integration objects (database.schema.eai_object_name)
+            to attach at execution time.
+          items:
+            type: string
+        env_vars:
+          type: array
+          description: List of single-key maps, each mapping an environment variable
+            name to its value.
+          items:
+            type: object
+            additionalProperties:
+              type: string
+          example:
+          - my_env_var: '101'
+    StageMount:
+      type: object
+      description: 'A single stage mount: a stage path mounted at a container path.'
+      required:
+      - stage_url
+      - mount_path
+      properties:
+        stage_url:
+          type: string
+          description: Stage path to mount (for example, "@stage/dir").
+          example: '@stage/dir'
+        mount_path:
+          type: string
+          description: Container path where the stage is mounted.
+          example: /tmp/dir1
+        cpu_limit:
+          type: string
+          description: CPU limit for the mount (not yet implemented).
+        memory_limit:
+          type: string
+          description: Memory limit for the mount (not yet implemented).
