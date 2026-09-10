@@ -1,0 +1,409 @@
+openapi: 3.0.0
+servers:
+- description: Snowflake REST Server
+  url: https://org-account.snowflakecomputing.com
+info:
+  version: 0.0.1
+  title: Snowflake Code Bundle Executions API
+  description: The Snowflake Code Bundle Executions API is a REST API that you can
+    use to execute a code bundle directly from a stage location, without first creating
+    a named code bundle, and to monitor or cancel those executions. An execution started
+    this way has no named code bundle backing it and does not live under a specific
+    database or schema, so this resource is exposed at the account level.
+  contact:
+    name: Snowflake, Inc.
+    url: https://snowflake.com
+    email: support@snowflake.com
+paths:
+  /api/v2/code-bundle-executions:
+    get:
+      summary: List code bundle executions
+      tags:
+      - code-bundle-execution
+      description: List code bundle executions in the account, optionally filtered
+        by bundle, entrypoint, time range, type, status, execution name, or query
+        id. All query parameters are optional; with none supplied, recent executions
+        are returned (up to the result limit).
+      operationId: listCodeBundleExecutions
+      parameters:
+      - name: bundleName
+        in: query
+        required: false
+        description: Filter by code bundle name. To match a case-sensitive or special-character
+          identifier, wrap the value in double quotes (for example "0303_replace_test").
+          Combine with database and schema to scope to a fully qualified bundle.
+        schema:
+          type: string
+          example: '"0303_replace_test"'
+      - name: database
+        in: query
+        required: false
+        description: Filter by the database supplied when the code bundle was created
+          or executed.
+        schema:
+          type: string
+          example: MY_DB
+      - name: schema
+        in: query
+        required: false
+        description: Filter by the schema supplied when the code bundle was created
+          or executed.
+        schema:
+          type: string
+          example: MY_SCHEMA
+      - name: entrypoint
+        in: query
+        required: false
+        description: Exact match on the executed entrypoint file path.
+        schema:
+          type: string
+          example: main.py
+      - name: startTimeRangeStart
+        in: query
+        required: false
+        description: Inclusive lower bound on the execution start time, interpreted
+          as TIMESTAMP_LTZ. Accepts any timestamp literal (for example 2026-07-07
+          or 2026-07-07T00:00:00).
+        schema:
+          type: string
+          example: '2026-07-07'
+      - name: startTimeRangeEnd
+        in: query
+        required: false
+        description: Inclusive upper bound on the execution start time, interpreted
+          as TIMESTAMP_LTZ.
+        schema:
+          type: string
+          example: '2026-07-08'
+      - name: bundleTypes
+        in: query
+        required: false
+        description: 'Comma-separated, case-insensitive list of bundle types to include.
+          Allowed values: custom, ml, spark.'
+        schema:
+          type: string
+          example: custom, spark
+      - name: computeTypes
+        in: query
+        required: false
+        description: 'Comma-separated, case-insensitive list of compute types to include.
+          Allowed values: warehouse, compute_pool, serverless.'
+        schema:
+          type: string
+          example: warehouse, compute_pool
+      - name: languageTypes
+        in: query
+        required: false
+        description: 'Comma-separated, case-insensitive list of language types to
+          include. Allowed values: python, java, scala.'
+        schema:
+          type: string
+          example: python, scala
+      - name: status
+        in: query
+        required: false
+        description: 'Filter by a single execution status (case-insensitive). Allowed
+          values: pending, running, done (succeeded), failed, cancelled (canceled),
+          deleted.'
+        schema:
+          type: string
+          example: failed
+      - name: executionName
+        in: query
+        required: false
+        description: Exact match on the caller-supplied execution name.
+        schema:
+          type: string
+          example: my-execution
+      - name: queryId
+        in: query
+        required: false
+        description: Query id of the execute-code-bundle statement, to scope history
+          to a single execution.
+        schema:
+          type: string
+          example: 01c55b6d-c819-b0fb-0001-14e60dccc27e
+      - name: resultLimit
+        in: query
+        required: false
+        description: Maximum number of rows to return. Clamped to [1, CODE_BUNDLE_HISTORY_MAX_RESULT_LIMIT]
+          (default 100).
+        schema:
+          type: integer
+          minimum: 1
+          example: 100
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CodeBundleExecution'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+    post:
+      summary: Execute a code bundle
+      tags:
+      - code-bundle-execution
+      description: Execute a code bundle directly from a stage location, without first
+        creating a named code bundle.
+      operationId: executeCodeBundle
+      parameters:
+      - $ref: common.yaml#/components/parameters/asyncExec
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExecuteCodeBundleRequest'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '408':
+          $ref: common.yaml#/components/responses/408RequestTimeout
+        '409':
+          $ref: common.yaml#/components/responses/409Conflict
+        '410':
+          $ref: common.yaml#/components/responses/410Gone
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/code-bundle-executions/{executionId}:
+    get:
+      summary: Get the status of a code bundle execution
+      tags:
+      - code-bundle-execution
+      description: Fetch the execution status and details of a code bundle execution
+        identified by its execution id.
+      operationId: fetchCodeBundleExecutionStatus
+      parameters:
+      - $ref: '#/components/parameters/executionId'
+      responses:
+        '200':
+          description: successful
+          headers:
+            X-Snowflake-Request-ID:
+              $ref: common.yaml#/components/headers/X-Snowflake-Request-ID
+            Link:
+              $ref: common.yaml#/components/headers/Link
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CodeBundleExecution'
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+  /api/v2/code-bundle-executions/{executionId}:cancel:
+    post:
+      summary: Cancel a code bundle execution
+      tags:
+      - code-bundle-execution
+      description: Cancel a running code bundle execution identified by its execution
+        id.
+      operationId: cancelCodeBundleExecution
+      parameters:
+      - $ref: '#/components/parameters/executionId'
+      responses:
+        '200':
+          $ref: common.yaml#/components/responses/200SuccessResponse
+        '202':
+          $ref: common.yaml#/components/responses/202SuccessAcceptedResponse
+        '400':
+          $ref: common.yaml#/components/responses/400BadRequest
+        '401':
+          $ref: common.yaml#/components/responses/401Unauthorized
+        '403':
+          $ref: common.yaml#/components/responses/403Forbidden
+        '404':
+          $ref: common.yaml#/components/responses/404NotFound
+        '405':
+          $ref: common.yaml#/components/responses/405MethodNotAllowed
+        '429':
+          $ref: common.yaml#/components/responses/429LimitExceeded
+        '500':
+          $ref: common.yaml#/components/responses/500InternalServerError
+        '503':
+          $ref: common.yaml#/components/responses/503ServiceUnavailable
+        '504':
+          $ref: common.yaml#/components/responses/504GatewayTimeout
+components:
+  parameters:
+    executionId:
+      name: executionId
+      description: Unique identifier (query id) of the code bundle execution.
+      required: true
+      in: path
+      schema:
+        type: string
+        example: 01c55b6d-c819-b0fb-0001-14e60dccc27e
+  schemas:
+    CodeBundleExecution:
+      type: object
+      description: A code bundle execution record, sourced from INFORMATION_SCHEMA.CODE_BUNDLE_HISTORY.
+      properties:
+        bundle_name:
+          type: string
+          description: Fully qualified name of the code bundle. May be empty for anonymous
+            (unnamed) executions.
+        database_name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Database supplied when the code bundle was created or executed.
+        schema_name:
+          type: string
+          pattern: ^"([^"]|"")+"|[a-zA-Z_][a-zA-Z0-9_$]*$
+          description: Schema supplied when the code bundle was created or executed.
+        status:
+          type: string
+          description: Execution job status (for example, Queued, In progress, Succeeded,
+            or Failed).
+        bundle_type:
+          type: string
+          description: Type of the code bundle (for example, custompython, mljava,
+            or spark).
+        compute_type:
+          type: string
+          description: Compute on which the execution ran (for example, warehouse,
+            compute_pool, or serverless).
+        language_type:
+          type: string
+          description: Language of the code bundle (for example, python or java).
+        runtime_name:
+          type: string
+          description: Name of the runtime backing the execution (warehouse name or
+            SPCS service name).
+        execution_name:
+          type: string
+          description: Optional caller-supplied name for the execution (used primarily
+            for anonymous executions).
+        start_time:
+          type: string
+          description: Time when the execution started.
+        end_time:
+          type: string
+          description: Time when the execution completed.
+        entrypoint:
+          type: string
+          description: File path entrypoint of the execution.
+        query_id:
+          type: string
+          description: Query id of the statement that executed the code bundle.
+        runtime_version:
+          type: string
+          description: Version of the runtime backing the execution.
+        runtime_status_details:
+          type: string
+          description: Additional detail about the runtime or service status, when
+            available.
+        sql_error_code:
+          type: string
+          description: Snowflake SQL error code associated with a failed execution,
+            if any.
+        error_message:
+          type: string
+          description: Error message associated with a failed execution, if any.
+        task_name:
+          type: string
+          description: Name of the task associated with the execution, when it ran
+            as part of a task.
+    ExecuteCodeBundleRequest:
+      type: object
+      description: Request body for executing a code bundle from a stage location.
+      properties:
+        from_location:
+          type: string
+          description: Stage location (URI) of the code bundle files to execute.
+        entrypoint:
+          type: string
+          description: Name or path of the file (or class) to run as the entry point
+            of the code bundle.
+        arguments:
+          type: array
+          items:
+            type: string
+          description: Command-line arguments passed to the code bundle at execution
+            time.
+        specification:
+          $ref: common-code-bundle.yaml#/components/schemas/CodeBundleSpecification
+        execution_name:
+          type: string
+          description: Optional caller-supplied name recorded in run history for the
+            code bundle execution.
+      required:
+      - from_location
+      - entrypoint
+  securitySchemes:
+    KeyPair:
+      $ref: common.yaml#/components/securitySchemes/KeyPair
+    ExternalOAuth:
+      $ref: common.yaml#/components/securitySchemes/ExternalOAuth
+    SnowflakeOAuth:
+      $ref: common.yaml#/components/securitySchemes/SnowflakeOAuth
+    ProgrammaticAccessToken:
+      $ref: common.yaml#/components/securitySchemes/ProgrammaticAccessToken
+security:
+- KeyPair: []
+- ExternalOAuth: []
+- SnowflakeOAuth: []
+- ProgrammaticAccessToken: []

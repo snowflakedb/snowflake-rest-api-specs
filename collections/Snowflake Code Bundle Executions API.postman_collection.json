@@ -1,0 +1,3465 @@
+{
+  "info": {
+    "_postman_id": "188d40fb-9cee-46da-8fcc-562e79584ce0",
+    "name": "Snowflake Code Bundle Executions API",
+    "description": "The Snowflake Code Bundle Executions API is a REST API that you can use to execute a code bundle directly from a stage location, without first creating a named code bundle, and to monitor or cancel those executions. An execution started this way has no named code bundle backing it and does not live under a specific database or schema, so this resource is exposed at the account level.\n\nContact Support:\n Name: Snowflake, Inc.\n Email: support@snowflake.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57948166",
+    "_collection_link": "https://go.postman.co/collection/57948166-188d40fb-9cee-46da-8fcc-562e79584ce0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "api",
+      "item": [
+        {
+          "name": "v2",
+          "item": [
+            {
+              "name": "code-bundle-executions",
+              "item": [
+                {
+                  "name": "List code bundle executions",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v2/code-bundle-executions?bundleName=\"0303_replace_test\"&database=MY_DB&schema=MY_SCHEMA&entrypoint=main.py&startTimeRangeStart=2026-07-07&startTimeRangeEnd=2026-07-08&bundleTypes=custom, spark&computeTypes=warehouse, compute_pool&languageTypes=python, scala&status=failed&executionName=my-execution&queryId=01c55b6d-c819-b0fb-0001-14e60dccc27e&resultLimit=100",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v2",
+                        "code-bundle-executions"
+                      ],
+                      "query": [
+                        {
+                          "description": "Filter by code bundle name. To match a case-sensitive or special-character identifier, wrap the value in double quotes (for example \"0303_replace_test\"). Combine with database and schema to scope to a fully qualified bundle.",
+                          "key": "bundleName",
+                          "value": "\"0303_replace_test\""
+                        },
+                        {
+                          "description": "Filter by the database supplied when the code bundle was created or executed.",
+                          "key": "database",
+                          "value": "MY_DB"
+                        },
+                        {
+                          "description": "Filter by the schema supplied when the code bundle was created or executed.",
+                          "key": "schema",
+                          "value": "MY_SCHEMA"
+                        },
+                        {
+                          "description": "Exact match on the executed entrypoint file path.",
+                          "key": "entrypoint",
+                          "value": "main.py"
+                        },
+                        {
+                          "description": "Inclusive lower bound on the execution start time, interpreted as TIMESTAMP_LTZ. Accepts any timestamp literal (for example 2026-07-07 or 2026-07-07T00:00:00).",
+                          "key": "startTimeRangeStart",
+                          "value": "2026-07-07"
+                        },
+                        {
+                          "description": "Inclusive upper bound on the execution start time, interpreted as TIMESTAMP_LTZ.",
+                          "key": "startTimeRangeEnd",
+                          "value": "2026-07-08"
+                        },
+                        {
+                          "description": "Comma-separated, case-insensitive list of bundle types to include. Allowed values: custom, ml, spark.",
+                          "key": "bundleTypes",
+                          "value": "custom, spark"
+                        },
+                        {
+                          "description": "Comma-separated, case-insensitive list of compute types to include. Allowed values: warehouse, compute_pool, serverless.",
+                          "key": "computeTypes",
+                          "value": "warehouse, compute_pool"
+                        },
+                        {
+                          "description": "Comma-separated, case-insensitive list of language types to include. Allowed values: python, java, scala.",
+                          "key": "languageTypes",
+                          "value": "python, scala"
+                        },
+                        {
+                          "description": "Filter by a single execution status (case-insensitive). Allowed values: pending, running, done (succeeded), failed, cancelled (canceled), deleted.",
+                          "key": "status",
+                          "value": "failed"
+                        },
+                        {
+                          "description": "Exact match on the caller-supplied execution name.",
+                          "key": "executionName",
+                          "value": "my-execution"
+                        },
+                        {
+                          "description": "Query id of the execute-code-bundle statement, to scope history to a single execution.",
+                          "key": "queryId",
+                          "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e"
+                        },
+                        {
+                          "description": "Maximum number of rows to return. Clamped to [1, CODE_BUNDLE_HISTORY_MAX_RESULT_LIMIT] (default 100).",
+                          "key": "resultLimit",
+                          "value": "100"
+                        }
+                      ]
+                    },
+                    "description": "List code bundle executions in the account, optionally filtered by bundle, entrypoint, time range, type, status, execution name, or query id. All query parameters are optional; with none supplied, recent executions are returned (up to the result limit)."
+                  },
+                  "response": [
+                    {
+                      "name": "successful",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {},
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?bundleName=\"0303_replace_test\"&database=MY_DB&schema=MY_SCHEMA&entrypoint=main.py&startTimeRangeStart=2026-07-07&startTimeRangeEnd=2026-07-08&bundleTypes=custom, spark&computeTypes=warehouse, compute_pool&languageTypes=python, scala&status=failed&executionName=my-execution&queryId=01c55b6d-c819-b0fb-0001-14e60dccc27e&resultLimit=100",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Filter by code bundle name. To match a case-sensitive or special-character identifier, wrap the value in double quotes (for example \"0303_replace_test\"). Combine with database and schema to scope to a fully qualified bundle.",
+                              "key": "bundleName",
+                              "value": "\"0303_replace_test\""
+                            },
+                            {
+                              "description": "Filter by the database supplied when the code bundle was created or executed.",
+                              "key": "database",
+                              "value": "MY_DB"
+                            },
+                            {
+                              "description": "Filter by the schema supplied when the code bundle was created or executed.",
+                              "key": "schema",
+                              "value": "MY_SCHEMA"
+                            },
+                            {
+                              "description": "Exact match on the executed entrypoint file path.",
+                              "key": "entrypoint",
+                              "value": "main.py"
+                            },
+                            {
+                              "description": "Inclusive lower bound on the execution start time, interpreted as TIMESTAMP_LTZ. Accepts any timestamp literal (for example 2026-07-07 or 2026-07-07T00:00:00).",
+                              "key": "startTimeRangeStart",
+                              "value": "2026-07-07"
+                            },
+                            {
+                              "description": "Inclusive upper bound on the execution start time, interpreted as TIMESTAMP_LTZ.",
+                              "key": "startTimeRangeEnd",
+                              "value": "2026-07-08"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of bundle types to include. Allowed values: custom, ml, spark.",
+                              "key": "bundleTypes",
+                              "value": "custom, spark"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of compute types to include. Allowed values: warehouse, compute_pool, serverless.",
+                              "key": "computeTypes",
+                              "value": "warehouse, compute_pool"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of language types to include. Allowed values: python, java, scala.",
+                              "key": "languageTypes",
+                              "value": "python, scala"
+                            },
+                            {
+                              "description": "Filter by a single execution status (case-insensitive). Allowed values: pending, running, done (succeeded), failed, cancelled (canceled), deleted.",
+                              "key": "status",
+                              "value": "failed"
+                            },
+                            {
+                              "description": "Exact match on the caller-supplied execution name.",
+                              "key": "executionName",
+                              "value": "my-execution"
+                            },
+                            {
+                              "description": "Query id of the execute-code-bundle statement, to scope history to a single execution.",
+                              "key": "queryId",
+                              "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e"
+                            },
+                            {
+                              "description": "Maximum number of rows to return. Clamped to [1, CODE_BUNDLE_HISTORY_MAX_RESULT_LIMIT] (default 100).",
+                              "key": "resultLimit",
+                              "value": "100"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        },
+                        {
+                          "key": "Link",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "[\n  {\n    \"bundle_name\": \"string\",\n    \"database_name\": \"ZOdWlCIWL\",\n    \"schema_name\": \"Rhm9\",\n    \"status\": \"string\",\n    \"bundle_type\": \"string\",\n    \"compute_type\": \"string\",\n    \"language_type\": \"string\",\n    \"runtime_name\": \"string\",\n    \"execution_name\": \"string\",\n    \"start_time\": \"string\",\n    \"end_time\": \"string\",\n    \"entrypoint\": \"string\",\n    \"query_id\": \"string\",\n    \"runtime_version\": \"string\",\n    \"runtime_status_details\": \"string\",\n    \"sql_error_code\": \"string\",\n    \"error_message\": \"string\",\n    \"task_name\": \"string\"\n  },\n  {\n    \"bundle_name\": \"string\",\n    \"database_name\": \"\\\"\\\"\\\"E\\\"\\\"\\\"\",\n    \"schema_name\": \"XRm5r\",\n    \"status\": \"string\",\n    \"bundle_type\": \"string\",\n    \"compute_type\": \"string\",\n    \"language_type\": \"string\",\n    \"runtime_name\": \"string\",\n    \"execution_name\": \"string\",\n    \"start_time\": \"string\",\n    \"end_time\": \"string\",\n    \"entrypoint\": \"string\",\n    \"query_id\": \"string\",\n    \"runtime_version\": \"string\",\n    \"runtime_status_details\": \"string\",\n    \"sql_error_code\": \"string\",\n    \"error_message\": \"string\",\n    \"task_name\": \"string\"\n  }\n]"
+                    },
+                    {
+                      "name": "Successfully accepted the request, but it is not completed yet.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {},
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?bundleName=\"0303_replace_test\"&database=MY_DB&schema=MY_SCHEMA&entrypoint=main.py&startTimeRangeStart=2026-07-07&startTimeRangeEnd=2026-07-08&bundleTypes=custom, spark&computeTypes=warehouse, compute_pool&languageTypes=python, scala&status=failed&executionName=my-execution&queryId=01c55b6d-c819-b0fb-0001-14e60dccc27e&resultLimit=100",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Filter by code bundle name. To match a case-sensitive or special-character identifier, wrap the value in double quotes (for example \"0303_replace_test\"). Combine with database and schema to scope to a fully qualified bundle.",
+                              "key": "bundleName",
+                              "value": "\"0303_replace_test\""
+                            },
+                            {
+                              "description": "Filter by the database supplied when the code bundle was created or executed.",
+                              "key": "database",
+                              "value": "MY_DB"
+                            },
+                            {
+                              "description": "Filter by the schema supplied when the code bundle was created or executed.",
+                              "key": "schema",
+                              "value": "MY_SCHEMA"
+                            },
+                            {
+                              "description": "Exact match on the executed entrypoint file path.",
+                              "key": "entrypoint",
+                              "value": "main.py"
+                            },
+                            {
+                              "description": "Inclusive lower bound on the execution start time, interpreted as TIMESTAMP_LTZ. Accepts any timestamp literal (for example 2026-07-07 or 2026-07-07T00:00:00).",
+                              "key": "startTimeRangeStart",
+                              "value": "2026-07-07"
+                            },
+                            {
+                              "description": "Inclusive upper bound on the execution start time, interpreted as TIMESTAMP_LTZ.",
+                              "key": "startTimeRangeEnd",
+                              "value": "2026-07-08"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of bundle types to include. Allowed values: custom, ml, spark.",
+                              "key": "bundleTypes",
+                              "value": "custom, spark"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of compute types to include. Allowed values: warehouse, compute_pool, serverless.",
+                              "key": "computeTypes",
+                              "value": "warehouse, compute_pool"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of language types to include. Allowed values: python, java, scala.",
+                              "key": "languageTypes",
+                              "value": "python, scala"
+                            },
+                            {
+                              "description": "Filter by a single execution status (case-insensitive). Allowed values: pending, running, done (succeeded), failed, cancelled (canceled), deleted.",
+                              "key": "status",
+                              "value": "failed"
+                            },
+                            {
+                              "description": "Exact match on the caller-supplied execution name.",
+                              "key": "executionName",
+                              "value": "my-execution"
+                            },
+                            {
+                              "description": "Query id of the execute-code-bundle statement, to scope history to a single execution.",
+                              "key": "queryId",
+                              "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e"
+                            },
+                            {
+                              "description": "Maximum number of rows to return. Clamped to [1, CODE_BUNDLE_HISTORY_MAX_RESULT_LIMIT] (default 100).",
+                              "key": "resultLimit",
+                              "value": "100"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Accepted",
+                      "code": 202,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "Location",
+                          "value": "string"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the request body for retry.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {},
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?bundleName=\"0303_replace_test\"&database=MY_DB&schema=MY_SCHEMA&entrypoint=main.py&startTimeRangeStart=2026-07-07&startTimeRangeEnd=2026-07-08&bundleTypes=custom, spark&computeTypes=warehouse, compute_pool&languageTypes=python, scala&status=failed&executionName=my-execution&queryId=01c55b6d-c819-b0fb-0001-14e60dccc27e&resultLimit=100",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Filter by code bundle name. To match a case-sensitive or special-character identifier, wrap the value in double quotes (for example \"0303_replace_test\"). Combine with database and schema to scope to a fully qualified bundle.",
+                              "key": "bundleName",
+                              "value": "\"0303_replace_test\""
+                            },
+                            {
+                              "description": "Filter by the database supplied when the code bundle was created or executed.",
+                              "key": "database",
+                              "value": "MY_DB"
+                            },
+                            {
+                              "description": "Filter by the schema supplied when the code bundle was created or executed.",
+                              "key": "schema",
+                              "value": "MY_SCHEMA"
+                            },
+                            {
+                              "description": "Exact match on the executed entrypoint file path.",
+                              "key": "entrypoint",
+                              "value": "main.py"
+                            },
+                            {
+                              "description": "Inclusive lower bound on the execution start time, interpreted as TIMESTAMP_LTZ. Accepts any timestamp literal (for example 2026-07-07 or 2026-07-07T00:00:00).",
+                              "key": "startTimeRangeStart",
+                              "value": "2026-07-07"
+                            },
+                            {
+                              "description": "Inclusive upper bound on the execution start time, interpreted as TIMESTAMP_LTZ.",
+                              "key": "startTimeRangeEnd",
+                              "value": "2026-07-08"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of bundle types to include. Allowed values: custom, ml, spark.",
+                              "key": "bundleTypes",
+                              "value": "custom, spark"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of compute types to include. Allowed values: warehouse, compute_pool, serverless.",
+                              "key": "computeTypes",
+                              "value": "warehouse, compute_pool"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of language types to include. Allowed values: python, java, scala.",
+                              "key": "languageTypes",
+                              "value": "python, scala"
+                            },
+                            {
+                              "description": "Filter by a single execution status (case-insensitive). Allowed values: pending, running, done (succeeded), failed, cancelled (canceled), deleted.",
+                              "key": "status",
+                              "value": "failed"
+                            },
+                            {
+                              "description": "Exact match on the caller-supplied execution name.",
+                              "key": "executionName",
+                              "value": "my-execution"
+                            },
+                            {
+                              "description": "Query id of the execute-code-bundle statement, to scope history to a single execution.",
+                              "key": "queryId",
+                              "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e"
+                            },
+                            {
+                              "description": "Maximum number of rows to return. Clamped to [1, CODE_BUNDLE_HISTORY_MAX_RESULT_LIMIT] (default 100).",
+                              "key": "resultLimit",
+                              "value": "100"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Bad Request",
+                      "code": 400,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a new access token for retry.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {},
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?bundleName=\"0303_replace_test\"&database=MY_DB&schema=MY_SCHEMA&entrypoint=main.py&startTimeRangeStart=2026-07-07&startTimeRangeEnd=2026-07-08&bundleTypes=custom, spark&computeTypes=warehouse, compute_pool&languageTypes=python, scala&status=failed&executionName=my-execution&queryId=01c55b6d-c819-b0fb-0001-14e60dccc27e&resultLimit=100",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Filter by code bundle name. To match a case-sensitive or special-character identifier, wrap the value in double quotes (for example \"0303_replace_test\"). Combine with database and schema to scope to a fully qualified bundle.",
+                              "key": "bundleName",
+                              "value": "\"0303_replace_test\""
+                            },
+                            {
+                              "description": "Filter by the database supplied when the code bundle was created or executed.",
+                              "key": "database",
+                              "value": "MY_DB"
+                            },
+                            {
+                              "description": "Filter by the schema supplied when the code bundle was created or executed.",
+                              "key": "schema",
+                              "value": "MY_SCHEMA"
+                            },
+                            {
+                              "description": "Exact match on the executed entrypoint file path.",
+                              "key": "entrypoint",
+                              "value": "main.py"
+                            },
+                            {
+                              "description": "Inclusive lower bound on the execution start time, interpreted as TIMESTAMP_LTZ. Accepts any timestamp literal (for example 2026-07-07 or 2026-07-07T00:00:00).",
+                              "key": "startTimeRangeStart",
+                              "value": "2026-07-07"
+                            },
+                            {
+                              "description": "Inclusive upper bound on the execution start time, interpreted as TIMESTAMP_LTZ.",
+                              "key": "startTimeRangeEnd",
+                              "value": "2026-07-08"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of bundle types to include. Allowed values: custom, ml, spark.",
+                              "key": "bundleTypes",
+                              "value": "custom, spark"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of compute types to include. Allowed values: warehouse, compute_pool, serverless.",
+                              "key": "computeTypes",
+                              "value": "warehouse, compute_pool"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of language types to include. Allowed values: python, java, scala.",
+                              "key": "languageTypes",
+                              "value": "python, scala"
+                            },
+                            {
+                              "description": "Filter by a single execution status (case-insensitive). Allowed values: pending, running, done (succeeded), failed, cancelled (canceled), deleted.",
+                              "key": "status",
+                              "value": "failed"
+                            },
+                            {
+                              "description": "Exact match on the caller-supplied execution name.",
+                              "key": "executionName",
+                              "value": "my-execution"
+                            },
+                            {
+                              "description": "Query id of the execute-code-bundle statement, to scope history to a single execution.",
+                              "key": "queryId",
+                              "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e"
+                            },
+                            {
+                              "description": "Maximum number of rows to return. Clamped to [1, CODE_BUNDLE_HISTORY_MAX_RESULT_LIMIT] (default 100).",
+                              "key": "resultLimit",
+                              "value": "100"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Unauthorized",
+                      "code": 401,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {},
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?bundleName=\"0303_replace_test\"&database=MY_DB&schema=MY_SCHEMA&entrypoint=main.py&startTimeRangeStart=2026-07-07&startTimeRangeEnd=2026-07-08&bundleTypes=custom, spark&computeTypes=warehouse, compute_pool&languageTypes=python, scala&status=failed&executionName=my-execution&queryId=01c55b6d-c819-b0fb-0001-14e60dccc27e&resultLimit=100",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Filter by code bundle name. To match a case-sensitive or special-character identifier, wrap the value in double quotes (for example \"0303_replace_test\"). Combine with database and schema to scope to a fully qualified bundle.",
+                              "key": "bundleName",
+                              "value": "\"0303_replace_test\""
+                            },
+                            {
+                              "description": "Filter by the database supplied when the code bundle was created or executed.",
+                              "key": "database",
+                              "value": "MY_DB"
+                            },
+                            {
+                              "description": "Filter by the schema supplied when the code bundle was created or executed.",
+                              "key": "schema",
+                              "value": "MY_SCHEMA"
+                            },
+                            {
+                              "description": "Exact match on the executed entrypoint file path.",
+                              "key": "entrypoint",
+                              "value": "main.py"
+                            },
+                            {
+                              "description": "Inclusive lower bound on the execution start time, interpreted as TIMESTAMP_LTZ. Accepts any timestamp literal (for example 2026-07-07 or 2026-07-07T00:00:00).",
+                              "key": "startTimeRangeStart",
+                              "value": "2026-07-07"
+                            },
+                            {
+                              "description": "Inclusive upper bound on the execution start time, interpreted as TIMESTAMP_LTZ.",
+                              "key": "startTimeRangeEnd",
+                              "value": "2026-07-08"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of bundle types to include. Allowed values: custom, ml, spark.",
+                              "key": "bundleTypes",
+                              "value": "custom, spark"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of compute types to include. Allowed values: warehouse, compute_pool, serverless.",
+                              "key": "computeTypes",
+                              "value": "warehouse, compute_pool"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of language types to include. Allowed values: python, java, scala.",
+                              "key": "languageTypes",
+                              "value": "python, scala"
+                            },
+                            {
+                              "description": "Filter by a single execution status (case-insensitive). Allowed values: pending, running, done (succeeded), failed, cancelled (canceled), deleted.",
+                              "key": "status",
+                              "value": "failed"
+                            },
+                            {
+                              "description": "Exact match on the caller-supplied execution name.",
+                              "key": "executionName",
+                              "value": "my-execution"
+                            },
+                            {
+                              "description": "Query id of the execute-code-bundle statement, to scope history to a single execution.",
+                              "key": "queryId",
+                              "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e"
+                            },
+                            {
+                              "description": "Maximum number of rows to return. Clamped to [1, CODE_BUNDLE_HISTORY_MAX_RESULT_LIMIT] (default 100).",
+                              "key": "resultLimit",
+                              "value": "100"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Forbidden",
+                      "code": 403,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {},
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?bundleName=\"0303_replace_test\"&database=MY_DB&schema=MY_SCHEMA&entrypoint=main.py&startTimeRangeStart=2026-07-07&startTimeRangeEnd=2026-07-08&bundleTypes=custom, spark&computeTypes=warehouse, compute_pool&languageTypes=python, scala&status=failed&executionName=my-execution&queryId=01c55b6d-c819-b0fb-0001-14e60dccc27e&resultLimit=100",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Filter by code bundle name. To match a case-sensitive or special-character identifier, wrap the value in double quotes (for example \"0303_replace_test\"). Combine with database and schema to scope to a fully qualified bundle.",
+                              "key": "bundleName",
+                              "value": "\"0303_replace_test\""
+                            },
+                            {
+                              "description": "Filter by the database supplied when the code bundle was created or executed.",
+                              "key": "database",
+                              "value": "MY_DB"
+                            },
+                            {
+                              "description": "Filter by the schema supplied when the code bundle was created or executed.",
+                              "key": "schema",
+                              "value": "MY_SCHEMA"
+                            },
+                            {
+                              "description": "Exact match on the executed entrypoint file path.",
+                              "key": "entrypoint",
+                              "value": "main.py"
+                            },
+                            {
+                              "description": "Inclusive lower bound on the execution start time, interpreted as TIMESTAMP_LTZ. Accepts any timestamp literal (for example 2026-07-07 or 2026-07-07T00:00:00).",
+                              "key": "startTimeRangeStart",
+                              "value": "2026-07-07"
+                            },
+                            {
+                              "description": "Inclusive upper bound on the execution start time, interpreted as TIMESTAMP_LTZ.",
+                              "key": "startTimeRangeEnd",
+                              "value": "2026-07-08"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of bundle types to include. Allowed values: custom, ml, spark.",
+                              "key": "bundleTypes",
+                              "value": "custom, spark"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of compute types to include. Allowed values: warehouse, compute_pool, serverless.",
+                              "key": "computeTypes",
+                              "value": "warehouse, compute_pool"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of language types to include. Allowed values: python, java, scala.",
+                              "key": "languageTypes",
+                              "value": "python, scala"
+                            },
+                            {
+                              "description": "Filter by a single execution status (case-insensitive). Allowed values: pending, running, done (succeeded), failed, cancelled (canceled), deleted.",
+                              "key": "status",
+                              "value": "failed"
+                            },
+                            {
+                              "description": "Exact match on the caller-supplied execution name.",
+                              "key": "executionName",
+                              "value": "my-execution"
+                            },
+                            {
+                              "description": "Query id of the execute-code-bundle statement, to scope history to a single execution.",
+                              "key": "queryId",
+                              "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e"
+                            },
+                            {
+                              "description": "Maximum number of rows to return. Clamped to [1, CODE_BUNDLE_HISTORY_MAX_RESULT_LIMIT] (default 100).",
+                              "key": "resultLimit",
+                              "value": "100"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {},
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?bundleName=\"0303_replace_test\"&database=MY_DB&schema=MY_SCHEMA&entrypoint=main.py&startTimeRangeStart=2026-07-07&startTimeRangeEnd=2026-07-08&bundleTypes=custom, spark&computeTypes=warehouse, compute_pool&languageTypes=python, scala&status=failed&executionName=my-execution&queryId=01c55b6d-c819-b0fb-0001-14e60dccc27e&resultLimit=100",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Filter by code bundle name. To match a case-sensitive or special-character identifier, wrap the value in double quotes (for example \"0303_replace_test\"). Combine with database and schema to scope to a fully qualified bundle.",
+                              "key": "bundleName",
+                              "value": "\"0303_replace_test\""
+                            },
+                            {
+                              "description": "Filter by the database supplied when the code bundle was created or executed.",
+                              "key": "database",
+                              "value": "MY_DB"
+                            },
+                            {
+                              "description": "Filter by the schema supplied when the code bundle was created or executed.",
+                              "key": "schema",
+                              "value": "MY_SCHEMA"
+                            },
+                            {
+                              "description": "Exact match on the executed entrypoint file path.",
+                              "key": "entrypoint",
+                              "value": "main.py"
+                            },
+                            {
+                              "description": "Inclusive lower bound on the execution start time, interpreted as TIMESTAMP_LTZ. Accepts any timestamp literal (for example 2026-07-07 or 2026-07-07T00:00:00).",
+                              "key": "startTimeRangeStart",
+                              "value": "2026-07-07"
+                            },
+                            {
+                              "description": "Inclusive upper bound on the execution start time, interpreted as TIMESTAMP_LTZ.",
+                              "key": "startTimeRangeEnd",
+                              "value": "2026-07-08"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of bundle types to include. Allowed values: custom, ml, spark.",
+                              "key": "bundleTypes",
+                              "value": "custom, spark"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of compute types to include. Allowed values: warehouse, compute_pool, serverless.",
+                              "key": "computeTypes",
+                              "value": "warehouse, compute_pool"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of language types to include. Allowed values: python, java, scala.",
+                              "key": "languageTypes",
+                              "value": "python, scala"
+                            },
+                            {
+                              "description": "Filter by a single execution status (case-insensitive). Allowed values: pending, running, done (succeeded), failed, cancelled (canceled), deleted.",
+                              "key": "status",
+                              "value": "failed"
+                            },
+                            {
+                              "description": "Exact match on the caller-supplied execution name.",
+                              "key": "executionName",
+                              "value": "my-execution"
+                            },
+                            {
+                              "description": "Query id of the execute-code-bundle statement, to scope history to a single execution.",
+                              "key": "queryId",
+                              "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e"
+                            },
+                            {
+                              "description": "Maximum number of rows to return. Clamped to [1, CODE_BUNDLE_HISTORY_MAX_RESULT_LIMIT] (default 100).",
+                              "key": "resultLimit",
+                              "value": "100"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Method Not Allowed",
+                      "code": 405,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {},
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?bundleName=\"0303_replace_test\"&database=MY_DB&schema=MY_SCHEMA&entrypoint=main.py&startTimeRangeStart=2026-07-07&startTimeRangeEnd=2026-07-08&bundleTypes=custom, spark&computeTypes=warehouse, compute_pool&languageTypes=python, scala&status=failed&executionName=my-execution&queryId=01c55b6d-c819-b0fb-0001-14e60dccc27e&resultLimit=100",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Filter by code bundle name. To match a case-sensitive or special-character identifier, wrap the value in double quotes (for example \"0303_replace_test\"). Combine with database and schema to scope to a fully qualified bundle.",
+                              "key": "bundleName",
+                              "value": "\"0303_replace_test\""
+                            },
+                            {
+                              "description": "Filter by the database supplied when the code bundle was created or executed.",
+                              "key": "database",
+                              "value": "MY_DB"
+                            },
+                            {
+                              "description": "Filter by the schema supplied when the code bundle was created or executed.",
+                              "key": "schema",
+                              "value": "MY_SCHEMA"
+                            },
+                            {
+                              "description": "Exact match on the executed entrypoint file path.",
+                              "key": "entrypoint",
+                              "value": "main.py"
+                            },
+                            {
+                              "description": "Inclusive lower bound on the execution start time, interpreted as TIMESTAMP_LTZ. Accepts any timestamp literal (for example 2026-07-07 or 2026-07-07T00:00:00).",
+                              "key": "startTimeRangeStart",
+                              "value": "2026-07-07"
+                            },
+                            {
+                              "description": "Inclusive upper bound on the execution start time, interpreted as TIMESTAMP_LTZ.",
+                              "key": "startTimeRangeEnd",
+                              "value": "2026-07-08"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of bundle types to include. Allowed values: custom, ml, spark.",
+                              "key": "bundleTypes",
+                              "value": "custom, spark"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of compute types to include. Allowed values: warehouse, compute_pool, serverless.",
+                              "key": "computeTypes",
+                              "value": "warehouse, compute_pool"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of language types to include. Allowed values: python, java, scala.",
+                              "key": "languageTypes",
+                              "value": "python, scala"
+                            },
+                            {
+                              "description": "Filter by a single execution status (case-insensitive). Allowed values: pending, running, done (succeeded), failed, cancelled (canceled), deleted.",
+                              "key": "status",
+                              "value": "failed"
+                            },
+                            {
+                              "description": "Exact match on the caller-supplied execution name.",
+                              "key": "executionName",
+                              "value": "my-execution"
+                            },
+                            {
+                              "description": "Query id of the execute-code-bundle statement, to scope history to a single execution.",
+                              "key": "queryId",
+                              "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e"
+                            },
+                            {
+                              "description": "Maximum number of rows to return. Clamped to [1, CODE_BUNDLE_HISTORY_MAX_RESULT_LIMIT] (default 100).",
+                              "key": "resultLimit",
+                              "value": "100"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Too Many Requests",
+                      "code": 429,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {},
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?bundleName=\"0303_replace_test\"&database=MY_DB&schema=MY_SCHEMA&entrypoint=main.py&startTimeRangeStart=2026-07-07&startTimeRangeEnd=2026-07-08&bundleTypes=custom, spark&computeTypes=warehouse, compute_pool&languageTypes=python, scala&status=failed&executionName=my-execution&queryId=01c55b6d-c819-b0fb-0001-14e60dccc27e&resultLimit=100",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Filter by code bundle name. To match a case-sensitive or special-character identifier, wrap the value in double quotes (for example \"0303_replace_test\"). Combine with database and schema to scope to a fully qualified bundle.",
+                              "key": "bundleName",
+                              "value": "\"0303_replace_test\""
+                            },
+                            {
+                              "description": "Filter by the database supplied when the code bundle was created or executed.",
+                              "key": "database",
+                              "value": "MY_DB"
+                            },
+                            {
+                              "description": "Filter by the schema supplied when the code bundle was created or executed.",
+                              "key": "schema",
+                              "value": "MY_SCHEMA"
+                            },
+                            {
+                              "description": "Exact match on the executed entrypoint file path.",
+                              "key": "entrypoint",
+                              "value": "main.py"
+                            },
+                            {
+                              "description": "Inclusive lower bound on the execution start time, interpreted as TIMESTAMP_LTZ. Accepts any timestamp literal (for example 2026-07-07 or 2026-07-07T00:00:00).",
+                              "key": "startTimeRangeStart",
+                              "value": "2026-07-07"
+                            },
+                            {
+                              "description": "Inclusive upper bound on the execution start time, interpreted as TIMESTAMP_LTZ.",
+                              "key": "startTimeRangeEnd",
+                              "value": "2026-07-08"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of bundle types to include. Allowed values: custom, ml, spark.",
+                              "key": "bundleTypes",
+                              "value": "custom, spark"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of compute types to include. Allowed values: warehouse, compute_pool, serverless.",
+                              "key": "computeTypes",
+                              "value": "warehouse, compute_pool"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of language types to include. Allowed values: python, java, scala.",
+                              "key": "languageTypes",
+                              "value": "python, scala"
+                            },
+                            {
+                              "description": "Filter by a single execution status (case-insensitive). Allowed values: pending, running, done (succeeded), failed, cancelled (canceled), deleted.",
+                              "key": "status",
+                              "value": "failed"
+                            },
+                            {
+                              "description": "Exact match on the caller-supplied execution name.",
+                              "key": "executionName",
+                              "value": "my-execution"
+                            },
+                            {
+                              "description": "Query id of the execute-code-bundle statement, to scope history to a single execution.",
+                              "key": "queryId",
+                              "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e"
+                            },
+                            {
+                              "description": "Maximum number of rows to return. Clamped to [1, CODE_BUNDLE_HISTORY_MAX_RESULT_LIMIT] (default 100).",
+                              "key": "resultLimit",
+                              "value": "100"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Internal Server Error",
+                      "code": 500,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {},
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?bundleName=\"0303_replace_test\"&database=MY_DB&schema=MY_SCHEMA&entrypoint=main.py&startTimeRangeStart=2026-07-07&startTimeRangeEnd=2026-07-08&bundleTypes=custom, spark&computeTypes=warehouse, compute_pool&languageTypes=python, scala&status=failed&executionName=my-execution&queryId=01c55b6d-c819-b0fb-0001-14e60dccc27e&resultLimit=100",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Filter by code bundle name. To match a case-sensitive or special-character identifier, wrap the value in double quotes (for example \"0303_replace_test\"). Combine with database and schema to scope to a fully qualified bundle.",
+                              "key": "bundleName",
+                              "value": "\"0303_replace_test\""
+                            },
+                            {
+                              "description": "Filter by the database supplied when the code bundle was created or executed.",
+                              "key": "database",
+                              "value": "MY_DB"
+                            },
+                            {
+                              "description": "Filter by the schema supplied when the code bundle was created or executed.",
+                              "key": "schema",
+                              "value": "MY_SCHEMA"
+                            },
+                            {
+                              "description": "Exact match on the executed entrypoint file path.",
+                              "key": "entrypoint",
+                              "value": "main.py"
+                            },
+                            {
+                              "description": "Inclusive lower bound on the execution start time, interpreted as TIMESTAMP_LTZ. Accepts any timestamp literal (for example 2026-07-07 or 2026-07-07T00:00:00).",
+                              "key": "startTimeRangeStart",
+                              "value": "2026-07-07"
+                            },
+                            {
+                              "description": "Inclusive upper bound on the execution start time, interpreted as TIMESTAMP_LTZ.",
+                              "key": "startTimeRangeEnd",
+                              "value": "2026-07-08"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of bundle types to include. Allowed values: custom, ml, spark.",
+                              "key": "bundleTypes",
+                              "value": "custom, spark"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of compute types to include. Allowed values: warehouse, compute_pool, serverless.",
+                              "key": "computeTypes",
+                              "value": "warehouse, compute_pool"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of language types to include. Allowed values: python, java, scala.",
+                              "key": "languageTypes",
+                              "value": "python, scala"
+                            },
+                            {
+                              "description": "Filter by a single execution status (case-insensitive). Allowed values: pending, running, done (succeeded), failed, cancelled (canceled), deleted.",
+                              "key": "status",
+                              "value": "failed"
+                            },
+                            {
+                              "description": "Exact match on the caller-supplied execution name.",
+                              "key": "executionName",
+                              "value": "my-execution"
+                            },
+                            {
+                              "description": "Query id of the execute-code-bundle statement, to scope history to a single execution.",
+                              "key": "queryId",
+                              "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e"
+                            },
+                            {
+                              "description": "Maximum number of rows to return. Clamped to [1, CODE_BUNDLE_HISTORY_MAX_RESULT_LIMIT] (default 100).",
+                              "key": "resultLimit",
+                              "value": "100"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Service Unavailable",
+                      "code": 503,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {},
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?bundleName=\"0303_replace_test\"&database=MY_DB&schema=MY_SCHEMA&entrypoint=main.py&startTimeRangeStart=2026-07-07&startTimeRangeEnd=2026-07-08&bundleTypes=custom, spark&computeTypes=warehouse, compute_pool&languageTypes=python, scala&status=failed&executionName=my-execution&queryId=01c55b6d-c819-b0fb-0001-14e60dccc27e&resultLimit=100",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Filter by code bundle name. To match a case-sensitive or special-character identifier, wrap the value in double quotes (for example \"0303_replace_test\"). Combine with database and schema to scope to a fully qualified bundle.",
+                              "key": "bundleName",
+                              "value": "\"0303_replace_test\""
+                            },
+                            {
+                              "description": "Filter by the database supplied when the code bundle was created or executed.",
+                              "key": "database",
+                              "value": "MY_DB"
+                            },
+                            {
+                              "description": "Filter by the schema supplied when the code bundle was created or executed.",
+                              "key": "schema",
+                              "value": "MY_SCHEMA"
+                            },
+                            {
+                              "description": "Exact match on the executed entrypoint file path.",
+                              "key": "entrypoint",
+                              "value": "main.py"
+                            },
+                            {
+                              "description": "Inclusive lower bound on the execution start time, interpreted as TIMESTAMP_LTZ. Accepts any timestamp literal (for example 2026-07-07 or 2026-07-07T00:00:00).",
+                              "key": "startTimeRangeStart",
+                              "value": "2026-07-07"
+                            },
+                            {
+                              "description": "Inclusive upper bound on the execution start time, interpreted as TIMESTAMP_LTZ.",
+                              "key": "startTimeRangeEnd",
+                              "value": "2026-07-08"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of bundle types to include. Allowed values: custom, ml, spark.",
+                              "key": "bundleTypes",
+                              "value": "custom, spark"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of compute types to include. Allowed values: warehouse, compute_pool, serverless.",
+                              "key": "computeTypes",
+                              "value": "warehouse, compute_pool"
+                            },
+                            {
+                              "description": "Comma-separated, case-insensitive list of language types to include. Allowed values: python, java, scala.",
+                              "key": "languageTypes",
+                              "value": "python, scala"
+                            },
+                            {
+                              "description": "Filter by a single execution status (case-insensitive). Allowed values: pending, running, done (succeeded), failed, cancelled (canceled), deleted.",
+                              "key": "status",
+                              "value": "failed"
+                            },
+                            {
+                              "description": "Exact match on the caller-supplied execution name.",
+                              "key": "executionName",
+                              "value": "my-execution"
+                            },
+                            {
+                              "description": "Query id of the execute-code-bundle statement, to scope history to a single execution.",
+                              "key": "queryId",
+                              "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e"
+                            },
+                            {
+                              "description": "Maximum number of rows to return. Clamped to [1, CODE_BUNDLE_HISTORY_MAX_RESULT_LIMIT] (default 100).",
+                              "key": "resultLimit",
+                              "value": "100"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Gateway Timeout",
+                      "code": 504,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Execute a code bundle",
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v2",
+                        "code-bundle-executions"
+                      ],
+                      "query": [
+                        {
+                          "description": "Asynchronous execution enable/disable. Default is disable.",
+                          "key": "asyncExec",
+                          "value": "false"
+                        }
+                      ]
+                    },
+                    "description": "Execute a code bundle directly from a stage location, without first creating a named code bundle."
+                  },
+                  "response": [
+                    {
+                      "name": "Successful request.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Asynchronous execution enable/disable. Default is disable.",
+                              "key": "asyncExec",
+                              "value": "false"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"status\": \"Request successfully completed\"\n}"
+                    },
+                    {
+                      "name": "Successfully accepted the request, but it is not completed yet.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Asynchronous execution enable/disable. Default is disable.",
+                              "key": "asyncExec",
+                              "value": "false"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Accepted",
+                      "code": 202,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "Location",
+                          "value": "string"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the request body for retry.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Asynchronous execution enable/disable. Default is disable.",
+                              "key": "asyncExec",
+                              "value": "false"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Bad Request",
+                      "code": 400,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a new access token for retry.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Asynchronous execution enable/disable. Default is disable.",
+                              "key": "asyncExec",
+                              "value": "false"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Unauthorized",
+                      "code": 401,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Asynchronous execution enable/disable. Default is disable.",
+                              "key": "asyncExec",
+                              "value": "false"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Forbidden",
+                      "code": 403,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Asynchronous execution enable/disable. Default is disable.",
+                              "key": "asyncExec",
+                              "value": "false"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Asynchronous execution enable/disable. Default is disable.",
+                              "key": "asyncExec",
+                              "value": "false"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Method Not Allowed",
+                      "code": 405,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Request Timeout. This indicates that the request from the client timed out and was not completed by the server.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Asynchronous execution enable/disable. Default is disable.",
+                              "key": "asyncExec",
+                              "value": "false"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Request Timeout",
+                      "code": 408,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Conflict. The requested operation could not be performed due to a conflicting state that could not be resolved. This usually happens when a CREATE request was performed when there is a pre-existing resource with the same name, and also without one of the options orReplace/ifNotExists.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Asynchronous execution enable/disable. Default is disable.",
+                              "key": "asyncExec",
+                              "value": "false"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Conflict",
+                      "code": 409,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Gone. This error is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Asynchronous execution enable/disable. Default is disable.",
+                              "key": "asyncExec",
+                              "value": "false"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Gone",
+                      "code": 410,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Asynchronous execution enable/disable. Default is disable.",
+                              "key": "asyncExec",
+                              "value": "false"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Too Many Requests",
+                      "code": 429,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Asynchronous execution enable/disable. Default is disable.",
+                              "key": "asyncExec",
+                              "value": "false"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Internal Server Error",
+                      "code": 500,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Asynchronous execution enable/disable. Default is disable.",
+                              "key": "asyncExec",
+                              "value": "false"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Service Unavailable",
+                      "code": 503,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    },
+                    {
+                      "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"from_location\": \"string\",\n  \"entrypoint\": \"string\",\n  \"arguments\": [\n    \"string\",\n    \"string\"\n  ],\n  \"specification\": {\n    \"bundle\": {\n      \"type\": \"custom\",\n      \"compute_type\": \"warehouse\",\n      \"language\": \"python\",\n      \"compute_options\": {\n        \"warehouse\": \"db.schema.warehouse_name\",\n        \"runtime_version\": \"3.13\"\n      },\n      \"properties\": {\n        \"requirements_file\": \"requirements.txt\"\n      },\n      \"artifact_repositories\": [\n        \"db.my_schema.my_repo\"\n      ],\n      \"stage_mounts\": {\n        \"my_mount\": {\n          \"stage_url\": \"@stage/dir\",\n          \"mount_path\": \"/tmp/dir1\"\n        }\n      },\n      \"secrets\": [\n        \"string\",\n        \"string\"\n      ],\n      \"external_access_integrations\": [\n        \"string\",\n        \"string\"\n      ],\n      \"env_vars\": [\n        {\n          \"my_env_var\": \"101\"\n        }\n      ]\n    }\n  },\n  \"execution_name\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions?asyncExec=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions"
+                          ],
+                          "query": [
+                            {
+                              "description": "Asynchronous execution enable/disable. Default is disable.",
+                              "key": "asyncExec",
+                              "value": "false"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Gateway Timeout",
+                      "code": 504,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "X-Snowflake-Request-ID",
+                          "value": ""
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "{executionId}",
+                  "item": [
+                    {
+                      "name": "Get the status of a code bundle execution",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions/:executionId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions",
+                            ":executionId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "executionId",
+                              "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e",
+                              "description": "Unique identifier (query id) of the code bundle execution."
+                            }
+                          ]
+                        },
+                        "description": "Fetch the execution status and details of a code bundle execution identified by its execution id."
+                      },
+                      "response": [
+                        {
+                          "name": "successful",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/:executionId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                ":executionId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "executionId",
+                                  "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e",
+                                  "description": "Unique identifier (query id) of the code bundle execution."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            },
+                            {
+                              "key": "Link",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "[\n  {\n    \"bundle_name\": \"string\",\n    \"database_name\": \"ZOdWlCIWL\",\n    \"schema_name\": \"Rhm9\",\n    \"status\": \"string\",\n    \"bundle_type\": \"string\",\n    \"compute_type\": \"string\",\n    \"language_type\": \"string\",\n    \"runtime_name\": \"string\",\n    \"execution_name\": \"string\",\n    \"start_time\": \"string\",\n    \"end_time\": \"string\",\n    \"entrypoint\": \"string\",\n    \"query_id\": \"string\",\n    \"runtime_version\": \"string\",\n    \"runtime_status_details\": \"string\",\n    \"sql_error_code\": \"string\",\n    \"error_message\": \"string\",\n    \"task_name\": \"string\"\n  },\n  {\n    \"bundle_name\": \"string\",\n    \"database_name\": \"\\\"\\\"\\\"E\\\"\\\"\\\"\",\n    \"schema_name\": \"XRm5r\",\n    \"status\": \"string\",\n    \"bundle_type\": \"string\",\n    \"compute_type\": \"string\",\n    \"language_type\": \"string\",\n    \"runtime_name\": \"string\",\n    \"execution_name\": \"string\",\n    \"start_time\": \"string\",\n    \"end_time\": \"string\",\n    \"entrypoint\": \"string\",\n    \"query_id\": \"string\",\n    \"runtime_version\": \"string\",\n    \"runtime_status_details\": \"string\",\n    \"sql_error_code\": \"string\",\n    \"error_message\": \"string\",\n    \"task_name\": \"string\"\n  }\n]"
+                        },
+                        {
+                          "name": "Successfully accepted the request, but it is not completed yet.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/:executionId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                ":executionId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "executionId",
+                                  "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e",
+                                  "description": "Unique identifier (query id) of the code bundle execution."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Accepted",
+                          "code": 202,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "Location",
+                              "value": "string"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the request body for retry.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/:executionId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                ":executionId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "executionId",
+                                  "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e",
+                                  "description": "Unique identifier (query id) of the code bundle execution."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Bad Request",
+                          "code": 400,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a new access token for retry.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/:executionId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                ":executionId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "executionId",
+                                  "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e",
+                                  "description": "Unique identifier (query id) of the code bundle execution."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/:executionId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                ":executionId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "executionId",
+                                  "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e",
+                                  "description": "Unique identifier (query id) of the code bundle execution."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Forbidden",
+                          "code": 403,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/:executionId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                ":executionId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "executionId",
+                                  "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e",
+                                  "description": "Unique identifier (query id) of the code bundle execution."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Not Found",
+                          "code": 404,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/:executionId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                ":executionId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "executionId",
+                                  "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e",
+                                  "description": "Unique identifier (query id) of the code bundle execution."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Method Not Allowed",
+                          "code": 405,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/:executionId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                ":executionId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "executionId",
+                                  "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e",
+                                  "description": "Unique identifier (query id) of the code bundle execution."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Too Many Requests",
+                          "code": 429,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/:executionId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                ":executionId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "executionId",
+                                  "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e",
+                                  "description": "Unique identifier (query id) of the code bundle execution."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Internal Server Error",
+                          "code": 500,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/:executionId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                ":executionId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "executionId",
+                                  "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e",
+                                  "description": "Unique identifier (query id) of the code bundle execution."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Service Unavailable",
+                          "code": 503,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/:executionId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                ":executionId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "executionId",
+                                  "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e",
+                                  "description": "Unique identifier (query id) of the code bundle execution."
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Gateway Timeout",
+                          "code": 504,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "{executionId}:cancel",
+                  "item": [
+                    {
+                      "name": "Cancel a code bundle execution",
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v2/code-bundle-executions/{{executionId}}:cancel",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v2",
+                            "code-bundle-executions",
+                            "{{executionId}}:cancel"
+                          ]
+                        },
+                        "description": "Cancel a running code bundle execution identified by its execution id."
+                      },
+                      "response": [
+                        {
+                          "name": "Successful request.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/{{executionId}}:cancel",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                "{{executionId}}:cancel"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"status\": \"Request successfully completed\"\n}"
+                        },
+                        {
+                          "name": "Successfully accepted the request, but it is not completed yet.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/{{executionId}}:cancel",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                "{{executionId}}:cancel"
+                              ]
+                            }
+                          },
+                          "status": "Accepted",
+                          "code": 202,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "Location",
+                              "value": "string"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"code\": \"392604\",\n  \"message\": \"Request execution in progress. Use the provided location header or result handler ID to perform query monitoring and management.\",\n  \"job_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Bad Request. The request payload is invalid or malformed. This happens if the application didn't send the correct request payload. The response body may include the error code and message indicating the actual cause. The application must reconstruct the request body for retry.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/{{executionId}}:cancel",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                "{{executionId}}:cancel"
+                              ]
+                            }
+                          },
+                          "status": "Bad Request",
+                          "code": 400,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Unauthorized. The request is not authorized. This happens if the attached access token is invalid or missing. The response body may include the error code and message indicating the actual cause, e.g., expired, invalid token. The application must obtain a new access token for retry.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/{{executionId}}:cancel",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                "{{executionId}}:cancel"
+                              ]
+                            }
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Forbidden. The request is forbidden. This can also happen if the request is made even if the API is not enabled.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/{{executionId}}:cancel",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                "{{executionId}}:cancel"
+                              ]
+                            }
+                          },
+                          "status": "Forbidden",
+                          "code": 403,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Not Found. The request endpoint is not valid. This happens if the API endpoint does not exist, or if the API is not enabled.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/{{executionId}}:cancel",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                "{{executionId}}:cancel"
+                              ]
+                            }
+                          },
+                          "status": "Not Found",
+                          "code": 404,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Method Not Allowed. The request method doesn't match the supported API. This happens, for example, if the application calls the API with GET method but the endpoint accepts only POST.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/{{executionId}}:cancel",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                "{{executionId}}:cancel"
+                              ]
+                            }
+                          },
+                          "status": "Method Not Allowed",
+                          "code": 405,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Limit Exceeded. The number of requests hit the rate limit. The application must slow down the frequency of hitting the API endpoints.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/{{executionId}}:cancel",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                "{{executionId}}:cancel"
+                              ]
+                            }
+                          },
+                          "status": "Too Many Requests",
+                          "code": 429,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Internal Server Error. The server hit an unrecoverable system error. The response body may include the error code and message for further guidance. The application owner may need to reach out the customer support.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/{{executionId}}:cancel",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                "{{executionId}}:cancel"
+                              ]
+                            }
+                          },
+                          "status": "Internal Server Error",
+                          "code": 500,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Service Unavailable. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/{{executionId}}:cancel",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                "{{executionId}}:cancel"
+                              ]
+                            }
+                          },
+                          "status": "Service Unavailable",
+                          "code": 503,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        },
+                        {
+                          "name": "Gateway Timeout. The request was not processed due to server side timeouts. The application may retry with backoff. The jittered backoff is recommended.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {},
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v2/code-bundle-executions/{{executionId}}:cancel",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v2",
+                                "code-bundle-executions",
+                                "{{executionId}}:cancel"
+                              ]
+                            }
+                          },
+                          "status": "Gateway Timeout",
+                          "code": 504,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            },
+                            {
+                              "key": "X-Snowflake-Request-ID",
+                              "value": ""
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"message\": \"Compilation error!\",\n  \"error_code\": \"390189\",\n  \"request_id\": \"01afef9d-0607-0550-0001-dd270c3902d7\"\n}"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://org-account.snowflakecomputing.com"
+    },
+    {
+      "key": "executionId",
+      "value": "01c55b6d-c819-b0fb-0001-14e60dccc27e"
+    }
+  ]
+}
